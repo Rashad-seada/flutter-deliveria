@@ -1,0 +1,1220 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'filter_category_state.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+/// @nodoc
+mixin _$FilterCategoryState<T> {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FilterCategoryStateCopyWith<T, $Res> {
+  factory $FilterCategoryStateCopyWith(
+    FilterCategoryState<T> value,
+    $Res Function(FilterCategoryState<T>) then,
+  ) = _$FilterCategoryStateCopyWithImpl<T, $Res, FilterCategoryState<T>>;
+}
+
+/// @nodoc
+class _$FilterCategoryStateCopyWithImpl<
+  T,
+  $Res,
+  $Val extends FilterCategoryState<T>
+>
+    implements $FilterCategoryStateCopyWith<T, $Res> {
+  _$FilterCategoryStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$InitialImplCopyWith<T, $Res> {
+  factory _$$InitialImplCopyWith(
+    _$InitialImpl<T> value,
+    $Res Function(_$InitialImpl<T>) then,
+  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$InitialImplCopyWithImpl<T, $Res>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
+    implements _$$InitialImplCopyWith<T, $Res> {
+  __$$InitialImplCopyWithImpl(
+    _$InitialImpl<T> _value,
+    $Res Function(_$InitialImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$InitialImpl<T> implements _Initial<T> {
+  const _$InitialImpl();
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.initial()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initial<T> implements FilterCategoryState<T> {
+  const factory _Initial() = _$InitialImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$LoadingImplCopyWith<T, $Res> {
+  factory _$$LoadingImplCopyWith(
+    _$LoadingImpl<T> value,
+    $Res Function(_$LoadingImpl<T>) then,
+  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LoadingImplCopyWithImpl<T, $Res>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
+    implements _$$LoadingImplCopyWith<T, $Res> {
+  __$$LoadingImplCopyWithImpl(
+    _$LoadingImpl<T> _value,
+    $Res Function(_$LoadingImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LoadingImpl<T> implements Loading<T> {
+  const _$LoadingImpl();
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Loading<T> implements FilterCategoryState<T> {
+  const factory Loading() = _$LoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SuccessImplCopyWith<T, $Res> {
+  factory _$$SuccessImplCopyWith(
+    _$SuccessImpl<T> value,
+    $Res Function(_$SuccessImpl<T>) then,
+  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<T, $Res>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
+    implements _$$SuccessImplCopyWith<T, $Res> {
+  __$$SuccessImplCopyWithImpl(
+    _$SuccessImpl<T> _value,
+    $Res Function(_$SuccessImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? data = freezed}) {
+    return _then(
+      _$SuccessImpl<T>(
+        freezed == data
+            ? _value.data
+            : data // ignore: cast_nullable_to_non_nullable
+                as T,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class _$SuccessImpl<T> implements Success<T> {
+  const _$SuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.success(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+      __$$SuccessImplCopyWithImpl<T, _$SuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return success(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return success?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Success<T> implements FilterCategoryState<T> {
+  const factory Success(final T data) = _$SuccessImpl<T>;
+
+  T get data;
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FailImplCopyWith<T, $Res> {
+  factory _$$FailImplCopyWith(
+    _$FailImpl<T> value,
+    $Res Function(_$FailImpl<T>) then,
+  ) = __$$FailImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({ApiErrorModel erro});
+}
+
+/// @nodoc
+class __$$FailImplCopyWithImpl<T, $Res>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$FailImpl<T>>
+    implements _$$FailImplCopyWith<T, $Res> {
+  __$$FailImplCopyWithImpl(
+    _$FailImpl<T> _value,
+    $Res Function(_$FailImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? erro = null}) {
+    return _then(
+      _$FailImpl<T>(
+        null == erro
+            ? _value.erro
+            : erro // ignore: cast_nullable_to_non_nullable
+                as ApiErrorModel,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class _$FailImpl<T> implements Fail<T> {
+  const _$FailImpl(this.erro);
+
+  @override
+  final ApiErrorModel erro;
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.fail(erro: $erro)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FailImpl<T> &&
+            (identical(other.erro, erro) || other.erro == erro));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, erro);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
+      __$$FailImplCopyWithImpl<T, _$FailImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return fail(erro);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return fail?.call(erro);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (fail != null) {
+      return fail(erro);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return fail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return fail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (fail != null) {
+      return fail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Fail<T> implements FilterCategoryState<T> {
+  const factory Fail(final ApiErrorModel erro) = _$FailImpl<T>;
+
+  ApiErrorModel get erro;
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SortByPriceLoadingImplCopyWith<T, $Res> {
+  factory _$$SortByPriceLoadingImplCopyWith(
+    _$SortByPriceLoadingImpl<T> value,
+    $Res Function(_$SortByPriceLoadingImpl<T>) then,
+  ) = __$$SortByPriceLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SortByPriceLoadingImplCopyWithImpl<T, $Res>
+    extends
+        _$FilterCategoryStateCopyWithImpl<T, $Res, _$SortByPriceLoadingImpl<T>>
+    implements _$$SortByPriceLoadingImplCopyWith<T, $Res> {
+  __$$SortByPriceLoadingImplCopyWithImpl(
+    _$SortByPriceLoadingImpl<T> _value,
+    $Res Function(_$SortByPriceLoadingImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SortByPriceLoadingImpl<T> implements SortByPriceLoading<T> {
+  const _$SortByPriceLoadingImpl();
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.sortByPriceLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SortByPriceLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return sortByPriceLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return sortByPriceLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (sortByPriceLoading != null) {
+      return sortByPriceLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return sortByPriceLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return sortByPriceLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (sortByPriceLoading != null) {
+      return sortByPriceLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SortByPriceLoading<T> implements FilterCategoryState<T> {
+  const factory SortByPriceLoading() = _$SortByPriceLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SortByPriceSuccessImplCopyWith<T, $Res> {
+  factory _$$SortByPriceSuccessImplCopyWith(
+    _$SortByPriceSuccessImpl<T> value,
+    $Res Function(_$SortByPriceSuccessImpl<T>) then,
+  ) = __$$SortByPriceSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$SortByPriceSuccessImplCopyWithImpl<T, $Res>
+    extends
+        _$FilterCategoryStateCopyWithImpl<T, $Res, _$SortByPriceSuccessImpl<T>>
+    implements _$$SortByPriceSuccessImplCopyWith<T, $Res> {
+  __$$SortByPriceSuccessImplCopyWithImpl(
+    _$SortByPriceSuccessImpl<T> _value,
+    $Res Function(_$SortByPriceSuccessImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? data = freezed}) {
+    return _then(
+      _$SortByPriceSuccessImpl<T>(
+        freezed == data
+            ? _value.data
+            : data // ignore: cast_nullable_to_non_nullable
+                as T,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class _$SortByPriceSuccessImpl<T> implements SortByPriceSuccess<T> {
+  const _$SortByPriceSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.sortByPriceSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SortByPriceSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SortByPriceSuccessImplCopyWith<T, _$SortByPriceSuccessImpl<T>>
+  get copyWith =>
+      __$$SortByPriceSuccessImplCopyWithImpl<T, _$SortByPriceSuccessImpl<T>>(
+        this,
+        _$identity,
+      );
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return sortByPriceSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return sortByPriceSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (sortByPriceSuccess != null) {
+      return sortByPriceSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return sortByPriceSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return sortByPriceSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (sortByPriceSuccess != null) {
+      return sortByPriceSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SortByPriceSuccess<T> implements FilterCategoryState<T> {
+  const factory SortByPriceSuccess(final T data) = _$SortByPriceSuccessImpl<T>;
+
+  T get data;
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SortByPriceSuccessImplCopyWith<T, _$SortByPriceSuccessImpl<T>>
+  get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SortByPriceFailImplCopyWith<T, $Res> {
+  factory _$$SortByPriceFailImplCopyWith(
+    _$SortByPriceFailImpl<T> value,
+    $Res Function(_$SortByPriceFailImpl<T>) then,
+  ) = __$$SortByPriceFailImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({ApiErrorModel erro});
+}
+
+/// @nodoc
+class __$$SortByPriceFailImplCopyWithImpl<T, $Res>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$SortByPriceFailImpl<T>>
+    implements _$$SortByPriceFailImplCopyWith<T, $Res> {
+  __$$SortByPriceFailImplCopyWithImpl(
+    _$SortByPriceFailImpl<T> _value,
+    $Res Function(_$SortByPriceFailImpl<T>) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? erro = null}) {
+    return _then(
+      _$SortByPriceFailImpl<T>(
+        null == erro
+            ? _value.erro
+            : erro // ignore: cast_nullable_to_non_nullable
+                as ApiErrorModel,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class _$SortByPriceFailImpl<T> implements SortByPriceFail<T> {
+  const _$SortByPriceFailImpl(this.erro);
+
+  @override
+  final ApiErrorModel erro;
+
+  @override
+  String toString() {
+    return 'FilterCategoryState<$T>.sortByPriceFail(erro: $erro)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SortByPriceFailImpl<T> &&
+            (identical(other.erro, erro) || other.erro == erro));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, erro);
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SortByPriceFailImplCopyWith<T, _$SortByPriceFailImpl<T>> get copyWith =>
+      __$$SortByPriceFailImplCopyWithImpl<T, _$SortByPriceFailImpl<T>>(
+        this,
+        _$identity,
+      );
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(ApiErrorModel erro) fail,
+    required TResult Function() sortByPriceLoading,
+    required TResult Function(T data) sortByPriceSuccess,
+    required TResult Function(ApiErrorModel erro) sortByPriceFail,
+  }) {
+    return sortByPriceFail(erro);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(ApiErrorModel erro)? fail,
+    TResult? Function()? sortByPriceLoading,
+    TResult? Function(T data)? sortByPriceSuccess,
+    TResult? Function(ApiErrorModel erro)? sortByPriceFail,
+  }) {
+    return sortByPriceFail?.call(erro);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(ApiErrorModel erro)? fail,
+    TResult Function()? sortByPriceLoading,
+    TResult Function(T data)? sortByPriceSuccess,
+    TResult Function(ApiErrorModel erro)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (sortByPriceFail != null) {
+      return sortByPriceFail(erro);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
+    required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
+    required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
+  }) {
+    return sortByPriceFail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
+  }) {
+    return sortByPriceFail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Fail<T> value)? fail,
+    TResult Function(SortByPriceLoading<T> value)? sortByPriceLoading,
+    TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
+    TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
+    required TResult orElse(),
+  }) {
+    if (sortByPriceFail != null) {
+      return sortByPriceFail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SortByPriceFail<T> implements FilterCategoryState<T> {
+  const factory SortByPriceFail(final ApiErrorModel erro) =
+      _$SortByPriceFailImpl<T>;
+
+  ApiErrorModel get erro;
+
+  /// Create a copy of FilterCategoryState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SortByPriceFailImplCopyWith<T, _$SortByPriceFailImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}

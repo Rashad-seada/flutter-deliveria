@@ -1,0 +1,117 @@
+import 'package:delveria/core/network/api_error_handler.dart';
+import 'package:delveria/features/deliveryAgent/data/models/get_accepted_orders.dart';
+import 'package:delveria/features/deliveryAgent/data/models/get_not_accepted_order_agent.dart';
+import 'package:delveria/features/deliveryAgent/data/repo/agent_ordrs_repo.dart';
+import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class AgentOrdersCubit extends Cubit<AgentOrdersState> {
+  final AgentOrdrsRepo agentOrdrsRepo;
+  AgentOrdersCubit(this.agentOrdrsRepo) : super(AgentOrdersState.initial());
+  List<AgentOrder> agentOrders = [];
+  List<AcceptedOrder> acceptedOrders = [];
+  void getCurrentOrdersAgent() async {
+    emit(AgentOrdersState.loading());
+    try {
+      final response = await agentOrdrsRepo.getCurrentOrdersForAgent();
+      response.when(
+        success: (currentAgentRes) {
+          agentOrders = currentAgentRes.orders;
+          print("ssssssss$agentOrders");
+          emit(AgentOrdersState.success(currentAgentRes));
+        },
+        failure: (error) => AgentOrdersState.fail(error),
+      );
+    } catch (e) {
+      emit(AgentOrdersState.fail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  void getAcceptedOrders() async {
+    emit(AgentOrdersState.getAcceptOrderLoading());
+    try {
+      final response = await agentOrdrsRepo.getAcceptedOrders();
+      response.when(
+        success: (getAcceptedOrdersRes) {
+          acceptedOrders = getAcceptedOrdersRes.orders;
+          print("ssssssss$acceptedOrders");
+          emit(AgentOrdersState.getAcceptOrderSuccess(acceptedOrders));
+        },
+        failure: (error) => AgentOrdersState.getAcceptOrderFail(error),
+      );
+    } catch (e) {
+      emit(AgentOrdersState.getAcceptOrderFail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  void acceptOrder({required String orderId}) async {
+    emit(AgentOrdersState.acceptOrderLoading());
+    try {
+      final response = await agentOrdrsRepo.acceptOrder(orderId: orderId);
+      response.when(
+        success: (acceptOrderRes) {
+          emit(AgentOrdersState.acceptOrderSuccess(acceptOrderRes));
+        },
+        failure: (error) => AgentOrdersState.acceptOrderFail(error),
+      );
+    } catch (e) {
+      emit(AgentOrdersState.acceptOrderFail(ApiErrorHandler.handle(e)));
+    }
+  }
+  void acceptOrderRestuarnt({required String orderId}) async {
+    emit(AgentOrdersState.acceptOrderResLoading());
+    try {
+      final response = await agentOrdrsRepo.acceptOrderRestaurant(orderId: orderId);
+      response.when(
+        success: (acceptOrderRes) {
+          emit(AgentOrdersState.acceptOrderResSuccess(acceptOrderRes));
+        },
+        failure: (error) => AgentOrdersState.acceptOrderResFail(error),
+      );
+    } catch (e) {
+      emit(AgentOrdersState.acceptOrderResFail(ApiErrorHandler.handle(e)));
+    }
+  }
+  void readyForPickUp({required String orderId}) async {
+    emit(AgentOrdersState.readyForPickUpLoading());
+    try {
+      final response = await agentOrdrsRepo.readyForPickup(orderId: orderId);
+      response.when(
+        success: (acceptOrderRes) {
+          emit(AgentOrdersState.readyForPickUpSuccess(acceptOrderRes));
+        },
+        failure: (error) => AgentOrdersState.readyForPickUpFail(error),
+      );
+    } catch (e) {
+      emit(AgentOrdersState.readyForPickUpFail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  void updateOrderStatusAgent({
+    required String orderId,
+    required Map<String, dynamic> body,
+  }) async {
+    emit(AgentOrdersState.updateOrderStatusAgentLoading());
+    try {
+      final response = await agentOrdrsRepo.updateAgentOrderStatus(
+        orderId: orderId,
+        body: body,
+      );
+      response.when(
+        success: (updateStatusOrderAgentRes) {
+          emit(
+            AgentOrdersState.updateOrderStatusAgentSuccess(
+              updateStatusOrderAgentRes,
+            ),
+          );
+        },
+        failure:
+            (error) => emit(AgentOrdersState.updateOrderStatusAgentFail(error)),
+      );
+    } catch (e) {
+      emit(
+        AgentOrdersState.updateOrderStatusAgentFail(ApiErrorHandler.handle(e)),
+      );
+    }
+  }
+}
