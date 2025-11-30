@@ -32,7 +32,6 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-/lib/core/network/api_constants.dart
 
 
 # Symbolication related
@@ -45,5 +44,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-/lib/core/network/api_constants.dart
 
+# Android Debug Files
+*.hprof
+java_pid*.hprof
