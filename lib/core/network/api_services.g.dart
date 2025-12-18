@@ -10,7 +10,7 @@ part of 'api_services.dart';
 
 class _ApiServices implements ApiServices {
   _ApiServices(this._dio, {this.baseUrl, this.errorLogger}) {
-    baseUrl ??= 'http://62.72.16.178:8550';
+    baseUrl ??= 'https://deliveria.low-high.org';
   }
 
   final Dio _dio;
@@ -30,7 +30,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://62.72.16.178:8550/users/signup',
+            'https://deliveria.low-high.org/users/signup',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2048,7 +2048,7 @@ class _ApiServices implements ApiServices {
     final _data = <String, dynamic>{};
     _data.addAll(body);
     final _options = _setStreamType<GetHomeDataResturantResponse>(
-      Options(method: 'PUT', headers: _headers, extra: _extra)
+      Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
             '/restaurants/home_data',
@@ -2173,7 +2173,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/agents/get_orders',
+            '/delivery/available',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2203,7 +2203,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/agents/my_orders',
+            '/delivery/my_orders',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2234,7 +2234,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'PUT', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/agents/accept_order/${orderId}',
+            '/delivery/accept/${orderId}',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2254,6 +2254,7 @@ class _ApiServices implements ApiServices {
   @override
   Future<AcceptOrdersModel> acceptOrderRestaurant(
     String orderId,
+    String subOrderId,
     Map<String, dynamic> body,
   ) async {
     final _extra = <String, dynamic>{};
@@ -2265,7 +2266,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'PUT', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/restaurants/preparing_order/${orderId}',
+            '/restaurants/accept_order/${orderId}/${subOrderId}',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2285,6 +2286,7 @@ class _ApiServices implements ApiServices {
   @override
   Future<AcceptOrdersModel> readyForPickUp(
     String orderId,
+    String subOrderId,
     Map<String, dynamic> body,
   ) async {
     final _extra = <String, dynamic>{};
@@ -2296,7 +2298,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'PUT', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/restaurants/ready_for_pickup_order/${orderId}',
+            '/restaurants/ready_for_pickup_order/${orderId}/${subOrderId}',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2327,7 +2329,7 @@ class _ApiServices implements ApiServices {
       Options(method: 'PUT', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/agents/change_status/${orderId}',
+            '/delivery/order/${orderId}/status',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -2337,6 +2339,36 @@ class _ApiServices implements ApiServices {
     late UpdateAgentOrderStatusResponse _value;
     try {
       _value = UpdateAgentOrderStatusResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<UpdateLocationResponse> updateAgentLocation(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<UpdateLocationResponse>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/delivery/agent/location',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late UpdateLocationResponse _value;
+    try {
+      _value = UpdateLocationResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

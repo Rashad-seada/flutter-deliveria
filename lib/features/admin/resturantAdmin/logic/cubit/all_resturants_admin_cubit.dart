@@ -127,7 +127,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   Future<void> getAllResturantsForAdmin() async {
     emit(AllresturantsadminState.loading());
     try {
-      await resetHeaders();
+
 
       final res = await resturantAdminRepo.getAllResturantsforAdmin();
       res.when(
@@ -154,7 +154,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   Future<void> getAllRatedResturantsForAdmin(double? lat, double? long) async {
     emit(AllresturantsadminState.reatedLoading());
     try {
-      await resetHeaders();
+
 
       final res = await resturantAdminRepo.getAllRatedResturantsforAdmin(
         lat: lat ?? 0,
@@ -181,7 +181,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   Future<void> getAllRatedResturantsWithoutLocation() async {
     emit(AllresturantsadminState.reatedLoading());
     try {
-      await resetHeaders();
+
 
       final res =
           await resturantAdminRepo.getAllRatedResturantsWithoutLocation();
@@ -206,7 +206,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   void getAllSuperCategories() async {
     emit(AllresturantsadminState.superCateLoading());
     try {
-      await resetHeaders();
+
 
       final res = await resturantAdminRepo.getAllSuperCategories();
       res.when(
@@ -229,7 +229,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   Future<void> changeEnable({required String resID, int? index}) async {
     emit(AllresturantsadminState.changeEnableLoading());
     try {
-      await resetHeaders();
+
 
       final res = await resturantAdminRepo.changeEnable(resID: resID);
       res.when(
@@ -289,7 +289,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
         return;
       }
 
-      await setMultiPartHeaders();
+
 
       final res = await resturantAdminRepo.creatResturantIndexed(
         photo: selectedPhoto!,
@@ -297,9 +297,8 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
         creatRes: req,
       );
 
-      await resetHeaders();
       print("❌ will refresh token ");
-      await refreshToken();
+
       res.when(
         success: (creatRes) {
           if (creatRes.message.contains("Error")) {
@@ -317,26 +316,17 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
         },
       );
     } catch (e) {
-      await resetHeaders();
       emit(
         AllresturantsadminState.createResturantFail(ApiErrorHandler.handle(e)),
       );
     }
   }
 
-  Future<void> setMultiPartHeaders() async {
-    DioFactory.setMutliPartHeaders();
-  }
 
-  Future<void> refreshToken() async {
-    DioFactory.setTokenIntoHeaderAfterLogin(
-      await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken),
-    );
-  }
 
-  Future<void> resetHeaders() async {
-    DioFactory.setJsonHeaders();
-  }
+
+
+
 
   Future<void> getNearbyResturants({
     BuildContext? context,
@@ -347,7 +337,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
     print(long);
     emit(AllresturantsadminState.nearbyLoading());
     try {
-      await resetHeaders();
+
 
       final response = await resturantAdminRepo.getNearbyResponse(
         lat: lat ?? 0,
@@ -371,7 +361,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   }) async {
     emit(AllresturantsadminState.byCategoryLoading());
     try {
-      await resetHeaders();
+
 
       final respone = await resturantAdminRepo.filterByCategoryAdmin(
         superId: superId,
@@ -392,7 +382,7 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   Future<void> searchResturant({required String query}) async {
     emit(AllresturantsadminState.searchResLoading());
     try {
-      await resetHeaders();
+
 
       final response = await resturantAdminRepo.searchResturant(query: query);
       response.when(

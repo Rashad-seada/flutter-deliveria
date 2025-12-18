@@ -478,9 +478,11 @@ class ItemCubit extends Cubit<ItemState> {
   }
 
   Future<void> getAllItems({required String resId}) async {
+    if (isClosed) return;
     emit(ItemState.getItemLoading());
     try {
       final res = await itemsRepo.getAllItem(code: resId);
+      if (isClosed) return;
       res.when(
         success: (itemRes) {
           // Store all items from backend
@@ -492,12 +494,14 @@ class ItemCubit extends Cubit<ItemState> {
           allItems = [];
           _loadItemsForCurrentPage();
 
-          emit(ItemState.getItemSuccess(itemRes));
+          if (!isClosed) emit(ItemState.getItemSuccess(itemRes));
         },
-        failure: (error) => emit(ItemState.getItemFail(error)),
+        failure: (error) {
+          if (!isClosed) emit(ItemState.getItemFail(error));
+        },
       );
     } catch (e) {
-      emit(ItemState.getItemFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(ItemState.getItemFail(ApiErrorHandler.handle(e)));
     }
   }
 

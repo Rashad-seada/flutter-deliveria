@@ -47,8 +47,7 @@ class SignupCubit extends Cubit<SignupState> {
       failure: (error) => emit(SignupState.fail(error)),
     );
   }
-    Future<void> saveUserToken(String token) async {
+  Future<void> saveUserToken(String token) async {
     await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
-    DioFactory.setTokenIntoHeaderAfterLogin(token);
   }
 }

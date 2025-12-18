@@ -17,8 +17,12 @@ class DioFactory {
       dio = Dio();
       dio!
         ..options.connectTimeout = timeOut
-        ..options.receiveTimeout = timeOut;
-      addDioHeaders();
+        ..options.receiveTimeout = timeOut
+        ..options.headers = {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        };
+
       addDioInterceptor();
       return dio!;
     } else {
@@ -26,38 +30,27 @@ class DioFactory {
     }
   }
 
-  static void addDioHeaders() async {
-    dio?.options.headers = {
-      'Accept': 'application/json',
-      'Authorization':
-          'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}'
-    };
-  }
-
-  static void setTokenIntoHeaderAfterLogin(String token) {
-    dio?.options.headers = {'Authorization': 'Bearer $token'};
-  }
-
-  static void setMutliPartHeaders() {
-    dio?.options.headers = {"Content-Type": "multipart/form-data"};
-  }
-static void setJsonHeaders() {
-    dio?.options.headers = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Authorization': dio?.options.headers['Authorization'],
-    };
-  }
-  
   static void addDioInterceptor() {
+    dio?.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) async {
+          final token = await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+          print("🔑 Token in Interceptor: ${token.isEmpty ? 'EMPTY' : 'FOUND (${token.substring(0, token.length > 5 ? 5 : token.length)}...)'}");
+          if (token.isNotEmpty) {
+            options.headers['Authorization'] = 'Bearer $token';
+          }
+          return handler.next(options);
+        },
+      ),
+    );
+
     dio?.interceptors.add(
       PrettyDioLogger(
         responseBody: true,
         requestBody: true,
-        requestHeader: false,
+        requestHeader: true,
         responseHeader: false,
       ),
     );
   }
-
 }

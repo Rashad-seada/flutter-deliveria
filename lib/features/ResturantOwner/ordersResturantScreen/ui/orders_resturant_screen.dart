@@ -74,7 +74,8 @@ class _OrdersResturantScreenState extends State<OrdersResturantScreen>
           tabController: _tabController,
           showFilter: true, // Always show filter in AppBar if on "Orders" tab
           onRefresh: () {
-            context.read<OrdersResturantCubit>().getOrdersRestuant();
+            context.read<OrdersResturantCubit>().getOrdersRestaurant();
+
           },
           fromDate: _fromDate,
           toDate: _toDate,
@@ -121,15 +122,10 @@ class _OrdersResturantScreenState extends State<OrdersResturantScreen>
                     ],
                   ),
                 ),
-              BlocProvider(
-                create:
-                    (context) =>
-                        getIt<OrdersResturantCubit>()..getOrdersRestuant(),
-                child: OrdersTabBody(
-                  isDeliveryAgent: false,
-                  filterFromDate: _fromDate,
-                  filterToDate: _toDate,
-                ),
+              OrdersTabBody(
+                isDeliveryAgent: false,
+                filterFromDate: _fromDate,
+                filterToDate: _toDate,
               ),
             ],
           ),

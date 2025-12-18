@@ -9,7 +9,7 @@ import 'package:delveria/features/ResturantOwner/ordersResturantScreen/logic/cub
 import 'package:delveria/features/ResturantOwner/ordersResturantScreen/logic/cubit/orders_resturant_state.dart';
 import 'package:delveria/features/client/payment/ui/widgets/track_order_button_row.dart';
 import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_cubit.dart';
-import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_state.dart';
+import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_state.dart' hide AcceptOrderSuccess;
 import 'package:delveria/features/deliveryAgent/ui/widgets/accept_order_bloc_listener.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -32,27 +32,29 @@ class OrderActionButtons extends StatelessWidget {
   }
 
   Widget _buildReceivedOrderActions(BuildContext context) {
-    return BlocBuilder<OrdersResturantCubit, OrdersResturantState>(
-      builder: (context, state) {
-        return BlocConsumer<AgentOrdersCubit, AgentOrdersState>(
-          builder: (context, state) {
-            if (viewModel.isRestaurant == true) {
-              return _buildRestaurantActions(context);
-            }
-            return _buildAgentActions(context);
-          },
-          listener: (context, state) {
-            if (viewModel.isRestaurant == true &&
-                state is ReadyForPickUpSuccess) {
-              showSuccessSnackBar(context, AppStrings.success.tr());
-            } else if (viewModel.isRestaurant == false &&
-                state is UpdateOrderStatusAgentSuccess) {
-              showSuccessSnackBar(context, AppStrings.success.tr());
-            }
-          },
-        );
-      },
-    );
+    if (viewModel.isRestaurant == true) {
+      return BlocConsumer<OrdersResturantCubit, OrdersResturantState>(
+        builder: (context, state) {
+          return _buildRestaurantActions(context);
+        },
+        listener: (context, state) {
+          if (state is MarkReadySuccess) {
+            showSuccessSnackBar(context, AppStrings.success.tr());
+          }
+        },
+      );
+    } else {
+      return BlocConsumer<AgentOrdersCubit, AgentOrdersState>(
+        builder: (context, state) {
+          return _buildAgentActions(context);
+        },
+        listener: (context, state) {
+          if (state is UpdateOrderStatusAgentSuccess) {
+            showSuccessSnackBar(context, AppStrings.success.tr());
+          }
+        },
+      );
+    }
   }
 
   Widget _buildRestaurantActions(BuildContext context) {
@@ -64,10 +66,13 @@ class OrderActionButtons extends StatelessWidget {
       child: AppButton(
         title: "Ready For pickUp ",
         onPressed: () {
-          context.read<AgentOrdersCubit>().readyForPickUp(
+          context.read<OrdersResturantCubit>().markReady(
             orderId: viewModel.orderId ?? "",
+            subOrderId: viewModel.restaurantOrderModel?.id ?? "",
           );
-          context.read<OrdersResturantCubit>().getOrdersRestuant();
+          // getOrdersRestuant is called inside markReady success, but we can keep it here or remove it.
+          // The previous code called it here.
+          // context.read<OrdersResturantCubit>().getOrdersRestaurant(); 
           SharedPrefHelper.setData(SharedPrefKeys.showbtn, false);
           context.pop();
         },
@@ -93,9 +98,7 @@ class OrderActionButtons extends StatelessWidget {
   }
 
   VoidCallback _getFirstButtonAction(AgentOrdersCubit cubit) {
-    if (viewModel.agentStatus != "Accepted" &&
-        viewModel.agentStatus != "On the way" &&
-        viewModel.agentStatus != "Completed") {
+    if (viewModel.agentStatus == "Accepted") {
       return () {
         cubit.updateOrderStatusAgent(
           orderId: viewModel.acceptedOrder?.id ?? "",
@@ -114,24 +117,20 @@ class OrderActionButtons extends StatelessWidget {
           orderId: viewModel.acceptedOrder?.id ?? "",
           body: {"status": "DELIVERED"},
         );
+        cubit.getAcceptedOrders();
       };
     }
     return () {};
   }
 
   Color _getFirstButtonColor() {
-    if (viewModel.agentStatus == "Accepted" ||
-        viewModel.agentStatus == "On the way" ||
-        viewModel.orderStatus == "Completed") {
-      return Colors.grey;
+    if (viewModel.agentStatus == "Accepted") {
+      return AppColors.primary;
     }
-    return AppColors.primary;
+    return Colors.grey;
   }
 
   Color _getSecondButtonColor() {
-    if (viewModel.agentStatus == "Accepted") {
-      return Colors.grey;
-    }
     if (viewModel.agentStatus == "On the way") {
       return AppColors.primary;
     }
@@ -139,36 +138,53 @@ class OrderActionButtons extends StatelessWidget {
   }
 
   Widget _buildPendingOrderActions(BuildContext context) {
-    return BlocConsumer<AgentOrdersCubit, AgentOrdersState>(
-      builder: (context, state) {
-        final cubit = context.read<AgentOrdersCubit>();
-        return AcceptOrderBlocListener(
-          child: TrackOrderButtonRow(
+    if (viewModel.isDeliveryAgent) {
+      return BlocConsumer<AgentOrdersCubit, AgentOrdersState>(
+        builder: (context, state) {
+          final cubit = context.read<AgentOrdersCubit>();
+          return AcceptOrderBlocListener(
+            child: TrackOrderButtonRow(
+              showSecond: false,
+              fWidth: 200.w,
+              ftitle: "Accept",
+              sTitle: "Reject",
+              fOnPressed: () {
+                cubit.acceptOrder(orderId: viewModel.agentOrder?.id ?? "");
+              },
+            ),
+          );
+        },
+        listener: (context, state) {
+          if (state is AcceptOrderSuccess) {
+            showSuccessSnackBar(context, AppStrings.success.tr());
+          }
+        },
+      );
+    } else {
+      // Restaurant Logic
+      return BlocConsumer<OrdersResturantCubit, OrdersResturantState>(
+        builder: (context, state) {
+          final cubit = context.read<OrdersResturantCubit>();
+          return TrackOrderButtonRow(
             showSecond: false,
             fWidth: 200.w,
             ftitle: "Accept",
-            sTitle:
-                viewModel.isDeliveryAgent ? "Reject" : AppStrings.cancel.tr(),
+            sTitle: AppStrings.cancel.tr(),
             fOnPressed: () {
-              if (viewModel.isDeliveryAgent) {
-                cubit.acceptOrder(orderId: viewModel.agentOrder?.id ?? "");
-              } else {
-                cubit.acceptOrderRestuarnt(orderId: viewModel.orderId ?? "");
-                context.pop();
-                context.read<OrdersResturantCubit>().getOrdersRestuant();
-              }
+              cubit.acceptOrder(
+                orderId: viewModel.orderId ?? "",
+                subOrderId: viewModel.restaurantOrderModel?.id ?? "",
+              );
+              context.pop();
             },
-          ),
-        );
-      },
-      listener: (context, state) {
-        if (viewModel.isDeliveryAgent && state is AcceptOrderSuccess) {
-          showSuccessSnackBar(context, AppStrings.success.tr());
-        } else if (!viewModel.isDeliveryAgent &&
-            state is AcceptOrderResSuccess) {
-          showSuccessSnackBar(context, AppStrings.success.tr());
-        }
-      },
-    );
+          );
+        },
+        listener: (context, state) {
+          if (state is AcceptOrderSuccess) {
+            showSuccessSnackBar(context, AppStrings.success.tr());
+          }
+        },
+      );
+    }
   }
 }

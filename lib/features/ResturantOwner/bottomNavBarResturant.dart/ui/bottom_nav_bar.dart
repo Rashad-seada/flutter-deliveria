@@ -86,7 +86,7 @@ class _BottomNavBarScreenResturantState
           BlocProvider(create: (context) => CarouselCubit()),
           BlocProvider(
             create:
-                (context) => getIt<OrdersResturantCubit>()..getOrdersRestuant(),
+                (context) => getIt<OrdersResturantCubit>()..getOrdersRestaurant(),
           ),
         ],
         child: OrdersResturantScreen(),

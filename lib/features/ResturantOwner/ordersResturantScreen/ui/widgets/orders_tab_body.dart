@@ -141,15 +141,11 @@ class OrdersTabBody extends StatelessWidget {
             cubit.ordersResturant
                 .where(
                   (e) =>
-                      (e.status == "Preparing" &&
-                          (e.orders?.any(
-                                (order) =>
-                                    order.status != "New" &&
-                                    order.status == "Preparing",
-                              ) ??
-                              false)) ||
+                      e.status == "Preparing" ||
                       e.status == "Completed" ||
-                      e.status == "Ready for pickup",
+                      e.status == "Delivered" ||
+                      e.status == "Canceled" ||
+                      e.status == "Ready for Delivery",
                 )
                 .toList();
 
@@ -206,7 +202,7 @@ class OrdersTabBody extends StatelessWidget {
                   BlocProvider(
                     create:
                         (context) =>
-                            getIt<OrdersResturantCubit>()..getOrdersRestuant(),
+                            getIt<OrdersResturantCubit>()..getOrdersRestaurant(),
                   ),
                 ],
                 child: MyOrderCard(
@@ -228,7 +224,7 @@ class OrdersTabBody extends StatelessWidget {
                                   create:
                                       (context) =>
                                           getIt<OrdersResturantCubit>()
-                                            ..getOrdersRestuant(),
+                                            ..getOrdersRestaurant(),
                                 ),
                               ],
                               child: NewOrdersDetailsScreen(

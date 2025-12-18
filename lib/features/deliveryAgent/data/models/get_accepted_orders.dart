@@ -38,7 +38,7 @@ class AcceptedOrder {
   @JsonKey(name: '__v')
   final int v;
   @JsonKey(name: 'delivery_id')
-  final String deliveryId;
+  final String? deliveryId;
 
   // ADD: Order ID (as received in example, integer, but can be num for generality)
   @JsonKey(name: 'order_id')
@@ -58,7 +58,7 @@ class AcceptedOrder {
     required this.createdAt,
     required this.updatedAt,
     required this.v,
-    required this.deliveryId,
+    this.deliveryId,
     this.orderId,
   });
 
@@ -70,17 +70,17 @@ class AcceptedOrder {
 
 @JsonSerializable()
 class AcceptedOrderAddress {
-  final AcceptedOrderCoordinates coordinates;
+  final AcceptedOrderCoordinates? coordinates;
   @JsonKey(name: 'address_title')
-  final String addressTitle;
-  final String phone;
-  final String details;
+  final String? addressTitle;
+  final String? phone;
+  final String? details;
 
   AcceptedOrderAddress({
-    required this.coordinates,
-    required this.addressTitle,
-    required this.phone,
-    required this.details,
+    this.coordinates,
+    this.addressTitle,
+    this.phone,
+    this.details,
   });
 
   factory AcceptedOrderAddress.fromJson(Map<String, dynamic> json) =>
@@ -224,16 +224,16 @@ class AcceptedOrderItem {
 @JsonSerializable()
 class AcceptedOrderItemDetails {
   @JsonKey(name: 'item_id')
-  final String itemId;
-  final String name;
-  final String description;
-  final String photo;
+  final String? itemId;
+  final String? name;
+  final String? description;
+  final String? photo;
 
   AcceptedOrderItemDetails({
-    required this.itemId,
-    required this.name,
-    required this.description,
-    required this.photo,
+    this.itemId,
+    this.name,
+    this.description,
+    this.photo,
   });
 
   factory AcceptedOrderItemDetails.fromJson(Map<String, dynamic> json) =>

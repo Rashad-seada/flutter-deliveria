@@ -125,10 +125,7 @@ class _NewOrdersDetailsScreenState extends State<NewOrdersDetailsScreen> {
                           : const SizedBox(height: 32),
                       _buildOrderSection(),
                       verticalSpace(40),
-                      BlocProvider(
-                        create: (context) => getIt<OrdersResturantCubit>(),
-                        child: OrderActionButtons(viewModel: viewModel),
-                      ),
+                      OrderActionButtons(viewModel: viewModel),
                       verticalSpace(100),
                     ],
                   ),

@@ -48,7 +48,7 @@ AcceptedOrder _$AcceptedOrderFromJson(Map<String, dynamic> json) =>
       createdAt: json['createdAt'] as String,
       updatedAt: json['updatedAt'] as String,
       v: (json['__v'] as num).toInt(),
-      deliveryId: json['delivery_id'] as String,
+      deliveryId: json['delivery_id'] as String?,
       orderId: json['order_id'] as num?,
     );
 
@@ -75,12 +75,15 @@ Map<String, dynamic> _$AcceptedOrderToJson(
 AcceptedOrderAddress _$AcceptedOrderAddressFromJson(
   Map<String, dynamic> json,
 ) => AcceptedOrderAddress(
-  coordinates: AcceptedOrderCoordinates.fromJson(
-    json['coordinates'] as Map<String, dynamic>,
-  ),
-  addressTitle: json['address_title'] as String,
-  phone: json['phone'] as String,
-  details: json['details'] as String,
+  coordinates:
+      json['coordinates'] == null
+          ? null
+          : AcceptedOrderCoordinates.fromJson(
+            json['coordinates'] as Map<String, dynamic>,
+          ),
+  addressTitle: json['address_title'] as String?,
+  phone: json['phone'] as String?,
+  details: json['details'] as String?,
 );
 
 Map<String, dynamic> _$AcceptedOrderAddressToJson(
@@ -200,10 +203,10 @@ Map<String, dynamic> _$AcceptedOrderItemToJson(
 AcceptedOrderItemDetails _$AcceptedOrderItemDetailsFromJson(
   Map<String, dynamic> json,
 ) => AcceptedOrderItemDetails(
-  itemId: json['item_id'] as String,
-  name: json['name'] as String,
-  description: json['description'] as String,
-  photo: json['photo'] as String,
+  itemId: json['item_id'] as String?,
+  name: json['name'] as String?,
+  description: json['description'] as String?,
+  photo: json['photo'] as String?,
 );
 
 Map<String, dynamic> _$AcceptedOrderItemDetailsToJson(

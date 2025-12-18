@@ -71,6 +71,7 @@ import 'package:delveria/features/deliveryAgent/data/models/accept_orders_model.
 import 'package:delveria/features/deliveryAgent/data/models/get_accepted_orders.dart';
 import 'package:delveria/features/deliveryAgent/data/models/get_not_accepted_order_agent.dart';
 import 'package:delveria/features/deliveryAgent/data/models/update_agent_order_status_response.dart';
+import 'package:delveria/features/deliveryAgent/data/models/update_location_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -358,7 +359,7 @@ abstract class ApiServices {
     @Path('resturantId') String code,
     @Body() Map<String, dynamic> body,
   );
-  @PUT(ApiConstants.getHomeDataResLink)
+  @GET(ApiConstants.getHomeDataResLink)
   Future<GetHomeDataResturantResponse> getHomeDataResturant(
     @Body() Map<String, dynamic> body,
   );
@@ -400,25 +401,32 @@ abstract class ApiServices {
     @Body() Map<String, dynamic> body,
   );
 
-  @PUT("/agents/accept_order/{orderId}")
+  @PUT("/delivery/accept/{orderId}")
   Future<AcceptOrdersModel> acceptOrder(
     @Path("orderId") String orderId,
     @Body() Map<String, dynamic> body,
   );
-  @PUT("/restaurants/preparing_order/{orderId}")
+  @PUT("/restaurants/accept_order/{orderId}/{subOrderId}")
   Future<AcceptOrdersModel> acceptOrderRestaurant(
     @Path("orderId") String orderId,
+    @Path("subOrderId") String subOrderId,
     @Body() Map<String, dynamic> body,
   );
-  @PUT("/restaurants/ready_for_pickup_order/{orderId}")
+  @PUT("/restaurants/ready_for_pickup_order/{orderId}/{subOrderId}")
   Future<AcceptOrdersModel> readyForPickUp(
+    @Path("orderId") String orderId,
+    @Path("subOrderId") String subOrderId,
+    @Body() Map<String, dynamic> body,
+  );
+
+  @PUT("/delivery/order/{orderId}/status")
+  Future<UpdateAgentOrderStatusResponse> updateAgentOrderStatus(
     @Path("orderId") String orderId,
     @Body() Map<String, dynamic> body,
   );
 
-  @PUT("/agents/change_status/{orderId}")
-  Future<UpdateAgentOrderStatusResponse> updateAgentOrderStatus(
-    @Path("orderId") String orderId,
+  @POST("/delivery/agent/location")
+  Future<UpdateLocationResponse> updateAgentLocation(
     @Body() Map<String, dynamic> body,
   );
 }

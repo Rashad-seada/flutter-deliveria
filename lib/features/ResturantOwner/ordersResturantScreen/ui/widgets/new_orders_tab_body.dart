@@ -115,7 +115,7 @@ class NewOrdersTapBody extends StatelessWidget {
               cubit.ordersResturant
                   .where(
                     (e) =>
-                        (e.orders?.any((order) => order.status == "New") ??
+                        (e.orders?.any((order) => order.status == "Pending Approval") ??
                             false),
                   )
                   .toList();

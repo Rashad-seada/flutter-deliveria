@@ -29,16 +29,16 @@ class ApiConstants {
   static const String addOrderLink = "/orders/add";
   static const String getOrdersLink = "/orders";
   static const String getFavLink = "/favourites";
-  static const String getIncomingOrdersAgentLink = "/agents/get_orders";
-  static const String getmyOrdersAgentLink = "/agents/my_orders";
+  static const String getIncomingOrdersAgentLink = "/delivery/available";
+  static const String getmyOrdersAgentLink = "/delivery/my_orders";
   static const String getSlidersLink = "/sliders/all";
   static const String createSliderLink = "/sliders/create";
   static const String getDataLink = "/auth/get_data";
   static const String updateUserInfoLink = "/users/update";
   static const String getMyOrdersLink = "/restaurants/my_orders";
-  static const String acceptedOrderLink = "/agents/my_orders";
+  static const String acceptedOrderLink = "/delivery/my_orders";
 
-  static const String getOrdersNotAcceptedAgentLink = "/agents/get_orders";
+  static const String getOrdersNotAcceptedAgentLink = "/delivery/available";
 
   static const String addReviewLink = "/restaurants/add_review";
 

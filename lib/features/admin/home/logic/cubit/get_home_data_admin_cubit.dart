@@ -19,7 +19,6 @@ class GetHomeDataAdminCubit extends Cubit<GetHomeDataAdminState> {
   void getHomeDataAdmin() async {
     emit(GetHomeDataAdminState.loading());
     try {
-      await resetHeaders();
 
       final response = await getHomeDataRepo.getHomeDataAdmin();
       response.when(
@@ -38,8 +37,5 @@ class GetHomeDataAdminCubit extends Cubit<GetHomeDataAdminState> {
     } catch (e) {
       emit(GetHomeDataAdminState.fail(ApiErrorHandler.handle(e)));
     }
-  }
-  Future<void> resetHeaders() async {
-    DioFactory.setJsonHeaders(); 
   }
 }

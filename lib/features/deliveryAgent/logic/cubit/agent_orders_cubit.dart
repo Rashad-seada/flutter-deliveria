@@ -58,10 +58,10 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
       emit(AgentOrdersState.acceptOrderFail(ApiErrorHandler.handle(e)));
     }
   }
-  void acceptOrderRestuarnt({required String orderId}) async {
+  void acceptOrderRestuarnt({required String orderId,required String subOrderId}) async {
     emit(AgentOrdersState.acceptOrderResLoading());
     try {
-      final response = await agentOrdrsRepo.acceptOrderRestaurant(orderId: orderId);
+      final response = await agentOrdrsRepo.acceptOrderRestaurant(orderId: orderId, subOrderId: subOrderId);
       response.when(
         success: (acceptOrderRes) {
           emit(AgentOrdersState.acceptOrderResSuccess(acceptOrderRes));
@@ -72,10 +72,10 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
       emit(AgentOrdersState.acceptOrderResFail(ApiErrorHandler.handle(e)));
     }
   }
-  void readyForPickUp({required String orderId}) async {
+  void readyForPickUp({required String orderId, required String subOrderId}) async {
     emit(AgentOrdersState.readyForPickUpLoading());
     try {
-      final response = await agentOrdrsRepo.readyForPickup(orderId: orderId);
+      final response = await agentOrdrsRepo.readyForPickup(orderId: orderId, subOrderId: subOrderId);
       response.when(
         success: (acceptOrderRes) {
           emit(AgentOrdersState.readyForPickUpSuccess(acceptOrderRes));
@@ -112,6 +112,32 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
       emit(
         AgentOrdersState.updateOrderStatusAgentFail(ApiErrorHandler.handle(e)),
       );
+    }
+  }
+
+  void updateAgentLocation({
+    required double latitude,
+    required double longitude,
+  }) async {
+    // No loading state for location updates (silent background operation)
+    try {
+      final response = await agentOrdrsRepo.updateAgentLocation(
+        latitude: latitude,
+        longitude: longitude,
+      );
+      response.when(
+        success: (locationRes) {
+          // Location updated successfully (silent)
+          print('Location updated: $latitude, $longitude');
+        },
+        failure: (error) {
+          // Log error but don't emit state (silent failure)
+          print('Error updating location: ${error.message}');
+        },
+      );
+    } catch (e) {
+      // Log error but don't emit state (silent failure)
+      print('Error updating location: $e');
     }
   }
 }

@@ -11,7 +11,7 @@ class OrdersResturantCubit extends Cubit<OrdersResturantState> {
 
   List<OrderResturantModel> ordersResturant = [];
 
- Future <void> getOrdersRestuant() async {
+ Future <void> getOrdersRestaurant() async {
     emit(OrdersResturantState.loading());
     try {
       final response = await getOrdersRepo.getOrdersResturant();
@@ -24,6 +24,40 @@ class OrdersResturantCubit extends Cubit<OrdersResturantState> {
       );
     } catch (e) {
       emit(OrdersResturantState.fail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  Future<void> acceptOrder({required String orderId, required String subOrderId}) async {
+    emit(OrdersResturantState.acceptOrderLoading());
+    try {
+      final response = await getOrdersRepo.acceptOrder(orderId: orderId, subOrderId: subOrderId);
+      response.when(
+        success: (acceptRes) {
+          emit(OrdersResturantState.acceptOrderSuccess(acceptRes));
+          // Refresh orders list after accepting
+          getOrdersRestaurant();
+        },
+        failure: (error) => emit(OrdersResturantState.acceptOrderFail(error)),
+      );
+    } catch (e) {
+      emit(OrdersResturantState.acceptOrderFail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  Future<void> markReady({required String orderId, required String subOrderId}) async {
+    emit(OrdersResturantState.markReadyLoading());
+    try {
+      final response = await getOrdersRepo.markReady(orderId: orderId, subOrderId: subOrderId);
+      response.when(
+        success: (readyRes) {
+          emit(OrdersResturantState.markReadySuccess(readyRes));
+          // Refresh orders list after marking ready
+          getOrdersRestaurant();
+        },
+        failure: (error) => emit(OrdersResturantState.markReadyFail(error)),
+      );
+    } catch (e) {
+      emit(OrdersResturantState.markReadyFail(ApiErrorHandler.handle(e)));
     }
   }
 }
