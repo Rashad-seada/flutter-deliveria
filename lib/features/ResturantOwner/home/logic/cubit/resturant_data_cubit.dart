@@ -45,7 +45,7 @@ class ResturantDataCubit extends Cubit<ResturantDataState> {
     }
   }
 
-  void getResturantDataForHome() async {
+  Future<void> getResturantDataForHome() async {
     emit(ResturantDataState.getHomeResLoading());
     try {
       final response = await resturantDataRepo.getResturantDataForHome();

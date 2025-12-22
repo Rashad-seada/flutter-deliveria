@@ -18,75 +18,141 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ResturantAdminDetails extends StatelessWidget {
+class ResturantAdminDetails extends StatefulWidget {
   const ResturantAdminDetails({super.key, required this.resturantAdmin});
   final ResturantAdmin resturantAdmin;
+
+  @override
+  State<ResturantAdminDetails> createState() => _ResturantAdminDetailsState();
+}
+
+class _ResturantAdminDetailsState extends State<ResturantAdminDetails> {
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(_onScroll);
+  }
+
+  void _onScroll() {
+    if (_scrollController.position.pixels >=
+        _scrollController.position.maxScrollExtent * 0.8) {
+      context.read<ItemCubit>().loadMoreItems();
+    }
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: BlocBuilder<ResturantMenuCubit, ResturantMenuState>(
-            builder: (resContext, state) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  verticalSpace(20),
-                  SearchRow(showButton: false, showIosArrow: true),
-                  verticalSpace(20),
-                  ResturantStackedImage(logo: resturantAdmin.logo, img: resturantAdmin.photo),
-                  ResturantReviewAndName(
-                    resName: resturantAdmin.name,
-                    reviews: resturantAdmin.reviews ?? [],
-                    resId: resturantAdmin.id ?? "",
+        child: RefreshIndicator(
+          onRefresh: () async {
+            await context.read<ItemCubit>().getAllItems(
+                  resId: widget.resturantAdmin.id ?? "",
+                );
+          },
+          child: CustomScrollView(
+            controller: _scrollController,
+            slivers: [
+              SliverAppBar(
+                expandedHeight: 200.h,
+                floating: false,
+                pinned: true,
+                flexibleSpace: FlexibleSpaceBar(
+                  background: ResturantStackedImage(
+                    logo: widget.resturantAdmin.logo,
+                    img: widget.resturantAdmin.photo,
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0.w),
-                    child: Text(
-                      textAlign: TextAlign.start,
-                      resturantAdmin.aboutUs,
-                      style: TextStyles.bimini16W400Body.copyWith(
-                        color: AppColors.grey,
-                      ),
+                ),
+                backgroundColor: Colors.white,
+                elevation: 0,
+                leading: const BackButton(color: Colors.black),
+              ),
+              BlocBuilder<ResturantMenuCubit, ResturantMenuState>(
+                builder: (resContext, state) {
+                  return SliverToBoxAdapter(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        verticalSpace(20),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 16.w),
+                          child: SearchRow(
+                            showButton: false, 
+                            showIosArrow: false // already have back button in SliverAppBar
+                          ),
+                        ),
+                        verticalSpace(10),
+                        ResturantReviewAndName(
+                          resName: widget.resturantAdmin.name,
+                          reviews: widget.resturantAdmin.reviews ?? [],
+                          resId: widget.resturantAdmin.id ?? "",
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10.0.w),
+                          child: Text(
+                            widget.resturantAdmin.aboutUs,
+                            textAlign: TextAlign.start,
+                            style: TextStyles.bimini16W400Body.copyWith(
+                              color: AppColors.grey,
+                            ),
+                          ),
+                        ),
+                        verticalSpace(10),
+                        RateAndDeliveryCostRow(
+                          deliveryCost: widget.resturantAdmin.deliveryCost.toString(),
+                          estimatedTime: widget.resturantAdmin.estimatedTime.toString(),
+                          themeState: themeState,
+                          rate: widget.resturantAdmin.rate.toString(),
+                        ),
+                        verticalSpace(20),
+                        FoodMenuText(themeState: themeState),
+                        verticalSpace(20),
+                      ],
                     ),
-                  ),
-                  verticalSpace(10),
-                  RateAndDeliveryCostRow(
-                    deliveryCost:resturantAdmin. deliveryCost.toString(),
-                    estimatedTime:resturantAdmin. estimatedTime.toString(),
-                    themeState: themeState,
-                    rate: resturantAdmin.rate.toString(),
-                  ),
-                  verticalSpace(20),
-                  // BestPicksTextRow(themeState: themeState),
-                  // BestPicksBody(),
-                  FoodMenuText(themeState: themeState),
-                  // FoodTypeTaps(),
-                  verticalSpace(30),
-                  state.toggleToHorizental
-                      ? BlocBuilder<ItemCubit, ItemState>(
-                        builder: (context, state) {
-                          return HorizentalBodyForUser(
-                            resId: resturantAdmin.id,
-                            isAdmin: true,
-                          );
-                        },
-                      )
-                      : BlocBuilder<ItemCubit, ItemState>(
-                        builder: (context, state) {
-                          return VerticalMenuBody(
-                            resId: resturantAdmin.id,
-                            isAdmin: true,
-                          );
-                        },
-                      ),
-                ],
-              );
-            },
+                  );
+                },
+              ),
+              BlocBuilder<ResturantMenuCubit, ResturantMenuState>(
+                builder: (context, state) {
+                  if (state.toggleToHorizental) {
+                    return BlocBuilder<ItemCubit, ItemState>(
+                      builder: (context, itemState) {
+                        return HorizentalBodyForUser(
+                          resId: widget.resturantAdmin.id,
+                          isAdmin: true,
+                          isSliver: true,
+                        );
+                      },
+                    );
+                  } else {
+                    return BlocBuilder<ItemCubit, ItemState>(
+                      builder: (context, itemState) {
+                        return VerticalMenuBody(
+                          resId: widget.resturantAdmin.id,
+                          isAdmin: true,
+                          isSliver: true,
+                        );
+                      },
+                    );
+                  }
+                },
+              ),
+              // Add some bottom padding
+              SliverToBoxAdapter(child: verticalSpace(20)),
+            ],
           ),
         ),
       ),
     );
   }
 }
+

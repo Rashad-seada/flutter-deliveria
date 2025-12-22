@@ -66,7 +66,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
 
       final cubit = context.read<AddressCubit>();
 
-      cubit.state.titleController.text = _selectedAddress;
+      // cubit.state.titleController.text = _selectedAddress;
 
       if (_selectedLocation != null) {
         cubit.state.linkController.text =

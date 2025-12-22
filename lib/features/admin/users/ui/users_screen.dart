@@ -4,6 +4,7 @@ import 'package:delveria/core/helper/spacing.dart';
 import 'package:delveria/core/helper/strings.dart';
 import 'package:delveria/core/theme/color.dart';
 import 'package:delveria/core/theme/styles.dart';
+import 'package:delveria/core/widgets/app_button.dart';
 import 'package:delveria/core/widgets/custom_loading.dart';
 import 'package:delveria/core/widgets/search_row.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/logic/cubit/notifications_cubit.dart';
@@ -44,9 +45,6 @@ class _UsersScreenState extends State<UsersScreen> {
   List<String> _getAllUserIds(List users) {
     return users
         .map<String>((e) {
-          // e is UserModelAdmin
-          if (e is Map && e.containsKey('id')) return e['id'].toString();
-          if (e is Map && e.containsKey('_id')) return e['_id'].toString();
           if (e.id != null) return e.id.toString();
           return '';
         })
@@ -54,12 +52,14 @@ class _UsersScreenState extends State<UsersScreen> {
         .toList();
   }
 
-  void _sendNotificationToUsers({
+  Future<void> _sendNotificationToUsers({
     required String message,
     required List<String> ids,
-  }) {
+  }) async {
     final cubit = context.read<NotificationsCubit>();
-    cubit.createNotification(body: {"message": message, "ids": ids});
+    await cubit.createNotification(body: {"message": message, "ids": ids});
+    if (!mounted) return;
+    Navigator.pop(context);
   }
 
   Future<void> _handleRefresh() async {
@@ -69,6 +69,45 @@ class _UsersScreenState extends State<UsersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: widget.isFromNotification == true
+          ? Container(
+            color: Colors.white,
+            padding: const EdgeInsets.all(16.0),
+            child: SafeArea(
+              child: AppButton(
+                title:
+                    "${"Send"} (${isSelectedList.where((e) => e).length})",
+                onPressed: () {
+                  final cubit = context.read<GetAllUsersAdminCubit>();
+                  final users =
+                      searchQury.trim().isNotEmpty
+                          ? cubit.searchUsers
+                          : cubit.users;
+                  List<String> selectedIds = [];
+                  for (int i = 0; i < users.length; i++) {
+                    if (isSelectedList[i]) {
+                      final user = users[i];
+                       if (user.id != null)
+                          selectedIds.add(user.id.toString());
+                    }
+                  }
+
+                  if (selectedIds.isNotEmpty) {
+                    _sendNotificationToUsers(
+                      message: widget.message ?? "test",
+                      ids: selectedIds,
+                    );
+                  } else {
+                    showWarningSnackBar(
+                      context,
+                      'pleaseSelectUserOrSendToAll'.tr(),
+                    );
+                  }
+                },
+              ),
+            ),
+          )
+          : null,
       body: SafeArea(
         child: BlocConsumer<GetAllUsersAdminCubit, GetAllUsersAdminState>(
           builder: (context, state) {
@@ -106,6 +145,7 @@ class _UsersScreenState extends State<UsersScreen> {
                       context,
                       "notificationsendsuccessfully".tr(),
                     );
+                    Navigator.pop(context);
                   },
                 );
               },
@@ -172,29 +212,13 @@ class _UsersScreenState extends State<UsersScreen> {
                                       onTap: () {
                                         setState(() {
                                           sendToAll = !sendToAll;
-                                        });
-                                        final message =
-                                            widget.message ?? "test";
-                                        if (sendToAll) {
-                                          final ids = _getAllUserIds(users);
-                                          if (ids.isNotEmpty) {
-                                            _sendNotificationToUsers(
-                                              message: message,
-                                              ids: ids,
-                                            );
+                                          // Select/Deselect all based on sendToAll
+                                          for (var i = 0;
+                                              i < isSelectedList.length;
+                                              i++) {
+                                            isSelectedList[i] = sendToAll;
                                           }
-                                        } else if (widget.selectedIds != null &&
-                                            widget.selectedIds!.isNotEmpty) {
-                                          _sendNotificationToUsers(
-                                            message: message,
-                                            ids: widget.selectedIds!,
-                                          );
-                                        } else {
-                                          showWarningSnackBar(
-                                            context,
-                                            'pleaseSelectUserOrSendToAll'.tr(),
-                                          );
-                                        }
+                                        });
                                       },
                                       child: Container(
                                         width: 32.w,
@@ -250,19 +274,10 @@ class _UsersScreenState extends State<UsersScreen> {
                                         onTap: () {
                                           if (widget.isFromNotification ==
                                               true) {
-                                            final user = users[entry.key];
-                                            String? id;
-
-                                            // user is UserModelAdmin
-                                            id = user.id.toString();
-
-                                            if (id.isNotEmpty) {
-                                              _sendNotificationToUsers(
-                                                message:
-                                                    widget.message ?? "test",
-                                                ids: [id],
-                                              );
-                                            }
+                                            setState(() {
+                                              isSelectedList[i] =
+                                                  !isSelectedList[i];
+                                            });
                                           }
                                         },
                                         child: UserCard(
@@ -281,19 +296,6 @@ class _UsersScreenState extends State<UsersScreen> {
                                                     !(isSelectedList[i]);
                                               }
                                             });
-                                            if (widget.isFromNotification ==
-                                                true) {
-                                              final user = users[entry.key];
-                                              String? id;
-                                              id = user.id.toString();
-                                              if (id.isNotEmpty) {
-                                                _sendNotificationToUsers(
-                                                  message:
-                                                      widget.message ?? "test",
-                                                  ids: [id],
-                                                );
-                                              }
-                                            }
                                           },
                                           name: "${e.firstName} ${e.lastName}",
                                           email: e.email,

@@ -13,30 +13,36 @@ class VerticalMenuBody extends StatefulWidget {
     this.resId,
     required this.isAdmin,
     this.searchQuery,
+    this.isSliver = false,
   });
   final bool? showRow;
   final bool? edit;
   final String? resId;
   final bool isAdmin;
   final String? searchQuery;
+  final bool isSliver;
 
   @override
   State<VerticalMenuBody> createState() => _VerticalMenuBodyState();
 }
 
 class _VerticalMenuBodyState extends State<VerticalMenuBody> {
-  final ScrollController _scrollController = ScrollController();
+  late ScrollController _scrollController;
 
   @override
   void initState() {
     super.initState();
-    // Initial load with refresh
+    _scrollController = ScrollController();
+    
+    // Initial load attempt (safe to call multiple times if handled by cubit)
     context.read<ItemCubit>().getAllItems(
       resId: widget.resId ?? "",
     );
 
-    // Add scroll listener for pagination
-    _scrollController.addListener(_onScroll);
+    if (!widget.isSliver) {
+      // Add scroll listener for pagination only if NOT using external controller
+      _scrollController.addListener(_onScroll);
+    }
   }
 
   void _onScroll() {
@@ -92,12 +98,15 @@ class _VerticalMenuBodyState extends State<VerticalMenuBody> {
 
         // Show loading for initial load
         if (state is GetItemLoading && allItems.isEmpty) {
+          if (widget.isSliver) {
+            return const SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()));
+          }
           return const Center(child: CircularProgressIndicator());
         }
 
         // Show "No items found" for search
         if (items.isEmpty && (widget.searchQuery?.isNotEmpty ?? false)) {
-          return Center(
+          Widget emptyWidget = Center(
             child: Padding(
               padding: const EdgeInsets.all(32.0),
               child: Column(
@@ -124,9 +133,16 @@ class _VerticalMenuBodyState extends State<VerticalMenuBody> {
               ),
             ),
           );
+          if(widget.isSliver) {
+            return SliverToBoxAdapter(child: emptyWidget);
+          }
+          return emptyWidget;
         }
 
         if (filteredItemCount == 0) {
+          if (widget.isSliver) {
+            return const SliverToBoxAdapter(child: Center(child: Text('No items available')));
+          }
           return const Center(child: Text('No items available'));
         }
 
@@ -138,6 +154,42 @@ class _VerticalMenuBodyState extends State<VerticalMenuBody> {
                     widget.showRow != false)
                 ? 1
                 : 0);
+        
+        if (widget.isSliver) {
+          return SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                 if (!isSearching &&
+                    cubit.hasMoreItems &&
+                    index >= filteredItemCount) {
+                  return const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Center(child: CircularProgressIndicator()),
+                  );
+                }
+
+                if (index < 0 || index >= filteredItemCount) {
+                  return const SizedBox.shrink();
+                }
+
+                final item = items[index];
+                return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: buildMenuItem(
+                      false,
+                      items: item,
+                      res: cubit.resturant,
+                      context,
+                      widget.isAdmin,
+                      edit: widget.edit,
+                      item,
+                      showRow: widget.showRow ?? true,
+                    ));
+              },
+              childCount: itemCount,
+            ),
+          );
+        }
 
         return RefreshIndicator(
           onRefresh: () async {
@@ -147,7 +199,9 @@ class _VerticalMenuBodyState extends State<VerticalMenuBody> {
             controller: _scrollController,
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
-            physics: const AlwaysScrollableScrollPhysics(),
+            physics: widget.isAdmin
+                ? const NeverScrollableScrollPhysics()
+                : const AlwaysScrollableScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 16),
             itemCount: itemCount,
             itemBuilder: (context, index) {

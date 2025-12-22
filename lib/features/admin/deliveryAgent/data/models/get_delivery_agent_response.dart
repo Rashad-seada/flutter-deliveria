@@ -18,30 +18,30 @@ class GetDeliveryAgentResponse {
 class AgentModel {
   @JsonKey(name: '_id')
   final String id;
-  final String name;
-  final String phone;
+  final String? name;
+  final String? phone;
   @JsonKey(name: 'user_name')
-  final String userName;
-  final String password;
-  final bool ban;
-  final String createdAt;
-  final String updatedAt;
+  final String? userName;
+  final String? password;
+  final bool? ban;
+  final String? createdAt;
+  final String? updatedAt;
   @JsonKey(name: '__v')
-  final int v;
+  final int? v;
 
   @JsonKey(fromJson: _ordersFromJson, toJson: _ordersToJson)
   final List<OrderModelAgent>? orders;
 
   AgentModel({
     required this.id,
-    required this.name,
-    required this.phone,
-    required this.userName,
-    required this.password,
-    required this.ban,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.v,
+    this.name,
+    this.phone,
+    this.userName,
+    this.password,
+    this.ban,
+    this.createdAt,
+    this.updatedAt,
+    this.v,
     this.orders,
   });
 

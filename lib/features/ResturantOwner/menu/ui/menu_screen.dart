@@ -19,6 +19,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../logic/cubit/item_cubit.dart';
+
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key, this.resId});
   final String? resId;
@@ -31,12 +33,15 @@ String? _sharedPrefResturantId;
 
 class _MenuScreenState extends State<MenuScreen> {
   final TextEditingController _searchController = TextEditingController();
+  late ScrollController _scrollController;
   String _searchQuery = '';
 
   @override
   void initState() {
     super.initState();
     _loadResturantId();
+    _scrollController = ScrollController();
+    _scrollController.addListener(_onScroll);
 
     // Listen to search input changes
     _searchController.addListener(() {
@@ -46,9 +51,22 @@ class _MenuScreenState extends State<MenuScreen> {
     });
   }
 
+  void _onScroll() {
+    // Only handle pagination for Grid View here.
+    // List View (VerticalMenuBody) has its own internal controller/scrolling logic.
+    final menuCubit = context.read<MenuResturantCubit>();
+    if (menuCubit.state.toggleToHorizental) {
+       if (_scrollController.position.pixels >=
+          _scrollController.position.maxScrollExtent * 0.8) {
+        context.read<ItemCubit>().loadMoreItems();
+      }
+    }
+  }
+
   @override
   void dispose() {
     _searchController.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -78,39 +96,56 @@ class _MenuScreenState extends State<MenuScreen> {
           return BlocBuilder<FilterCategoryCubit, FilterCategoryState>(
             builder: (context, filterState) {
               final cubit = context.read<FilterCategoryCubit>();
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 16.0,
-                  horizontal: 10,
-                ),
-                child: SingleChildScrollView(
-                  child: GetAllItemsBlocListener(
-                    child: Column(
-                      children: [
-                        SearchRowWithController(
-                          controller: _searchController,
-                          showButton: false,
-                          showOffers: true,
-                          resId: widget.resId ?? _sharedPrefResturantId,
-                          sortedPriceItems: cubit.sortedPriceItems,
+              return RefreshIndicator(
+                onRefresh: () async {
+                   final itemCubit = context.read<ItemCubit>();
+                   await itemCubit.getAllItems(resId: widget.resId ?? _sharedPrefResturantId ?? "");
+                },
+                child: CustomScrollView(
+                  controller: _scrollController,
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 16.0,
+                          horizontal: 10,
                         ),
-                        verticalSpace(15),
-
-                        FoodMenuTextResturant(state: state),
-                        verticalSpace(20),
-
-                        state.toggleToHorizental
-                            ? HorizentalBodyForResturantOwnerWithSearch(
-                              edit: true,
-                              searchQuery: _searchQuery,
-                            )
-                            : VerticalMenuBodyForResturant(
-                              edit: true,
-                              searchQuery: _searchQuery,
+                        child: Column(
+                          children: [
+                            SearchRowWithController(
+                              controller: _searchController,
+                              showButton: false,
+                              showOffers: true,
+                              resId: widget.resId ?? _sharedPrefResturantId,
+                              sortedPriceItems: cubit.sortedPriceItems,
                             ),
-                      ],
+                            verticalSpace(15),
+                            FoodMenuTextResturant(state: state),
+                            verticalSpace(20),
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
+                    state.toggleToHorizental
+                        ? SliverPadding(
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            sliver: HorizentalBodyForResturantOwnerWithSearch(
+                              edit: true,
+                              searchQuery: _searchQuery,
+                              isSliver: true,
+                            ),
+                          )
+                        : SliverToBoxAdapter(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10),
+                              child: VerticalMenuBodyForResturant(
+                                edit: true,
+                                searchQuery: _searchQuery,
+                              ),
+                            ),
+                          ),
+                    const SliverToBoxAdapter(child: SizedBox(height: 20)),
+                  ],
                 ),
               );
             },

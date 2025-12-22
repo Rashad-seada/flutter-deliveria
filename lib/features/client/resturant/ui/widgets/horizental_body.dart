@@ -27,24 +27,32 @@ class HorizentalBodyForUser extends StatefulWidget {
     this.resId,
     required this.isAdmin,
     this.searchQuery,
+    this.isSliver = false,
   });
   final bool? edit;
   final String? resId;
   final bool isAdmin;
   final String? searchQuery;
+  final bool isSliver;
 
   @override
   State<HorizentalBodyForUser> createState() => _HorizentalBodyForUserState();
 }
 
 class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
-  final ScrollController _scrollController = ScrollController();
+  late ScrollController _scrollController;
 
   @override
   void initState() {
     super.initState();
+    _scrollController = ScrollController();
+    if (!widget.isSliver) {
+      _scrollController.addListener(_onScroll);
+    }
+    // Only load initial items if NOT in sliver mode or if we want to force load.
+    // Usually the parent or this widget should trigger load.
+    // Keeping this safe:
     context.read<ItemCubit>().getAllItems(resId: widget.resId ?? "");
-    _scrollController.addListener(_onScroll);
   }
 
   void _onScroll() {
@@ -109,13 +117,16 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
         final enabledItems = _filterItems(allEnabledItems, widget.searchQuery);
 
         if (state is GetItemLoading && enabledItems.isEmpty) {
+          if (widget.isSliver) {
+            return const SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()));
+          }
           return const Center(child: CircularProgressIndicator());
         }
 
         if (enabledItems.isEmpty) {
-          // If searching and empty, show specific "no results" 
+          Widget emptyWidget;
           if (widget.searchQuery != null && widget.searchQuery!.isNotEmpty) {
-            return Center(
+            emptyWidget = Center(
               child: Padding(
                 padding: const EdgeInsets.all(32.0),
                 child: Column(
@@ -142,17 +153,58 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
                 ),
               ),
             );
+          } else {
+            emptyWidget = const Center(child: Text('No items available'));
           }
-          return const Center(child: Text('No items available'));
+
+          if (widget.isSliver) {
+            return SliverToBoxAdapter(child: emptyWidget);
+          }
+          return emptyWidget;
+        }
+
+        if (widget.isSliver) {
+          return SliverGrid(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 5.w,
+              mainAxisSpacing: 10.h,
+              childAspectRatio: 0.75,
+            ),
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                   if (index >= enabledItems.length) {
+                  // Trigger load more when loader becomes visible
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                     if (context.mounted) {
+                       context.read<ItemCubit>().loadMoreItems();
+                     }
+                  });
+                  return const Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: CircularProgressIndicator(),
+                    ),
+                  );
+                }
+                final item = enabledItems[index];
+                return _buildItemCard(item, cubit);
+              },
+              childCount: enabledItems.length + (cubit.hasMoreItems ? 1 : 0),
+            ),
+          );
         }
 
         return RefreshIndicator(
           onRefresh: () async {
             await cubit.getAllItems(resId: widget.resId ?? "",);
           },
-          child: GridView.builder(
+            child: GridView.builder(
             controller: _scrollController,
             shrinkWrap: true,
+            physics: widget.isAdmin
+                ? const NeverScrollableScrollPhysics()
+                : const AlwaysScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 5.w,
@@ -161,8 +213,12 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
             ),
             itemCount: enabledItems.length + (cubit.hasMoreItems ? 1 : 0),
             itemBuilder: (context, index) {
-              // Loading indicator at the end for paging
               if (index >= enabledItems.length) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  if (context.mounted) {
+                    context.read<ItemCubit>().loadMoreItems();
+                  }
+                });
                 return const Center(
                   child: Padding(
                     padding: EdgeInsets.all(16.0),
@@ -170,9 +226,17 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
                   ),
                 );
               }
-
               final item = enabledItems[index];
-              return GestureDetector(
+              return _buildItemCard(item, cubit);
+            },
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildItemCard(dynamic item, ItemCubit cubit) {
+    return GestureDetector(
                 onTap: widget.isAdmin
                     ? () {}
                     : () {
@@ -344,10 +408,7 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
                         ),
                       ),
               );
-            },
-          ),
-        );
-      },
-    );
-  }
+            }
+
 }
+

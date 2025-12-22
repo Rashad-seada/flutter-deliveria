@@ -6,6 +6,7 @@ import 'package:delveria/core/routing/routes.dart';
 import 'package:delveria/core/theme/color.dart';
 import 'package:delveria/core/theme/styles.dart';
 import 'package:delveria/core/widgets/add_icon_container.dart';
+import 'package:delveria/core/widgets/app_button.dart';
 import 'package:delveria/core/widgets/search_row.dart';
 import 'package:delveria/features/ResturantOwner/menu/logic/cubit/item_cubit.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/logic/cubit/notifications_cubit.dart';
@@ -45,7 +46,7 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
   List<String> _getAllRestaurantIds(List allRes) {
     return allRes
         .map<String>((e) {
-          if (e is Map && e.containsKey('id')) return e['id'].toString();
+             if (e is Map && e.containsKey('id')) return e['id'].toString();
           if (e is Map && e.containsKey('_id')) return e['_id'].toString();
           if (e.id != null) return e.id.toString();
           if (e._id != null) return e._id.toString();
@@ -55,14 +56,15 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
         .toList();
   }
 
-  void _sendNotificationToRestaurants({
+  Future<void> _sendNotificationToRestaurants({
     required String message,
     required List<String> ids,
-  }) {
+  }) async {
     final notificationCubit = context.read<NotificationsCubit>();
-    notificationCubit.createNotification(
+    await notificationCubit.createNotification(
       body: {"message": message, "ids": ids},
     );
+    if (!mounted) return;
     Navigator.pop(context); // Go back after sending
   }
   final GlobalKey<RefreshIndicatorState> _refreshKey =
@@ -78,6 +80,62 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar:  widget.isFromNotification == true
+          ? Container(
+            color: Colors.white,
+            padding: const EdgeInsets.all(16.0),
+            child: SafeArea(
+              child: AppButton(
+                title:
+                    "${"Send"} (${isSelectedList.where((e) => e).length})",
+                onPressed: () {
+                   final cubit = context.read<AllresturantsadminCubit>();
+                    final bool isSearching = query.trim().isNotEmpty;
+                    final List allRes =
+                        isSearching ? cubit.searchResturants : cubit.allResturants;
+                  
+                  List<String> selectedIds = [];
+                  for (int i = 0; i < allRes.length; i++) {
+                    if (isSelectedList[i]) {
+                       final rest = allRes[i];
+                       String? id;
+                        if (rest is Map && rest.containsKey('id'))
+                          id = rest['id'].toString();
+                        else if (rest is Map &&
+                            rest.containsKey('_id'))
+                          id = rest['_id'].toString();
+                        else if (rest.id != null)
+                          id = rest.id.toString();
+                        else if (rest._id != null)
+                          id = rest._id.toString();
+                        
+                        if (id != null && id.isNotEmpty) {
+                          selectedIds.add(id);
+                        }
+                    }
+                  }
+
+                  if (selectedIds.isNotEmpty) {
+                    _sendNotificationToRestaurants(
+                      message: widget.message ?? "test",
+                      ids: selectedIds,
+                    );
+                  } else {
+                     ScaffoldMessenger.of(
+                                            context,
+                                          ).showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                "Please select a restaurant or choose Send To All.",
+                                              ),
+                                            ),
+                                          );
+                  }
+                },
+              ),
+            ),
+          )
+          : null,
       body: SafeArea(
         child: Column(
           children: [
@@ -161,38 +219,13 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
                                     onTap: () {
                                       setState(() {
                                         sendToAll = !sendToAll;
+                                         // Select/Deselect all based on sendToAll
+                                          for (var i = 0;
+                                              i < isSelectedList.length;
+                                              i++) {
+                                            isSelectedList[i] = sendToAll;
+                                          }
                                       });
-                                      final message = widget.message ?? "test";
-                                      if (sendToAll) {
-                                        // Send to all restaurants
-                                        final ids = _getAllRestaurantIds(
-                                          allRes,
-                                        );
-                                        if (ids.isNotEmpty) {
-                                          _sendNotificationToRestaurants(
-                                            message: message,
-                                            ids: ids,
-                                          );
-                                        }
-                                      } else if (widget.selectedIds != null &&
-                                          widget.selectedIds!.isNotEmpty) {
-                                        // Send to selected restaurant(s)
-                                        _sendNotificationToRestaurants(
-                                          message: message,
-                                          ids: widget.selectedIds!,
-                                        );
-                                      } else {
-                                        // Show warning
-                                        ScaffoldMessenger.of(
-                                          context,
-                                        ).showSnackBar(
-                                          SnackBar(
-                                            content: Text(
-                                              "Please select a restaurant or choose Send To All.",
-                                            ),
-                                          ),
-                                        );
-                                      }
                                     },
                                     child: Container(
                                       width: 32.w,
@@ -273,25 +306,6 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
                                         isSelectedList[entry.key] =
                                             !isSelectedList[entry.key];
                                       });
-                                      final rest = allRes[entry.key];
-                                      String? id;
-                                      if (rest is Map && rest.containsKey('id'))
-                                        id = rest['id'].toString();
-                                      else if (rest is Map &&
-                                          rest.containsKey('_id'))
-                                        id = rest['_id'].toString();
-                                      else if (rest.id != null)
-                                        id = rest.id.toString();
-                                      else if (rest._id != null)
-                                        id = rest._id.toString();
-                                      if (id != null && id.isNotEmpty) {
-                                        final message =
-                                            widget.message ?? "test";
-                                        _sendNotificationToRestaurants(
-                                          message: message,
-                                          ids: [id],
-                                        );
-                                      }
                                     },
 
                                     index: entry.key,

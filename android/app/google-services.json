@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "295914680879",
-    "project_id": "delveria-f5847",
-    "storage_bucket": "delveria-f5847.firebasestorage.app"
+    "project_number": "764283484292",
+    "project_id": "delveria-657b0",
+    "storage_bucket": "delveria-657b0.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:295914680879:android:4afbdd6d8ec20adc47ccda",
+        "mobilesdk_app_id": "1:764283484292:android:8a72f494861c4df4062ad1",
         "android_client_info": {
           "package_name": "com.delveria.app"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBDRZ2NZYPLWjMtMHY_kZb0l_zgGrq-rIU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:295914680879:android:0b84103298cef3fd47ccda",
-        "android_client_info": {
-          "package_name": "com.example.delveria"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBDRZ2NZYPLWjMtMHY_kZb0l_zgGrq-rIU"
+          "current_key": "AIzaSyDbFowBj4YNU8Kq88bUG82ViRbcZuBwHys"
         }
       ],
       "services": {

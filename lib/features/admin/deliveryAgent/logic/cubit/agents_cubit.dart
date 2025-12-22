@@ -129,6 +129,7 @@ class AgentsCubit extends Cubit<AgentsState> {
 
   Future<void> getEachOrderDeatils(String id) async {
     emit(AgentsState.getEachOrderDetailsLoading());
+
     try {
       final response = await agentAdminRepo.getEachOrderDetails(id: id);
       response.when(

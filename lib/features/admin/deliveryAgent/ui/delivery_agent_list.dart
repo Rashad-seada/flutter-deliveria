@@ -227,8 +227,8 @@ class _DeliveryAgentsScreenState extends State<DeliveryAgentsScreen> {
                                         });
                                         cubit.banAgent(agentId: agent.value.id);
                                       },
-                                      name: agent.value.name,
-                                      phone: agent.value.phone,
+                                      name: agent.value.name ?? "--",
+                                      phone: agent.value.phone ?? "--",
                                       index: agent.key,
                                     ),
                                     SizedBox(height: 8),

@@ -41,48 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBzG5Ti7KbQ_7Db4hwuHUDAZW7Rj375jmk',
-    appId: '1:295914680879:web:46a7421ef9b686c147ccda',
-    messagingSenderId: '295914680879',
-    projectId: 'delveria-f5847',
-    authDomain: 'delveria-f5847.firebaseapp.com',
-    storageBucket: 'delveria-f5847.firebasestorage.app',
-    measurementId: 'G-JRD7Y99EDZ',
+    apiKey: 'AIzaSyBqHsj4Fv-IyFXZmoQIICpQ3W7t165PCCM',
+    appId: '1:764283484292:web:32d6494bc41333a3062ad1',
+    messagingSenderId: '764283484292',
+    projectId: 'delveria-657b0',
+    authDomain: 'delveria-657b0.firebaseapp.com',
+    storageBucket: 'delveria-657b0.firebasestorage.app',
+    measurementId: 'G-3KBKKQYMD6',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBDRZ2NZYPLWjMtMHY_kZb0l_zgGrq-rIU',
-    appId: '1:295914680879:android:0b84103298cef3fd47ccda',
-    messagingSenderId: '295914680879',
-    projectId: 'delveria-f5847',
-    storageBucket: 'delveria-f5847.firebasestorage.app',
+    apiKey: 'AIzaSyDbFowBj4YNU8Kq88bUG82ViRbcZuBwHys',
+    appId: '1:764283484292:android:8a72f494861c4df4062ad1',
+    messagingSenderId: '764283484292',
+    projectId: 'delveria-657b0',
+    storageBucket: 'delveria-657b0.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB6_YBPa03WdqlgulbrQ1n2LlakLUNG6iQ',
-    appId: '1:295914680879:ios:81825974ca5761c347ccda',
-    messagingSenderId: '295914680879',
-    projectId: 'delveria-f5847',
-    storageBucket: 'delveria-f5847.firebasestorage.app',
+    apiKey: 'AIzaSyDPgkDqwdRqYN1kaj5ok6NJKceMDCY5Kt8',
+    appId: '1:764283484292:ios:5aa81622391ba9ac062ad1',
+    messagingSenderId: '764283484292',
+    projectId: 'delveria-657b0',
+    storageBucket: 'delveria-657b0.firebasestorage.app',
     iosBundleId: 'com.delveria.app',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB6_YBPa03WdqlgulbrQ1n2LlakLUNG6iQ',
-    appId: '1:295914680879:ios:81825974ca5761c347ccda',
-    messagingSenderId: '295914680879',
-    projectId: 'delveria-f5847',
-    storageBucket: 'delveria-f5847.firebasestorage.app',
-    iosBundleId: 'com.delveria.app',
+    apiKey: 'AIzaSyDPgkDqwdRqYN1kaj5ok6NJKceMDCY5Kt8',
+    appId: '1:764283484292:ios:02550f513e784f6b062ad1',
+    messagingSenderId: '764283484292',
+    projectId: 'delveria-657b0',
+    storageBucket: 'delveria-657b0.firebasestorage.app',
+    iosBundleId: 'com.example.delveria',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBzG5Ti7KbQ_7Db4hwuHUDAZW7Rj375jmk',
-    appId: '1:295914680879:web:533ed8026ce551c447ccda',
-    messagingSenderId: '295914680879',
-    projectId: 'delveria-f5847',
-    authDomain: 'delveria-f5847.firebaseapp.com',
-    storageBucket: 'delveria-f5847.firebasestorage.app',
-    measurementId: 'G-YR3H9FZEFL',
+    apiKey: 'AIzaSyBqHsj4Fv-IyFXZmoQIICpQ3W7t165PCCM',
+    appId: '1:764283484292:web:435d04a9a7d397dc062ad1',
+    messagingSenderId: '764283484292',
+    projectId: 'delveria-657b0',
+    authDomain: 'delveria-657b0.firebaseapp.com',
+    storageBucket: 'delveria-657b0.firebasestorage.app',
+    measurementId: 'G-D4W47BV7FR',
   );
+
 }

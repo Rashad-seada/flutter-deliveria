@@ -20,9 +20,9 @@ class OrderModel {
   @JsonKey(name: '_id')
   final String? id;
   @JsonKey(name: 'order_id')
-  final int? orderId; // <-- Added order_id field, mapped correctly
-  @JsonKey(name: 'user_id')
-  final String? userId;
+  final int? orderId;
+  @JsonKey(name: 'user_id', fromJson: _userFromJson)
+  final UserModel? user;
   final List<RestaurantOrderModel>? orders;
   @JsonKey(name: 'final_price_without_delivery_cost')
   final dynamic finalPriceWithoutDeliveryCost;
@@ -46,7 +46,7 @@ class OrderModel {
     this.address,
     this.id,
     this.orderId,
-    this.userId,
+    this.user,
     this.orders,
     this.finalPriceWithoutDeliveryCost,
     this.finalDeliveryCost,
@@ -64,6 +64,42 @@ class OrderModel {
       _$OrderModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$OrderModelToJson(this);
+
+  // Handle user_id which can be null, a String, or a Map object
+  static UserModel? _userFromJson(dynamic value) {
+    if (value == null) return null;
+    try {
+      if (value is String) {
+        return UserModel(id: value);
+      }
+      if (value is Map<String, dynamic>) {
+        return UserModel.fromJson(value);
+      }
+      if (value is Map) {
+        return UserModel.fromJson(value.cast<String, dynamic>());
+      }
+    } catch (e) {
+      print('Error parsing user: $e');
+    }
+    return null;
+  }
+}
+
+@JsonSerializable()
+class UserModel {
+  @JsonKey(name: '_id')
+  final String? id;
+  @JsonKey(name: 'first_name')
+  final String? firstName;
+  @JsonKey(name: 'last_name')
+  final String? lastName;
+
+  UserModel({this.id, this.firstName, this.lastName});
+
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserModelToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -89,7 +125,9 @@ class AddressModel {
 
 @JsonSerializable()
 class CoordinatesModel {
+  @JsonKey(fromJson: _asString)
   final String? latitude;
+  @JsonKey(fromJson: _asString)
   final String? longitude;
 
   CoordinatesModel({
@@ -101,12 +139,30 @@ class CoordinatesModel {
       _$CoordinatesModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoordinatesModelToJson(this);
+
+  static String? _asString(dynamic value) => value?.toString();
+}
+
+@JsonSerializable()
+class RestaurantInfoModel {
+  @JsonKey(name: '_id')
+  final String? id;
+  final String? logo;
+  final String? name;
+  final String? phone;
+
+  RestaurantInfoModel({this.id, this.logo, this.name, this.phone});
+
+  factory RestaurantInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$RestaurantInfoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RestaurantInfoModelToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
 class RestaurantOrderModel {
-  @JsonKey(name: 'restaurant_id')
-  final String? restaurantId;
+  @JsonKey(name: 'restaurant_id', fromJson: _restaurantFromJson)
+  final RestaurantInfoModel? restaurant;
   final List<OrderItemModel>? items;
   @JsonKey(name: 'price_of_restaurant')
   final dynamic priceOfRestaurant;
@@ -117,7 +173,7 @@ class RestaurantOrderModel {
   final String? id;
 
   RestaurantOrderModel({
-    this.restaurantId,
+    this.restaurant,
     this.items,
     this.priceOfRestaurant,
     this.status,
@@ -129,6 +185,25 @@ class RestaurantOrderModel {
       _$RestaurantOrderModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$RestaurantOrderModelToJson(this);
+
+  // Handle restaurant_id which can be null, a String, or a Map object
+  static RestaurantInfoModel? _restaurantFromJson(dynamic value) {
+    if (value == null) return null;
+    try {
+      if (value is String) {
+        return RestaurantInfoModel(id: value);
+      }
+      if (value is Map<String, dynamic>) {
+        return RestaurantInfoModel.fromJson(value);
+      }
+      if (value is Map) {
+        return RestaurantInfoModel.fromJson(value.cast<String, dynamic>());
+      }
+    } catch (e) {
+      print('Error parsing restaurant: $e');
+    }
+    return null;
+  }
 }
 
 @JsonSerializable(explicitToJson: true)

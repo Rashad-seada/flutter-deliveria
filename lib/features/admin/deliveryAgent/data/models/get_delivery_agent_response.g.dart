@@ -23,14 +23,14 @@ Map<String, dynamic> _$GetDeliveryAgentResponseToJson(
 
 AgentModel _$AgentModelFromJson(Map<String, dynamic> json) => AgentModel(
   id: json['_id'] as String,
-  name: json['name'] as String,
-  phone: json['phone'] as String,
-  userName: json['user_name'] as String,
-  password: json['password'] as String,
-  ban: json['ban'] as bool,
-  createdAt: json['createdAt'] as String,
-  updatedAt: json['updatedAt'] as String,
-  v: (json['__v'] as num).toInt(),
+  name: json['name'] as String?,
+  phone: json['phone'] as String?,
+  userName: json['user_name'] as String?,
+  password: json['password'] as String?,
+  ban: json['ban'] as bool?,
+  createdAt: json['createdAt'] as String?,
+  updatedAt: json['updatedAt'] as String?,
+  v: (json['__v'] as num?)?.toInt(),
   orders: AgentModel._ordersFromJson(json['orders']),
 );
 
