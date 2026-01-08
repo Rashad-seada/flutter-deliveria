@@ -81,8 +81,8 @@ class OrderAddress {
 
 @JsonSerializable()
 class OrderCoordinates {
-  final String? latitude;
-  final String? longitude;
+  final double? latitude;
+  final double? longitude;
 
   OrderCoordinates({
     this.latitude,

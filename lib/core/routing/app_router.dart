@@ -159,6 +159,9 @@ class AppRouter {
                     create: (_) => getIt()..getSliders(),
                   ),
                   BlocProvider<AllresturantsadminCubit>(create: (_) => getIt()),
+                  BlocProvider<GetOrdersCubit>(
+                    create: (_) => getIt()..getOrdersUser(),
+                  ),
                 ],
                 child: BottomNavBarScreen(selectedIndex: 0),
               ),
@@ -182,6 +185,9 @@ class AppRouter {
                     create: (_) => getIt()..getSliders(),
                   ),
                   BlocProvider<AllresturantsadminCubit>(create: (_) => getIt()),
+                  BlocProvider<GetOrdersCubit>(
+                    create: (_) => getIt()..getOrdersUser(),
+                  ),
                 ],
                 child: BottomNavBarScreen(selectedIndex: selectedIndex),
               ),

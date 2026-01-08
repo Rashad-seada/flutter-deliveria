@@ -21,5 +21,6 @@ class SlidersState<T> with _$SlidersState {
   const factory SlidersState.searchRestuantItemLoading() = SearchRestuantItemLoading;
   const factory SlidersState.searchRestuantItemSuccess(T data  ) = SearchRestuantItemSuccess<T>;
   const factory SlidersState.searchRestuantItemFail(ApiErrorModel error ) = SearchRestuantItemFail;
-
 }
+
+

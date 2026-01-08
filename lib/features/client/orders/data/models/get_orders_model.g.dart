@@ -86,8 +86,8 @@ Map<String, dynamic> _$OrderAddressToJson(OrderAddress instance) =>
 
 OrderCoordinates _$OrderCoordinatesFromJson(Map<String, dynamic> json) =>
     OrderCoordinates(
-      latitude: json['latitude'] as String?,
-      longitude: json['longitude'] as String?,
+      latitude: json['latitude'] as double?,
+      longitude: json['longitude'] as double?,
     );
 
 Map<String, dynamic> _$OrderCoordinatesToJson(OrderCoordinates instance) =>

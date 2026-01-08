@@ -505,6 +505,56 @@ class ItemCubit extends Cubit<ItemState> {
     }
   }
 
+  /// Filters items to show only those with active offers/discounts
+  /// An item has an offer if any of its sizes has offer > 0 && offer < 100
+  void getOffersOnly({required String resId}) async {
+    if (isClosed) return;
+    emit(ItemState.getItemLoading());
+    try {
+      final res = await itemsRepo.getAllItem(code: resId);
+      if (isClosed) return;
+      res.when(
+        success: (itemRes) {
+          resturant = itemRes.response?.restaurant;
+          
+          // Filter items with active offers
+          final allItemsFromBackend = itemRes.response?.items ?? [];
+          print("🎁 getOffersOnly: Total items from API: ${allItemsFromBackend.length}");
+          
+          _allItemsFromBackend = allItemsFromBackend.where((item) {
+            if (item.sizes == null || item.sizes!.isEmpty) return false;
+            return item.sizes!.any((size) {
+              final offer = size.offer;
+              final hasOffer = offer != null && offer > 0 && offer < 100;
+              if (hasOffer) {
+                print("🎁 Item '${item.name}' has offer: $offer%");
+              }
+              return hasOffer;
+            });
+          }).toList();
+          
+          print("🎁 getOffersOnly: Items with offers: ${_allItemsFromBackend?.length ?? 0}");
+
+          // Reset pagination and load first page
+          currentPage = 1;
+          allItems = [];
+          _loadItemsForCurrentPage();
+          
+          print("🎁 getOffersOnly: allItems count after pagination: ${allItems?.length ?? 0}");
+
+          if (!isClosed) emit(ItemState.getItemSuccess(itemRes));
+        },
+        failure: (error) {
+          print("🔥 getOffersOnly failed: ${error.message}");
+          if (!isClosed) emit(ItemState.getItemFail(error));
+        },
+      );
+    } catch (e) {
+      print("🔥 getOffersOnly exception: $e");
+      if (!isClosed) emit(ItemState.getItemFail(ApiErrorHandler.handle(e)));
+    }
+  }
+
   void getItemCategories() async {
     emit(ItemState.getItemsCategoriesLoading());
     try {

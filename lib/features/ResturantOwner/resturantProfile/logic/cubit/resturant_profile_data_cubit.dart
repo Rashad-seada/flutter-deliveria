@@ -124,7 +124,7 @@ class ResturantProfileDataCubit extends Cubit<ResturantProfileDataState> {
             cityName = "";
           }
 
-          emit(ResturantProfileDataState.success(resturantProfiledata));
+          if (!isClosed) emit(ResturantProfileDataState.success(resturantProfiledata));
         },
         failure: (error) {
           emit(ResturantProfileDataState.fail(error));

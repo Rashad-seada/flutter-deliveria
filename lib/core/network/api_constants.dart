@@ -63,6 +63,11 @@ class ApiConstants {
       'f96f2653bcffae32c7b1939e86f06869a95f107fd31e023bd21ad04e6b7eeb48';
 
   static var piplineId = '68f3aff0dddc0839d5019f3b';
+
+  // Offers API endpoints
+  static const String getRestaurantsWithOffersLink = "/restaurants/with_offers";
+  static const String getRestaurantOffersLink = "/restaurants"; // /{id}/offers
+  static const String getRestaurantDetailsLink = "/restaurants/details"; // /{id}
 }
 
 class ApiErrors {

@@ -92,19 +92,37 @@ class _FoodTypeTapsState extends State<FoodTypeTaps> {
               height: 33.h,
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                itemCount: cubit.allItemsCategoriesUser.length,
+                // +1 for the "Offers" tab at the beginning
+                itemCount: cubit.allItemsCategoriesUser.length + 1,
                 itemBuilder: (context, index) {
+                  // First item is always "Offers" tab
+                  if (index == 0) {
+                    return buildCategoryTab(
+                      AppStrings.discount.tr(), // "Offers" / "العروض"
+                      cubit.isSelectedFilter == -1, // -1 indicates Offers tab
+                      () {
+                        cubit.getOffersOnly(
+                          resId: cubit.allItemsCategoriesUser.isNotEmpty
+                              ? cubit.allItemsCategoriesUser[0].restaurantId
+                              : cubit.resturant?.id ?? "",
+                        );
+                        cubit.updateIsSelectedFilter(-1); // -1 for Offers
+                      },
+                    );
+                  }
+                  // Adjust index for regular categories (index - 1)
+                  final categoryIndex = index - 1;
                   return buildCategoryTab(
                     context.locale.languageCode == "en"
-                        ? cubit.allItemsCategoriesUser[index].nameEn
-                        : cubit.allItemsCategoriesUser[index].nameAr,
-                    cubit.isSelectedFilter == index,
+                        ? cubit.allItemsCategoriesUser[categoryIndex].nameEn
+                        : cubit.allItemsCategoriesUser[categoryIndex].nameAr,
+                    cubit.isSelectedFilter == categoryIndex,
                     () {
                       cubit.filterItemCategoriesUser(
-                        cateId: cubit.allItemsCategoriesUser[index].id ?? "",
-                        resId: cubit.allItemsCategoriesUser[index].restaurantId,
+                        cateId: cubit.allItemsCategoriesUser[categoryIndex].id ?? "",
+                        resId: cubit.allItemsCategoriesUser[categoryIndex].restaurantId,
                       );
-                      cubit.updateIsSelectedFilter(index);
+                      cubit.updateIsSelectedFilter(categoryIndex);
                     },
                   );
                 },
@@ -115,28 +133,31 @@ class _FoodTypeTapsState extends State<FoodTypeTaps> {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.only(top: 4.h),
-                child:
-                    showHorizontal
+                child: Builder(
+                  builder: (context) {
+                    // When Offers tab is selected (index -1), use first category's restaurant ID
+                    // Otherwise use the selected category's restaurant ID
+                    final resId = cubit.isSelectedFilter == -1
+                        ? (cubit.allItemsCategoriesUser.isNotEmpty
+                            ? cubit.allItemsCategoriesUser[0].restaurantId
+                            : cubit.resturant?.id ?? "")
+                        : cubit.allItemsCategoriesUser[cubit.isSelectedFilter].restaurantId;
+
+                    return showHorizontal
                         ? HorizentalBodyForUser(
-                          resId:
-                              cubit
-                                  .allItemsCategoriesUser[cubit
-                                      .isSelectedFilter]
-                                  .restaurantId,
-                          isAdmin: false,
-                          searchQuery: widget.searchQuery,
-                        )
+                            resId: resId,
+                            isAdmin: false,
+                            searchQuery: widget.searchQuery,
+                          )
                         : VerticalMenuBody(
-                          isAdmin: false,
-                          resId:
-                              cubit
-                                  .allItemsCategoriesUser[cubit
-                                      .isSelectedFilter]
-                                  .restaurantId,
-                          edit: false,
-                          showRow: true,
-                          searchQuery: widget.searchQuery,
-                        ),
+                            isAdmin: false,
+                            resId: resId,
+                            edit: false,
+                            showRow: true,
+                            searchQuery: widget.searchQuery,
+                          );
+                  },
+                ),
               ),
             ),
           ],

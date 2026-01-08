@@ -19,6 +19,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+Color _getStatusColor(String status) {
+  switch (status) {
+    case "Delivered":
+    case "Completed":
+    case "Done":
+      return Colors.green.withOpacity(0.2);
+    case "Canceled":
+      return Colors.red.withOpacity(0.2);
+    default:
+      return Colors.orange.withOpacity(0.2);
+  }
+}
+
+Color _getStatusTextColor(String status) {
+   switch (status) {
+    case "Delivered":
+    case "Completed":
+    case "Done":
+      return Colors.green;
+    case "Canceled":
+      return Colors.red;
+    default:
+      return Colors.orange;
+  }
+}
+
 class MyOrderCard extends StatelessWidget {
   const MyOrderCard({
     super.key,
@@ -61,209 +87,160 @@ class MyOrderCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 16),
+        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 4.w),
+        padding: EdgeInsets.all(16.r),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16.r),
           color: themeState?.themeMode == ThemeMode.dark
               ? AppColors.darkGrey
               : Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
-              spreadRadius: 1,
-              blurRadius: 3,
-              offset: Offset(0, 1),
+              color: Colors.black.withOpacity(0.05),
+              spreadRadius: 0,
+              blurRadius: 10,
+              offset: Offset(0, 4),
             ),
           ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Header: Icon + Name + Status
             Row(
               children: [
-                CircleAvatar(
-                  radius: 20.r,
-                  backgroundColor: AppColors.primaryDeafult,
+                Container(
+                  padding: EdgeInsets.all(8.r),
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryDeafult.withOpacity(0.1),
+                    shape: BoxShape.circle,
+                  ),
                   child: Icon(
-                    Icons.shopping_basket_outlined,
-                    color: Colors.white,
+                    Icons.storefront_outlined,
+                    color: AppColors.primaryDeafult,
+                    size: 20.sp,
                   ),
                 ),
-                SizedBox(width: 12),
+                 horizontalSpace(12),
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      orders == true
-                          ? Row(
-                            children: [
-                              SizedBox(
-                                width: 120.w,
-                                child: Text(
-                                  restaurantName,
-                                  style: TextStyles.bimini16W700,
-                                ),
-                              ),
-                              Spacer(),
-                              multi ?? SizedBox(),
-                              horizontalSpace(10),
-
-                              Container(
-                                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                                width: 104.w,
-                                height: 24.h,
-                                decoration: BoxDecoration(
-                                  color: orderStatusColor,
-                                  borderRadius: BorderRadius.circular(
-                                    isDeliveryAgent == true ? 4 : 0,
-                                  ),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    orderStatus ?? "Recieved",
-                                    style: TextStyles.bimini16W400Body.copyWith(
-                                      color:
-                                          orderStatus == "Completed" ||
-                                                  orderStatus == "Done"
-                                              ? AppColors.darkGrey
-                                              : null,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                          : isDeliveryAgent == true
-                          ? Row(
-                            children: [
-                              SizedBox(
-                                width: 200.w,
-                                child: Text(
-                                  restaurantName,
-                                  style: TextStyles.bimini16W700,
-                                ),
-                              ),
-                              
-                            ],
-                          )
-                          : Row(
-                            children: [
-                              Text(orderNumber, style: TextStyles.bimini16W700),
-                              Spacer(),
-                              orderStatus!="Completed"?  Container(
-                                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                                width: 104.w,
-                                height: 24.h,
-                                decoration: BoxDecoration(
-                                  color: orderStatusColor,
-                                  borderRadius: BorderRadius.circular(
-                                   4 
-                                  ),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    orderStatus ?? "Recieved",
-                                    style: TextStyles.bimini16W400Body.copyWith(
-                                      color:
-                                          orderStatus == "Completed" ||
-                                                  orderStatus == "Done"
-                                              ? AppColors.darkGrey
-                                              : null,
-                                    ),
-                                  ),
-                                ),
-                              ):
-                              orderStatus == "Completed"
-                                  ? Text(
-                                    "Done",
-                                    style: TextStyles.bimini14W700.copyWith(
-                                      color: AppColors.green,
-                                    ),
-                                  )
-                                  : SizedBox(),
-                            ],
-                          ),
-                      verticalSpace(isDeliveryAgent == true ? 16 : 7),
-                      isDeliveryAgent == true
-                          ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                shippingPrice ?? "",
-                                style: TextStyles.bimini13W700Deafult.copyWith(
-                                  color:
-                                      themeState?.themeMode == ThemeMode.dark
-                                          ? AppColors.lightGrey
-                                          : AppColors.darkGrey,
-                                ),
-                              ),
-                              Text(
-                                price,
-                                style: TextStyles.bimini13W700Deafult.copyWith(
-                                  color:
-                                      themeState?.themeMode == ThemeMode.dark
-                                          ? AppColors.lightGrey
-                                          : AppColors.darkGrey,
-                                ),
-                              ),
-                            ],
-                          )
-                          : Text(
-                            price,
-                            style: TextStyles.bimini13W700Deafult.copyWith(
-                              color:
-                                  themeState?.themeMode == ThemeMode.dark
-                                      ? AppColors.lightGrey
-                                      : AppColors.darkGrey,
-                            ),
-                          ),
-                      verticalSpace(isDeliveryAgent == true ? 16 : 10),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              orderNumber,
-                              style: TextStyles.sen14W400.copyWith(
-                                color:
-                                    themeState?.themeMode == ThemeMode.dark
-                                        ? AppColors.grey
-                                        : AppColors.darkGrey,
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                            horizontalSpace(5),
-                            SizedBox(height: 20.h, child: VerticalDivider()),
-                            horizontalSpace(5),
-                            Text(date, style: TextStyles.bimini13W400Grey),
-                            horizontalSpace(5),
-                            SizedBox(height: 20.h, child: VerticalDivider()),
-                            horizontalSpace(10),
-                            Text(items, style: TextStyles.bimini13W400Grey),
-                          ],
-                        ),
-                      ),
-                    ],
+                  child: Text(
+                    restaurantName,
+                    style: TextStyles.bimini16W700.copyWith(fontSize: 16.sp),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                 horizontalSpace(8),
+                 if (multi != null) multi!,
+                 if (multi != null) horizontalSpace(8),
+                
+                // Status Chip
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                  decoration: BoxDecoration(
+                    color: _getStatusColor(orderStatus ?? ""),
+                    borderRadius: BorderRadius.circular(20.r),
+                  ),
+                  child: Text(
+                    orderStatus ?? "Recieved",
+                    style: TextStyles.bimini16W400Body.copyWith(
+                      color: _getStatusTextColor(orderStatus ?? ""),
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 12),
-            SizedBox(height: newOrders == true ? 0 : 16),
-            newOrders == true || orders == true
-                ? SizedBox()
-                : BlocBuilder<CarouselCubit, CarouselState>(
+            
+            verticalSpace(12),
+            Divider(color: AppColors.grey.withOpacity(0.2), height: 1),
+            verticalSpace(12),
+
+            // Body: Details
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "$orderNumber",
+                      style: TextStyles.sen14W400.copyWith(
+                        color: themeState?.themeMode == ThemeMode.dark
+                            ? AppColors.lightGrey
+                            : AppColors.grey,
+                         fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    verticalSpace(4),
+                    Text(
+                      date,
+                      style: TextStyles.bimini13W400Grey.copyWith(fontSize: 12.sp),
+                    ),
+                  ],
+                ),
+                
+                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      price,
+                      style: TextStyles.bimini16W700.copyWith(
+                        color: AppColors.primaryDeafult,
+                        fontSize: 15.sp,
+                      ),
+                    ),
+                    if (isDeliveryAgent == true && shippingPrice != null)
+                     Padding(
+                       padding: EdgeInsets.only(top: 4.h),
+                       child: Text(
+                          shippingPrice!,
+                          style: TextStyles.bimini13W400Grey.copyWith(fontSize: 12.sp),
+                        ),
+                     ),
+                  ],
+                ),
+              ],
+            ),
+
+            verticalSpace(12),
+            
+            // Items
+            if (items.isNotEmpty)
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+              decoration: BoxDecoration(
+                 color: themeState?.themeMode == ThemeMode.dark
+                    ? Colors.black12
+                    : AppColors.grey.withOpacity(0.3),
+                 borderRadius: BorderRadius.circular(8.r),
+              ),
+              width: double.infinity,
+              child: Text(
+                items,
+                style: TextStyles.bimini13W400Grey.copyWith(
+                  color: themeState?.themeMode == ThemeMode.dark ? Colors.white70 : AppColors.darkGrey,
+                  fontSize: 13.sp,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+
+
+            // Actions (Keep Logic)
+            if (!(newOrders == true || orders == true) && !isResturant) ...[
+               verticalSpace(16),
+               BlocBuilder<CarouselCubit, CarouselState>(
                   builder: (context, carouselState) {
                     return BlocBuilder<GetOrdersCubit, GetOrdersState>(
                       builder: (context, state) {
                         final cubit = context.read<GetOrdersCubit>();
-                        return isResturant
-                            ? SizedBox()
-                            : TrackOrderButtonRow(
+                        return TrackOrderButtonRow(
                               showSecond: isOngoing == true ? false : true,
                               fHeight: 38.h,
-                              fWidth: isOngoing == true ? 300.w : 148.w,
+                              fWidth: isOngoing == true ? 300.w : 148.w, // Fixed width 300.w fits within 318px constraint
                               sOnPressed: () {
                                 context.pushNamed(
                                   Routes.addReviewScreen,
@@ -314,7 +291,7 @@ class MyOrderCard extends StatelessWidget {
                                       ? AppStrings.trackOrder.tr()
                                       : AppStrings.reorder.tr(),
                               sHeight: 38.h,
-                              sWidth: 148.w,
+                              sWidth: 140.w,
                               sTitle:
                                   isOngoing == true
                                       ? AppStrings.cancel.tr()
@@ -325,6 +302,8 @@ class MyOrderCard extends StatelessWidget {
                     );
                   },
                 ),
+            ],
+
           ],
         ),
       ),

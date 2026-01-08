@@ -46,72 +46,107 @@ class SliderSection extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder:
-                        (_) => MultiBlocProvider(
-                          providers: [
-                            BlocProvider(
-                              create: (context) => ResturantMenuCubit(),
-                            ),
-                            BlocProvider(
-                              create: (context) => getIt<ItemCubit>(),
-                            ),
-                            BlocProvider(
-                              create:
-                                  (context) => getIt<AllresturantsadminCubit>(),
-                            ),
-                            BlocProvider(
-                              create:
-                                  (context) =>
-                                      getIt<FilterCategoryCubit>()
-                                        ..sortByPrice(resId: resId ?? ""),
-                            ),
-                            BlocProvider(
-                              create: (context) => getIt<FavoriteCubit>(),
-                            ),
-                          ],
-                          child: ResturantScreen(
-                            resturantAdmin: resturantAdmin.firstWhere(
-                              (e) =>
-                                  e.id == cubit.sliders[realIdx].restaurantId,
-                            ),
-                          ),
+                    builder: (_) => MultiBlocProvider(
+                      providers: [
+                        BlocProvider(
+                          create: (context) => ResturantMenuCubit(),
                         ),
-                  ),
-                );
-              },
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                    width: 342.w,
-                    height: 158.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: CachedNetworkImage(
-                        fit: BoxFit.cover,
-                        imageUrl:
-                            "${ApiConstants.baseUrl}/${cubit.sliders[index].image}",
-                        placeholder:
-                            (context, url) => Center(child: CustomLoading()),
-                        errorWidget: (context, url, error) {
-                          return Center(child: CustomLoading());
-                        },
+                        BlocProvider(
+                          create: (context) => getIt<ItemCubit>(),
+                        ),
+                        BlocProvider(
+                          create: (context) => getIt<AllresturantsadminCubit>(),
+                        ),
+                        BlocProvider(
+                          create: (context) =>
+                              getIt<FilterCategoryCubit>()
+                                ..sortByPrice(resId: resId ?? ""),
+                        ),
+                        BlocProvider(
+                          create: (context) => getIt<FavoriteCubit>(),
+                        ),
+                      ],
+                      child: ResturantScreen(
+                        resturantAdmin: resturantAdmin.firstWhere(
+                          (e) => e.id == cubit.sliders[realIdx].restaurantId,
+                        ),
                       ),
                     ),
                   ),
-                  // OffersContainer(),
-                ],
+                );
+              },
+              child: AnimatedScale(
+                scale: state.currentPage == index ? 1.0 : 0.95,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeOutCubic,
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 6.w),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.r),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        blurRadius: 16,
+                        offset: const Offset(0, 8),
+                        spreadRadius: 0,
+                      ),
+                    ],
+                  ),
+                  child: Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      // Main Image
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20.r),
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: 165.h,
+                          child: CachedNetworkImage(
+                            fit: BoxFit.cover,
+                            imageUrl:
+                                "${ApiConstants.baseUrl}/${cubit.sliders[index].image}",
+                            placeholder: (context, url) =>
+                                Center(child: CustomLoading()),
+                            errorWidget: (context, url, error) {
+                              return Center(child: CustomLoading());
+                            },
+                          ),
+                        ),
+                      ),
+                      // Gradient Overlay for better text visibility if needed
+                      Positioned.fill(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.r),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                Colors.transparent,
+                                Colors.black.withOpacity(0.3),
+                              ],
+                              stops: const [0.0, 0.6, 1.0],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             );
           },
           options: CarouselOptions(
-            height: 150.h,
-            viewportFraction: 1,
+            height: 165.h,
+            viewportFraction: 0.92,
             enableInfiniteScroll: false,
             autoPlay: true,
+            autoPlayInterval: const Duration(seconds: 4),
+            autoPlayAnimationDuration: const Duration(milliseconds: 800),
+            autoPlayCurve: Curves.easeInOutCubic,
+            enlargeCenterPage: true,
+            enlargeFactor: 0.15,
             onPageChanged: (index, reason) {
               context.read<CarouselCubit>().updateCurrentPage(index);
             },

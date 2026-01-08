@@ -13,7 +13,7 @@ class NotificationService {
       FlutterLocalNotificationsPlugin();
 
   static Future<void> initialize() async {
-    await Firebase.initializeApp();
+// await Firebase.initializeApp(); // Already initialized in main.dart
     await _initializeFirebaseMessaging();
     await _initializeLocalNotifications();
   }

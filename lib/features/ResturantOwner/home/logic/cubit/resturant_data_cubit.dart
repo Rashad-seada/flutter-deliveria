@@ -36,7 +36,7 @@ class ResturantDataCubit extends Cubit<ResturantDataState> {
             resData.restaurant.loacationMap,
           );
           print("city/location name: $cityName");
-          emit(ResturantDataState.success(resData));
+          if (!isClosed) emit(ResturantDataState.success(resData));
         },
         failure: (error) => emit(ResturantDataState.fail(error)),
       );

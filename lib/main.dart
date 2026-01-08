@@ -29,7 +29,8 @@ void main() async {
       path: 'assets/translation',
       fallbackLocale: const Locale("en"),
       saveLocale: true, 
-      child: Builder(
+      child: 
+      Builder(
         builder: (context) {
           return BlocProvider(
             create: (_) => LocaleCubit(context),

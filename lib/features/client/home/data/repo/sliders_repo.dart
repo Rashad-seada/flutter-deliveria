@@ -3,11 +3,14 @@ import 'dart:io';
 import 'package:delveria/core/network/api_error_handler.dart';
 import 'package:delveria/core/network/api_result.dart';
 import 'package:delveria/core/network/api_services.dart';
+import 'package:delveria/core/network/api_constants.dart';
+import 'package:delveria/core/network/dio_factory.dart';
 import 'package:delveria/features/admin/resturantAdmin/data/models/all_resturant_admin_response.dart';
 import 'package:delveria/features/admin/slider/data/models/create_slider_response.dart';
 import 'package:delveria/features/admin/slider/data/models/delete_slider_response.dart';
 import 'package:delveria/features/client/home/data/models/get_sliders_response.dart';
 import 'package:delveria/features/client/home/data/models/search_response.dart';
+import 'package:delveria/features/client/home/data/models/offers_response.dart';
 
 class SlidersRepo {
   final ApiServices apiServices;
@@ -76,4 +79,59 @@ class SlidersRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+
+  // ============ OFFERS API METHODS ============
+
+  /// Get restaurants with active offers for home carousel
+  Future<ApiResult<RestaurantsWithOffersResponse>> getRestaurantsWithOffers({
+    required double lat,
+    required double long,
+  }) async {
+    try {
+      final dio = DioFactory.getDio();
+      final response = await dio.get(
+        "${ApiConstants.baseUrl}${ApiConstants.getRestaurantsWithOffersLink}/$lat/$long",
+      );
+      final res = RestaurantsWithOffersResponse.fromJson(response.data);
+      return ApiResult.success(res);
+    } catch (e) {
+      print("🔥 error getting restaurants with offers: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  /// Get offer items for a specific restaurant (for Offers tab)
+  Future<ApiResult<RestaurantOffersResponse>> getRestaurantOffers({
+    required String restaurantId,
+  }) async {
+    try {
+      final dio = DioFactory.getDio();
+      final response = await dio.get(
+        "${ApiConstants.baseUrl}${ApiConstants.getRestaurantOffersLink}/$restaurantId/offers",
+      );
+      final res = RestaurantOffersResponse.fromJson(response.data);
+      return ApiResult.success(res);
+    } catch (e) {
+      print("🔥 error getting restaurant offers: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  /// Get restaurant details with has_offers flag
+  Future<ApiResult<RestaurantDetailsResponse>> getRestaurantDetails({
+    required String restaurantId,
+  }) async {
+    try {
+      final dio = DioFactory.getDio();
+      final response = await dio.get(
+        "${ApiConstants.baseUrl}${ApiConstants.getRestaurantDetailsLink}/$restaurantId",
+      );
+      final res = RestaurantDetailsResponse.fromJson(response.data);
+      return ApiResult.success(res);
+    } catch (e) {
+      print("🔥 error getting restaurant details: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
 }
+

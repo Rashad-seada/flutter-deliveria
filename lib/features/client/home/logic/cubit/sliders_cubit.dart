@@ -5,6 +5,7 @@ import 'package:delveria/features/ResturantOwner/menu/data/models/get_all_item_r
 import 'package:delveria/features/admin/resturantAdmin/data/models/all_resturant_admin_response.dart';
 import 'package:delveria/features/client/home/data/models/get_sliders_response.dart';
 import 'package:delveria/features/client/home/data/models/search_response.dart';
+import 'package:delveria/features/client/home/data/models/offers_response.dart';
 import 'package:delveria/features/client/home/data/repo/sliders_repo.dart';
 import 'package:delveria/features/client/home/logic/cubit/sliders_state.dart';
 import 'package:file_picker/file_picker.dart';
@@ -17,6 +18,14 @@ class SlidersCubit extends Cubit<SlidersState> {
   List<File?> selectedPhotos = List<File?>.filled(5, null, growable: false);
   List<ResturantAdmin> searchResturant = [];
   List<ItemModelSearch> searchResturantItemList = [];
+  
+  // Offers data
+  List<RestaurantWithOffers> restaurantsWithOffers = [];
+  List<OfferItem> restaurantOfferItems = [];
+  bool hasOffers = false;
+  int offersCount = 0;
+  num maxDiscount = 0;
+
   void getSliders() async {
     emit(SlidersState.loading());
     try {
@@ -141,6 +150,75 @@ class SlidersCubit extends Cubit<SlidersState> {
       );
     } catch (e) {
       emit(SlidersState.searchRestuantItemFail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  // ============ OFFERS METHODS ============
+
+  /// Get restaurants with active offers for home carousel
+  /// Does not emit state - just populates restaurantsWithOffers list
+  Future<void> getRestaurantsWithOffers({
+    required double lat,
+    required double long,
+  }) async {
+    try {
+      final response = await slidersRepo.getRestaurantsWithOffers(
+        lat: lat,
+        long: long,
+      );
+      response.when(
+        success: (offersData) {
+          restaurantsWithOffers = offersData.restaurants ?? [];
+          print("🎁 Found ${restaurantsWithOffers.length} restaurants with offers");
+        },
+        failure: (error) {
+          print("🔥 Failed to get restaurants with offers: ${error.message}");
+        },
+      );
+    } catch (e) {
+      print("🔥 Error getting restaurants with offers: $e");
+    }
+  }
+
+  /// Get offer items for a specific restaurant (for Offers tab)
+  Future<void> getRestaurantOffers({required String restaurantId}) async {
+    try {
+      final response = await slidersRepo.getRestaurantOffers(
+        restaurantId: restaurantId,
+      );
+      response.when(
+        success: (offersData) {
+          restaurantOfferItems = offersData.items ?? [];
+          print("🎁 Found ${restaurantOfferItems.length} offer items");
+        },
+        failure: (error) {
+          print("🔥 Failed to get restaurant offers: ${error.message}");
+        },
+      );
+    } catch (e) {
+      print("🔥 Error getting restaurant offers: $e");
+    }
+  }
+
+  /// Get restaurant details with has_offers flag
+  Future<void> getRestaurantDetails({required String restaurantId}) async {
+    try {
+      final response = await slidersRepo.getRestaurantDetails(
+        restaurantId: restaurantId,
+      );
+      response.when(
+        success: (detailsData) {
+          hasOffers = detailsData.restaurant?.hasOffers ?? false;
+          offersCount = detailsData.restaurant?.offersCount ?? 0;
+          maxDiscount = detailsData.restaurant?.maxDiscount ?? 0;
+          print("🎁 Restaurant hasOffers: $hasOffers, count: $offersCount");
+        },
+        failure: (error) {
+          print("🔥 Failed to get restaurant details: ${error.message}");
+        },
+      );
+    } catch (e) {
+      print("🔥 Error getting restaurant details: $e");
     }
   }
 }

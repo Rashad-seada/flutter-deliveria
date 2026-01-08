@@ -22,7 +22,7 @@ val keystoreProperties = Properties().apply {
 android {
     namespace = "com.delveria.app"
     compileSdk = 36
-    ndkVersion = "28.0.13004108"
+    ndkVersion = "27.3.13750724"
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
