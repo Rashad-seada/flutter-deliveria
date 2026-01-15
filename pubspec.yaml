@@ -87,3 +87,11 @@ flutter:
         - asset: assets/fonts/BiminiNormal.ttf
         - asset: assets/fonts/BiminiItalic.TTF
           style: italic
+    - family: Lantx
+      fonts:
+        - asset: assets/fonts/ArbFONTS-LANTX-Regular.otf
+        - asset: assets/fonts/ArbFONTS-LANTX-Bold.otf
+          weight: 700
+        - asset: assets/fonts/ArbFONTS-LANTX-BoldItalic.otf
+          weight: 700
+          style: italic

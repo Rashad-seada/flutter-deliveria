@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:delveria/core/network/api_constants.dart';
+import 'package:delveria/core/theme/animations.dart'; // [NEW]
 import 'package:delveria/core/theme/color.dart';
 import 'package:delveria/core/theme/styles.dart';
+import 'package:delveria/core/helper/spacing.dart'; // [NEW]
 import 'package:delveria/core/widgets/custom_loading.dart';
 import 'package:delveria/features/admin/resturantAdmin/data/models/super_categories_response.dart';
 import 'package:delveria/features/client/settings/logic/theme_cubit.dart';
@@ -26,81 +28,95 @@ class CategoriesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100.h,
+      height: 110.h, // Increased slightly for spring effect
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         itemCount: superCategories.length,
         itemBuilder: (context, index) {
           final category = superCategories[index];
-          // Fix: isSelected must be a bool. Compare the correct value.
-          final isSelected =
-              context.locale.languageCode == "en"
-                  ? category.nameEn == selectedSuperCategoryName
-                  : category.nameAr == selectedSuperCategoryName;
-          return GestureDetector(
-            onTap:
-                () => onSuperCategoryChanged(
-                  context.locale.languageCode == "en"
-                      ? category.nameEn
-                      : category.nameAr,
-                ),
-            child: Container(
-              margin: EdgeInsets.only(right: 15),
+          final isEn = context.locale.languageCode == "en";
+          final categoryName = isEn ? category.nameEn : category.nameAr;
+          final isSelected = categoryName == selectedSuperCategoryName;
+
+          return Padding(
+            padding: EdgeInsets.only(right: 15.w),
+            child: ScaleOnTap(
+              onTap: () => onSuperCategoryChanged(categoryName),
+              enableHaptic: true,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min, // Fixed: Prevent infinite expansion
                 children: [
-                  Container(
-                    width: 49.w,
-                    height: 62.h,
-                    decoration: BoxDecoration(
-                      color: isSelected ? AppColors.pink : AppColors.lightGrey,
-                      borderRadius: BorderRadius.circular(25),
-                      border:
-                          isSelected
-                              ? Border.all(
-                                color: AppColors.primaryDeafult,
-                                width: 2,
-                              )
-                              : null,
-                    ),
+                  // Icon/Image
+                  AnimatedContainer(
+                    duration: AppAnimations.modalSpringDuration,
+                    curve: Curves.easeOutCubic, // Fixed: Use stable curve instead of elasticOut
+                    width: isSelected ? 55.w : 49.w,
+                    height: isSelected ? 68.h : 62.h,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child:
-                          category.logo.isNotEmpty
-                              ? CachedNetworkImage(
-                                imageUrl:
-                                    "${ApiConstants.baseUrl}/${category.logo}",
-                                width: 30.w,
-                                placeholder:
-                                    (context, url) =>
-                                        Center(child: CustomLoading(size: 80)),
-                                errorWidget: (context, url, error) {
-                                  return Center(child: CustomLoading(size: 80));
-                                },
-                              )
-                              : Icon(
-                                Icons.category,
-                                color: AppColors.darkBrown,
-                              ),
+                      child: category.logo.isNotEmpty
+                          ? CachedNetworkImage(
+                              imageUrl: "${ApiConstants.baseUrl}/${category.logo}",
+                              fit: BoxFit.contain,
+                              placeholder: (context, url) =>
+                                  const Center(child: CustomLoading(size: 20)),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error, size: 20),
+                            )
+                          : Icon(
+                              Icons.category,
+                              color: isSelected 
+                                  ? AppColors.primaryDeafult 
+                                  : AppColors.darkBrown,
+                              size: isSelected ? 32.sp : 26.sp,
+                            ),
                     ),
                   ),
-                  SizedBox(height: 5),
+                  
+                  verticalSpace(4),
+                  
+                  // Text
                   BlocBuilder<ThemeCubit, ThemeState>(
                     builder: (context, state) {
-                      return Text(
-                        context.locale.languageCode == "en"
-                            ? category.nameEn
-                            : category.nameAr,
+                      final isDark = state.themeMode == ThemeMode.dark;
+                      return AnimatedDefaultTextStyle(
+                        duration: const Duration(milliseconds: 200),
                         style: TextStyles.bimini13W400Grey.copyWith(
-                          color:
-                              state.themeMode == ThemeMode.dark
-                                  ? AppColors.lightGreySecond
-                                  : AppColors.darkBrown,
-                          fontWeight:
-                              isSelected ? FontWeight.bold : FontWeight.normal,
+                          color: isSelected
+                              ? AppColors.primaryDeafult
+                              : (isDark ? AppColors.lightGreySecond : AppColors.darkBrown),
+                          fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
+                          fontSize: isSelected ? 14.sp : 13.sp,
                         ),
+                        child: Text(categoryName),
                       );
                     },
+                  ),
+                  
+                  verticalSpace(4),
+                  
+                  // Sliding Underline Indicator - Fixed: No animation of boxShadow list length
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeOutCubic, // Fixed: Use stable curve
+                    height: 3.h,
+                    width: isSelected ? 20.w : 0,
+                    decoration: BoxDecoration(
+                      color: isSelected ? AppColors.primaryDeafult : Colors.transparent,
+                      borderRadius: BorderRadius.circular(10.r),
+                      // Fixed: Always have same number of shadows, just toggle opacity
+                      boxShadow: [
+                        BoxShadow(
+                          color: isSelected 
+                              ? AppColors.primaryDeafult.withOpacity(0.4)
+                              : Colors.transparent,
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

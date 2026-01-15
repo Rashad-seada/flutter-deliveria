@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:delveria/core/di/dependancy_injection.dart';
 import 'package:delveria/core/helper/strings.dart';
+import 'package:delveria/core/theme/animations.dart'; // [NEW] For Shimmer
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_state.dart';
 import 'package:delveria/features/client/filter/ui/rating_filter_screen.dart';
@@ -84,6 +85,11 @@ class HomeTopRestaurantsSection extends StatelessWidget {
   Widget _buildTopRatedCarousel(BuildContext context) {
     return BlocBuilder<AllresturantsadminCubit, AllresturantsadminState>(
       builder: (context, state) {
+        // Show shimmer during loading
+        if (state is RatedLoading) {
+          return _buildShimmerCarousel();
+        }
+        
         final cubit = context.read<AllresturantsadminCubit>();
         final allRes = cubit.allRatedResturants;
         final showCount = allRes.length > 10 ? 10 : allRes.length;
@@ -126,6 +132,18 @@ class HomeTopRestaurantsSection extends StatelessWidget {
             isTopTen: true,
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildShimmerCarousel() {
+    return SizedBox(
+      height: 280,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        itemCount: 3,
+        itemBuilder: (context, index) => const ShimmerRestaurantCard(),
       ),
     );
   }

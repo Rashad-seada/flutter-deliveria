@@ -1,5 +1,6 @@
 import 'package:delveria/core/helper/shared_pref_helper.dart';
 import 'package:delveria/core/helper/spacing.dart';
+import 'package:delveria/core/theme/animations.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_state.dart';
 import 'package:delveria/features/client/home/logic/cubit/carousel_cubit.dart';
@@ -46,6 +47,7 @@ class _ScrollableContentState extends State<ScrollableContent> {
   int _topRestIndex = 0;
   int _nearbyRestIndex = 0;
   int _offersIndex = 0;
+  String? _selectedCategory; // [NEW]
 
   @override
   void initState() {
@@ -78,58 +80,119 @@ class _ScrollableContentState extends State<ScrollableContent> {
                   builder: (context, adminState) {
                     final admin = context.read<AllresturantsadminCubit>();
                     final restaurantsList = admin.allResturants;
-                    final showSliderSection = restaurantsList.isNotEmpty;
+                    final SlidersCubit cubit = context.read<SlidersCubit>(); // Get SlidersCubit instance
+                    final showSliderSection = cubit.sliders.isNotEmpty; // Fixed: Check sliders, not restaurants
+                    final AllresturantsadminCubit allResturantsCubit = context.read<AllresturantsadminCubit>(); // Get AllresturantsadminCubit instance
+                    final superCategoriesCubit = context.read<AllresturantsadminCubit>(); // Assuming this is the cubit for super categories
 
                     return Column(
                       children: [
-                        // Search Bar
-                        _buildSearchBar(),
-                        verticalSpace(20),
-
-                        // Active Order Tracking
-                        _buildActiveOrderSection(),
-
-                        // Hero Slider
-                        _buildSliderSection(carouselState, restaurantsList, showSliderSection),
-                        verticalSpace(20),
-
-                        // Carousel Dots
-                        ReactiveDots(
-                          state: carouselState,
-                          themeState: widget.themeState,
-                          cubit: context.read<SlidersCubit>(),
+                        StaggeredSlideFade(
+                          index: 0,
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.w),
+                            child: SearchBarSection(
+                              themeState: widget.themeState,
+                              lat: widget.lat,
+                              long: widget.long,
+                              onChanged: (value) async {
+                                setState(() {
+                                  query = value;
+                                });
+                                await context.read<SlidersCubit>().searchResturantUserSide(
+                                  query: query,
+                                  lat: widget.lat,
+                                  long: widget.long,
+                                );
+                              },
+                            ),
+                          ),
                         ),
+                        verticalSpace(15),
+                        BlocBuilder<GetOrdersCubit, GetOrdersState>(
+                          builder: (context, state) {
+                            final orders = context.read<GetOrdersCubit>().orders;
+                            final activeOrder = _findOngoingOrder(orders);
+                            
+                            if (activeOrder == null) return SizedBox.shrink();
+
+                            return StaggeredSlideFade(
+                              index: 1,
+                              child: Padding(
+                                padding: EdgeInsets.only(bottom: 15.h),
+                                child: ActiveOrderTrackingBar(
+                                  order: activeOrder,
+                                  themeState: widget.themeState,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                        if (showSliderSection) // Only show slider if there are sliders
+                          StaggeredSlideFade(
+                            index: 2,
+                            child: SliderSection(
+                              state: carouselState,
+                              resId: restaurantsList.map((e) => e.id).toString(),
+                              resturantAdmin: restaurantsList.cast(),
+                            ),
+                          ),
+                        verticalSpace(10),
+                        if (showSliderSection) // Only show dots if slider is shown
+                          StaggeredSlideFade(
+                            index: 3,
+                            child: ReactiveDots(
+                              state: carouselState,
+                              themeState: widget.themeState,
+                              cubit: context.read<SlidersCubit>(),
+                            ),
+                          ),
                         verticalSpace(20),
-
-                        // Categories
-                        _buildCategoriesSection(),
-                        verticalSpace(20),
-
-                        // Top Restaurants / Search Results
-                        HomeTopRestaurantsSection(
-                          themeState: widget.themeState,
-                          lat: widget.lat,
-                          long: widget.long,
-                          searchQuery: query,
-                          onPageChanged: (index) => setState(() => _topRestIndex = index),
+                        StaggeredSlideFade(
+                          index: 4,
+                          child: HomeCategoriesSection(
+                            lat: widget.lat,
+                            long: widget.long,
+                            selectedCategoryName: _selectedCategory ?? "All",
+                          ),
                         ),
-
-                        // Nearby Restaurants
-                        HomeNearbySection(
-                          themeState: widget.themeState,
-                          lat: widget.lat,
-                          long: widget.long,
-                          isSearching: query.isNotEmpty,
-                          onPageChanged: (index) => setState(() => _nearbyRestIndex = index),
+                        verticalSpace(15),
+                        if (query.isEmpty &&
+                            (_selectedCategory == "All" || _selectedCategory == null) &&
+                            cubit.restaurantsWithOffers.isNotEmpty)
+                          StaggeredSlideFade(
+                            index: 7,
+                            child: HomeOffersSection(
+                              themeState: widget.themeState,
+                              isSearching: query.isNotEmpty,
+                              lat: widget.lat,
+                              long: widget.long,
+                              onPageChanged: (index) => setState(() => _offersIndex = index),
+                            ),
+                          ),
+                        if (query.isEmpty && (_selectedCategory == "All" || _selectedCategory == null))
+                          verticalSpace(15),
+                        StaggeredSlideFade(
+                          index: 5,
+                          child: HomeTopRestaurantsSection(
+                            themeState: widget.themeState,
+                            lat: widget.lat,
+                            long: widget.long,
+                            searchQuery: query,
+                            onPageChanged: (index) => setState(() => _topRestIndex = index),
+                          ),
                         ),
-
-                        // Offers Section
-                        HomeOffersSection(
-                          themeState: widget.themeState,
-                          isSearching: query.isNotEmpty,
-                          onPageChanged: (index) => setState(() => _offersIndex = index),
-                        ),
-
+                        if (query.isEmpty && (_selectedCategory == "All" || _selectedCategory == null))
+                          StaggeredSlideFade(
+                            index: 6,
+                            child: HomeNearbySection(
+                              themeState: widget.themeState,
+                              lat: widget.lat,
+                              long: widget.long,
+                              isSearching: query.isNotEmpty,
+                              onPageChanged: (index) => setState(() => _nearbyRestIndex = index),
+                            ),
+                          ),
                         verticalSpace(80),
                       ],
                     );

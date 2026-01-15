@@ -1,6 +1,7 @@
 import 'package:delveria/core/func/date_formate.dart';
 import 'package:delveria/core/helper/spacing.dart';
 import 'package:delveria/core/helper/strings.dart';
+import 'package:delveria/core/theme/animations.dart'; // [NEW] For ScaleOnTap
 import 'package:delveria/core/theme/color.dart';
 import 'package:delveria/core/theme/styles.dart';
 import 'package:delveria/features/client/orders/data/models/get_orders_model.dart';
@@ -10,7 +11,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ActiveOrderTrackingBar extends StatelessWidget {
+class ActiveOrderTrackingBar extends StatefulWidget {
   const ActiveOrderTrackingBar({
     super.key,
     required this.order,
@@ -19,6 +20,34 @@ class ActiveOrderTrackingBar extends StatelessWidget {
 
   final OrderModel order;
   final ThemeState themeState;
+
+  @override
+  State<ActiveOrderTrackingBar> createState() => _ActiveOrderTrackingBarState();
+}
+
+class _ActiveOrderTrackingBarState extends State<ActiveOrderTrackingBar>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _pulseController;
+  late Animation<double> _pulseAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _pulseController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    )..repeat(reverse: true);
+
+    _pulseAnimation = Tween<double>(begin: 1.0, end: 1.15).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+  }
+
+  @override
+  void dispose() {
+    _pulseController.dispose();
+    super.dispose();
+  }
 
   Color _getStatusColor(String status) {
     switch (status.toLowerCase()) {
@@ -60,18 +89,18 @@ class ActiveOrderTrackingBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = themeState.themeMode == ThemeMode.dark;
-    final status = order.status ?? "Pending";
+    final isDark = widget.themeState.themeMode == ThemeMode.dark;
+    final status = widget.order.status ?? "Pending";
     final statusColor = _getStatusColor(status);
 
-    return GestureDetector(
+    return ScaleOnTap(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (_) => TrackingOrderScreen(
-              orderId: order.id ?? "",
-              time: formatDate(order.createdAt),
+              orderId: widget.order.id ?? "",
+              time: formatDate(widget.order.createdAt),
               initialOrderStatus: status,
             ),
           ),
@@ -104,17 +133,27 @@ class ActiveOrderTrackingBar extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Status Icon
-            Container(
-              padding: EdgeInsets.all(12.r),
-              decoration: BoxDecoration(
-                color: statusColor.withOpacity(0.2),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                _getStatusIcon(status),
-                color: statusColor,
-                size: 24.sp,
+            // Pulsing Status Icon
+            ScaleTransition(
+              scale: _pulseAnimation,
+              child: Container(
+                padding: EdgeInsets.all(12.r),
+                decoration: BoxDecoration(
+                  color: statusColor.withOpacity(0.2),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: statusColor.withOpacity(0.3),
+                      blurRadius: 8,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+                child: Icon(
+                  _getStatusIcon(status),
+                  color: statusColor,
+                  size: 24.sp,
+                ),
               ),
             ),
             horizontalSpace(12),
@@ -132,7 +171,7 @@ class ActiveOrderTrackingBar extends StatelessWidget {
                   ),
                   verticalSpace(4),
                   Text(
-                    "Order: #${order.orderId ?? order.id?.substring(0, 8) ?? ''}",
+                    "Order: #${widget.order.orderId ?? widget.order.id?.substring(0, 8) ?? ''}",
                     style: TextStyles.bimini13W400Grey.copyWith(
                       fontSize: 12.sp,
                     ),

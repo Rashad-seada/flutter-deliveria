@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:delveria/core/di/dependancy_injection.dart';
 import 'package:delveria/core/helper/strings.dart';
+import 'package:delveria/core/theme/animations.dart'; // [NEW] For Shimmer
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_state.dart';
 import 'package:delveria/features/client/filter/ui/nearby_see_all_screen.dart';
@@ -53,6 +54,11 @@ class HomeNearbySection extends StatelessWidget {
   Widget _buildCarousel(BuildContext context) {
     return BlocBuilder<AllresturantsadminCubit, AllresturantsadminState>(
       builder: (context, state) {
+        // Show shimmer during loading
+        if (state is NearbyLoading) {
+          return _buildShimmerCarousel();
+        }
+        
         final cubit = context.read<AllresturantsadminCubit>();
         final nearbyList = cubit.allNearbyResturant;
 
@@ -93,6 +99,18 @@ class HomeNearbySection extends StatelessWidget {
             ..getNearbyResturants(lat: lat, long: long),
           child: NearbySeeAllScreen(),
         ),
+      ),
+    );
+  }
+
+  Widget _buildShimmerCarousel() {
+    return SizedBox(
+      height: 280,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        itemCount: 3,
+        itemBuilder: (context, index) => const ShimmerRestaurantCard(),
       ),
     );
   }

@@ -20,5 +20,6 @@ class AppColors {
   static const Color greyBlue = Color(0xff94A3B8);
   static const Color lightGreySecond = Color(0xffE4E4E4);
   static const Color adminBottomBarColor = Color(0xffFAFAFA);
+  static const Color darkCharcoal = Color(0xFF222222);
 
 }
