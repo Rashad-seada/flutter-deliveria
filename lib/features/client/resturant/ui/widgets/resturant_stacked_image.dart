@@ -10,9 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ResturantStackedImage extends StatelessWidget {
-  const ResturantStackedImage({super.key, this.img, this.logo});
+  const ResturantStackedImage({super.key, this.img, this.logo, this.isOpen = true});
   final String? img;
   final String? logo;
+  final bool isOpen;
 
   @override
   Widget build(BuildContext context) {
@@ -63,8 +64,17 @@ class ResturantStackedImage extends StatelessWidget {
           child: Row(
             spacing: 2,
             children: [
-              Icon(Icons.circle, color: AppColors.green, size: 8.sp),
-              Text(AppStrings.open.tr(), style: TextStyles.bimini10W400Grey),
+              Icon(
+                Icons.circle, 
+                color: isOpen ? AppColors.green : Colors.red, 
+                size: 8.sp,
+              ),
+              Text(
+                isOpen ? AppStrings.open.tr() : AppStrings.close.tr(),
+                style: TextStyles.bimini10W400Grey.copyWith(
+                  color: isOpen ? AppColors.green : Colors.red,
+                ),
+              ),
             ],
           ),
         ),

@@ -5,6 +5,7 @@ import 'package:delveria/core/theme/animations.dart'; // [NEW] For Shimmer
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_state.dart';
 import 'package:delveria/features/client/filter/ui/rating_filter_screen.dart';
+import 'package:delveria/features/client/filter/ui/generic_see_all_screen.dart';
 import 'package:delveria/features/client/home/logic/cubit/sliders_cubit.dart';
 import 'package:delveria/features/client/home/ui/widgets/build_resturant_card.dart';
 import 'package:delveria/features/client/home/ui/widgets/shared/empty_restaurants_widget.dart';
@@ -121,16 +122,17 @@ class HomeTopRestaurantsSection extends StatelessWidget {
   }
 
   void _navigateToSeeAll(BuildContext context) {
+    final cubit = context.read<AllresturantsadminCubit>();
+    final restaurants = cubit.allRatedResturants;
+    
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => BlocProvider(
-          create: (context) => getIt<AllresturantsadminCubit>()
-            ..getAllRatedResturantsForAdmin(lat, long),
-          child: RatingFilterScreen(
-            showTitle: false,
-            isTopTen: true,
-          ),
+        builder: (_) => GenericSeeAllScreen(
+          title: AppStrings.top.tr(),
+          restaurants: restaurants,
+          titleIcon: Icons.star_rounded,
+          isTopTen: true,
         ),
       ),
     );

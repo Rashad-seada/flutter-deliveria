@@ -87,18 +87,24 @@ class _MobileNumberTextFieldState extends State<MobileNumberTextField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(AppStrings.mobileNumber.tr(), style: TextStyles.bimini16W400Body),
-        verticalSpace(10),
         Container(
           height: 50.h,
           decoration: BoxDecoration(
+            color: Colors.white,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               color:
                   errorText == null
-                      ? Colors.grey[300]!
+                      ? Colors.grey.withOpacity(0.2)
                       : AppColors.primaryDeafult,
             ),
+             boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.05),
+                blurRadius: 10,
+                offset: Offset(0, 4),
+              ),
+            ],
           ),
           child: Row(
             children: [

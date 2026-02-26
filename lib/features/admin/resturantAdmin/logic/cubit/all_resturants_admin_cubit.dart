@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:delveria/core/helper/constants.dart';
@@ -49,6 +50,10 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController deliveryCostController = TextEditingController();
   TextEditingController estimatedTimeController = TextEditingController();
+  // New Admin Fields Controllers
+  TextEditingController commissionPercentageController = TextEditingController();
+  TextEditingController preparationTimeController = TextEditingController();
+  TextEditingController deliveryTimeController = TextEditingController();
   List<NearbyRestaurant> allNearbyResturant = [];
   List<cate.RestaurantByCategory> categoryResturants = [];
 
@@ -134,10 +139,20 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
         success: (resturantRes) {
           allResturants.clear();
           allResturants.addAll(resturantRes.response);
-          print("alllllllll$allResturants");
+          
+          // Print restaurants as formatted JSON (full output, no truncation)
+          const encoder = JsonEncoder.withIndent('  ');
+          final jsonList = resturantRes.response.map((r) => r.toJson()).toList();
+          final jsonString = encoder.convert(jsonList);
+          debugPrint('📋 All Restaurants (${jsonList.length}):', wrapWidth: 10000);
+          // Split and print to avoid truncation
+          for (var i = 0; i < jsonString.length; i += 800) {
+            debugPrint(jsonString.substring(i, (i + 800) > jsonString.length ? jsonString.length : i + 800), wrapWidth: 10000);
+          }
+          
           isOpen = resturantRes.response.map((e) => e.isOpen).first;
           changeEnableButton =
-              resturantRes.response.map((e) => e.isShow).toList();
+              resturantRes.response.map((e) => e.isShow ?? false).toList();
           emit(AllresturantsadminState.success(resturantRes));
         },
         failure: (error) {
@@ -395,6 +410,24 @@ class AllresturantsadminCubit extends Cubit<AllresturantsadminState> {
       );
     } catch (e) {
       emit(AllresturantsadminState.searchResFail(ApiErrorHandler.handle(e)));
+    }
+  }
+
+  Future<void> deleteResturant({required String resID}) async {
+    // using changeEnableLoading as a temporary loading state for delete since we can't regenerate code easily
+    emit(AllresturantsadminState.changeEnableLoading());
+    try {
+      final res = await resturantAdminRepo.deleteResturant(restaurantId: resID);
+      res.when(
+        success: (data) {
+           // utilizing changeEnableSuccess as success state
+          emit(AllresturantsadminState.changeEnableSuccess(data));
+          getAllResturantsForAdmin();
+        },
+        failure: (error) => emit(AllresturantsadminState.changeEnableFail(error)),
+      );
+    } catch (e) {
+      emit(AllresturantsadminState.changeEnableFail(ApiErrorHandler.handle(e)));
     }
   }
 }

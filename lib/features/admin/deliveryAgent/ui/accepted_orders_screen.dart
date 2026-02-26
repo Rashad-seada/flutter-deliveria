@@ -10,8 +10,15 @@ import 'package:delveria/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:delveria/features/admin/deliveryAgent/ui/widgets/admin_order_card.dart';
+import 'package:delveria/features/admin/deliveryAgent/ui/order_details_agent.dart';
+import 'package:delveria/core/di/dependancy_injection.dart';
 
-class AcceptedOrdersScreen extends StatelessWidget {
+import 'package:delveria/core/widgets/custom_loading.dart';
+import 'package:delveria/features/admin/deliveryAgent/ui/widgets/admin_order_filter_bottom_sheet.dart';
+import 'package:delveria/features/deliveryAgent/ui/widgets/delivery_filter_bottom_sheet.dart';
+
+class AcceptedOrdersScreen extends StatefulWidget {
   const AcceptedOrdersScreen({
     super.key,
     required this.isAccepted,
@@ -21,27 +28,72 @@ class AcceptedOrdersScreen extends StatelessWidget {
   final List<AgentModel> agents;
 
   @override
+  State<AcceptedOrdersScreen> createState() => _AcceptedOrdersScreenState();
+}
+
+class _AcceptedOrdersScreenState extends State<AcceptedOrdersScreen> {
+  FilterData _currentFilters = FilterData();
+
+  void _applyFilters(FilterData filters) {
+    setState(() {
+      _currentFilters = filters;
+    });
+    context.read<AgentsCubit>().getAllOrders(
+      date: filters.date,
+      paymentType: filters.paymentType,
+    );
+  }
+
+  void _showFilterBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => AdminOrderFilterBottomSheet(
+        initialFilters: _currentFilters,
+        onApply: _applyFilters,
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: ArrowBackAppBarWithTitle(
           showTitle: true,
-          title: isAccepted ? "Accepted Orders" : "Not Accepted Orders",
+          showRefresh: true,
+          title: widget.isAccepted ? "Accepted Orders" : "Not Accepted Orders",
+          widget: GestureDetector(
+            onTap: _showFilterBottomSheet,
+            behavior: HitTestBehavior.opaque,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Icon(Icons.filter_list, color: AppColors.primaryDeafult),
+            ),
+          ),
         ),
       ),
       body: BlocBuilder<AgentsCubit, AgentsState>(
         builder: (context, state) {
           final cubit = context.read<AgentsCubit>();
           final orders =
-              isAccepted ? cubit.acceptedOrders : cubit.notAcceptedOrders;
+              widget.isAccepted
+                  ? cubit.acceptedOrders
+                  : cubit.notAcceptedOrders;
+
+          if (state is GetAllOrdersLoading) {
+             return Center(child: CustomLoading());
+          }
 
           if (orders.isEmpty) {
             return const Center(child: Text("No orders found."));
           }
 
           return ListView.separated(
-            itemCount: orders.length,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+             itemCount: orders.length,
             separatorBuilder: (context, index) => verticalSpace(5),
             itemBuilder: (context, index) {
               final order = orders[index];
@@ -60,187 +112,46 @@ class AcceptedOrdersScreen extends StatelessWidget {
               // Find the agent name by deliveryId matching agent id
               String agentNameById = '';
               if (order.deliveryId != null) {
-                print("sssssssssss$agents");
-                final matchedAgent = agents.firstWhere(
+                print("sssssssssss${widget.agents}");
+                final matchedAgent = widget.agents.firstWhere(
                   (agent) =>
                       agent.id?.toString() == order.deliveryId.toString(),
-                  orElse: () => agents.first,
+                  orElse: () => widget.agents.first,
                 );
                 if (matchedAgent != null && matchedAgent.name != null) {
                   agentNameById = matchedAgent.name!;
                 }
               }
 
-              return Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 20.r,
-                          backgroundColor: AppColors.primaryDeafult,
-                          child: Icon(
-                            Icons.shopping_basket_outlined,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    width: 200.w,
-                                    child: Row(
-                                      children: [
-                                        Expanded(
-                                          child: Text(
-                                            restaurantName,
-                                            style: TextStyles.bimini16W700,
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
-                                        ),
-                                        SizedBox(width: 8),
-
-                                        // Required: agent name by delivery id
-                                        Text(
-                                          agentNameById.isNotEmpty
-                                              ? agentNameById
-                                              : '-',
-                                          style: TextStyles.bimini16W700
-                                              .copyWith(
-                                                fontWeight: FontWeight.w400,
-                                                color: AppColors.primaryDeafult,
-                                              ),
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        SizedBox(width: 8),
-
-                                        Text(
-                                          '|',
-                                          style: TextStyles.bimini16W700
-                                              .copyWith(
-                                                color: AppColors.grey
-                                                    .withOpacity(0.6),
-                                                fontWeight: FontWeight.normal,
-                                              ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  if (showMulti) ...[
-                                    SizedBox(width: 8),
-                                    Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 8,
-                                        vertical: 2,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.primaryDeafult
-                                            .withOpacity(0.1),
-                                        borderRadius: BorderRadius.circular(6),
-                                      ),
-                                      child: Text(
-                                        "Multi",
-                                        style: TextStyles.bimini12W400Grey
-                                            .copyWith(
-                                              color: AppColors.primaryDeafult,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ],
-                              ),
-                              verticalSpace(5),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    price,
-                                    style: TextStyles.bimini13W700Deafult
-                                        .copyWith(
-                                          color:
-                                              themeState.themeMode ==
-                                                      ThemeMode.dark
-                                                  ? AppColors.lightGrey
-                                                  : AppColors.darkGrey,
-                                        ),
-                                  ),
-                                  Spacer(),
-                                  Text(
-                                    "Shipping price : ",
-                                    style: TextStyles.bimini12W400Grey,
-                                  ),
-                                  Text(
-                                    shippingPrice ?? "",
-                                    style: TextStyles.bimini13W700Deafult
-                                        .copyWith(
-                                          color:
-                                              themeState.themeMode ==
-                                                      ThemeMode.dark
-                                                  ? AppColors.lightGrey
-                                                  : AppColors.darkGrey,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              verticalSpace(16),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      orderNumber,
-                                      style: TextStyles.sen14W400.copyWith(
-                                        color:
-                                            themeState.themeMode ==
-                                                    ThemeMode.dark
-                                                ? AppColors.grey
-                                                : AppColors.darkGrey,
-                                        decoration: TextDecoration.underline,
-                                      ),
-                                    ),
-                                    horizontalSpace(5),
-                                    SizedBox(
-                                      height: 20.h,
-                                      child: VerticalDivider(),
-                                    ),
-                                    horizontalSpace(5),
-                                    Text(
-                                      formatDate(date),
-                                      style: TextStyles.bimini13W400Grey,
-                                    ),
-                                    horizontalSpace(5),
-                                    SizedBox(
-                                      height: 20.h,
-                                      child: VerticalDivider(),
-                                    ),
-                                    horizontalSpace(10),
-                                    Text(
-                                      items.length.toString(),
-                                      style: TextStyles.bimini13W400Grey,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 12),
-                    SizedBox(height: 16),
-                  ],
+              return GestureDetector(
+                onTap: () {
+                  if (order.id != null) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder:
+                            (_) => BlocProvider(
+                              create:
+                                  (context) =>
+                                      getIt<AgentsCubit>()
+                                        ..getEachOrderDeatils(order.id!),
+                              child: const OrderDetailsAgent(),
+                            ),
+                      ),
+                    );
+                  }
+                },
+                child: AdminOrderCard(
+                  restaurantName:
+                      "Order #${restaurantName.length > 5 ? restaurantName.substring(0, 5) : restaurantName}", // Improving display
+                  agentName: agentNameById.isNotEmpty ? agentNameById : null,
+                  price: price,
+                  shippingPrice: shippingPrice,
+                  orderNumber: orderNumber,
+                  date: date,
+                  itemsCount: items.length,
+                  isMulti: showMulti,
+                  status: widget.isAccepted ? "Accepted" : "Not Accepted",
                 ),
               );
             },

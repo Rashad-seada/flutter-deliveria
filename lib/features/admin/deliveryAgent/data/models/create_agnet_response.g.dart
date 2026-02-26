@@ -13,8 +13,8 @@ CreateAgentResponse _$CreateAgentResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CreateAgentResponseToJson(
-  CreateAgentResponse instance,
-) => <String, dynamic>{
-  'success': instance.success,
-  'message': instance.message,
-};
+        CreateAgentResponse instance) =>
+    <String, dynamic>{
+      'success': instance.success,
+      'message': instance.message,
+    };

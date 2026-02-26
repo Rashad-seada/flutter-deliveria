@@ -7,9 +7,13 @@ part of 'change_enable_response.dart';
 // **************************************************************************
 
 ChangeEnableResponse _$ChangeEnableResponseFromJson(
-  Map<String, dynamic> json,
-) => ChangeEnableResponse(message: json['message'] as String);
+        Map<String, dynamic> json) =>
+    ChangeEnableResponse(
+      message: json['message'] as String,
+    );
 
 Map<String, dynamic> _$ChangeEnableResponseToJson(
-  ChangeEnableResponse instance,
-) => <String, dynamic>{'message': instance.message};
+        ChangeEnableResponse instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+    };

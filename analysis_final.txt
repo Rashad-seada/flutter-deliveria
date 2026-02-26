@@ -1,0 +1,751 @@
+Analyzing delveria-development...                               
+
+warning - Unused import: 'package:firebase_core/firebase_core.dart' - lib\core\func\firebase_notifications.dart:5:8 - unused_import
+   info - Empty catch block - lib\core\func\firebase_notifications.dart:35:21 - empty_catches
+   info - Empty catch block - lib\core\func\firebase_notifications.dart:50:17 - empty_catches
+   info - Empty catch block - lib\core\func\firebase_notifications.dart:62:17 - empty_catches
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:11:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:20:7 - avoid_print
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\core\func\permissions_function.dart:27:7 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:31:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:45:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:46:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:47:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:48:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:49:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:50:7 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\core\func\permissions_function.dart:52:34 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\func\permissions_function.dart:62:9 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:65:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\core\func\permissions_function.dart:68:5 - avoid_print
+warning - Unused import: 'package:flutter/material.dart' - lib\core\helper\shared_pref_helper.dart:1:8 - unused_import
+   info - Use 'TypeName _' instead of a type literal - lib\core\helper\shared_pref_helper.dart:25:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\core\helper\shared_pref_helper.dart:28:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\core\helper\shared_pref_helper.dart:31:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\core\helper\shared_pref_helper.dart:34:12 - type_literal_in_constant_pattern
+warning - Unused import: 'dart:convert' - lib\core\network\api_services.dart:1:8 - unused_import
+warning - Unused import: 'package:delveria/features/ResturantOwner/menu/data/models/filter_item_category_response_user.dart' - lib\core\network\api_services.dart:10:8 - unused_import
+warning - Unused import: 'package:delveria/features/admin/users/data/models/search_response.dart' - lib\core\network\api_services.dart:35:8 - unused_import
+warning - Unused import: 'package:delveria/features/admin/users/data/models/users_model.dart' - lib\core\network\api_services.dart:36:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/reviews/ui/add_review_screen.dart' - lib\core\network\api_services.dart:68:8 - unused_import
+   info - The variable name 'item_category' isn't a lowerCamelCase identifier - lib\core\network\api_services.dart:306:41 - non_constant_identifier_names
+   info - The variable name 'have_option' isn't a lowerCamelCase identifier - lib\core\network\api_services.dart:309:37 - non_constant_identifier_names
+   info - The variable name 'item_category' isn't a lowerCamelCase identifier - lib\core\network\api_services.g.dart:1679:12 - non_constant_identifier_names
+   info - The variable name 'have_option' isn't a lowerCamelCase identifier - lib\core\network\api_services.g.dart:1682:10 - non_constant_identifier_names
+   info - Don't invoke 'print' in production code - lib\core\network\dio_factory.dart:38:11 - avoid_print
+warning - Duplicate import - lib\core\routing\app_router.dart:11:8 - duplicate_import
+warning - Unused import: 'package:delveria/core/theme/color.dart' - lib\core\widgets\delete_confirmation_dialog.dart:1:8 - unused_import
+warning - The annotation 'JsonKey.new' can only be used on fields or getters - lib\features\ResturantOwner\home\data\models\get_home_data_resturant_response.dart:9:6 - invalid_annotation_target
+warning - The annotation 'JsonKey.new' can only be used on fields or getters - lib\features\ResturantOwner\home\data\models\get_home_data_resturant_response.dart:10:6 - invalid_annotation_target
+warning - The annotation 'JsonKey.new' can only be used on fields or getters - lib\features\ResturantOwner\home\data\models\get_home_data_resturant_response.dart:11:6 - invalid_annotation_target
+warning - The annotation 'JsonKey.new' can only be used on fields or getters - lib\features\ResturantOwner\home\data\models\get_home_data_resturant_response.dart:12:6 - invalid_annotation_target
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\home\data\repo\resturant_data_repo.dart:18:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\home\logic\cubit\resturant_data_cubit.dart:32:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\home\logic\cubit\resturant_data_cubit.dart:38:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\home\logic\cubit\resturant_data_cubit.dart:105:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\home\logic\cubit\resturant_data_cubit.dart:110:7 - avoid_print
+warning - Unused import: 'package:delveria/core/network/api_error_handler.dart' - lib\features\ResturantOwner\home\logic\cubit\resturant_data_state.dart:1:8 - unused_import
+   info - Invalid use of a private type in a public API - lib\features\ResturantOwner\home\ui\resturant_owner_home.dart:29:3 - library_private_types_in_public_api
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\ResturantOwner\home\ui\resturant_owner_home.dart:113:41 - deprecated_member_use
+   info - The variable name 'have_option' isn't a lowerCamelCase identifier - lib\features\ResturantOwner\menu\data\repo\items_repo.dart:30:19 - non_constant_identifier_names
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\data\repo\items_repo.dart:90:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\data\repo\items_repo.dart:114:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\data\repo\items_repo.dart:135:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\data\repo\items_repo.dart:181:7 - avoid_print
+   info - The imported package 'bloc' isn't a dependency of the importing package - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:4:8 - depend_on_referenced_packages
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:47:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:49:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:121:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:123:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:133:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:134:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:135:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:136:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:137:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:227:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:231:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:270:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:274:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:280:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:290:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:326:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:327:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:328:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:340:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:344:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:348:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:353:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:400:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:404:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:414:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:450:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:451:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:452:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:462:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:466:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:470:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:475:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:522:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:530:17 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:536:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:543:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:548:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:553:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\logic\cubit\item_cubit.dart:609:11 - avoid_print
+warning - Unused import: 'package:delveria/features/ResturantOwner/menu/data/models/filter_item_category_response_user.dart' - lib\features\ResturantOwner\menu\logic\cubit\item_state.dart:4:8 - unused_import
+warning - This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: AddItemsCategoryScreen.allItemsCategory - lib\features\ResturantOwner\menu\ui\add_items_category_screen.dart:19:7 - must_be_immutable
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:223:39 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:266:29 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:283:29 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:370:37 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:378:37 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:379:37 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:385:39 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:389:37 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:397:39 - avoid_print
+warning - The value of the local variable 'photoToSend' isn't used - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:402:42 - unused_local_variable
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:424:37 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:425:37 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\edit_your_item.dart:426:37 - avoid_print
+warning - Unused import: 'package:delveria/features/ResturantOwner/menu/ui/widgets/get_all_items_bloc_listener.dart' - lib\features\ResturantOwner\menu\ui\menu_screen.dart:12:8 - unused_import
+   info - Don't use 'BuildContext's across async gaps - lib\features\ResturantOwner\menu\ui\widgets\create_item_bloc_listener.dart:28:13 - use_build_context_synchronously
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\ResturantOwner\menu\ui\widgets\horizental_body_for_restuarnt_with_search.dart:260:25 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\widgets\horizental_body_for_restuarnt_with_search.dart:264:27 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\ResturantOwner\menu\ui\widgets\horizental_body_for_restuarnt_with_search.dart:321:35 - use_build_context_synchronously
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\ResturantOwner\menu\ui\widgets\horizental_body_for_resturant_owner.dart:165:33 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\menu\ui\widgets\horizental_body_for_resturant_owner.dart:169:35 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\ResturantOwner\menu\ui\widgets\horizental_body_for_resturant_owner.dart:225:43 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\data\repo\get_orders_repo.dart:17:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\data\repo\get_orders_repo.dart:27:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\data\repo\get_orders_repo.dart:37:7 - avoid_print
+warning - Unused import: 'package:delveria/core/di/dependancy_injection.dart' - lib\features\ResturantOwner\ordersResturantScreen\ui\new_orders_details_screen.dart:1:8 - unused_import
+warning - Unused import: 'package:delveria/features/ResturantOwner/ordersResturantScreen/logic/cubit/orders_resturant_cubit.dart' - lib\features\ResturantOwner\ordersResturantScreen\ui\new_orders_details_screen.dart:10:8 - unused_import
+   info - Don't use 'BuildContext's across async gaps - lib\features\ResturantOwner\ordersResturantScreen\ui\new_orders_details_screen.dart:98:11 - use_build_context_synchronously
+warning - Unused import: 'package:delveria/core/di/dependancy_injection.dart' - lib\features\ResturantOwner\ordersResturantScreen\ui\orders_resturant_screen.dart:1:8 - unused_import
+   info - Parameter 'key' could be a super parameter - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\customer_info_section.dart:16:9 - use_super_parameters
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\new_orders_tab_body.dart:31:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\new_orders_tab_body.dart:52:21 - avoid_print
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\new_orders_tab_body.dart:85:47 - unnecessary_null_comparison
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\new_orders_tab_body.dart:89:40 - unnecessary_null_comparison
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\new_orders_tab_body.dart:93:32 - unnecessary_null_comparison
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\new_orders_tab_body.dart:152:21 - avoid_print
+   info - Parameter 'key' could be a super parameter - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\order_app_bar.dart:17:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\order_item_card.dart:7:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\order_summary_section.dart:11:9 - use_super_parameters
+warning - The left operand can't be null, so the right operand is never executed - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\orders_tab_body.dart:77:64 - dead_null_aware_expression
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\orders_tab_body.dart:212:21 - avoid_print
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\oreder_res_app_bar.dart:124:48 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\features\ResturantOwner\ordersResturantScreen\ui\widgets\resturant_order_group.dart:11:9 - use_super_parameters
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\resturantProfile\logic\cubit\resturant_profile_data_cubit.dart:70:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\resturantProfile\logic\cubit\resturant_profile_data_cubit.dart:79:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\resturantProfile\logic\cubit\resturant_profile_data_cubit.dart:84:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\ResturantOwner\resturantProfile\logic\cubit\resturant_profile_data_cubit.dart:100:11 - avoid_print
+warning - The left operand can't be null, so the right operand is never executed - lib\features\ResturantOwner\resturantReviews\ui\resturant_reviews_screen.dart:44:38 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\ResturantOwner\resturantReviews\ui\resturant_reviews_screen.dart:45:44 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\ResturantOwner\resturantReviews\ui\resturant_reviews_screen.dart:46:50 - dead_null_aware_expression
+   info - Invalid use of a private type in a public API - lib\features\ResturantOwner\settingsResturant\ui\settings_resturant_screen.dart:23:3 - library_private_types_in_public_api
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\ResturantOwner\settingsResturant\ui\widgets\notification_row.dart:34:15 - deprecated_member_use
+warning - The declaration '_$CouponeRequestFromJson' isn't referenced - lib\features\admin\coupons\data\models\coupone_request.g.dart:9:16 - unused_element
+warning - The declaration '_$CouponeResponseToJson' isn't referenced - lib\features\admin\coupons\data\models\coupone_response.g.dart:12:22 - unused_element
+warning - Unused import: 'package:delveria/core/helper/lists.dart' - lib\features\admin\coupons\ui\coupons_screen.dart:2:8 - unused_import
+warning - The value of the local variable 'cubit' isn't used - lib\features\admin\coupons\ui\widgets\coupon_card.dart:73:21 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\features\admin\coupons\ui\widgets\coupon_card.dart:107:37 - use_build_context_synchronously
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\admin\coupons\ui\widgets\coupon_card.dart:115:27 - deprecated_member_use
+   info - The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of 'package:easy_localization/easy_localization.dart' - lib\features\admin\coupons\ui\widgets\coupon_information.dart:9:8 - unnecessary_import
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\all_orders_model.dart:82:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\all_orders_model.dart:203:7 - avoid_print
+warning - The declaration '_$CreateAgentRequestFromJson' isn't referenced - lib\features\admin\deliveryAgent\data\models\create_agent_request.g.dart:9:20 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:66:15 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:67:15 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:142:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:157:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:175:15 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:213:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:292:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:308:15 - avoid_print
+   info - The variable name 'total_price' isn't a lowerCamelCase identifier - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:344:14 - non_constant_identifier_names
+   info - The variable name 'total_price' isn't a lowerCamelCase identifier - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:353:10 - non_constant_identifier_names
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:373:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:388:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\models\get_delivery_agent_response.dart:404:15 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\repo\delivery_agent_admin_repo.dart:22:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\repo\delivery_agent_admin_repo.dart:52:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\repo\delivery_agent_admin_repo.dart:65:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\data\repo\delivery_agent_admin_repo.dart:78:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\ui\accepted_orders_screen.dart:63:17 - avoid_print
+warning - The receiver can't be null, so the null-aware operator '?.' is unnecessary - lib\features\admin\deliveryAgent\ui\accepted_orders_screen.dart:66:31 - invalid_null_aware_operator
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\admin\deliveryAgent\ui\accepted_orders_screen.dart:69:34 - unnecessary_null_comparison
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\deliveryAgent\ui\accepted_orders_screen.dart:131:54 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\deliveryAgent\ui\accepted_orders_screen.dart:147:46 - deprecated_member_use
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\accepted_orders_screen.dart:184:54 - dead_null_aware_expression
+   info - Invalid use of a private type in a public API - lib\features\admin\deliveryAgent\ui\add_delivery_agent_screen.dart:21:3 - library_private_types_in_public_api
+   info - Invalid use of a private type in a public API - lib\features\admin\deliveryAgent\ui\delivery_agent_list.dart:26:3 - library_private_types_in_public_api
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\delivery_agent_list.dart:175:33 - dead_null_aware_expression
+warning - The value of the local variable 'showMulti' isn't used - lib\features\admin\deliveryAgent\ui\delivery_agent_list.dart:176:35 - unused_local_variable
+warning - The value of the local variable 'userName' isn't used - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:27:15 - unused_local_variable
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:28:44 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:29:54 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:30:51 - dead_null_aware_expression
+warning - The value of the local variable 'latitude' isn't used - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:32:15 - unused_local_variable
+warning - The value of the local variable 'longitude' isn't used - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:33:15 - unused_local_variable
+warning - The value of the local variable 'restaurantId' isn't used - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:36:15 - unused_local_variable
+   info - Statements in an if should be enclosed in a block - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:41:23 - curly_braces_in_flow_control_structures
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:148:55 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:152:65 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:158:66 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:166:64 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:166:101 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:166:141 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:181:69 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:181:97 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:181:122 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\order_details_agent.dart:189:75 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\deliveryAgent\ui\orders_for_each_agent_screen.dart:130:53 - dead_null_aware_expression
+warning - A value for optional parameter 'key' isn't ever given - lib\features\admin\deliveryAgent\ui\orders_for_each_agent_screen.dart:245:11 - unused_element_parameter
+   info - Don't invoke 'print' in production code - lib\features\admin\deliveryAgent\ui\widgets\create_agent_bloc_listener.dart:35:13 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\admin\drawer\ui\widgets\menu_item_button_drawer_admin.dart:29:5 - use_build_context_synchronously
+warning - The value of the local variable 'token' isn't used - lib\features\admin\home\data\repo\get_home_data_repo.dart:14:11 - unused_local_variable
+warning - Unused import: 'package:delveria/core/network/dio_factory.dart' - lib\features\admin\home\logic\cubit\get_home_data_admin_cubit.dart:2:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\home\ui\orders_over_time_card.dart:19:33 - deprecated_member_use
+warning - The declaration '_$AllResturantAdminResponseFromJson' isn't referenced - lib\features\admin\resturantAdmin\data\models\all_resturant_admin_response.g.dart:9:27 - unused_element
+warning - The declaration '_$ChangeEnableResponseToJson' isn't referenced - lib\features\admin\resturantAdmin\data\models\change_enable_response.g.dart:13:22 - unused_element
+warning - The declaration '_$CreateResturantResponseToJson' isn't referenced - lib\features\admin\resturantAdmin\data\models\create_resturant_response.g.dart:13:22 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:50:7 - avoid_print
+warning - The value of the local variable 'token' isn't used - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:58:11 - unused_local_variable
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:67:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:77:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:167:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:179:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:200:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:219:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:243:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\data\repo\resturant_admin_repo.dart:267:7 - avoid_print
+warning - Unused import: 'package:delveria/core/helper/constants.dart' - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:4:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/shared_pref_helper.dart' - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:5:8 - unused_import
+warning - Unused import: 'package:delveria/core/network/dio_factory.dart' - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:7:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:77:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:78:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:79:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:80:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:115:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:128:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:159:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:164:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:182:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:186:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:191:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:207:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:211:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:216:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:234:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:239:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:262:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:267:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:315:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:351:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:352:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\logic\cubit\all_resturants_admin_cubit.dart:406:11 - avoid_print
+warning - Unused import: 'package:delveria/core/network/api_error_handler.dart' - lib\features\admin\resturantAdmin\logic\cubit\branches_cubit.dart:1:8 - unused_import
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\logic\cubit\branches_cubit.dart:30:60 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\logic\cubit\branches_cubit.dart:51:64 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\logic\cubit\branches_cubit.dart:72:64 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\logic\cubit\branches_cubit.dart:90:64 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\logic\cubit\branches_cubit.dart:108:64 - dead_null_aware_expression
+warning - Unused import: 'package:delveria/core/helper/image_helper.dart' - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:3:8 - unused_import
+warning - Unused import: 'package:cached_network_image/cached_network_image.dart' - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:13:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:197:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:203:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:218:51 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:246:60 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:246:90 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\branch_list_screen.dart:384:24 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\edit_branch_screen.dart:160:55 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/network/api_constants.dart' - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:6:8 - unused_import
+   info - The import of 'package:flutter/services.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:17:8 - unnecessary_import
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:93:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:104:7 - avoid_print
+warning - The operand can't be 'null', so the condition is always 'false' - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:135:24 - unnecessary_null_comparison
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:177:19 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:180:33 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:194:19 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:197:33 - avoid_print
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\ui\edit_restaurant_screen.dart:206:69 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\ui\resturant_admin_details.dart:59:54 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\ui\resturant_admin_details.dart:97:62 - dead_null_aware_expression
+warning - The declaration '_getAllRestaurantIds' isn't referenced - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:46:16 - unused_element
+   info - Statements in an if should be enclosed in a block - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:103:27 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:106:27 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:108:27 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:110:27 - curly_braces_in_flow_control_structures
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:237:54 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\resturant_admin_screen.dart:240:63 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\widgets\add_resturant_bloc_listener.dart:57:13 - avoid_print
+warning - Unused import: 'package:delveria/core/helper/strings.dart' - lib\features\admin\resturantAdmin\ui\widgets\admin_fields_section.dart:1:8 - unused_import
+warning - Unused import: 'package:easy_localization/easy_localization.dart' - lib\features\admin\resturantAdmin\ui\widgets\admin_fields_section.dart:4:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/adresses/ui/widgets/location_on-map_button.dart' - lib\features\admin\resturantAdmin\ui\widgets\build_address_section.dart:5:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_drop_down.dart:30:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:91:63 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:178:59 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:181:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:206:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:210:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:309:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:402:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:405:63 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:430:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\category_section.dart:436:50 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\resturantAdmin\ui\widgets\filter_dialog_admin_res.dart:88:13 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\resturantAdmin\ui\widgets\filter_dialog_admin_res.dart:89:13 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\resturantAdmin\ui\widgets\filter_dialog_admin_res.dart:99:13 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\resturantAdmin\ui\widgets\filter_dialog_admin_res.dart:100:13 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/helper/lists.dart' - lib\features\admin\resturantAdmin\ui\widgets\from_notification_res_body.dart:2:8 - unused_import
+   info - Constructors for public widgets should have a named 'key' parameter - lib\features\admin\resturantAdmin\ui\widgets\rated_resturant_card_admin.dart:10:9 - use_key_in_widget_constructors
+warning - Unused import: 'package:delveria/core/di/dependancy_injection.dart' - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:2:8 - unused_import
+warning - Unused import: 'package:delveria/core/func/show_snack_bar.dart' - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:3:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/images.dart' - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:4:8 - unused_import
+warning - Unused import: 'package:delveria/core/network/api_constants.dart' - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:7:8 - unused_import
+warning - Unused import: 'package:loading_animation_widget/loading_animation_widget.dart' - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:20:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:110:23 - avoid_print
+warning - The left operand can't be null, so the right operand is never executed - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:168:72 - dead_null_aware_expression
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\admin\resturantAdmin\ui\widgets\restaurant_card.dart:216:19 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/di/dependancy_injection.dart' - lib\features\admin\resturantAdmin\ui\widgets\resturant_admin_dialog.dart:1:8 - unused_import
+warning - Unused import: 'package:delveria/features/admin/resturantAdmin/logic/cubit/admin_resturant_filter_cubit.dart' - lib\features\admin\resturantAdmin\ui\widgets\resturant_admin_dialog.dart:9:8 - unused_import
+warning - Unused import: 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart' - lib\features\admin\resturantAdmin\ui\widgets\resturant_admin_dialog.dart:10:8 - unused_import
+warning - Unused import: 'package:delveria/features/admin/resturantAdmin/ui/resturant_admin_screen.dart' - lib\features\admin\resturantAdmin\ui\widgets\resturant_admin_dialog.dart:11:8 - unused_import
+warning - Unused import: 'package:flutter_bloc/flutter_bloc.dart' - lib\features\admin\resturantAdmin\ui\widgets\resturant_admin_dialog.dart:16:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\super_category_selection_body.dart:37:51 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\super_category_selection_body.dart:112:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\super_category_selection_body.dart:115:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\super_category_selection_body.dart:139:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\resturantAdmin\ui\widgets\super_category_selection_body.dart:142:63 - deprecated_member_use
+warning - The declaration '_$DeleteSliderResponseToJson' isn't referenced - lib\features\admin\slider\data\models\delete_slider_response.g.dart:13:22 - unused_element
+   info - Statements in an if should be enclosed in a block - lib\features\admin\slider\ui\widgets\create_slider_bloc_listener.dart:24:11 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\slider\ui\widgets\create_slider_bloc_listener.dart:46:11 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\slider\ui\widgets\delete_slider_bloc_listener.dart:24:13 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\slider\ui\widgets\delete_slider_bloc_listener.dart:26:13 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\slider\ui\widgets\delete_slider_bloc_listener.dart:51:13 - curly_braces_in_flow_control_structures
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\slider\ui\widgets\slider_upload_photo_container.dart:37:38 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\admin\users\data\repo\get_users_repo.dart:37:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\admin\users\logic\cubit\get_all_users_admin_cubit.dart:63:11 - avoid_print
+warning - The declaration '_getAllUserIds' isn't referenced - lib\features\admin\users\ui\users_screen.dart:45:16 - unused_element
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\admin\users\ui\users_screen.dart:90:36 - unnecessary_null_comparison
+   info - Statements in an if should be enclosed in a block - lib\features\admin\users\ui\users_screen.dart:91:27 - curly_braces_in_flow_control_structures
+   info - Statements in an if should be enclosed in a block - lib\features\admin\users\ui\users_screen.dart:134:19 - curly_braces_in_flow_control_structures
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\users\ui\users_screen.dart:230:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\admin\users\ui\users_screen.dart:233:65 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\users\ui\widgets\filter_dialog_for_admin_user.dart:52:13 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\users\ui\widgets\filter_dialog_for_admin_user.dart:53:13 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\users\ui\widgets\filter_dialog_for_admin_user.dart:63:13 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\users\ui\widgets\filter_dialog_for_admin_user.dart:64:13 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\users\ui\widgets\filter_dialog_for_admin_user.dart:74:13 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\admin\users\ui\widgets\filter_dialog_for_admin_user.dart:75:13 - deprecated_member_use
+warning - The declaration '_$UpdateUserInfoResponseToJson' isn't referenced - lib\features\client\accountInfo\data\model\update_user_info_response.g.dart:13:22 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\client\accountInfo\data\repo\get_data_repo.dart:17:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\accountInfo\ui\account_info_screen.dart:63:33 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\accountInfo\ui\account_info_screen.dart:107:45 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\accountInfo\ui\account_info_screen.dart:108:45 - use_build_context_synchronously
+   info - Invalid use of a private type in a public API - lib\features\client\accountInfo\ui\edit_account_info_screen.dart:24:3 - library_private_types_in_public_api
+   info - Don't invoke 'print' in production code - lib\features\client\accountInfo\ui\widgets\update_user_data_bloc_listner.dart:27:13 - avoid_print
+warning - The declaration '_$AddAddressRequestFromJson' isn't referenced - lib\features\client\adresses\data\models\add_address_request.g.dart:9:19 - unused_element
+warning - Unused import: 'package:delveria/features/client/adresses/data/models/delivery_zone.dart' - lib\features\client\adresses\data\repo\zones_repo.dart:5:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\data\repo\zones_repo.dart:20:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\data\repo\zones_repo.dart:42:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:73:13 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:87:13 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:97:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:98:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:99:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:100:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:101:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:116:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:117:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:120:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\create_address_cubit.dart:125:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\zones_cubit.dart:21:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\zones_cubit.dart:25:9 - avoid_print
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\adresses\logic\cubit\zones_cubit.dart:26:42 - dead_null_aware_expression
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\zones_cubit.dart:36:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\logic\cubit\zones_cubit.dart:40:9 - avoid_print
+   info - Invalid use of a private type in a public API - lib\features\client\adresses\ui\add_adress_screen.dart:28:3 - library_private_types_in_public_api
+warning - The value of the field '_formKey' isn't used - lib\features\client\adresses\ui\add_adress_screen.dart:34:30 - unused_field
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\adresses\ui\add_adress_screen.dart:67:21 - use_build_context_synchronously
+warning - The value of the field '_zoneName' isn't used - lib\features\client\adresses\ui\location_picker_screen.dart:34:11 - unused_field
+   info - The private field _circles could be 'final' - lib\features\client\adresses\ui\location_picker_screen.dart:39:15 - prefer_final_fields
+   info - The private field _polygons could be 'final' - lib\features\client\adresses\ui\location_picker_screen.dart:40:16 - prefer_final_fields
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\adresses\ui\location_picker_screen.dart:64:28 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\adresses\ui\location_picker_screen.dart:72:28 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\adresses\ui\location_picker_screen.dart:88:31 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\adresses\ui\location_picker_screen.dart:95:27 - use_build_context_synchronously
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\features\client\adresses\ui\location_picker_screen.dart:101:9 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\adresses\ui\location_picker_screen.dart:116:25 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\adresses\ui\location_picker_screen.dart:380:63 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\adresses\ui\location_picker_screen.dart:383:65 - deprecated_member_use
+   info - Invalid use of a private type in a public API - lib\features\client\adresses\ui\my_adress.dart:26:3 - library_private_types_in_public_api
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\ui\widgets\adress_card.dart:84:23 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\adresses\ui\widgets\create_address_bloc_listener.dart:21:13 - avoid_print
+   info - The file name 'location_on-map_button.dart' isn't a lower_case_with_underscores identifier - lib\features\client\adresses\ui\widgets\location_on-map_button.dart:1:1 - file_names
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\adresses\ui\widgets\save_changes_and_discared_btn.dart:66:19 - use_build_context_synchronously
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\client\adresses\ui\widgets\switch_row.dart:22:11 - deprecated_member_use
+warning - The declaration '_$LoginRequestBodyFromJson' isn't referenced - lib\features\client\auth\login\data\models\login_request.g.dart:9:18 - unused_element
+warning - The declaration '_$LoginCoordinatesFromJson' isn't referenced - lib\features\client\auth\login\data\models\login_response.g.dart:165:18 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\client\auth\login\data\repo\login_repo.dart:16:7 - avoid_print
+warning - Unused import: 'package:delveria/core/network/dio_factory.dart' - lib\features\client\auth\login\logic\cubit\login_cubit.dart:6:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\client\auth\login\logic\cubit\login_cubit.dart:88:11 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\login\login_screen.dart:87:37 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\login\widgets\login_bloc_listener.dart:35:23 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\auth\login\widgets\login_bloc_listener.dart:68:17 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\login\widgets\login_button.dart:60:37 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\auth\login\widgets\login_button.dart:72:17 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\login\widgets\login_button.dart:75:21 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\login\widgets\login_button.dart:79:19 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:88:25 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:153:29 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:164:29 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:169:27 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\auth\otp\ui\otp_screen.dart:173:7 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:174:25 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:204:27 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\otp\ui\otp_screen.dart:213:25 - use_build_context_synchronously
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\auth\otp\ui\otp_service.dart:22:46 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\auth\otp\ui\otp_service.dart:30:61 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\auth\otp\ui\otp_service.dart:51:46 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\auth\otp\ui\otp_service.dart:59:63 - dead_null_aware_expression
+warning - The value of the local variable 'cubit' isn't used - lib\features\client\auth\otp\ui\widgets\otp_fields_with_bloc.dart:27:15 - unused_local_variable
+warning - The declaration '_$SignUpRequestBodyFromJson' isn't referenced - lib\features\client\auth\signUp\data\models\sign_up_request_body.g.dart:9:19 - unused_element
+warning - The declaration '_$SignUpResponseToJson' isn't referenced - lib\features\client\auth\signUp\data\models\sign_up_response.g.dart:15:22 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\client\auth\signUp\data\repo\sign_up_repo.dart:18:7 - avoid_print
+warning - Unused import: 'package:delveria/core/network/dio_factory.dart' - lib\features\client\auth\signUp\logic\cubit\signup_cubit.dart:5:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/strings.dart' - lib\features\client\auth\signUp\widgets\email_and_phone.dart:2:8 - unused_import
+warning - Unused import: 'package:delveria/core/theme/styles.dart' - lib\features\client\auth\signUp\widgets\email_and_phone.dart:3:8 - unused_import
+warning - Unused import: 'package:easy_localization/easy_localization.dart' - lib\features\client\auth\signUp\widgets\email_and_phone.dart:5:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\client\auth\signUp\widgets\sign_up_app_bar.dart:28:9 - avoid_print
+warning - The value of the local variable 'cubit' isn't used - lib\features\client\auth\signUp\widgets\sign_up_app_bar.dart:31:19 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\signUp\widgets\sign_up_app_bar.dart:62:33 - use_build_context_synchronously
+   info - 'color' is deprecated and shouldn't be used. Use colorFilter instead - lib\features\client\auth\signUp\widgets\sign_up_app_bar.dart:85:29 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\client\auth\signUp\widgets\sign_up_bloc_listener.dart:40:13 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\signUp\widgets\sign_up_button.dart:31:39 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\signUp\widgets\sign_up_button.dart:34:33 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\auth\signUp\widgets\sign_up_button.dart:38:21 - use_build_context_synchronously
+warning - Unused import: 'package:delveria/features/ResturantOwner/resturantNotification/logic/cubit/notifications_cubit.dart' - lib\features\client\bottom_nav_bar_screen.dart:10:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/cart/logic/cubit/add_to_cart_cubit.dart' - lib\features\client\bottom_nav_bar_screen.dart:18:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/home/ui/widgets/deliver_to_row.dart' - lib\features\client\bottom_nav_bar_screen.dart:25:8 - unused_import
+   info - 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre - lib\features\client\bottom_nav_bar_screen.dart:134:12 - deprecated_member_use
+   info - The variable name 'user_id' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:25:17 - non_constant_identifier_names
+   info - The variable name 'final_price_without_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:31:14 - non_constant_identifier_names
+   info - The variable name 'final_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:32:14 - non_constant_identifier_names
+   info - The variable name 'final_price' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:33:14 - non_constant_identifier_names
+   info - The variable name 'user_id' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:37:10 - non_constant_identifier_names
+   info - The variable name 'final_price_without_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:42:10 - non_constant_identifier_names
+   info - The variable name 'final_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:43:10 - non_constant_identifier_names
+   info - The variable name 'final_price' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:44:10 - non_constant_identifier_names
+   info - The variable name 'restaurant_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:55:28 - non_constant_identifier_names
+   info - The variable name 'price_of_restaurant' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:57:14 - non_constant_identifier_names
+   info - The variable name 'restaurant_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:60:10 - non_constant_identifier_names
+   info - The variable name 'price_of_restaurant' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:62:10 - non_constant_identifier_names
+   info - The variable name 'delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:75:14 - non_constant_identifier_names
+   info - The variable name 'delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:80:10 - non_constant_identifier_names
+   info - The variable name 'item_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:91:22 - non_constant_identifier_names
+   info - The variable name 'size_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:92:22 - non_constant_identifier_names
+   info - Unnecessary 'const' keyword - lib\features\client\cart\data\models\get_cart_response.dart:93:26 - unnecessary_const
+   info - The variable name 'topping_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:94:31 - non_constant_identifier_names
+   info - The variable name 'total_price' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:96:14 - non_constant_identifier_names
+   info - The variable name 'item_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:99:10 - non_constant_identifier_names
+   info - The variable name 'size_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:100:10 - non_constant_identifier_names
+   info - The variable name 'topping_details' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:101:10 - non_constant_identifier_names
+   info - The variable name 'total_price' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:103:10 - non_constant_identifier_names
+   info - The variable name 'price_before' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:138:14 - non_constant_identifier_names
+   info - The variable name 'price_after' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:139:14 - non_constant_identifier_names
+   info - The variable name 'price_of_quantity' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:141:14 - non_constant_identifier_names
+   info - The variable name 'price_before' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:146:10 - non_constant_identifier_names
+   info - The variable name 'price_after' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:147:10 - non_constant_identifier_names
+   info - The variable name 'price_of_quantity' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:149:10 - non_constant_identifier_names
+   info - The variable name 'price_of_quantity' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:165:14 - non_constant_identifier_names
+   info - The variable name 'price_of_quantity' isn't a lowerCamelCase identifier - lib\features\client\cart\data\models\get_cart_response.dart:172:10 - non_constant_identifier_names
+   info - Don't invoke 'print' in production code - lib\features\client\cart\logic\cubit\add_to_cart_cubit.dart:41:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\logic\cubit\add_to_cart_cubit.dart:85:13 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\logic\cubit\add_to_cart_cubit.dart:108:17 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\logic\cubit\add_to_cart_cubit.dart:150:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\logic\cubit\add_to_cart_cubit.dart:187:5 - avoid_print
+warning - Unused import: 'package:delveria/core/network/api_error_handler.dart' - lib\features\client\cart\logic\cubit\add_to_cart_state.dart:1:8 - unused_import
+   info - Invalid use of a private type in a public API - lib\features\client\cart\ui\cart_screen.dart:26:3 - library_private_types_in_public_api
+warning - The declaration '_onWillPop' isn't referenced - lib\features\client\cart\ui\cart_screen.dart:30:16 - unused_element
+   info - 'onPopInvoked' is deprecated and shouldn't be used. Use onPopInvokedWithResult instead. This feature was deprecated after v3.22.0-12.0.pre - lib\features\client\cart\ui\cart_screen.dart:56:7 - deprecated_member_use
+   info - Invalid use of a private type in a public API - lib\features\client\cart\ui\check_out_screen.dart:23:3 - library_private_types_in_public_api
+warning - Unused import: 'package:delveria/features/admin/coupons/logic/cubit/coupone_state.dart' - lib\features\client\cart\ui\widgets\applied_coupon_text.dart:4:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/cart/logic/cubit/cart_cubit.dart' - lib\features\client\cart\ui\widgets\apply_coupon_button.dart:3:8 - unused_import
+warning - Unused import: 'package:flutter_bloc/flutter_bloc.dart' - lib\features\client\cart\ui\widgets\apply_coupon_button.dart:7:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\cart_item_meta.dart:99:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\cart_item_meta.dart:120:9 - avoid_print
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\cart\ui\widgets\cart_item_meta.dart:132:34 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\check_coupone_bloc_listener.dart:36:13 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\check_coupone_bloc_listener.dart:40:13 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\cart\ui\widgets\coupone_body_bloc.dart:147:37 - use_build_context_synchronously
+warning - The value of the local variable 'cartCubit' isn't used - lib\features\client\cart\ui\widgets\coupone_body_bloc.dart:159:55 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\cart\ui\widgets\coupone_body_bloc.dart:226:17 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\order_details_section.dart:51:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\order_details_section.dart:96:17 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\order_details_section.dart:97:17 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\order_details_section.dart:195:43 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\cart\ui\widgets\order_details_section.dart:199:43 - avoid_print
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\cart\ui\widgets\product_details.dart:319:37 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\cart\ui\widgets\product_details.dart:325:40 - dead_null_aware_expression
+   info - Don't invoke 'print' in production code - lib\features\client\fav\data\repo\favorite_repo.dart:27:7 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\fav\ui\fav_screen.dart:111:39 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\fav\ui\fav_screen.dart:114:27 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\fav\ui\fav_screen.dart:145:39 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\fav\ui\fav_screen.dart:146:46 - use_build_context_synchronously
+warning - The declaration '_$RestaurantByCategoryFromJson' isn't referenced - lib\features\client\filter\data\models\filter_by_category_response.g.dart:24:22 - unused_element
+warning - The declaration '_$CoordinatesFromJson' isn't referenced - lib\features\client\filter\data\models\filter_by_category_response.g.dart:88:13 - unused_element
+warning - The declaration '_$SuperCategoryFromJson' isn't referenced - lib\features\client\filter\data\models\filter_by_category_response.g.dart:99:15 - unused_element
+warning - The declaration '_$SubCategoryFromJson' isn't referenced - lib\features\client\filter\data\models\filter_by_category_response.g.dart:115:13 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\client\filter\data\repo\filter_category_repo.dart:28:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\filter\data\repo\filter_category_repo.dart:38:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\filter\data\repo\filter_category_repo.dart:41:7 - avoid_print
+   info - Statements in an if should be enclosed in a block - lib\features\client\filter\ui\nearby_see_all_screen.dart:64:31 - curly_braces_in_flow_control_structures
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\filter\ui\nearby_see_all_screen.dart:91:78 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\filter\ui\nearby_see_all_screen.dart:177:59 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\filter\ui\nearby_see_all_screen.dart:184:62 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\filter\ui\nearby_see_all_screen.dart:201:74 - dead_null_aware_expression
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\filter\ui\widgets\categories_container.dart:113:58 - deprecated_member_use
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\filter\ui\widgets\category_resturant_card.dart:58:77 - dead_null_aware_expression
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:25:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:71:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:84:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:104:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:121:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:138:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\data\repo\sliders_repo.dart:160:7 - avoid_print
+warning - Unused import: 'package:delveria/features/ResturantOwner/menu/data/models/get_all_item_response.dart' - lib\features\client\home\logic\cubit\sliders_cubit.dart:4:8 - unused_import
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:40:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:58:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:63:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:126:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:148:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:150:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:176:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:179:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:183:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:196:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:199:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:203:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:218:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:221:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:225:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:247:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:250:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\home\logic\cubit\sliders_cubit.dart:254:7 - avoid_print
+warning - Unused import: 'package:delveria/core/theme/color.dart' - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:5:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:115:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:116:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:123:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:128:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:142:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\active_order_tracking_bar.dart:146:42 - deprecated_member_use
+warning - Unused import: 'package:delveria/features/ResturantOwner/resturantNotification/data/models/notifications_model.dart' - lib\features\client\home\ui\widgets\bottom_nav_bar_block.dart:6:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\build_resturant_card.dart:109:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\build_resturant_card.dart:159:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\build_resturant_card.dart:216:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\build_resturant_card.dart:244:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\cards\offer_restaurant_card.dart:73:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\cards\offer_restaurant_card.dart:78:65 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\cards\offer_restaurant_card.dart:108:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\cards\offer_restaurant_card.dart:140:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\cards\offer_restaurant_card.dart:183:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\cards\offer_restaurant_card.dart:219:35 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\home\ui\widgets\deliver_to_row.dart:29:27 - use_build_context_synchronously
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\home\ui\widgets\filter_dialog.dart:66:31 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\home\ui\widgets\filter_dialog.dart:67:31 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\home\ui\widgets\filter_dialog.dart:80:31 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\home\ui\widgets\filter_dialog.dart:81:31 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/func/continue_as_a_guest.dart' - lib\features\client\home\ui\widgets\greeting_section.dart:1:8 - unused_import
+warning - Unused import: 'package:delveria/core/func/permissions_function.dart' - lib\features\client\home\ui\widgets\greeting_section.dart:2:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/constants.dart' - lib\features\client\home\ui\widgets\greeting_section.dart:3:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/shared_pref_helper.dart' - lib\features\client\home\ui\widgets\greeting_section.dart:6:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/accountInfo/logic/cubit/user_data_cubit.dart' - lib\features\client\home\ui\widgets\greeting_section.dart:12:8 - unused_import
+warning - Unused import: 'package:delveria/features/client/accountInfo/logic/cubit/user_data_state.dart' - lib\features\client\home\ui\widgets\greeting_section.dart:13:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\greeting_section.dart:49:43 - deprecated_member_use
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\home\ui\widgets\greeting_section.dart:96:31 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\home\ui\widgets\greeting_section.dart:97:31 - dead_null_aware_expression
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\greeting_section.dart:173:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\greeting_section.dart:178:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\header_section.dart:34:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\header_section.dart:38:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\nearby_text.dart:55:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\nearby_text.dart:56:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\reactive_dots.dart:36:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\reactive_dots.dart:36:78 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\reactive_dots.dart:43:55 - deprecated_member_use
+warning - The value of the local variable 'deliveryCost' isn't used - lib\features\client\home\ui\widgets\resturant_row_details.dart:32:11 - unused_local_variable
+warning - The value of the field '_topRestIndex' isn't used - lib\features\client\home\ui\widgets\scrollable_content.dart:48:7 - unused_field
+warning - The value of the field '_nearbyRestIndex' isn't used - lib\features\client\home\ui\widgets\scrollable_content.dart:49:7 - unused_field
+warning - The value of the field '_offersIndex' isn't used - lib\features\client\home\ui\widgets\scrollable_content.dart:50:7 - unused_field
+warning - The value of the local variable 'allResturantsCubit' isn't used - lib\features\client\home\ui\widgets\scrollable_content.dart:92:51 - unused_local_variable
+warning - The value of the local variable 'superCategoriesCubit' isn't used - lib\features\client\home\ui\widgets\scrollable_content.dart:93:27 - unused_local_variable
+warning - The declaration '_buildSearchBar' isn't referenced - lib\features\client\home\ui\widgets\scrollable_content.dart:229:10 - unused_element
+warning - The declaration '_buildActiveOrderSection' isn't referenced - lib\features\client\home\ui\widgets\scrollable_content.dart:250:10 - unused_element
+warning - The declaration '_buildSliderSection' isn't referenced - lib\features\client\home\ui\widgets\scrollable_content.dart:290:10 - unused_element
+warning - The declaration '_buildCategoriesSection' isn't referenced - lib\features\client\home\ui\widgets\scrollable_content.dart:304:10 - unused_element
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:103:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:113:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:114:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:118:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:119:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:125:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:126:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:169:58 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:208:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:220:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\search_bar.dart:221:32 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/helper/strings.dart' - lib\features\client\home\ui\widgets\sections\home_categories_section.dart:3:8 - unused_import
+warning - Unused import: 'package:easy_localization/easy_localization.dart' - lib\features\client\home\ui\widgets\sections\home_categories_section.dart:11:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/strings.dart' - lib\features\client\home\ui\widgets\sections\home_nearby_section.dart:3:8 - unused_import
+warning - Unused import: 'package:easy_localization/easy_localization.dart' - lib\features\client\home\ui\widgets\sections\home_nearby_section.dart:12:8 - unused_import
+warning - Unused import: 'package:delveria/core/theme/color.dart' - lib\features\client\home\ui\widgets\sections\home_offers_section.dart:4:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\sections\home_offers_section.dart:87:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\sections\home_offers_section.dart:88:34 - deprecated_member_use
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\home\ui\widgets\slider_section.dart:65:52 - dead_null_aware_expression
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\slider_section.dart:114:27 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\client\home\ui\widgets\slider_section.dart:174:7 - avoid_print
+  error - The named parameter 'loacationMap' isn't defined - lib\features\client\home\ui\widgets\slider_section.dart:223:7 - undefined_named_parameter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\top_resturants_text.dart:64:58 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\home\ui\widgets\top_resturants_text.dart:65:50 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/helper/strings.dart' - lib\features\client\onboarding\ui\widgets\next_button.dart:4:8 - unused_import
+warning - Unused import: 'package:easy_localization/easy_localization.dart' - lib\features\client\onboarding\ui\widgets\next_button.dart:10:8 - unused_import
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\onboarding\ui\widgets\next_button.dart:28:13 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\onboarding\ui\widgets\skip_button.dart:34:12 - use_build_context_synchronously
+   info - 'color' is deprecated and shouldn't be used. Use colorFilter instead - lib\features\client\onboarding\ui\widgets\skip_button.dart:50:15 - deprecated_member_use
+   info - The variable name 'user_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:22:17 - non_constant_identifier_names
+   info - The variable name 'final_price_without_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:24:14 - non_constant_identifier_names
+   info - The variable name 'final_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:25:14 - non_constant_identifier_names
+   info - The variable name 'final_price' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:26:14 - non_constant_identifier_names
+   info - The variable name 'delivery_type' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:27:17 - non_constant_identifier_names
+   info - The variable name 'delivery_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:28:17 - non_constant_identifier_names
+   info - The variable name 'payment_type' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:29:17 - non_constant_identifier_names
+   info - The variable name 'user_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:41:10 - non_constant_identifier_names
+   info - The variable name 'final_price_without_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:43:10 - non_constant_identifier_names
+   info - The variable name 'final_delivery_cost' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:44:10 - non_constant_identifier_names
+   info - The variable name 'final_price' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:45:10 - non_constant_identifier_names
+   info - The variable name 'delivery_type' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:46:10 - non_constant_identifier_names
+   info - The variable name 'delivery_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:47:10 - non_constant_identifier_names
+   info - The variable name 'payment_type' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:48:10 - non_constant_identifier_names
+   info - The variable name 'address_title' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:65:17 - non_constant_identifier_names
+   info - The variable name 'address_title' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:71:10 - non_constant_identifier_names
+   info - The variable name 'restaurant_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:100:17 - non_constant_identifier_names
+   info - The variable name 'price_of_restaurant' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:102:14 - non_constant_identifier_names
+   info - The variable name 'cancel_me' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:104:15 - non_constant_identifier_names
+   info - The variable name 'restaurant_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:109:10 - non_constant_identifier_names
+   info - The variable name 'price_of_restaurant' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:111:10 - non_constant_identifier_names
+   info - The variable name 'cancel_me' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:113:10 - non_constant_identifier_names
+   info - The variable name 'item_details' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:125:27 - non_constant_identifier_names
+   info - The variable name 'size_details' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:126:27 - non_constant_identifier_names
+   info - The variable name 'topping_details' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:127:36 - non_constant_identifier_names
+   info - The variable name 'total_price' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:128:14 - non_constant_identifier_names
+   info - The variable name 'item_details' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:133:10 - non_constant_identifier_names
+   info - The variable name 'size_details' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:134:10 - non_constant_identifier_names
+   info - The variable name 'topping_details' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:135:10 - non_constant_identifier_names
+   info - The variable name 'total_price' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:136:10 - non_constant_identifier_names
+   info - The variable name 'item_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:148:17 - non_constant_identifier_names
+   info - The variable name 'item_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:154:10 - non_constant_identifier_names
+   info - The variable name 'size_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:168:17 - non_constant_identifier_names
+   info - The variable name 'price_before' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:170:14 - non_constant_identifier_names
+   info - The variable name 'price_after' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:171:14 - non_constant_identifier_names
+   info - The variable name 'size_id' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:178:10 - non_constant_identifier_names
+   info - The variable name 'price_before' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:180:10 - non_constant_identifier_names
+   info - The variable name 'price_after' isn't a lowerCamelCase identifier - lib\features\client\orders\data\models\get_orders_model.dart:181:10 - non_constant_identifier_names
+   info - Don't invoke 'print' in production code - lib\features\client\orders\data\repo\orders_repo.dart:17:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\orders\logic\cubit\order_cubit.dart:142:7 - avoid_print
+warning - The value of the local variable 'items' isn't used - lib\features\client\orders\order_details_user.dart:22:11 - unused_local_variable
+   info - Invalid use of a private type in a public API - lib\features\client\orders\ui\my_orders.dart:19:3 - library_private_types_in_public_api
+   info - Don't invoke 'print' in production code - lib\features\client\orders\ui\track_order.dart:43:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\orders\ui\track_order.dart:44:5 - avoid_print
+warning - Unused import: 'package:delveria/core/helper/extentions.dart' - lib\features\client\orders\ui\widgets\delivered_on_body.dart:1:8 - unused_import
+warning - Unused import: 'package:delveria/core/widgets/app_button.dart' - lib\features\client\orders\ui\widgets\delivered_on_body.dart:5:8 - unused_import
+warning - Unused import: 'package:delveria/main.dart' - lib\features\client\orders\ui\widgets\delivered_on_body.dart:10:8 - unused_import
+   info - The private field _dialogShown could be 'final' - lib\features\client\orders\ui\widgets\delivered_on_body.dart:30:8 - prefer_final_fields
+warning - The value of the field '_dialogShown' isn't used - lib\features\client\orders\ui\widgets\delivered_on_body.dart:30:8 - unused_field
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:27:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:29:25 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:31:28 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:99:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:115:53 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:157:43 - deprecated_member_use
+   info - Unnecessary use of string interpolation - lib\features\client\orders\ui\widgets\my_order_card.dart:168:23 - unnecessary_string_interpolations
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\client\orders\ui\widgets\my_order_card.dart:216:38 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\client\orders\ui\widgets\my_order_card.dart:287:41 - avoid_print
+   info - Invalid use of a private type in a public API - lib\features\client\payment\ui\credit_card_info_screen.dart:20:3 - library_private_types_in_public_api
+   info - The prefix 'cartState' isn't a lower_case_with_underscores identifier - lib\features\client\payment\ui\payment_method_screen.dart:17:8 - library_prefixes
+   info - Invalid use of a private type in a public API - lib\features\client\payment\ui\payment_method_screen.dart:35:3 - library_private_types_in_public_api
+   info - Don't invoke 'print' in production code - lib\features\client\payment\ui\payment_method_screen.dart:44:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\payment\ui\payment_method_screen.dart:121:31 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\payment\ui\payment_method_screen.dart:201:48 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\payment\ui\payment_method_screen.dart:212:9 - avoid_print
+   info - Statements in an if should be enclosed in a block - lib\features\client\payment\ui\payment_web_view_screen.dart:69:27 - curly_braces_in_flow_control_structures
+   info - Don't invoke 'print' in production code - lib\features\client\payment\ui\payment_web_view_screen.dart:81:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\payment\ui\payment_web_view_screen.dart:88:7 - avoid_print
+   info - The file name 'card_holder_name_textField.dart' isn't a lower_case_with_underscores identifier - lib\features\client\payment\ui\widgets\card_holder_name_textField.dart:1:1 - file_names
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\profileDrawer\ui\widgets\menu_items_body_drawer.dart:53:5 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\profileDrawer\ui\widgets\menu_items_body_drawer.dart:251:21 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\profileDrawer\ui\widgets\menu_items_body_drawer.dart:252:21 - use_build_context_synchronously
+   info - Invalid use of a private type in a public API - lib\features\client\resturant\ui\add_item_screen.dart:40:3 - library_private_types_in_public_api
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\add_item_screen.dart:174:31 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\add_item_screen.dart:175:31 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\add_item_screen.dart:198:31 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\add_item_screen.dart:199:31 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\add_item_screen.dart:236:33 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\add_item_screen.dart:237:33 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\resturant\ui\add_item_screen.dart:374:45 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\resturant\ui\add_item_screen.dart:385:45 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\resturant\ui\add_item_screen.dart:398:45 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\client\resturant\ui\add_item_screen.dart:405:41 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\resturant\ui\add_item_screen.dart:408:41 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\resturant\ui\add_item_screen.dart:411:41 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\client\resturant\ui\add_item_screen.dart:414:41 - avoid_print
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\resturant\ui\add_item_screen.dart:424:69 - dead_null_aware_expression
+   info - Don't invoke 'print' in production code - lib\features\client\resturant\ui\add_item_screen.dart:430:41 - avoid_print
+   info - Invalid use of a private type in a public API - lib\features\client\resturant\ui\restaurant_filteration_screen.dart:25:3 - library_private_types_in_public_api
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\client\resturant\ui\resturant_screen.dart:94:42 - unnecessary_null_comparison
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\client\resturant\ui\resturant_screen.dart:98:43 - unnecessary_null_comparison
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\client\resturant\ui\resturant_screen.dart:102:34 - unnecessary_null_comparison
+warning - A value for optional parameter 'key' isn't ever given - lib\features\client\resturant\ui\resturant_screen.dart:310:11 - unused_element_parameter
+warning - Unused import: 'package:delveria/core/helper/images.dart' - lib\features\client\resturant\ui\widgets\build_burger_card.dart:3:8 - unused_import
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\client\resturant\ui\widgets\build_menu_item.dart:148:33 - deprecated_member_use
+   info - Don't invoke 'print' in production code - lib\features\client\resturant\ui\widgets\build_menu_item.dart:152:35 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\client\resturant\ui\widgets\build_menu_item.dart:311:53 - use_build_context_synchronously
+warning - Unused import: 'package:flutter_screenutil/flutter_screenutil.dart' - lib\features\client\resturant\ui\widgets\desired_topping_list.dart:9:8 - unused_import
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\widgets\filter_resturant_dialog.dart:77:31 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\widgets\filter_resturant_dialog.dart:78:31 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\widgets\filter_resturant_dialog.dart:109:35 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\resturant\ui\widgets\filter_resturant_dialog.dart:110:35 - deprecated_member_use
+warning - Unnecessary type check; the result is always 'true' - lib\features\client\resturant\ui\widgets\horizental_body.dart:95:43 - unnecessary_type_check
+   info - The file name 'quick_food_resturant_appBar.dart' isn't a lower_case_with_underscores identifier - lib\features\client\resturant\ui\widgets\quick_food_resturant_appBar.dart:1:1 - file_names
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\resturant\ui\widgets\rate_and_delivery_cost_row.dart:41:28 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\client\resturant\ui\widgets\rate_and_delivery_cost_row.dart:64:58 - dead_null_aware_expression
+warning - Unused import: 'package:delveria/features/client/resturant/ui/restaurant_filteration_screen.dart' - lib\features\client\resturant\ui\widgets\title_rich_text.dart:3:8 - unused_import
+   info - Constructors in '@immutable' classes should be declared as 'const' - lib\features\client\reviews\ui\add_review_screen.dart:16:3 - prefer_const_constructors_in_immutables
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\language_selection_dialog.dart:50:17 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\language_selection_dialog.dart:51:17 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\language_selection_dialog.dart:62:17 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\language_selection_dialog.dart:63:17 - deprecated_member_use
+warning - Unused import: 'package:delveria/core/helper/constants.dart' - lib\features\client\settings\ui\mode_selection_dialog.dart:1:8 - unused_import
+warning - Unused import: 'package:delveria/core/helper/shared_pref_helper.dart' - lib\features\client\settings\ui\mode_selection_dialog.dart:2:8 - unused_import
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\mode_selection_dialog.dart:52:17 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\mode_selection_dialog.dart:53:17 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\mode_selection_dialog.dart:64:17 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\client\settings\ui\mode_selection_dialog.dart:65:17 - deprecated_member_use
+warning - The declaration '_$UpdateAgentOrderStatusResponseToJson' isn't referenced - lib\features\deliveryAgent\data\models\update_agent_order_status_response.g.dart:13:22 - unused_element
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:20:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:23:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:33:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:43:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:53:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:63:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:73:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\data\repo\agent_ordrs_repo.dart:88:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\logic\cubit\agent_orders_cubit.dart:20:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\logic\cubit\agent_orders_cubit.dart:37:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\logic\cubit\agent_orders_cubit.dart:131:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\logic\cubit\agent_orders_cubit.dart:135:11 - avoid_print
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\logic\cubit\agent_orders_cubit.dart:140:7 - avoid_print
+   info - Don't use 'BuildContext's across async gaps - lib\features\deliveryAgent\ui\delivery_agent_home_screen.dart:52:5 - use_build_context_synchronously
+   info - Don't invoke 'print' in production code - lib\features\deliveryAgent\ui\widgets\accept_order_bloc_listener.dart:26:13 - avoid_print
+

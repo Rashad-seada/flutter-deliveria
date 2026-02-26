@@ -13,9 +13,22 @@ class AgentOrdrsRepo {
   AgentOrdrsRepo({required this.apiServices});
 
   Future<ApiResult<GetNotAcceptedOrderAgentResponse>>
-  getCurrentOrdersForAgent() async {
+  getCurrentOrdersForAgent({
+    String? date,
+    String? startDate,
+    String? endDate,
+    String? paymentType,
+    String? orderType,
+  }) async {
     try {
-      final res = await apiServices.getCurrentOrders({});
+      final res = await apiServices.getCurrentOrders(
+        {},
+        date: date,
+        startDate: startDate,
+        endDate: endDate,
+        paymentType: paymentType,
+        orderType: orderType,
+      );
 
       print(res);
       return ApiResult.success(res);
@@ -24,10 +37,23 @@ class AgentOrdrsRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
-  Future<ApiResult<GetAcceptedOrdersResponse>>
-  getAcceptedOrders() async {
+
+  Future<ApiResult<GetAcceptedOrdersResponse>> getAcceptedOrders({
+    String? status,
+    String? date,
+    String? startDate,
+    String? endDate,
+    String? paymentType,
+  }) async {
     try {
-      final res = await apiServices.getAcceptedOrders({});
+      final res = await apiServices.getAcceptedOrders(
+        {},
+        status: status,
+        date: date,
+        startDate: startDate,
+        endDate: endDate,
+        paymentType: paymentType,
+      );
       return ApiResult.success(res);
     } catch (e) {
       print('Error in getCurrentOrdersForAgent: $e');

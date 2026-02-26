@@ -10,20 +10,16 @@ LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) =>
     LoginResponse(
       message: json['message'] as String,
       token: json['token'] as String,
-      user:
-          json['user'] == null
-              ? null
-              : LoginUser.fromJson(json['user'] as Map<String, dynamic>),
-      restaurant:
-          json['restaurant'] == null
-              ? null
-              : LoginRestaurant.fromJson(
-                json['restaurant'] as Map<String, dynamic>,
-              ),
-      agent:
-          json['agent'] == null
-              ? null
-              : LoginAgent.fromJson(json['agent'] as Map<String, dynamic>),
+      user: json['user'] == null
+          ? null
+          : LoginUser.fromJson(json['user'] as Map<String, dynamic>),
+      restaurant: json['restaurant'] == null
+          ? null
+          : LoginRestaurant.fromJson(
+              json['restaurant'] as Map<String, dynamic>),
+      agent: json['agent'] == null
+          ? null
+          : LoginAgent.fromJson(json['agent'] as Map<String, dynamic>),
       userType: json['userType'] as String,
     );
 
@@ -38,57 +34,51 @@ Map<String, dynamic> _$LoginResponseToJson(LoginResponse instance) =>
     };
 
 LoginUser _$LoginUserFromJson(Map<String, dynamic> json) => LoginUser(
-  coordinates:
-      json['coordinates'] == null
+      coordinates: json['coordinates'] == null
           ? null
           : LoginCoordinates.fromJson(
-            json['coordinates'] as Map<String, dynamic>,
-          ),
-  id: json['_id'] as String,
-  firstName: json['first_name'] as String,
-  lastName: json['last_name'] as String,
-  phone: json['phone'] as String,
-  email: json['email'] as String,
-  ban: json['ban'] as bool,
-  createdAt: json['createdAt'] as String,
-  updatedAt: json['updatedAt'] as String,
-  v: (json['__v'] as num).toInt(),
-  addressId: json['address_id'] as String?,
-);
+              json['coordinates'] as Map<String, dynamic>),
+      id: json['_id'] as String,
+      firstName: json['first_name'] as String,
+      lastName: json['last_name'] as String,
+      phone: json['phone'] as String,
+      email: json['email'] as String,
+      ban: json['ban'] as bool,
+      createdAt: json['createdAt'] as String,
+      updatedAt: json['updatedAt'] as String,
+      v: (json['__v'] as num).toInt(),
+      addressId: json['address_id'] as String?,
+    );
 
 Map<String, dynamic> _$LoginUserToJson(LoginUser instance) => <String, dynamic>{
-  'coordinates': instance.coordinates?.toJson(),
-  '_id': instance.id,
-  'first_name': instance.firstName,
-  'last_name': instance.lastName,
-  'phone': instance.phone,
-  'email': instance.email,
-  'ban': instance.ban,
-  'createdAt': instance.createdAt,
-  'updatedAt': instance.updatedAt,
-  '__v': instance.v,
-  'address_id': instance.addressId,
-};
+      'coordinates': instance.coordinates?.toJson(),
+      '_id': instance.id,
+      'first_name': instance.firstName,
+      'last_name': instance.lastName,
+      'phone': instance.phone,
+      'email': instance.email,
+      'ban': instance.ban,
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+      '__v': instance.v,
+      'address_id': instance.addressId,
+    };
 
 LoginRestaurant _$LoginRestaurantFromJson(Map<String, dynamic> json) =>
     LoginRestaurant(
-      coordinates:
-          json['coordinates'] == null
-              ? null
-              : LoginCoordinates.fromJson(
-                json['coordinates'] as Map<String, dynamic>,
-              ),
+      coordinates: json['coordinates'] == null
+          ? null
+          : LoginCoordinates.fromJson(
+              json['coordinates'] as Map<String, dynamic>),
       id: json['_id'] as String,
       photo: json['photo'] as String,
       logo: json['logo'] as String,
-      superCategory:
-          (json['super_category'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList(),
-      subCategory:
-          (json['sub_category'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList(),
+      superCategory: (json['super_category'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      subCategory: (json['sub_category'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       name: json['name'] as String,
       phone: json['phone'] as String,
       userName: json['user_name'] as String,
@@ -140,15 +130,15 @@ Map<String, dynamic> _$LoginRestaurantToJson(LoginRestaurant instance) =>
     };
 
 LoginAgent _$LoginAgentFromJson(Map<String, dynamic> json) => LoginAgent(
-  id: json['_id'] as String,
-  name: json['name'] as String,
-  phone: json['phone'] as String,
-  userName: json['user_name'] as String,
-  ban: json['ban'] as bool,
-  createdAt: json['createdAt'] as String,
-  updatedAt: json['updatedAt'] as String,
-  v: (json['__v'] as num).toInt(),
-);
+      id: json['_id'] as String,
+      name: json['name'] as String,
+      phone: json['phone'] as String,
+      userName: json['user_name'] as String,
+      ban: json['ban'] as bool,
+      createdAt: json['createdAt'] as String,
+      updatedAt: json['updatedAt'] as String,
+      v: (json['__v'] as num).toInt(),
+    );
 
 Map<String, dynamic> _$LoginAgentToJson(LoginAgent instance) =>
     <String, dynamic>{

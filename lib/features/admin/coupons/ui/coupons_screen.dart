@@ -12,6 +12,7 @@ import 'package:delveria/features/admin/coupons/logic/cubit/coupone_state.dart';
 import 'package:delveria/features/admin/coupons/ui/widgets/coupon_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class AdminCouponsScreen extends StatefulWidget {
   const AdminCouponsScreen({super.key});
@@ -22,6 +23,15 @@ class AdminCouponsScreen extends StatefulWidget {
 
 class _AdminCouponsScreenState extends State<AdminCouponsScreen> {
   @override
+  void initState() {
+    super.initState();
+    // Fetch coupons when screen loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<CouponeCubit>().getCoupons();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
@@ -29,7 +39,7 @@ class _AdminCouponsScreenState extends State<AdminCouponsScreen> {
         child: ArrowBackAppBarWithTitle(
           canPop: true,
           showTitle: true,
-          title: AppStrings.coupons,
+          title: AppStrings.coupons.tr(),
           titleStyle: TextStyles.bimini20W700.copyWith(
             color: AppColors.primaryDeafult,
           ),
@@ -37,39 +47,76 @@ class _AdminCouponsScreenState extends State<AdminCouponsScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: BlocBuilder<CouponeCubit, CouponeState>(
-          builder: (context, state) {
-            final cubit = context.read<CouponeCubit>();
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            verticalSpace(24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                verticalSpace(48),
-                Text('All Coupons', style: TextStyles.bimini20W700),
-                verticalSpace(32),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: cubit.coupons.length,
-                    itemBuilder: (context, index) {
-                      return CouponCard(
-                        coupon:cubit.coupons[index],
-                        index: index,
+                Text(AppStrings.coupons.tr(), style: TextStyles.bimini20W700),
+                IconButton(
+                  onPressed: () {
+                     context.read<CouponeCubit>().getCoupons();
+                  }, 
+                  icon: Icon(Icons.refresh, color: AppColors.primary)
+                ),
+              ],
+            ),
+            verticalSpace(16),
+            Expanded(
+              child: BlocBuilder<CouponeCubit, CouponeState>(
+                builder: (context, state) {
+                  final cubit = context.read<CouponeCubit>();
+                  
+                  // Check for explicit loading state
+                  // Note: verify if state.maybeWhen is preferred or manual check
+                  // Since CouponeState is freezed, we can use try/catch or simple check if we had logic
+                  // But relying on cubit.coupons is risky if loading.
+                  
+                  return state.maybeWhen(
+                    getCouponsLoading: () => Center(child: CircularProgressIndicator()),
+                    getCouponsFail: (error) => Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(error.message),
+                          verticalSpace(8),
+                          AppButton(
+                            title: "Retry",
+                            onPressed: () => cubit.getCoupons(),
+                          )
+                        ],
+                      ),
+                    ),
+                    orElse: () {
+                      if (cubit.coupons.isEmpty) {
+                        return Center(child: Text("No coupons found"));
+                      }
+                      return ListView.builder(
+                        itemCount: cubit.coupons.length,
+                        itemBuilder: (context, index) {
+                          return CouponCard(
+                            coupon: cubit.coupons[index],
+                          );
+                        },
                       );
                     },
-                  ),
-                ),
-                verticalSpace(10),
-                Center(
-                  child: AppButton(
-                    title: AppStrings.addCoupon,
-                    onPressed: () {
-                      context.pushNamed(Routes.addCouponeScreen);
-                    },
-                  ),
-                ),
-                verticalSpace(28),
-              ],
-            );
-          },
+                  );
+                },
+              ),
+            ),
+            verticalSpace(10),
+            Center(
+              child: AppButton(
+                title: AppStrings.addCoupon.tr(),
+                onPressed: () {
+                  context.pushNamed(Routes.addCouponeScreen);
+                },
+              ),
+            ),
+            verticalSpace(28),
+          ],
         ),
       ),
     );

@@ -12,8 +12,7 @@ part of 'get_all_users_admin_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$GetAllUsersAdminState<T> {
@@ -29,7 +28,8 @@ mixin _$GetAllUsersAdminState<T> {
     required TResult Function() searchUserLoading,
     required TResult Function(T data) searchUserSuccess,
     required TResult Function(ApiErrorModel error) searchUserFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -42,7 +42,8 @@ mixin _$GetAllUsersAdminState<T> {
     TResult? Function()? searchUserLoading,
     TResult? Function(T data)? searchUserSuccess,
     TResult? Function(ApiErrorModel error)? searchUserFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -56,7 +57,8 @@ mixin _$GetAllUsersAdminState<T> {
     TResult Function(T data)? searchUserSuccess,
     TResult Function(ApiErrorModel error)? searchUserFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -69,7 +71,8 @@ mixin _$GetAllUsersAdminState<T> {
     required TResult Function(SearchUserLoading<T> value) searchUserLoading,
     required TResult Function(SearchUserSuccess<T> value) searchUserSuccess,
     required TResult Function(SearchUserFail<T> value) searchUserFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -82,7 +85,8 @@ mixin _$GetAllUsersAdminState<T> {
     TResult? Function(SearchUserLoading<T> value)? searchUserLoading,
     TResult? Function(SearchUserSuccess<T> value)? searchUserSuccess,
     TResult? Function(SearchUserFail<T> value)? searchUserFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -96,23 +100,20 @@ mixin _$GetAllUsersAdminState<T> {
     TResult Function(SearchUserSuccess<T> value)? searchUserSuccess,
     TResult Function(SearchUserFail<T> value)? searchUserFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetAllUsersAdminStateCopyWith<T, $Res> {
-  factory $GetAllUsersAdminStateCopyWith(
-    GetAllUsersAdminState<T> value,
-    $Res Function(GetAllUsersAdminState<T>) then,
-  ) = _$GetAllUsersAdminStateCopyWithImpl<T, $Res, GetAllUsersAdminState<T>>;
+  factory $GetAllUsersAdminStateCopyWith(GetAllUsersAdminState<T> value,
+          $Res Function(GetAllUsersAdminState<T>) then) =
+      _$GetAllUsersAdminStateCopyWithImpl<T, $Res, GetAllUsersAdminState<T>>;
 }
 
 /// @nodoc
-class _$GetAllUsersAdminStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends GetAllUsersAdminState<T>
->
+class _$GetAllUsersAdminStateCopyWithImpl<T, $Res,
+        $Val extends GetAllUsersAdminState<T>>
     implements $GetAllUsersAdminStateCopyWith<T, $Res> {
   _$GetAllUsersAdminStateCopyWithImpl(this._value, this._then);
 
@@ -120,17 +121,13 @@ class _$GetAllUsersAdminStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -138,12 +135,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -283,9 +276,8 @@ abstract class _Initial<T> implements GetAllUsersAdminState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -293,12 +285,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -438,9 +426,8 @@ abstract class Loading<T> implements GetAllUsersAdminState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -450,23 +437,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -495,9 +479,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -618,10 +600,7 @@ abstract class Success<T> implements GetAllUsersAdminState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -629,9 +608,8 @@ abstract class Success<T> implements GetAllUsersAdminState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -641,23 +619,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -685,9 +660,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -808,10 +781,7 @@ abstract class Fail<T> implements GetAllUsersAdminState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -819,9 +789,8 @@ abstract class Fail<T> implements GetAllUsersAdminState<T> {
 /// @nodoc
 abstract class _$$BanLoadingImplCopyWith<T, $Res> {
   factory _$$BanLoadingImplCopyWith(
-    _$BanLoadingImpl<T> value,
-    $Res Function(_$BanLoadingImpl<T>) then,
-  ) = __$$BanLoadingImplCopyWithImpl<T, $Res>;
+          _$BanLoadingImpl<T> value, $Res Function(_$BanLoadingImpl<T>) then) =
+      __$$BanLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -829,12 +798,8 @@ class __$$BanLoadingImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$BanLoadingImpl<T>>
     implements _$$BanLoadingImplCopyWith<T, $Res> {
   __$$BanLoadingImplCopyWithImpl(
-    _$BanLoadingImpl<T> _value,
-    $Res Function(_$BanLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
+      _$BanLoadingImpl<T> _value, $Res Function(_$BanLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -974,9 +939,8 @@ abstract class BanLoading<T> implements GetAllUsersAdminState<T> {
 /// @nodoc
 abstract class _$$BanSuccessImplCopyWith<T, $Res> {
   factory _$$BanSuccessImplCopyWith(
-    _$BanSuccessImpl<T> value,
-    $Res Function(_$BanSuccessImpl<T>) then,
-  ) = __$$BanSuccessImplCopyWithImpl<T, $Res>;
+          _$BanSuccessImpl<T> value, $Res Function(_$BanSuccessImpl<T>) then) =
+      __$$BanSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -986,23 +950,20 @@ class __$$BanSuccessImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$BanSuccessImpl<T>>
     implements _$$BanSuccessImplCopyWith<T, $Res> {
   __$$BanSuccessImplCopyWithImpl(
-    _$BanSuccessImpl<T> _value,
-    $Res Function(_$BanSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$BanSuccessImpl<T> _value, $Res Function(_$BanSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$BanSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$BanSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1031,9 +992,7 @@ class _$BanSuccessImpl<T> implements BanSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BanSuccessImplCopyWith<T, _$BanSuccessImpl<T>> get copyWith =>
@@ -1154,10 +1113,7 @@ abstract class BanSuccess<T> implements GetAllUsersAdminState<T> {
   const factory BanSuccess(final T data) = _$BanSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BanSuccessImplCopyWith<T, _$BanSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1165,9 +1121,8 @@ abstract class BanSuccess<T> implements GetAllUsersAdminState<T> {
 /// @nodoc
 abstract class _$$BanFailImplCopyWith<T, $Res> {
   factory _$$BanFailImplCopyWith(
-    _$BanFailImpl<T> value,
-    $Res Function(_$BanFailImpl<T>) then,
-  ) = __$$BanFailImplCopyWithImpl<T, $Res>;
+          _$BanFailImpl<T> value, $Res Function(_$BanFailImpl<T>) then) =
+      __$$BanFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1177,23 +1132,20 @@ class __$$BanFailImplCopyWithImpl<T, $Res>
     extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$BanFailImpl<T>>
     implements _$$BanFailImplCopyWith<T, $Res> {
   __$$BanFailImplCopyWithImpl(
-    _$BanFailImpl<T> _value,
-    $Res Function(_$BanFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$BanFailImpl<T> _value, $Res Function(_$BanFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$BanFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$BanFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1221,9 +1173,7 @@ class _$BanFailImpl<T> implements BanFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BanFailImplCopyWith<T, _$BanFailImpl<T>> get copyWith =>
@@ -1344,34 +1294,26 @@ abstract class BanFail<T> implements GetAllUsersAdminState<T> {
   const factory BanFail(final ApiErrorModel error) = _$BanFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BanFailImplCopyWith<T, _$BanFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SearchUserLoadingImplCopyWith<T, $Res> {
-  factory _$$SearchUserLoadingImplCopyWith(
-    _$SearchUserLoadingImpl<T> value,
-    $Res Function(_$SearchUserLoadingImpl<T>) then,
-  ) = __$$SearchUserLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$SearchUserLoadingImplCopyWith(_$SearchUserLoadingImpl<T> value,
+          $Res Function(_$SearchUserLoadingImpl<T>) then) =
+      __$$SearchUserLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$SearchUserLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$SearchUserLoadingImpl<T>>
+    extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res,
+        _$SearchUserLoadingImpl<T>>
     implements _$$SearchUserLoadingImplCopyWith<T, $Res> {
-  __$$SearchUserLoadingImplCopyWithImpl(
-    _$SearchUserLoadingImpl<T> _value,
-    $Res Function(_$SearchUserLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$SearchUserLoadingImplCopyWithImpl(_$SearchUserLoadingImpl<T> _value,
+      $Res Function(_$SearchUserLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1511,37 +1453,33 @@ abstract class SearchUserLoading<T> implements GetAllUsersAdminState<T> {
 
 /// @nodoc
 abstract class _$$SearchUserSuccessImplCopyWith<T, $Res> {
-  factory _$$SearchUserSuccessImplCopyWith(
-    _$SearchUserSuccessImpl<T> value,
-    $Res Function(_$SearchUserSuccessImpl<T>) then,
-  ) = __$$SearchUserSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$SearchUserSuccessImplCopyWith(_$SearchUserSuccessImpl<T> value,
+          $Res Function(_$SearchUserSuccessImpl<T>) then) =
+      __$$SearchUserSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$SearchUserSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$SearchUserSuccessImpl<T>>
+    extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res,
+        _$SearchUserSuccessImpl<T>>
     implements _$$SearchUserSuccessImplCopyWith<T, $Res> {
-  __$$SearchUserSuccessImplCopyWithImpl(
-    _$SearchUserSuccessImpl<T> _value,
-    $Res Function(_$SearchUserSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$SearchUserSuccessImplCopyWithImpl(_$SearchUserSuccessImpl<T> _value,
+      $Res Function(_$SearchUserSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SearchUserSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SearchUserSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1570,17 +1508,13 @@ class _$SearchUserSuccessImpl<T> implements SearchUserSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchUserSuccessImplCopyWith<T, _$SearchUserSuccessImpl<T>>
-  get copyWith =>
-      __$$SearchUserSuccessImplCopyWithImpl<T, _$SearchUserSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$SearchUserSuccessImplCopyWithImpl<T, _$SearchUserSuccessImpl<T>>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1697,47 +1631,40 @@ abstract class SearchUserSuccess<T> implements GetAllUsersAdminState<T> {
   const factory SearchUserSuccess(final T data) = _$SearchUserSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SearchUserSuccessImplCopyWith<T, _$SearchUserSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SearchUserFailImplCopyWith<T, $Res> {
-  factory _$$SearchUserFailImplCopyWith(
-    _$SearchUserFailImpl<T> value,
-    $Res Function(_$SearchUserFailImpl<T>) then,
-  ) = __$$SearchUserFailImplCopyWithImpl<T, $Res>;
+  factory _$$SearchUserFailImplCopyWith(_$SearchUserFailImpl<T> value,
+          $Res Function(_$SearchUserFailImpl<T>) then) =
+      __$$SearchUserFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
 
 /// @nodoc
 class __$$SearchUserFailImplCopyWithImpl<T, $Res>
-    extends
-        _$GetAllUsersAdminStateCopyWithImpl<T, $Res, _$SearchUserFailImpl<T>>
+    extends _$GetAllUsersAdminStateCopyWithImpl<T, $Res,
+        _$SearchUserFailImpl<T>>
     implements _$$SearchUserFailImplCopyWith<T, $Res> {
-  __$$SearchUserFailImplCopyWithImpl(
-    _$SearchUserFailImpl<T> _value,
-    $Res Function(_$SearchUserFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$SearchUserFailImplCopyWithImpl(_$SearchUserFailImpl<T> _value,
+      $Res Function(_$SearchUserFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$SearchUserFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$SearchUserFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1765,16 +1692,12 @@ class _$SearchUserFailImpl<T> implements SearchUserFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchUserFailImplCopyWith<T, _$SearchUserFailImpl<T>> get copyWith =>
       __$$SearchUserFailImplCopyWithImpl<T, _$SearchUserFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1892,10 +1815,7 @@ abstract class SearchUserFail<T> implements GetAllUsersAdminState<T> {
       _$SearchUserFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of GetAllUsersAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SearchUserFailImplCopyWith<T, _$SearchUserFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

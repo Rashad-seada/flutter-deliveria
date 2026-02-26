@@ -47,4 +47,33 @@ class CouponeRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+  Future<ApiResult<CouponeResponse>> updateCoupon({
+    required String id,
+    required Map<String, dynamic> updates,
+  }) async {
+    try {
+      final response = await apiServices.updateCoupon(id, updates);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<void>> deleteCoupon({required String id}) async {
+    try {
+      await apiServices.deleteCoupon(id);
+      return const ApiResult.success(null);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<bool>> toggleCouponStatus({required String id}) async {
+    try {
+      final response = await apiServices.toggleCouponStatus(id);
+      return ApiResult.success(response['is_active']);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
 }

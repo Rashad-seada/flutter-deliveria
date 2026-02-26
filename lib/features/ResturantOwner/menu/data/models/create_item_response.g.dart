@@ -7,7 +7,11 @@ part of 'create_item_response.dart';
 // **************************************************************************
 
 CreateItemResponse _$CreateItemResponseFromJson(Map<String, dynamic> json) =>
-    CreateItemResponse(message: json['message'] as String?);
+    CreateItemResponse(
+      message: json['message'] as String?,
+    );
 
 Map<String, dynamic> _$CreateItemResponseToJson(CreateItemResponse instance) =>
-    <String, dynamic>{'message': instance.message};
+    <String, dynamic>{
+      'message': instance.message,
+    };

@@ -17,11 +17,26 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController lastName = TextEditingController();
   TextEditingController email = TextEditingController();
   TextEditingController phone = TextEditingController();
+
+  /// Per-field error messages, keyed by field name.
+  /// UI widgets read this to show inline errors under their fields.
+  Map<String, String?> fieldErrors = {};
+
+  /// Clear all inline field errors.
+  void clearFieldErrors() {
+    fieldErrors = {};
+  }
+
+  /// Set an error on a specific field.
+  void setFieldError(String field, String message) {
+    fieldErrors[field] = message;
+  }
+
   bool empyFields() {
     if (firstName.text.isNullOrEmpty() ||
         lastName.text.isNullOrEmpty() ||
         password.text.isNullOrEmpty() ||
-        phone.text.isNullOrEmpty() ) {
+        phone.text.isNullOrEmpty()) {
       return true;
     } else {
       return false;
@@ -29,6 +44,7 @@ class SignupCubit extends Cubit<SignupState> {
   }
 
   void signUp(SignUpRequestBody signUpRequestBody) async {
+    clearFieldErrors();
     emit(SignupState.loading());
     final response = await signUpRepo.signUp(signUpRequestBody);
     response.when(
@@ -40,14 +56,15 @@ class SignupCubit extends Cubit<SignupState> {
             ),
           );
         } else {
-
           emit(SignupState.success(signUpResponse));
         }
       },
       failure: (error) => emit(SignupState.fail(error)),
     );
   }
+
   Future<void> saveUserToken(String token) async {
     await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
+    await SharedPrefHelper.setData(SharedPrefKeys.isGuest, false);
   }
 }

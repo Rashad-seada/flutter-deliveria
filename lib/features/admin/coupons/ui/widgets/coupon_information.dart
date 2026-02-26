@@ -23,13 +23,10 @@ class CouponInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String formattedDate;
-    try {
-      final date = DateTime.parse(widget.coupon.expiredDate);
-      formattedDate = DateFormat('yyyy-MM-dd').format(date);
-    } catch (e) {
-      formattedDate = widget.coupon.expiredDate;
-    }
+    final formattedDate = DateFormat('yyyy-MM-dd').format(widget.coupon.expiredDate);
+    final restaurants = widget.coupon.applicableRestaurants.isEmpty 
+        ? 'All' 
+        : widget.coupon.applicableRestaurants.join(', ');
 
     return Expanded(
       flex: 2,
@@ -48,11 +45,11 @@ class CouponInformation extends StatelessWidget {
             style: TextStyles.bimini16W400Body.copyWith(color: AppColors.grey),
           ),
           Text(
-            '${AppStrings.discount.tr()}: ${widget.coupon.discount}%',
+            '${AppStrings.discount.tr()}: ${widget.coupon.value}%',
             style: TextStyles.bimini16W400Body.copyWith(color: AppColors.grey),
           ),
           Text(
-            '${AppStrings.resturants.tr()}: ${widget.coupon.restaurant}',
+            '${AppStrings.resturants.tr()}: $restaurants',
             style: TextStyles.bimini16W400Body.copyWith(color: AppColors.grey),
           ),
           verticalSpace(16),

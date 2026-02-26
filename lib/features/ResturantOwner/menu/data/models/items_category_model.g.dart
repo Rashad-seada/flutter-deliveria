@@ -7,29 +7,28 @@ part of 'items_category_model.dart';
 // **************************************************************************
 
 ItemsCategoryResponse _$ItemsCategoryResponseFromJson(
-  Map<String, dynamic> json,
-) => ItemsCategoryResponse(
-  itemCategories:
-      (json['itemCategories'] as List<dynamic>)
+        Map<String, dynamic> json) =>
+    ItemsCategoryResponse(
+      itemCategories: (json['itemCategories'] as List<dynamic>)
           .map((e) => ItemCategory.fromJson(e as Map<String, dynamic>))
           .toList(),
-);
+    );
 
 Map<String, dynamic> _$ItemsCategoryResponseToJson(
-  ItemsCategoryResponse instance,
-) => <String, dynamic>{
-  'itemCategories': instance.itemCategories.map((e) => e.toJson()).toList(),
-};
+        ItemsCategoryResponse instance) =>
+    <String, dynamic>{
+      'itemCategories': instance.itemCategories.map((e) => e.toJson()).toList(),
+    };
 
 ItemCategory _$ItemCategoryFromJson(Map<String, dynamic> json) => ItemCategory(
-  id: json['_id'] as String,
-  nameEn: json['name_en'] as String,
-  nameAr: json['name_ar'] as String,
-  restaurantId: json['restaurant_id'] as String,
-  createdAt: json['createdAt'] as String,
-  updatedAt: json['updatedAt'] as String,
-  v: (json['__v'] as num).toInt(),
-);
+      id: json['_id'] as String,
+      nameEn: json['name_en'] as String,
+      nameAr: json['name_ar'] as String,
+      restaurantId: json['restaurant_id'] as String,
+      createdAt: json['createdAt'] as String,
+      updatedAt: json['updatedAt'] as String,
+      v: (json['__v'] as num).toInt(),
+    );
 
 Map<String, dynamic> _$ItemCategoryToJson(ItemCategory instance) =>
     <String, dynamic>{

@@ -40,6 +40,7 @@ class EditYourItemScreen extends StatefulWidget {
     this.itemName,
     this.itemImageUrl,
     this.itemDescription,
+    this.itemCategoryId,
   });
 
   final bool isAdd;
@@ -49,6 +50,7 @@ class EditYourItemScreen extends StatefulWidget {
   final String? itemName;
   final String? itemImageUrl;
   final String? itemDescription;
+  final String? itemCategoryId;
 
   @override
   State<EditYourItemScreen> createState() => _EditYourItemScreenState();
@@ -105,15 +107,48 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
             cubit.onToppingsChanged(convertedToppings);
           });
         }
+        
+        // Initialize category for edit mode
+        if (widget.itemCategoryId != null && cubit.allItemsCategories.isNotEmpty) {
+             _selectedCategoryId = widget.itemCategoryId;
+             try {
+               final selectedCategory = cubit.allItemsCategories.firstWhere(
+                 (cat) => cat.id == widget.itemCategoryId,
+               );
+               _selectedCategoryName = currentLang == 'en' ? selectedCategory.nameEn : selectedCategory.nameAr;
+               
+               // Also update in cubit if needed, though local state controls dropdown
+               cubit.updateItemCazegoryId(_selectedCategoryId!);
+             } catch (e) {
+               print("Category not found in list: ${widget.itemCategoryId}");
+               // Fallback or leave empty?
+               // If not found, maybe fetch categories again or default to first?
+               if (cubit.allItemsCategories.isNotEmpty) {
+                    _selectedCategoryId = cubit.allItemsCategories.first.id;
+                    _selectedCategoryName = currentLang == 'en'
+                        ? cubit.allItemsCategories.first.nameEn
+                        : cubit.allItemsCategories.first.nameAr;
+                     cubit.updateItemCazegoryId(_selectedCategoryId!);
+               }
+             }
+        } else if (cubit.allItemsCategories.isEmpty) {
+             // Try to fetch if empty
+             cubit.getItemCategories();
+        }
       }
 
-      // Set default selected category if available
+
+      // Set default selected category if available (ADD MODE only or fallbacks)
       if (widget.isAdd && cubit.allItemsCategories.isNotEmpty) {
+
         _selectedCategoryId = cubit.allItemsCategories.first.id;
         _selectedCategoryName = currentLang == 'en'
             ? cubit.allItemsCategories.first.nameEn
             : cubit.allItemsCategories.first.nameAr;
         cubit.updateItemCazegoryId(_selectedCategoryId!);
+      } else if (cubit.allItemsCategories.isEmpty) {
+        // Fetch categories if not already loaded
+        cubit.getItemCategories();
       }
 
       // Initialize haveOption to false for add mode
@@ -176,17 +211,49 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                 final isLoading = itemState is ItemStateLoading;
 
                 // Ensure _selectedCategoryId is always in sync with available categories
-                if (widget.isAdd &&
-                    cubit.allItemsCategories.isNotEmpty &&
-                    (_selectedCategoryId == null ||
-                        !cubit.allItemsCategories.any(
-                          (cat) => cat.id == _selectedCategoryId,
-                        ))) {
-                  _selectedCategoryId = cubit.allItemsCategories.first.id;
-                  _selectedCategoryName = currentLang == 'en'
-                      ? cubit.allItemsCategories.first.nameEn
-                      : cubit.allItemsCategories.first.nameAr;
-                  cubit.updateItemCazegoryId(_selectedCategoryId!);
+                if (cubit.allItemsCategories.isNotEmpty) {
+                  // For Add Mode: Select first if nothing selected
+                  if (widget.isAdd &&
+                      (_selectedCategoryId == null ||
+                          !cubit.allItemsCategories.any(
+                            (cat) => cat.id == _selectedCategoryId,
+                          ))) {
+                    _selectedCategoryId = cubit.allItemsCategories.first.id;
+                    _selectedCategoryName = currentLang == 'en'
+                        ? cubit.allItemsCategories.first.nameEn
+                        : cubit.allItemsCategories.first.nameAr;
+                    cubit.updateItemCazegoryId(_selectedCategoryId!);
+                  }
+                  
+                  // For Edit Mode: Ensure name is populated if ID exists but name doesn't match
+                  if (!widget.isAdd && _selectedCategoryId != null) {
+                       try {
+                           final selectedCategory = cubit.allItemsCategories.firstWhere(
+                             (cat) => cat.id == _selectedCategoryId,
+                           );
+                           final expectedName = currentLang == 'en' ? selectedCategory.nameEn : selectedCategory.nameAr;
+                           if (_selectedCategoryName != expectedName) {
+                               _selectedCategoryName = expectedName;
+                           }
+                       } catch (e) {
+                           // ID might be invalid or not in list, fallback to first if absolutely needed or keep as is
+                           // If we force fallback here, we might overwrite a valid ID that just hasn't loaded yet?
+                           // No, allItemsCategories is not empty here.
+                           // So if ID is not found, it's invalid.
+                           print("Warning: stored category ID $_selectedCategoryId not found in loaded list.");
+                       }
+                  }
+                  // Handle case where we have no selection in edit mode yet (should have been set in didChangeDependencies, but just in case)
+                   if (!widget.isAdd && _selectedCategoryId == null && widget.itemCategoryId != null) {
+                        _selectedCategoryId = widget.itemCategoryId;
+                        // Retry matching
+                         try {
+                           final selectedCategory = cubit.allItemsCategories.firstWhere(
+                             (cat) => cat.id == _selectedCategoryId,
+                           );
+                           _selectedCategoryName = currentLang == 'en' ? selectedCategory.nameEn : selectedCategory.nameAr;
+                       } catch (e) {}
+                   }
                 }
 
                 return Padding(
@@ -235,15 +302,11 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                               ),
                             )
                             : SizedBox(),
-                        widget.isAdd == false
-                            ? SizedBox()
-                            : Text(
-                              AppStrings.uploadPhoto.tr(),
-                              style: TextStyles.bimini16W700,
-                            ),
-                        widget.isAdd == false
-                            ? SizedBox()
-                            : UploadPhotoContainer(
+                        Text(
+                          AppStrings.uploadPhoto.tr(),
+                          style: TextStyles.bimini16W700,
+                        ),
+                        UploadPhotoContainer(
                               isLogo: false,
                               itemCubit: cubit,
                               itemImage: !widget.isAdd,
@@ -263,9 +326,7 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                             'sizes_${widget.itemId}_${widget.isAdd}',
                           ),
                           onSizesChanged: (sizes) {
-                            print(
-                              "📏 SizeSelectionWidget callback triggered with ${sizes.length} sizes",
-                            );
+
                             cubit.sizesNotifier.value = List<SizeItem>.from(
                               sizes,
                             );
@@ -280,9 +341,7 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                             'toppings_${widget.itemId}_${widget.isAdd}',
                           ),
                           onToppingsChanged: (toppings) {
-                            print(
-                              "🍕 ToppingsSelectionWidget callback triggered with ${toppings.length} toppings",
-                            );
+
                             cubit
                                 .toppingsNotifier
                                 .value = List<ToppingItem>.from(toppings);
@@ -291,44 +350,42 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                           initialToppings: widget.toppings,
                         ),
                         SizedBox(height: 20.h),
-                        widget.isAdd
-                            ? Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  AppStrings.itemCategory.tr(),
-                                  style: TextStyles.bimini20W700,
-                                ),
-                                SizedBox(height: 8.h),
-                                StyledDropDown(
-                                  activeColorbtn: AppColors.primaryDeafult,
-                                  fillColorbtn: AppColors.primaryDeafult,
-                                  value: _selectedCategoryName ?? "",
-                                  items: cubit.allItemsCategories
-                                      .map((e) => currentLang == 'en' ? e.nameEn : e.nameAr)
-                                      .toList(),
-                                  onChanged: (val) {
-                                    setState(() {
-                                      _selectedCategoryName = val as String?;
-                                      // Update _selectedCategoryId based on the selected name and language
-                                      final selectedCategory = cubit.allItemsCategories.firstWhere(
-                                        (cat) => (currentLang == 'en'
-                                            ? cat.nameEn
-                                            : cat.nameAr) == val,
-                                        orElse: () => cubit.allItemsCategories.first,
-                                      );
-                                      _selectedCategoryId = selectedCategory.id;
-                                    });
-                                    if (_selectedCategoryId != null) {
-                                      cubit.updateItemCazegoryId(
-                                        _selectedCategoryId!,
-                                      );
-                                    }
-                                  },
-                                ),
-                              ],
-                            )
-                            : SizedBox(),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              AppStrings.itemCategory.tr(),
+                              style: TextStyles.bimini20W700,
+                            ),
+                            SizedBox(height: 8.h),
+                            StyledDropDown(
+                              activeColorbtn: AppColors.primaryDeafult,
+                              fillColorbtn: AppColors.primaryDeafult,
+                              value: _selectedCategoryName ?? "",
+                              items: cubit.allItemsCategories
+                                  .map((e) => currentLang == 'en' ? e.nameEn : e.nameAr)
+                                  .toList(),
+                              onChanged: (val) {
+                                setState(() {
+                                  _selectedCategoryName = val as String?;
+                                  // Update _selectedCategoryId based on the selected name and language
+                                  final selectedCategory = cubit.allItemsCategories.firstWhere(
+                                    (cat) => (currentLang == 'en'
+                                        ? cat.nameEn
+                                        : cat.nameAr) == val,
+                                    orElse: () => cubit.allItemsCategories.first,
+                                  );
+                                  _selectedCategoryId = selectedCategory.id;
+                                });
+                                if (_selectedCategoryId != null) {
+                                  cubit.updateItemCazegoryId(
+                                    _selectedCategoryId!,
+                                  );
+                                }
+                              },
+                            ),
+                          ],
+                        ),
                         verticalSpace(20),
                         Text(
                           AppStrings.customizationOption.tr(),
@@ -367,37 +424,11 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                                 child: AppButton(
                                   title: AppStrings.saveChanges.tr(),
                                   onPressed: () async {
-                                    print("🚀 Edit button pressed");
-
                                     // Get current values from notifiers (this is the correct approach)
                                     final List<SizeItem> currentSizes =
                                         cubit.sizesNotifier.value;
                                     final List<ToppingItem> currentToppings =
                                         cubit.toppingsNotifier.value;
-
-                                    print("📊 Current data from notifiers:");
-                                    print("   Sizes: ${currentSizes.length}");
-                                    for (
-                                      int i = 0;
-                                      i < currentSizes.length;
-                                      i++
-                                    ) {
-                                      print(
-                                        "   Size $i: ${currentSizes[i].sizeController.text} = ${currentSizes[i].priceAfterController.text}",
-                                      );
-                                    }
-                                    print(
-                                      "   Toppings: ${currentToppings.length}",
-                                    );
-                                    for (
-                                      int i = 0;
-                                      i < currentToppings.length;
-                                      i++
-                                    ) {
-                                      print(
-                                        "   Topping $i: ${currentToppings[i].nameController.text} = ${currentToppings[i].priceController.text}",
-                                      );
-                                    }
 
                                     File photoToSend;
                                     if (cubit.selectedPhoto != null) {
@@ -421,9 +452,7 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                                           widget.itemDescription ?? "";
                                     }
 
-                                    print("📝 Final data to send:");
-                                    print("   Name: '$itemName'");
-                                    print("   Description: '$itemDescription'");
+
 
                                     await cubit.editMenuItem(
                                       itemId: widget.itemId ?? "",
@@ -431,7 +460,8 @@ class _EditYourItemScreenState extends State<EditYourItemScreen> {
                                       description: itemDescription,
                                       sizes: currentSizes,
                                       toppings: currentToppings,
-                                      // photo: photoToSend,
+                                      photo: photoToSend == cubit.selectedPhoto ? cubit.selectedPhoto : null, // Only send if user selected a new photo
+                                      itemCategory: _selectedCategoryId,
                                     );
                                   },
                                 ),

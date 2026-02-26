@@ -8,14 +8,15 @@ part of 'search_response.dart';
 
 SearchResponseItem _$SearchResponseItemFromJson(Map<String, dynamic> json) =>
     SearchResponseItem(
-      items:
-          (json['items'] as List<dynamic>)
-              .map((e) => ItemModelSearch.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      items: (json['items'] as List<dynamic>)
+          .map((e) => ItemModelSearch.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$SearchResponseItemToJson(SearchResponseItem instance) =>
-    <String, dynamic>{'items': instance.items.map((e) => e.toJson()).toList()};
+    <String, dynamic>{
+      'items': instance.items.map((e) => e.toJson()).toList(),
+    };
 
 ItemModelSearch _$ItemModelSearchFromJson(Map<String, dynamic> json) =>
     ItemModelSearch(
@@ -27,14 +28,12 @@ ItemModelSearch _$ItemModelSearchFromJson(Map<String, dynamic> json) =>
       enable: json['enable'] as bool?,
       itemCategory: json['item_category'] as String?,
       haveOption: json['have_option'] as bool?,
-      sizes:
-          (json['sizes'] as List<dynamic>?)
-              ?.map((e) => SizeModel.fromJson(e as Map<String, dynamic>))
-              .toList(),
-      toppings:
-          (json['toppings'] as List<dynamic>?)
-              ?.map((e) => ToppingModel.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      sizes: (json['sizes'] as List<dynamic>?)
+          ?.map((e) => SizeModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      toppings: (json['toppings'] as List<dynamic>?)
+          ?.map((e) => ToppingModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
       createdAt: json['createdAt'] as String?,
       updatedAt: json['updatedAt'] as String?,
       v: (json['__v'] as num?)?.toInt(),

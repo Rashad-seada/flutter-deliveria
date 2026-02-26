@@ -29,8 +29,12 @@ import 'package:delveria/features/admin/users/logic/cubit/get_all_users_admin_cu
 import 'package:delveria/features/client/accountInfo/data/repo/get_data_repo.dart';
 import 'package:delveria/features/client/accountInfo/logic/cubit/user_data_cubit.dart';
 import 'package:delveria/features/client/adresses/data/repo/address_repo.dart';
+import 'package:delveria/features/client/adresses/data/repo/zones_repo.dart';
 import 'package:delveria/features/client/adresses/logic/cubit/address_cubit.dart';
 import 'package:delveria/features/client/adresses/logic/cubit/create_address_cubit.dart';
+import 'package:delveria/features/client/adresses/logic/cubit/zones_cubit.dart';
+import 'package:delveria/features/ResturantOwner/branches/data/repo/branches_repo.dart';
+import 'package:delveria/features/ResturantOwner/branches/logic/cubit/branches_cubit.dart';
 import 'package:delveria/features/client/auth/login/data/repo/login_repo.dart';
 import 'package:delveria/features/client/auth/login/logic/cubit/login_cubit.dart';
 import 'package:delveria/features/client/auth/otp/logic/cubit/otp_cubit.dart';
@@ -58,8 +62,14 @@ import 'package:delveria/features/client/settings/logic/theme_cubit.dart';
 import 'package:delveria/features/client/settings/logic/theme_state.dart';
 import 'package:delveria/features/deliveryAgent/data/repo/agent_ordrs_repo.dart';
 import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_cubit.dart';
+import 'package:delveria/features/client/loyalty/data/repo/loyalty_repo.dart';
+import 'package:delveria/features/client/loyalty/logic/cubit/loyalty_cubit.dart';
+import 'package:delveria/features/admin/loyalty/data/repo/admin_loyalty_repo.dart';
+import 'package:delveria/features/admin/loyalty/logic/cubit/admin_loyalty_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:delveria/features/admin/resturantAdmin/data/repo/branches_repo.dart' as AdminBranchesRepo;
+import 'package:delveria/features/admin/resturantAdmin/logic/cubit/branches_cubit.dart' as AdminBranchesCubit;
 
 final getIt = GetIt.instance;
 
@@ -72,7 +82,7 @@ Future<void> setUpGetIt() async {
   getIt.registerLazySingleton<ResturantAdminRepo>(
     () => ResturantAdminRepo(apiServices: getIt()),
   );
-  getIt.registerFactory<AllresturantsadminCubit>(
+  getIt.registerLazySingleton<AllresturantsadminCubit>(
     () => AllresturantsadminCubit(getIt()),
   );
   getIt.registerLazySingleton<CouponeRepo>(
@@ -160,7 +170,7 @@ Future<void> setUpGetIt() async {
   getIt.registerFactory<SlidersCubit>(() => SlidersCubit(getIt()));
   getIt.registerFactory<UserDataCubit>(() => UserDataCubit(getIt()));
   getIt.registerFactory<ResturantDataCubit>(() => ResturantDataCubit(getIt()));
-  getIt.registerFactory<AddToCartCubit>(() => AddToCartCubit(getIt()));
+  getIt.registerLazySingleton<AddToCartCubit>(() => AddToCartCubit(getIt()));
   getIt.registerFactory<GetOrdersCubit>(() => GetOrdersCubit(getIt()));
   getIt.registerFactory<FilterCategoryCubit>(() => FilterCategoryCubit(getIt()));
   getIt.registerFactory<FavoriteCubit>(() => FavoriteCubit(getIt()));
@@ -170,7 +180,23 @@ Future<void> setUpGetIt() async {
   getIt.registerFactory<ReviewsCubit>(() => ReviewsCubit(getIt()));
   getIt.registerFactory<GetAllUsersAdminCubit>(() => GetAllUsersAdminCubit(getIt()));
   getIt.registerFactory<GetHomeDataAdminCubit>(() => GetHomeDataAdminCubit(getIt()));
-  getIt.registerFactory<NotificationsCubit>(() => NotificationsCubit(getIt()));
+  getIt.registerLazySingleton<NotificationsCubit>(() => NotificationsCubit(getIt()));
   getIt.registerFactory<SystemDataCubit>(() => SystemDataCubit(getIt()));
 
+  // Zone Coverage
+  getIt.registerLazySingleton<ZonesRepo>(() => ZonesRepo());
+  getIt.registerFactory<ZonesCubit>(() => ZonesCubit(getIt()));
+
+  // Branch Management
+  getIt.registerLazySingleton<BranchesRepo>(() => BranchesRepo(getIt()));
+  getIt.registerFactory<BranchesCubit>(() => BranchesCubit(getIt()));
+
+  // Loyalty Points System
+  getIt.registerLazySingleton<LoyaltyRepo>(() => LoyaltyRepo());
+  getIt.registerFactory<LoyaltyCubit>(() => LoyaltyCubit(getIt()));
+  getIt.registerLazySingleton<AdminLoyaltyRepo>(() => AdminLoyaltyRepo());
+  getIt.registerFactory<AdminLoyaltyCubit>(() => AdminLoyaltyCubit(getIt()));
+  // Admin Branch Management
+  getIt.registerLazySingleton<AdminBranchesRepo.BranchesRepo>(() => AdminBranchesRepo.BranchesRepo());
+  getIt.registerFactory<AdminBranchesCubit.BranchesCubit>(() => AdminBranchesCubit.BranchesCubit(getIt()));
 }

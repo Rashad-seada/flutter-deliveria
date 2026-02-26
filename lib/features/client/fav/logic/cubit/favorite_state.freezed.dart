@@ -12,8 +12,7 @@ part of 'favorite_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FavoriteState<T> {
@@ -29,7 +28,8 @@ mixin _$FavoriteState<T> {
     required TResult Function() deleteFavLoading,
     required TResult Function(T data) deleteFavSuccess,
     required TResult Function(ApiErrorModel error) deleteFavFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -42,7 +42,8 @@ mixin _$FavoriteState<T> {
     TResult? Function()? deleteFavLoading,
     TResult? Function(T data)? deleteFavSuccess,
     TResult? Function(ApiErrorModel error)? deleteFavFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -56,7 +57,8 @@ mixin _$FavoriteState<T> {
     TResult Function(T data)? deleteFavSuccess,
     TResult Function(ApiErrorModel error)? deleteFavFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -69,7 +71,8 @@ mixin _$FavoriteState<T> {
     required TResult Function(DeleteFavLoading<T> value) deleteFavLoading,
     required TResult Function(DeleteFavSuccess<T> value) deleteFavSuccess,
     required TResult Function(DeleteFavFail<T> value) deleteFavFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -82,7 +85,8 @@ mixin _$FavoriteState<T> {
     TResult? Function(DeleteFavLoading<T> value)? deleteFavLoading,
     TResult? Function(DeleteFavSuccess<T> value)? deleteFavSuccess,
     TResult? Function(DeleteFavFail<T> value)? deleteFavFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -96,15 +100,15 @@ mixin _$FavoriteState<T> {
     TResult Function(DeleteFavSuccess<T> value)? deleteFavSuccess,
     TResult Function(DeleteFavFail<T> value)? deleteFavFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FavoriteStateCopyWith<T, $Res> {
   factory $FavoriteStateCopyWith(
-    FavoriteState<T> value,
-    $Res Function(FavoriteState<T>) then,
-  ) = _$FavoriteStateCopyWithImpl<T, $Res, FavoriteState<T>>;
+          FavoriteState<T> value, $Res Function(FavoriteState<T>) then) =
+      _$FavoriteStateCopyWithImpl<T, $Res, FavoriteState<T>>;
 }
 
 /// @nodoc
@@ -116,17 +120,13 @@ class _$FavoriteStateCopyWithImpl<T, $Res, $Val extends FavoriteState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -134,12 +134,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -278,23 +274,18 @@ abstract class _Initial<T> implements FavoriteState<T> {
 
 /// @nodoc
 abstract class _$$AddToFavLoadingImplCopyWith<T, $Res> {
-  factory _$$AddToFavLoadingImplCopyWith(
-    _$AddToFavLoadingImpl<T> value,
-    $Res Function(_$AddToFavLoadingImpl<T>) then,
-  ) = __$$AddToFavLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$AddToFavLoadingImplCopyWith(_$AddToFavLoadingImpl<T> value,
+          $Res Function(_$AddToFavLoadingImpl<T>) then) =
+      __$$AddToFavLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$AddToFavLoadingImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$AddToFavLoadingImpl<T>>
     implements _$$AddToFavLoadingImplCopyWith<T, $Res> {
-  __$$AddToFavLoadingImplCopyWithImpl(
-    _$AddToFavLoadingImpl<T> _value,
-    $Res Function(_$AddToFavLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$AddToFavLoadingImplCopyWithImpl(_$AddToFavLoadingImpl<T> _value,
+      $Res Function(_$AddToFavLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -433,10 +424,9 @@ abstract class AddToFavLoading<T> implements FavoriteState<T> {
 
 /// @nodoc
 abstract class _$$AddToFavSuccessImplCopyWith<T, $Res> {
-  factory _$$AddToFavSuccessImplCopyWith(
-    _$AddToFavSuccessImpl<T> value,
-    $Res Function(_$AddToFavSuccessImpl<T>) then,
-  ) = __$$AddToFavSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$AddToFavSuccessImplCopyWith(_$AddToFavSuccessImpl<T> value,
+          $Res Function(_$AddToFavSuccessImpl<T>) then) =
+      __$$AddToFavSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -445,24 +435,21 @@ abstract class _$$AddToFavSuccessImplCopyWith<T, $Res> {
 class __$$AddToFavSuccessImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$AddToFavSuccessImpl<T>>
     implements _$$AddToFavSuccessImplCopyWith<T, $Res> {
-  __$$AddToFavSuccessImplCopyWithImpl(
-    _$AddToFavSuccessImpl<T> _value,
-    $Res Function(_$AddToFavSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AddToFavSuccessImplCopyWithImpl(_$AddToFavSuccessImpl<T> _value,
+      $Res Function(_$AddToFavSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$AddToFavSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$AddToFavSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -491,16 +478,12 @@ class _$AddToFavSuccessImpl<T> implements AddToFavSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddToFavSuccessImplCopyWith<T, _$AddToFavSuccessImpl<T>> get copyWith =>
       __$$AddToFavSuccessImplCopyWithImpl<T, _$AddToFavSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -617,20 +600,16 @@ abstract class AddToFavSuccess<T> implements FavoriteState<T> {
   const factory AddToFavSuccess(final T data) = _$AddToFavSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddToFavSuccessImplCopyWith<T, _$AddToFavSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AddToFavFailImplCopyWith<T, $Res> {
-  factory _$$AddToFavFailImplCopyWith(
-    _$AddToFavFailImpl<T> value,
-    $Res Function(_$AddToFavFailImpl<T>) then,
-  ) = __$$AddToFavFailImplCopyWithImpl<T, $Res>;
+  factory _$$AddToFavFailImplCopyWith(_$AddToFavFailImpl<T> value,
+          $Res Function(_$AddToFavFailImpl<T>) then) =
+      __$$AddToFavFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -640,23 +619,20 @@ class __$$AddToFavFailImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$AddToFavFailImpl<T>>
     implements _$$AddToFavFailImplCopyWith<T, $Res> {
   __$$AddToFavFailImplCopyWithImpl(
-    _$AddToFavFailImpl<T> _value,
-    $Res Function(_$AddToFavFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$AddToFavFailImpl<T> _value, $Res Function(_$AddToFavFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$AddToFavFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AddToFavFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -684,16 +660,12 @@ class _$AddToFavFailImpl<T> implements AddToFavFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddToFavFailImplCopyWith<T, _$AddToFavFailImpl<T>> get copyWith =>
       __$$AddToFavFailImplCopyWithImpl<T, _$AddToFavFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -810,33 +782,25 @@ abstract class AddToFavFail<T> implements FavoriteState<T> {
   const factory AddToFavFail(final ApiErrorModel error) = _$AddToFavFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddToFavFailImplCopyWith<T, _$AddToFavFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetFavLoadingImplCopyWith<T, $Res> {
-  factory _$$GetFavLoadingImplCopyWith(
-    _$GetFavLoadingImpl<T> value,
-    $Res Function(_$GetFavLoadingImpl<T>) then,
-  ) = __$$GetFavLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$GetFavLoadingImplCopyWith(_$GetFavLoadingImpl<T> value,
+          $Res Function(_$GetFavLoadingImpl<T>) then) =
+      __$$GetFavLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetFavLoadingImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$GetFavLoadingImpl<T>>
     implements _$$GetFavLoadingImplCopyWith<T, $Res> {
-  __$$GetFavLoadingImplCopyWithImpl(
-    _$GetFavLoadingImpl<T> _value,
-    $Res Function(_$GetFavLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$GetFavLoadingImplCopyWithImpl(_$GetFavLoadingImpl<T> _value,
+      $Res Function(_$GetFavLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -975,10 +939,9 @@ abstract class GetFavLoading<T> implements FavoriteState<T> {
 
 /// @nodoc
 abstract class _$$GetFavSuccessImplCopyWith<T, $Res> {
-  factory _$$GetFavSuccessImplCopyWith(
-    _$GetFavSuccessImpl<T> value,
-    $Res Function(_$GetFavSuccessImpl<T>) then,
-  ) = __$$GetFavSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$GetFavSuccessImplCopyWith(_$GetFavSuccessImpl<T> value,
+          $Res Function(_$GetFavSuccessImpl<T>) then) =
+      __$$GetFavSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -987,24 +950,21 @@ abstract class _$$GetFavSuccessImplCopyWith<T, $Res> {
 class __$$GetFavSuccessImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$GetFavSuccessImpl<T>>
     implements _$$GetFavSuccessImplCopyWith<T, $Res> {
-  __$$GetFavSuccessImplCopyWithImpl(
-    _$GetFavSuccessImpl<T> _value,
-    $Res Function(_$GetFavSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetFavSuccessImplCopyWithImpl(_$GetFavSuccessImpl<T> _value,
+      $Res Function(_$GetFavSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetFavSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetFavSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1033,16 +993,12 @@ class _$GetFavSuccessImpl<T> implements GetFavSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetFavSuccessImplCopyWith<T, _$GetFavSuccessImpl<T>> get copyWith =>
       __$$GetFavSuccessImplCopyWithImpl<T, _$GetFavSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1159,10 +1115,7 @@ abstract class GetFavSuccess<T> implements FavoriteState<T> {
   const factory GetFavSuccess(final T data) = _$GetFavSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetFavSuccessImplCopyWith<T, _$GetFavSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1170,9 +1123,8 @@ abstract class GetFavSuccess<T> implements FavoriteState<T> {
 /// @nodoc
 abstract class _$$GetFavFailImplCopyWith<T, $Res> {
   factory _$$GetFavFailImplCopyWith(
-    _$GetFavFailImpl<T> value,
-    $Res Function(_$GetFavFailImpl<T>) then,
-  ) = __$$GetFavFailImplCopyWithImpl<T, $Res>;
+          _$GetFavFailImpl<T> value, $Res Function(_$GetFavFailImpl<T>) then) =
+      __$$GetFavFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1182,23 +1134,20 @@ class __$$GetFavFailImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$GetFavFailImpl<T>>
     implements _$$GetFavFailImplCopyWith<T, $Res> {
   __$$GetFavFailImplCopyWithImpl(
-    _$GetFavFailImpl<T> _value,
-    $Res Function(_$GetFavFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetFavFailImpl<T> _value, $Res Function(_$GetFavFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetFavFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetFavFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1226,9 +1175,7 @@ class _$GetFavFailImpl<T> implements GetFavFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetFavFailImplCopyWith<T, _$GetFavFailImpl<T>> get copyWith =>
@@ -1349,33 +1296,25 @@ abstract class GetFavFail<T> implements FavoriteState<T> {
   const factory GetFavFail(final ApiErrorModel error) = _$GetFavFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetFavFailImplCopyWith<T, _$GetFavFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteFavLoadingImplCopyWith<T, $Res> {
-  factory _$$DeleteFavLoadingImplCopyWith(
-    _$DeleteFavLoadingImpl<T> value,
-    $Res Function(_$DeleteFavLoadingImpl<T>) then,
-  ) = __$$DeleteFavLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$DeleteFavLoadingImplCopyWith(_$DeleteFavLoadingImpl<T> value,
+          $Res Function(_$DeleteFavLoadingImpl<T>) then) =
+      __$$DeleteFavLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$DeleteFavLoadingImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$DeleteFavLoadingImpl<T>>
     implements _$$DeleteFavLoadingImplCopyWith<T, $Res> {
-  __$$DeleteFavLoadingImplCopyWithImpl(
-    _$DeleteFavLoadingImpl<T> _value,
-    $Res Function(_$DeleteFavLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$DeleteFavLoadingImplCopyWithImpl(_$DeleteFavLoadingImpl<T> _value,
+      $Res Function(_$DeleteFavLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1515,10 +1454,9 @@ abstract class DeleteFavLoading<T> implements FavoriteState<T> {
 
 /// @nodoc
 abstract class _$$DeleteFavSuccessImplCopyWith<T, $Res> {
-  factory _$$DeleteFavSuccessImplCopyWith(
-    _$DeleteFavSuccessImpl<T> value,
-    $Res Function(_$DeleteFavSuccessImpl<T>) then,
-  ) = __$$DeleteFavSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$DeleteFavSuccessImplCopyWith(_$DeleteFavSuccessImpl<T> value,
+          $Res Function(_$DeleteFavSuccessImpl<T>) then) =
+      __$$DeleteFavSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -1527,24 +1465,21 @@ abstract class _$$DeleteFavSuccessImplCopyWith<T, $Res> {
 class __$$DeleteFavSuccessImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$DeleteFavSuccessImpl<T>>
     implements _$$DeleteFavSuccessImplCopyWith<T, $Res> {
-  __$$DeleteFavSuccessImplCopyWithImpl(
-    _$DeleteFavSuccessImpl<T> _value,
-    $Res Function(_$DeleteFavSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DeleteFavSuccessImplCopyWithImpl(_$DeleteFavSuccessImpl<T> _value,
+      $Res Function(_$DeleteFavSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$DeleteFavSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$DeleteFavSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1573,16 +1508,12 @@ class _$DeleteFavSuccessImpl<T> implements DeleteFavSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteFavSuccessImplCopyWith<T, _$DeleteFavSuccessImpl<T>> get copyWith =>
       __$$DeleteFavSuccessImplCopyWithImpl<T, _$DeleteFavSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1699,20 +1630,16 @@ abstract class DeleteFavSuccess<T> implements FavoriteState<T> {
   const factory DeleteFavSuccess(final T data) = _$DeleteFavSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteFavSuccessImplCopyWith<T, _$DeleteFavSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteFavFailImplCopyWith<T, $Res> {
-  factory _$$DeleteFavFailImplCopyWith(
-    _$DeleteFavFailImpl<T> value,
-    $Res Function(_$DeleteFavFailImpl<T>) then,
-  ) = __$$DeleteFavFailImplCopyWithImpl<T, $Res>;
+  factory _$$DeleteFavFailImplCopyWith(_$DeleteFavFailImpl<T> value,
+          $Res Function(_$DeleteFavFailImpl<T>) then) =
+      __$$DeleteFavFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1721,24 +1648,21 @@ abstract class _$$DeleteFavFailImplCopyWith<T, $Res> {
 class __$$DeleteFavFailImplCopyWithImpl<T, $Res>
     extends _$FavoriteStateCopyWithImpl<T, $Res, _$DeleteFavFailImpl<T>>
     implements _$$DeleteFavFailImplCopyWith<T, $Res> {
-  __$$DeleteFavFailImplCopyWithImpl(
-    _$DeleteFavFailImpl<T> _value,
-    $Res Function(_$DeleteFavFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DeleteFavFailImplCopyWithImpl(_$DeleteFavFailImpl<T> _value,
+      $Res Function(_$DeleteFavFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$DeleteFavFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$DeleteFavFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1766,16 +1690,12 @@ class _$DeleteFavFailImpl<T> implements DeleteFavFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteFavFailImplCopyWith<T, _$DeleteFavFailImpl<T>> get copyWith =>
       __$$DeleteFavFailImplCopyWithImpl<T, _$DeleteFavFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1893,10 +1813,7 @@ abstract class DeleteFavFail<T> implements FavoriteState<T> {
       _$DeleteFavFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of FavoriteState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteFavFailImplCopyWith<T, _$DeleteFavFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

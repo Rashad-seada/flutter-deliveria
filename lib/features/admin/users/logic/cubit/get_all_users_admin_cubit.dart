@@ -12,51 +12,63 @@ class GetAllUsersAdminCubit extends Cubit<GetAllUsersAdminState> {
   List<UserModelAdmin> searchUsers = [];
 
   Future<void> getAllUsers() async {
+    if (isClosed) return;
     emit(GetAllUsersAdminState.loading());
     try {
       final response = await getUsersRepo.getAllUsers();
+      if (isClosed) return;
       response.when(
         success: (usersRes) {
           users = usersRes.users;
-          emit(GetAllUsersAdminState.success(usersRes));
+          if (!isClosed) emit(GetAllUsersAdminState.success(usersRes));
         },
-        failure: (error) => emit(GetAllUsersAdminState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(GetAllUsersAdminState.fail(error));
+        },
       );
     } catch (e) {
-      emit(GetAllUsersAdminState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(GetAllUsersAdminState.fail(ApiErrorHandler.handle(e)));
     }
   }
 
   void banUser({required String userId}) async {
+    if (isClosed) return;
     emit(GetAllUsersAdminState.banLoading());
     try {
       final response = await getUsersRepo.banUser(userId: userId);
+      if (isClosed) return;
       response.when(
         success: (usersRes) {
           getAllUsers();
-          emit(GetAllUsersAdminState.banSuccess(usersRes));
+          if (!isClosed) emit(GetAllUsersAdminState.banSuccess(usersRes));
         },
-        failure: (error) => emit(GetAllUsersAdminState.banFail(error)),
+        failure: (error) {
+          if (!isClosed) emit(GetAllUsersAdminState.banFail(error));
+        },
       );
     } catch (e) {
-      emit(GetAllUsersAdminState.banFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(GetAllUsersAdminState.banFail(ApiErrorHandler.handle(e)));
     }
   }
 
   Future<void> searchUser({required String query}) async {
+    if (isClosed) return;
     emit(GetAllUsersAdminState.searchUserLoading());
     try {
       final response = await getUsersRepo.searchUser(query: query);
+      if (isClosed) return;
       response.when(
         success: (usersRes) {
           searchUsers = usersRes.users;
           print("❤️‍🔥 $searchUsers");
-          emit(GetAllUsersAdminState.searchUserSuccess(usersRes));
+          if (!isClosed) emit(GetAllUsersAdminState.searchUserSuccess(usersRes));
         },
-        failure: (error) => emit(GetAllUsersAdminState.searchUserFail(error)),
+        failure: (error) {
+          if (!isClosed) emit(GetAllUsersAdminState.searchUserFail(error));
+        },
       );
     } catch (e) {
-      emit(GetAllUsersAdminState.searchUserFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(GetAllUsersAdminState.searchUserFail(ApiErrorHandler.handle(e)));
     }
   }
 }

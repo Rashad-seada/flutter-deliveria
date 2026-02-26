@@ -153,6 +153,7 @@ class _FavScreenState extends State<FavScreen> {
                     child: ResturantStackedImage(
                       logo: cubit.favRes[index].logo,
                       img: cubit.favRes[index].photo,
+                      isOpen: true, // FavouriteRestaurant doesn't have isOpen field
                     ),
                   ),
                   BlocListener<FavoriteCubit, FavoriteState>(

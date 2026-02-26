@@ -28,10 +28,12 @@ class ResturantAdminScreen extends StatefulWidget {
     super.key,
     this.isFromNotification,
     this.message,
+    this.notificationTitle,
     this.selectedIds,
   });
   final bool? isFromNotification;
   final String? message;
+  final String? notificationTitle;
   final List<String>? selectedIds; 
 
   @override
@@ -61,8 +63,14 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
     required List<String> ids,
   }) async {
     final notificationCubit = context.read<NotificationsCubit>();
+    final body = {
+      "message": message,
+      "ids": ids,
+      if (widget.notificationTitle?.isNotEmpty == true)
+        "title": widget.notificationTitle,
+    };
     await notificationCubit.createNotification(
-      body: {"message": message, "ids": ids},
+      body: body,
     );
     if (!mounted) return;
     Navigator.pop(context); // Go back after sending
@@ -178,7 +186,9 @@ class _ResturantAdminScreenState extends State<ResturantAdminScreen> {
                               setState(() {
                                 query = p0;
                               });
-                              await cubit.searchResturant(query: p0);
+                              if (p0.trim().isNotEmpty) {
+                                await cubit.searchResturant(query: p0);
+                              }
                             },
                           ),
                           verticalSpace(10),

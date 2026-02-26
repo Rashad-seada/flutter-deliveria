@@ -17,30 +17,30 @@ class NotificationsModel {
 @JsonSerializable()
 class NotificationItemModel {
   @JsonKey(name: '_id')
-  final String id;
-  final String message;
+  final String? id;
+  final String? message;
   @JsonKey(name: 'sender_id')
-  final String senderId;
+  final String? senderId;
   @JsonKey(name: 'user_id')
-  final String userId;
-  final bool seen;
-  final String createdAt;
-  final String updatedAt;
+  final String? userId;
+  final bool? seen;
+  final String? createdAt;
+  final String? updatedAt;
   @JsonKey(name: '__v')
-  final int v;
+  final int? v;
   @JsonKey(name: 'sender_name')
-  final String senderName;
+  final String? senderName;
 
   NotificationItemModel({
-    required this.id,
-    required this.message,
-    required this.senderId,
-    required this.userId,
-    required this.seen,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.v,
-    required this.senderName,
+    this.id,
+    this.message,
+    this.senderId,
+    this.userId,
+    this.seen,
+    this.createdAt,
+    this.updatedAt,
+    this.v,
+    this.senderName,
   });
 
   factory NotificationItemModel.fromJson(Map<String, dynamic> json) =>

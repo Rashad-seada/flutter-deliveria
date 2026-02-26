@@ -11,14 +11,15 @@ Future<({String route, Object? arguments})> getInitialRouteWithArgs() async {
   final finishOnBoarding = await SharedPrefHelper.getBool(
     SharedPrefKeys.finishOnBoarding,
   );
+  final isGuest = await SharedPrefHelper.getBool(SharedPrefKeys.isGuest);
 
   // Check finishOnBoarding first
   if (finishOnBoarding != true) {
     return (route: Routes.onBoarding, arguments: null);
   }
 
-  if (token != null && token.toString().isNotEmpty) {
-    if (userType == "user") {
+  if ((token != null && token.toString().isNotEmpty) || isGuest) {
+    if (userType == "user" || isGuest) {
       return (route: Routes.bottomBarScreen, arguments: 0);
     } else if (userType == "restaurant") {
       return (route: Routes.resturantBottomBar, arguments: resturantId);

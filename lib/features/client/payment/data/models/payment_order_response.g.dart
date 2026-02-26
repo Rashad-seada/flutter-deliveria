@@ -13,5 +13,8 @@ PaymobOrderResponse _$PaymobOrderResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PaymobOrderResponseToJson(
-  PaymobOrderResponse instance,
-) => <String, dynamic>{'id': instance.orderId, 'status': instance.status};
+        PaymobOrderResponse instance) =>
+    <String, dynamic>{
+      'id': instance.orderId,
+      'status': instance.status,
+    };

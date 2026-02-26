@@ -12,8 +12,7 @@ part of 'notifications_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$NotificationsState<T> {
@@ -26,7 +25,8 @@ mixin _$NotificationsState<T> {
     required TResult Function() createLoading,
     required TResult Function(T data) createSuccess,
     required TResult Function(ApiErrorModel error) createFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -36,7 +36,8 @@ mixin _$NotificationsState<T> {
     TResult? Function()? createLoading,
     TResult? Function(T data)? createSuccess,
     TResult? Function(ApiErrorModel error)? createFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -47,7 +48,8 @@ mixin _$NotificationsState<T> {
     TResult Function(T data)? createSuccess,
     TResult Function(ApiErrorModel error)? createFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -57,7 +59,8 @@ mixin _$NotificationsState<T> {
     required TResult Function(CreateLoading<T> value) createLoading,
     required TResult Function(CreateSuccess<T> value) createSuccess,
     required TResult Function(CreateFail<T> value) createFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -67,7 +70,8 @@ mixin _$NotificationsState<T> {
     TResult? Function(CreateLoading<T> value)? createLoading,
     TResult? Function(CreateSuccess<T> value)? createSuccess,
     TResult? Function(CreateFail<T> value)? createFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -78,23 +82,20 @@ mixin _$NotificationsState<T> {
     TResult Function(CreateSuccess<T> value)? createSuccess,
     TResult Function(CreateFail<T> value)? createFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotificationsStateCopyWith<T, $Res> {
-  factory $NotificationsStateCopyWith(
-    NotificationsState<T> value,
-    $Res Function(NotificationsState<T>) then,
-  ) = _$NotificationsStateCopyWithImpl<T, $Res, NotificationsState<T>>;
+  factory $NotificationsStateCopyWith(NotificationsState<T> value,
+          $Res Function(NotificationsState<T>) then) =
+      _$NotificationsStateCopyWithImpl<T, $Res, NotificationsState<T>>;
 }
 
 /// @nodoc
-class _$NotificationsStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends NotificationsState<T>
->
+class _$NotificationsStateCopyWithImpl<T, $Res,
+        $Val extends NotificationsState<T>>
     implements $NotificationsStateCopyWith<T, $Res> {
   _$NotificationsStateCopyWithImpl(this._value, this._then);
 
@@ -102,17 +103,13 @@ class _$NotificationsStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -120,12 +117,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -247,9 +240,8 @@ abstract class _Initial<T> implements NotificationsState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -257,12 +249,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -384,9 +372,8 @@ abstract class Loading<T> implements NotificationsState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -396,23 +383,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -441,9 +425,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -546,10 +528,7 @@ abstract class Success<T> implements NotificationsState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -557,9 +536,8 @@ abstract class Success<T> implements NotificationsState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -569,23 +547,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -613,9 +588,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -718,33 +691,25 @@ abstract class Fail<T> implements NotificationsState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateLoadingImplCopyWith<T, $Res> {
-  factory _$$CreateLoadingImplCopyWith(
-    _$CreateLoadingImpl<T> value,
-    $Res Function(_$CreateLoadingImpl<T>) then,
-  ) = __$$CreateLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$CreateLoadingImplCopyWith(_$CreateLoadingImpl<T> value,
+          $Res Function(_$CreateLoadingImpl<T>) then) =
+      __$$CreateLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$CreateLoadingImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$CreateLoadingImpl<T>>
     implements _$$CreateLoadingImplCopyWith<T, $Res> {
-  __$$CreateLoadingImplCopyWithImpl(
-    _$CreateLoadingImpl<T> _value,
-    $Res Function(_$CreateLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$CreateLoadingImplCopyWithImpl(_$CreateLoadingImpl<T> _value,
+      $Res Function(_$CreateLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -865,10 +830,9 @@ abstract class CreateLoading<T> implements NotificationsState<T> {
 
 /// @nodoc
 abstract class _$$CreateSuccessImplCopyWith<T, $Res> {
-  factory _$$CreateSuccessImplCopyWith(
-    _$CreateSuccessImpl<T> value,
-    $Res Function(_$CreateSuccessImpl<T>) then,
-  ) = __$$CreateSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$CreateSuccessImplCopyWith(_$CreateSuccessImpl<T> value,
+          $Res Function(_$CreateSuccessImpl<T>) then) =
+      __$$CreateSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -877,24 +841,21 @@ abstract class _$$CreateSuccessImplCopyWith<T, $Res> {
 class __$$CreateSuccessImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$CreateSuccessImpl<T>>
     implements _$$CreateSuccessImplCopyWith<T, $Res> {
-  __$$CreateSuccessImplCopyWithImpl(
-    _$CreateSuccessImpl<T> _value,
-    $Res Function(_$CreateSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$CreateSuccessImplCopyWithImpl(_$CreateSuccessImpl<T> _value,
+      $Res Function(_$CreateSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$CreateSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$CreateSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -923,16 +884,12 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateSuccessImplCopyWith<T, _$CreateSuccessImpl<T>> get copyWith =>
       __$$CreateSuccessImplCopyWithImpl<T, _$CreateSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1031,10 +988,7 @@ abstract class CreateSuccess<T> implements NotificationsState<T> {
   const factory CreateSuccess(final T data) = _$CreateSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateSuccessImplCopyWith<T, _$CreateSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1042,9 +996,8 @@ abstract class CreateSuccess<T> implements NotificationsState<T> {
 /// @nodoc
 abstract class _$$CreateFailImplCopyWith<T, $Res> {
   factory _$$CreateFailImplCopyWith(
-    _$CreateFailImpl<T> value,
-    $Res Function(_$CreateFailImpl<T>) then,
-  ) = __$$CreateFailImplCopyWithImpl<T, $Res>;
+          _$CreateFailImpl<T> value, $Res Function(_$CreateFailImpl<T>) then) =
+      __$$CreateFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1054,23 +1007,20 @@ class __$$CreateFailImplCopyWithImpl<T, $Res>
     extends _$NotificationsStateCopyWithImpl<T, $Res, _$CreateFailImpl<T>>
     implements _$$CreateFailImplCopyWith<T, $Res> {
   __$$CreateFailImplCopyWithImpl(
-    _$CreateFailImpl<T> _value,
-    $Res Function(_$CreateFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$CreateFailImpl<T> _value, $Res Function(_$CreateFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$CreateFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$CreateFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1098,9 +1048,7 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateFailImplCopyWith<T, _$CreateFailImpl<T>> get copyWith =>
@@ -1203,10 +1151,7 @@ abstract class CreateFail<T> implements NotificationsState<T> {
   const factory CreateFail(final ApiErrorModel error) = _$CreateFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of NotificationsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateFailImplCopyWith<T, _$CreateFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

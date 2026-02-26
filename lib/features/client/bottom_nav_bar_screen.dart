@@ -1,6 +1,8 @@
 import 'package:delveria/core/di/dependancy_injection.dart';
 import 'package:delveria/core/func/continue_as_a_guest.dart';
 import 'package:delveria/core/helper/extentions.dart';
+import 'package:delveria/core/helper/shared_pref_helper.dart';
+import 'package:delveria/core/helper/constants.dart';
 import 'package:delveria/core/helper/strings.dart';
 import 'package:delveria/core/routing/routes.dart';
 import 'package:delveria/core/theme/color.dart';
@@ -45,10 +47,19 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   void initState() {
     super.initState();
     loadContinueAsGuest();
+    _checkGuestSync();
     final cubit = context.read<CarouselCubit>();
     if (cubit.state.selectedIndex != widget.selectedIndex) {
       cubit.updateSelectedIndex(widget.selectedIndex);
     }
+  }
+
+  Future<void> _checkGuestSync() async {
+     final isGuest = await SharedPrefHelper.getBool(SharedPrefKeys.isGuest);
+     // Sync only if NOT guest (logged in user)
+     if (isGuest != true && mounted) {
+        context.read<AddToCartCubit>().syncGuestCart();
+     }
   }
 
   Future<bool> _onWillPop() async {
@@ -76,18 +87,17 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
               final lat = createAddressCubit.lat;
               final long = createAddressCubit.long;
 
-              return BlocProvider(
-                create: (context) {
-                  final cubit = getIt<AllresturantsadminCubit>();
-                  cubit.getNearbyResturants(
-                    context: context,
-                    lat: lat,
-                    long: long,
-                  );
-                  cubit.getAllRatedResturantsForAdmin(lat, long);
-                  cubit.getAllSuperCategories();
-                  return cubit;
-                },
+              final cubit = getIt<AllresturantsadminCubit>();
+              cubit.getNearbyResturants(
+                context: context,
+                lat: lat,
+                long: long,
+              );
+              cubit.getAllRatedResturantsForAdmin(lat, long);
+              cubit.getAllSuperCategories();
+              
+              return BlocProvider.value(
+                value: cubit,
                 child: HomeScreen(lat: lat, long: long),
               );
             } else if (addressState is GetAddressFail) {
@@ -117,14 +127,8 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
           },
         ),
       ),
-      BlocProvider(
-        create: (context) => getIt<AddToCartCubit>()..getCart(),
-        child: CartScreen(),
-      ),
-      BlocProvider(
-        create: (context) => getIt<NotificationsCubit>()..getNotifications(),
-        child: ResturantNotification(isRestaurant: false),
-      ),
+      CartScreen(),
+      ResturantNotification(isRestaurant: false),
       MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -145,18 +149,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
           return Scaffold(
             key: _scaffoldKey,
             drawer: const ProfileDrawer(),
-            appBar:
-                state.selectedIndex == 0
-                    ? PreferredSize(
-                      preferredSize: const Size.fromHeight(80),
-                      child: BlocProvider(
-                        create:
-                            (context) =>
-                                getIt<CreateAddressCubit>()..getAdresses(),
-                        child: DelivertoRow(),
-                      ),
-                    )
-                    : null,
+            appBar: null,
             body: pages[state.selectedIndex],
             bottomNavigationBar: BottomNavBarBloc(
               selectedIndex: state.selectedIndex,

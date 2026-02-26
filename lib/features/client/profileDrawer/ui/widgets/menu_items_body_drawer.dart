@@ -14,6 +14,7 @@ import 'package:delveria/features/client/onboarding/logic/cubit/system_data_cubi
 import 'package:delveria/features/client/onboarding/logic/cubit/system_data_state.dart';
 import 'package:delveria/features/client/orders/data/models/get_orders_model.dart';
 import 'package:delveria/features/client/profileDrawer/ui/widgets/build_menu_item_drawer.dart';
+import 'package:delveria/core/widgets/guest_login_dialog.dart';
 import 'package:delveria/features/client/settings/ui/about_us.dart';
 import 'package:delveria/features/client/settings/ui/privacy_and_policy.dart';
 import 'package:delveria/features/client/settings/ui/terms_and_conditions.dart';
@@ -92,6 +93,10 @@ class _UserDrawerBodyState extends State<UserDrawerBody> {
               img: AppImages.accountInfo,
               title: AppStrings.accountInfo.tr(),
               onTap: () {
+                if(isContinueAsGuest) {
+                  showGuestLoginDialog(context);
+                  return;
+                }
                 context.pushNamed(Routes.accountInfoScreen, arguments: true);
               },
             ),
@@ -99,6 +104,10 @@ class _UserDrawerBodyState extends State<UserDrawerBody> {
               img: AppImages.myOrder,
               title: AppStrings.myOrders.tr(),
               onTap: () {
+                if(isContinueAsGuest) {
+                  showGuestLoginDialog(context);
+                  return;
+                }
                 context.pushNamed(Routes.myOrdersScreen);
               },
             ),
@@ -133,7 +142,11 @@ class _UserDrawerBodyState extends State<UserDrawerBody> {
               ),
               title: AppStrings.myPoints.tr(),
               onTap: () {
-                // context.pushNamed(Routes.myOrdersScreen);
+                if(isContinueAsGuest) {
+                  showGuestLoginDialog(context);
+                  return;
+                }
+                context.pushNamed(Routes.loyaltyScreen);
               },
               img: '',
             ),
@@ -141,6 +154,10 @@ class _UserDrawerBodyState extends State<UserDrawerBody> {
               img: AppImages.myFav,
               title: AppStrings.myFavorites.tr(),
               onTap: () {
+                if(isContinueAsGuest) {
+                  showGuestLoginDialog(context);
+                  return;
+                }
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -166,6 +183,10 @@ class _UserDrawerBodyState extends State<UserDrawerBody> {
               img: AppImages.myAdress,
               title: AppStrings.myAddresses.tr(),
               onTap: () {
+                if(isContinueAsGuest) {
+                  showGuestLoginDialog(context);
+                  return;
+                }
                 context.pushNamed(Routes.addressListScreen);
               },
             ),
@@ -224,8 +245,11 @@ class _UserDrawerBodyState extends State<UserDrawerBody> {
                 ? buildMenuItemDrawer(
                   img: AppImages.logout,
                   title: AppStrings.signIn.tr(),
-                  onTap: () {
-                    context.pushNamed(Routes.loginScreen);
+                  onTap: () async {
+                     await SharedPrefHelper.removeData(SharedPrefKeys.isGuest);
+                     if (context.mounted) {
+                        context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (route) => false);
+                     }
                   },
                 )
                 : buildMenuItemDrawer(

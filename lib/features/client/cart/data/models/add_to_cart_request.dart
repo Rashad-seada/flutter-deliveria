@@ -34,7 +34,10 @@ class AddToCartRequest {
     required this.size,
     required this.toppings,
     required this.description,
+    this.quantity = 1,
   });
+
+  final int? quantity;
 
   factory AddToCartRequest.fromJson(Map<String, dynamic> json) =>
       _$AddToCartRequestFromJson(json);

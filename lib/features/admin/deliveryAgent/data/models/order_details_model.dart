@@ -29,16 +29,16 @@ class OrderDetailsModel {
   @JsonKey(name: 'final_price')
   final num finalPrice;
   @JsonKey(name: 'delivery_type')
-  final String deliveryType;
+  final String? deliveryType;
   @JsonKey(name: 'payment_type')
-  final String paymentType;
-  final String status;
+  final String? paymentType;
+  final String? status;
   final String createdAt;
   final String updatedAt;
   @JsonKey(name: '__v')
   final int v;
   @JsonKey(name: 'delivery_id')
-  final String deliveryId;
+  final String? deliveryId;
 
   OrderDetailsModel({
     required this.address,
@@ -48,13 +48,13 @@ class OrderDetailsModel {
     required this.finalPriceWithoutDeliveryCost,
     required this.finalDeliveryCost,
     required this.finalPrice,
-    required this.deliveryType,
-    required this.paymentType,
-    required this.status,
+    this.deliveryType,
+    this.paymentType,
+    this.status,
     required this.createdAt,
     required this.updatedAt,
     required this.v,
-    required this.deliveryId,
+    this.deliveryId,
   });
 
   factory OrderDetailsModel.fromJson(Map<String, dynamic> json) =>
@@ -104,6 +104,8 @@ class CoordinatesModel {
 class RestaurantOrderModel {
   @JsonKey(name: 'restaurant_id')
   final String restaurantId;
+  @JsonKey(name: 'branch_id', fromJson: _orderDetailsBranchFromJson)
+  final OrderDetailsBranchInfo? branch;
   final List<OrderItemModel> items;
   @JsonKey(name: 'price_of_restaurant')
   final num priceOfRestaurant;
@@ -115,6 +117,7 @@ class RestaurantOrderModel {
 
   RestaurantOrderModel({
     required this.restaurantId,
+    this.branch,
     required this.items,
     required this.priceOfRestaurant,
     required this.status,
@@ -126,6 +129,50 @@ class RestaurantOrderModel {
       _$RestaurantOrderModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$RestaurantOrderModelToJson(this);
+}
+
+/// Safely parse branch_id which can be a String (old) or Map (new)
+OrderDetailsBranchInfo? _orderDetailsBranchFromJson(dynamic json) {
+  if (json == null) return null;
+  if (json is Map<String, dynamic>) {
+    return OrderDetailsBranchInfo.fromJson(json);
+  }
+  if (json is String) {
+    return OrderDetailsBranchInfo(id: json);
+  }
+  return null;
+}
+
+@JsonSerializable()
+class OrderDetailsBranchInfo {
+  @JsonKey(name: '_id')
+  final String? id;
+  final String? name;
+  @JsonKey(name: 'branch_name')
+  final String? branchName;
+  final String? address;
+  final String? phone;
+  final CoordinatesModel? coordinates;
+  @JsonKey(name: 'location_map')
+  final String? locationMap;
+
+  OrderDetailsBranchInfo({
+    this.id,
+    this.name,
+    this.branchName,
+    this.address,
+    this.phone,
+    this.coordinates,
+    this.locationMap,
+  });
+
+  /// Display name helper
+  String get displayName => branchName ?? name ?? '';
+
+  factory OrderDetailsBranchInfo.fromJson(Map<String, dynamic> json) =>
+      _$OrderDetailsBranchInfoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$OrderDetailsBranchInfoToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)

@@ -12,8 +12,7 @@ part of 'add_to_cart_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AddToCartState<T> {
@@ -38,7 +37,8 @@ mixin _$AddToCartState<T> {
     required TResult Function() addOrderLoading,
     required TResult Function(T data) addOrderSuccess,
     required TResult Function(ApiErrorModel error) addOrderFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -60,7 +60,8 @@ mixin _$AddToCartState<T> {
     TResult? Function()? addOrderLoading,
     TResult? Function(T data)? addOrderSuccess,
     TResult? Function(ApiErrorModel error)? addOrderFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -83,7 +84,8 @@ mixin _$AddToCartState<T> {
     TResult Function(T data)? addOrderSuccess,
     TResult Function(ApiErrorModel error)? addOrderFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -105,7 +107,8 @@ mixin _$AddToCartState<T> {
     required TResult Function(AddOrderLoading<T> value) addOrderLoading,
     required TResult Function(AddOrderSuccess<T> value) addOrderSuccess,
     required TResult Function(AddOrderFail<T> value) addOrderFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -127,7 +130,8 @@ mixin _$AddToCartState<T> {
     TResult? Function(AddOrderLoading<T> value)? addOrderLoading,
     TResult? Function(AddOrderSuccess<T> value)? addOrderSuccess,
     TResult? Function(AddOrderFail<T> value)? addOrderFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -150,15 +154,15 @@ mixin _$AddToCartState<T> {
     TResult Function(AddOrderSuccess<T> value)? addOrderSuccess,
     TResult Function(AddOrderFail<T> value)? addOrderFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AddToCartStateCopyWith<T, $Res> {
   factory $AddToCartStateCopyWith(
-    AddToCartState<T> value,
-    $Res Function(AddToCartState<T>) then,
-  ) = _$AddToCartStateCopyWithImpl<T, $Res, AddToCartState<T>>;
+          AddToCartState<T> value, $Res Function(AddToCartState<T>) then) =
+      _$AddToCartStateCopyWithImpl<T, $Res, AddToCartState<T>>;
 }
 
 /// @nodoc
@@ -170,17 +174,13 @@ class _$AddToCartStateCopyWithImpl<T, $Res, $Val extends AddToCartState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -188,12 +188,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -387,9 +383,8 @@ abstract class _Initial<T> implements AddToCartState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -397,12 +392,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -596,9 +587,8 @@ abstract class Loading<T> implements AddToCartState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -608,23 +598,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -653,9 +640,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -830,10 +815,7 @@ abstract class Success<T> implements AddToCartState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -841,9 +823,8 @@ abstract class Success<T> implements AddToCartState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -853,23 +834,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -897,9 +875,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -1074,33 +1050,25 @@ abstract class Fail<T> implements AddToCartState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetCartLoadingImplCopyWith<T, $Res> {
-  factory _$$GetCartLoadingImplCopyWith(
-    _$GetCartLoadingImpl<T> value,
-    $Res Function(_$GetCartLoadingImpl<T>) then,
-  ) = __$$GetCartLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$GetCartLoadingImplCopyWith(_$GetCartLoadingImpl<T> value,
+          $Res Function(_$GetCartLoadingImpl<T>) then) =
+      __$$GetCartLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetCartLoadingImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$GetCartLoadingImpl<T>>
     implements _$$GetCartLoadingImplCopyWith<T, $Res> {
-  __$$GetCartLoadingImplCopyWithImpl(
-    _$GetCartLoadingImpl<T> _value,
-    $Res Function(_$GetCartLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$GetCartLoadingImplCopyWithImpl(_$GetCartLoadingImpl<T> _value,
+      $Res Function(_$GetCartLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1293,10 +1261,9 @@ abstract class GetCartLoading<T> implements AddToCartState<T> {
 
 /// @nodoc
 abstract class _$$GetCartSuccessImplCopyWith<T, $Res> {
-  factory _$$GetCartSuccessImplCopyWith(
-    _$GetCartSuccessImpl<T> value,
-    $Res Function(_$GetCartSuccessImpl<T>) then,
-  ) = __$$GetCartSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$GetCartSuccessImplCopyWith(_$GetCartSuccessImpl<T> value,
+          $Res Function(_$GetCartSuccessImpl<T>) then) =
+      __$$GetCartSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -1305,24 +1272,21 @@ abstract class _$$GetCartSuccessImplCopyWith<T, $Res> {
 class __$$GetCartSuccessImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$GetCartSuccessImpl<T>>
     implements _$$GetCartSuccessImplCopyWith<T, $Res> {
-  __$$GetCartSuccessImplCopyWithImpl(
-    _$GetCartSuccessImpl<T> _value,
-    $Res Function(_$GetCartSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetCartSuccessImplCopyWithImpl(_$GetCartSuccessImpl<T> _value,
+      $Res Function(_$GetCartSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetCartSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetCartSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1351,16 +1315,12 @@ class _$GetCartSuccessImpl<T> implements GetCartSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCartSuccessImplCopyWith<T, _$GetCartSuccessImpl<T>> get copyWith =>
       __$$GetCartSuccessImplCopyWithImpl<T, _$GetCartSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1531,20 +1491,16 @@ abstract class GetCartSuccess<T> implements AddToCartState<T> {
   const factory GetCartSuccess(final T data) = _$GetCartSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetCartSuccessImplCopyWith<T, _$GetCartSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetCartFailImplCopyWith<T, $Res> {
-  factory _$$GetCartFailImplCopyWith(
-    _$GetCartFailImpl<T> value,
-    $Res Function(_$GetCartFailImpl<T>) then,
-  ) = __$$GetCartFailImplCopyWithImpl<T, $Res>;
+  factory _$$GetCartFailImplCopyWith(_$GetCartFailImpl<T> value,
+          $Res Function(_$GetCartFailImpl<T>) then) =
+      __$$GetCartFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1554,23 +1510,20 @@ class __$$GetCartFailImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$GetCartFailImpl<T>>
     implements _$$GetCartFailImplCopyWith<T, $Res> {
   __$$GetCartFailImplCopyWithImpl(
-    _$GetCartFailImpl<T> _value,
-    $Res Function(_$GetCartFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetCartFailImpl<T> _value, $Res Function(_$GetCartFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetCartFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetCartFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1598,16 +1551,12 @@ class _$GetCartFailImpl<T> implements GetCartFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCartFailImplCopyWith<T, _$GetCartFailImpl<T>> get copyWith =>
       __$$GetCartFailImplCopyWithImpl<T, _$GetCartFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1778,20 +1727,16 @@ abstract class GetCartFail<T> implements AddToCartState<T> {
   const factory GetCartFail(final ApiErrorModel error) = _$GetCartFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetCartFailImplCopyWith<T, _$GetCartFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$IncreaseCartLoadingImplCopyWith<T, $Res> {
-  factory _$$IncreaseCartLoadingImplCopyWith(
-    _$IncreaseCartLoadingImpl<T> value,
-    $Res Function(_$IncreaseCartLoadingImpl<T>) then,
-  ) = __$$IncreaseCartLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$IncreaseCartLoadingImplCopyWith(_$IncreaseCartLoadingImpl<T> value,
+          $Res Function(_$IncreaseCartLoadingImpl<T>) then) =
+      __$$IncreaseCartLoadingImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({int index});
 }
@@ -1800,24 +1745,21 @@ abstract class _$$IncreaseCartLoadingImplCopyWith<T, $Res> {
 class __$$IncreaseCartLoadingImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$IncreaseCartLoadingImpl<T>>
     implements _$$IncreaseCartLoadingImplCopyWith<T, $Res> {
-  __$$IncreaseCartLoadingImplCopyWithImpl(
-    _$IncreaseCartLoadingImpl<T> _value,
-    $Res Function(_$IncreaseCartLoadingImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$IncreaseCartLoadingImplCopyWithImpl(_$IncreaseCartLoadingImpl<T> _value,
+      $Res Function(_$IncreaseCartLoadingImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? index = null}) {
-    return _then(
-      _$IncreaseCartLoadingImpl<T>(
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$IncreaseCartLoadingImpl<T>(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -1845,17 +1787,12 @@ class _$IncreaseCartLoadingImpl<T> implements IncreaseCartLoading<T> {
   @override
   int get hashCode => Object.hash(runtimeType, index);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$IncreaseCartLoadingImplCopyWith<T, _$IncreaseCartLoadingImpl<T>>
-  get copyWith =>
-      __$$IncreaseCartLoadingImplCopyWithImpl<T, _$IncreaseCartLoadingImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$IncreaseCartLoadingImplCopyWithImpl<T,
+          _$IncreaseCartLoadingImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2027,20 +1964,16 @@ abstract class IncreaseCartLoading<T> implements AddToCartState<T> {
       _$IncreaseCartLoadingImpl<T>;
 
   int get index;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$IncreaseCartLoadingImplCopyWith<T, _$IncreaseCartLoadingImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$IncreaseCartSuccessImplCopyWith<T, $Res> {
-  factory _$$IncreaseCartSuccessImplCopyWith(
-    _$IncreaseCartSuccessImpl<T> value,
-    $Res Function(_$IncreaseCartSuccessImpl<T>) then,
-  ) = __$$IncreaseCartSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$IncreaseCartSuccessImplCopyWith(_$IncreaseCartSuccessImpl<T> value,
+          $Res Function(_$IncreaseCartSuccessImpl<T>) then) =
+      __$$IncreaseCartSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data, int index});
 }
@@ -2049,28 +1982,26 @@ abstract class _$$IncreaseCartSuccessImplCopyWith<T, $Res> {
 class __$$IncreaseCartSuccessImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$IncreaseCartSuccessImpl<T>>
     implements _$$IncreaseCartSuccessImplCopyWith<T, $Res> {
-  __$$IncreaseCartSuccessImplCopyWithImpl(
-    _$IncreaseCartSuccessImpl<T> _value,
-    $Res Function(_$IncreaseCartSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$IncreaseCartSuccessImplCopyWithImpl(_$IncreaseCartSuccessImpl<T> _value,
+      $Res Function(_$IncreaseCartSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed, Object? index = null}) {
-    return _then(
-      _$IncreaseCartSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+    Object? index = null,
+  }) {
+    return _then(_$IncreaseCartSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -2100,22 +2031,14 @@ class _$IncreaseCartSuccessImpl<T> implements IncreaseCartSuccess<T> {
 
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(data),
-    index,
-  );
+      runtimeType, const DeepCollectionEquality().hash(data), index);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$IncreaseCartSuccessImplCopyWith<T, _$IncreaseCartSuccessImpl<T>>
-  get copyWith =>
-      __$$IncreaseCartSuccessImplCopyWithImpl<T, _$IncreaseCartSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$IncreaseCartSuccessImplCopyWithImpl<T,
+          _$IncreaseCartSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2288,20 +2211,16 @@ abstract class IncreaseCartSuccess<T> implements AddToCartState<T> {
 
   T get data;
   int get index;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$IncreaseCartSuccessImplCopyWith<T, _$IncreaseCartSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$IncreaseCartFailImplCopyWith<T, $Res> {
-  factory _$$IncreaseCartFailImplCopyWith(
-    _$IncreaseCartFailImpl<T> value,
-    $Res Function(_$IncreaseCartFailImpl<T>) then,
-  ) = __$$IncreaseCartFailImplCopyWithImpl<T, $Res>;
+  factory _$$IncreaseCartFailImplCopyWith(_$IncreaseCartFailImpl<T> value,
+          $Res Function(_$IncreaseCartFailImpl<T>) then) =
+      __$$IncreaseCartFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error, int index});
 }
@@ -2310,28 +2229,26 @@ abstract class _$$IncreaseCartFailImplCopyWith<T, $Res> {
 class __$$IncreaseCartFailImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$IncreaseCartFailImpl<T>>
     implements _$$IncreaseCartFailImplCopyWith<T, $Res> {
-  __$$IncreaseCartFailImplCopyWithImpl(
-    _$IncreaseCartFailImpl<T> _value,
-    $Res Function(_$IncreaseCartFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$IncreaseCartFailImplCopyWithImpl(_$IncreaseCartFailImpl<T> _value,
+      $Res Function(_$IncreaseCartFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null, Object? index = null}) {
-    return _then(
-      _$IncreaseCartFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+    Object? index = null,
+  }) {
+    return _then(_$IncreaseCartFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -2362,16 +2279,12 @@ class _$IncreaseCartFailImpl<T> implements IncreaseCartFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error, index);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$IncreaseCartFailImplCopyWith<T, _$IncreaseCartFailImpl<T>> get copyWith =>
       __$$IncreaseCartFailImplCopyWithImpl<T, _$IncreaseCartFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2544,20 +2457,16 @@ abstract class IncreaseCartFail<T> implements AddToCartState<T> {
 
   ApiErrorModel get error;
   int get index;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$IncreaseCartFailImplCopyWith<T, _$IncreaseCartFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DecreaseCartLoadingImplCopyWith<T, $Res> {
-  factory _$$DecreaseCartLoadingImplCopyWith(
-    _$DecreaseCartLoadingImpl<T> value,
-    $Res Function(_$DecreaseCartLoadingImpl<T>) then,
-  ) = __$$DecreaseCartLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$DecreaseCartLoadingImplCopyWith(_$DecreaseCartLoadingImpl<T> value,
+          $Res Function(_$DecreaseCartLoadingImpl<T>) then) =
+      __$$DecreaseCartLoadingImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({int index});
 }
@@ -2566,24 +2475,21 @@ abstract class _$$DecreaseCartLoadingImplCopyWith<T, $Res> {
 class __$$DecreaseCartLoadingImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$DecreaseCartLoadingImpl<T>>
     implements _$$DecreaseCartLoadingImplCopyWith<T, $Res> {
-  __$$DecreaseCartLoadingImplCopyWithImpl(
-    _$DecreaseCartLoadingImpl<T> _value,
-    $Res Function(_$DecreaseCartLoadingImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DecreaseCartLoadingImplCopyWithImpl(_$DecreaseCartLoadingImpl<T> _value,
+      $Res Function(_$DecreaseCartLoadingImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? index = null}) {
-    return _then(
-      _$DecreaseCartLoadingImpl<T>(
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$DecreaseCartLoadingImpl<T>(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -2611,17 +2517,12 @@ class _$DecreaseCartLoadingImpl<T> implements DecreaseCartLoading<T> {
   @override
   int get hashCode => Object.hash(runtimeType, index);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DecreaseCartLoadingImplCopyWith<T, _$DecreaseCartLoadingImpl<T>>
-  get copyWith =>
-      __$$DecreaseCartLoadingImplCopyWithImpl<T, _$DecreaseCartLoadingImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$DecreaseCartLoadingImplCopyWithImpl<T,
+          _$DecreaseCartLoadingImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2793,20 +2694,16 @@ abstract class DecreaseCartLoading<T> implements AddToCartState<T> {
       _$DecreaseCartLoadingImpl<T>;
 
   int get index;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DecreaseCartLoadingImplCopyWith<T, _$DecreaseCartLoadingImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DecreaseCartSuccessImplCopyWith<T, $Res> {
-  factory _$$DecreaseCartSuccessImplCopyWith(
-    _$DecreaseCartSuccessImpl<T> value,
-    $Res Function(_$DecreaseCartSuccessImpl<T>) then,
-  ) = __$$DecreaseCartSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$DecreaseCartSuccessImplCopyWith(_$DecreaseCartSuccessImpl<T> value,
+          $Res Function(_$DecreaseCartSuccessImpl<T>) then) =
+      __$$DecreaseCartSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data, int index});
 }
@@ -2815,28 +2712,26 @@ abstract class _$$DecreaseCartSuccessImplCopyWith<T, $Res> {
 class __$$DecreaseCartSuccessImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$DecreaseCartSuccessImpl<T>>
     implements _$$DecreaseCartSuccessImplCopyWith<T, $Res> {
-  __$$DecreaseCartSuccessImplCopyWithImpl(
-    _$DecreaseCartSuccessImpl<T> _value,
-    $Res Function(_$DecreaseCartSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DecreaseCartSuccessImplCopyWithImpl(_$DecreaseCartSuccessImpl<T> _value,
+      $Res Function(_$DecreaseCartSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed, Object? index = null}) {
-    return _then(
-      _$DecreaseCartSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+    Object? index = null,
+  }) {
+    return _then(_$DecreaseCartSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -2866,22 +2761,14 @@ class _$DecreaseCartSuccessImpl<T> implements DecreaseCartSuccess<T> {
 
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(data),
-    index,
-  );
+      runtimeType, const DeepCollectionEquality().hash(data), index);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DecreaseCartSuccessImplCopyWith<T, _$DecreaseCartSuccessImpl<T>>
-  get copyWith =>
-      __$$DecreaseCartSuccessImplCopyWithImpl<T, _$DecreaseCartSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$DecreaseCartSuccessImplCopyWithImpl<T,
+          _$DecreaseCartSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3054,20 +2941,16 @@ abstract class DecreaseCartSuccess<T> implements AddToCartState<T> {
 
   T get data;
   int get index;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DecreaseCartSuccessImplCopyWith<T, _$DecreaseCartSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DecreaseCartFailImplCopyWith<T, $Res> {
-  factory _$$DecreaseCartFailImplCopyWith(
-    _$DecreaseCartFailImpl<T> value,
-    $Res Function(_$DecreaseCartFailImpl<T>) then,
-  ) = __$$DecreaseCartFailImplCopyWithImpl<T, $Res>;
+  factory _$$DecreaseCartFailImplCopyWith(_$DecreaseCartFailImpl<T> value,
+          $Res Function(_$DecreaseCartFailImpl<T>) then) =
+      __$$DecreaseCartFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error, int index});
 }
@@ -3076,28 +2959,26 @@ abstract class _$$DecreaseCartFailImplCopyWith<T, $Res> {
 class __$$DecreaseCartFailImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$DecreaseCartFailImpl<T>>
     implements _$$DecreaseCartFailImplCopyWith<T, $Res> {
-  __$$DecreaseCartFailImplCopyWithImpl(
-    _$DecreaseCartFailImpl<T> _value,
-    $Res Function(_$DecreaseCartFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DecreaseCartFailImplCopyWithImpl(_$DecreaseCartFailImpl<T> _value,
+      $Res Function(_$DecreaseCartFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null, Object? index = null}) {
-    return _then(
-      _$DecreaseCartFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+    Object? index = null,
+  }) {
+    return _then(_$DecreaseCartFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -3128,16 +3009,12 @@ class _$DecreaseCartFailImpl<T> implements DecreaseCartFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error, index);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DecreaseCartFailImplCopyWith<T, _$DecreaseCartFailImpl<T>> get copyWith =>
       __$$DecreaseCartFailImplCopyWithImpl<T, _$DecreaseCartFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3310,33 +3187,25 @@ abstract class DecreaseCartFail<T> implements AddToCartState<T> {
 
   ApiErrorModel get error;
   int get index;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DecreaseCartFailImplCopyWith<T, _$DecreaseCartFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$RemoveCartLoadingImplCopyWith<T, $Res> {
-  factory _$$RemoveCartLoadingImplCopyWith(
-    _$RemoveCartLoadingImpl<T> value,
-    $Res Function(_$RemoveCartLoadingImpl<T>) then,
-  ) = __$$RemoveCartLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$RemoveCartLoadingImplCopyWith(_$RemoveCartLoadingImpl<T> value,
+          $Res Function(_$RemoveCartLoadingImpl<T>) then) =
+      __$$RemoveCartLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$RemoveCartLoadingImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$RemoveCartLoadingImpl<T>>
     implements _$$RemoveCartLoadingImplCopyWith<T, $Res> {
-  __$$RemoveCartLoadingImplCopyWithImpl(
-    _$RemoveCartLoadingImpl<T> _value,
-    $Res Function(_$RemoveCartLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$RemoveCartLoadingImplCopyWithImpl(_$RemoveCartLoadingImpl<T> _value,
+      $Res Function(_$RemoveCartLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -3530,10 +3399,9 @@ abstract class RemoveCartLoading<T> implements AddToCartState<T> {
 
 /// @nodoc
 abstract class _$$RemoveCartSuccessImplCopyWith<T, $Res> {
-  factory _$$RemoveCartSuccessImplCopyWith(
-    _$RemoveCartSuccessImpl<T> value,
-    $Res Function(_$RemoveCartSuccessImpl<T>) then,
-  ) = __$$RemoveCartSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$RemoveCartSuccessImplCopyWith(_$RemoveCartSuccessImpl<T> value,
+          $Res Function(_$RemoveCartSuccessImpl<T>) then) =
+      __$$RemoveCartSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -3542,24 +3410,21 @@ abstract class _$$RemoveCartSuccessImplCopyWith<T, $Res> {
 class __$$RemoveCartSuccessImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$RemoveCartSuccessImpl<T>>
     implements _$$RemoveCartSuccessImplCopyWith<T, $Res> {
-  __$$RemoveCartSuccessImplCopyWithImpl(
-    _$RemoveCartSuccessImpl<T> _value,
-    $Res Function(_$RemoveCartSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$RemoveCartSuccessImplCopyWithImpl(_$RemoveCartSuccessImpl<T> _value,
+      $Res Function(_$RemoveCartSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$RemoveCartSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$RemoveCartSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -3588,17 +3453,13 @@ class _$RemoveCartSuccessImpl<T> implements RemoveCartSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoveCartSuccessImplCopyWith<T, _$RemoveCartSuccessImpl<T>>
-  get copyWith =>
-      __$$RemoveCartSuccessImplCopyWithImpl<T, _$RemoveCartSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$RemoveCartSuccessImplCopyWithImpl<T, _$RemoveCartSuccessImpl<T>>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3769,20 +3630,16 @@ abstract class RemoveCartSuccess<T> implements AddToCartState<T> {
   const factory RemoveCartSuccess(final T data) = _$RemoveCartSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RemoveCartSuccessImplCopyWith<T, _$RemoveCartSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$RemoveCartFailImplCopyWith<T, $Res> {
-  factory _$$RemoveCartFailImplCopyWith(
-    _$RemoveCartFailImpl<T> value,
-    $Res Function(_$RemoveCartFailImpl<T>) then,
-  ) = __$$RemoveCartFailImplCopyWithImpl<T, $Res>;
+  factory _$$RemoveCartFailImplCopyWith(_$RemoveCartFailImpl<T> value,
+          $Res Function(_$RemoveCartFailImpl<T>) then) =
+      __$$RemoveCartFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -3791,24 +3648,21 @@ abstract class _$$RemoveCartFailImplCopyWith<T, $Res> {
 class __$$RemoveCartFailImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$RemoveCartFailImpl<T>>
     implements _$$RemoveCartFailImplCopyWith<T, $Res> {
-  __$$RemoveCartFailImplCopyWithImpl(
-    _$RemoveCartFailImpl<T> _value,
-    $Res Function(_$RemoveCartFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$RemoveCartFailImplCopyWithImpl(_$RemoveCartFailImpl<T> _value,
+      $Res Function(_$RemoveCartFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$RemoveCartFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$RemoveCartFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3836,16 +3690,12 @@ class _$RemoveCartFailImpl<T> implements RemoveCartFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoveCartFailImplCopyWith<T, _$RemoveCartFailImpl<T>> get copyWith =>
       __$$RemoveCartFailImplCopyWithImpl<T, _$RemoveCartFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4017,33 +3867,25 @@ abstract class RemoveCartFail<T> implements AddToCartState<T> {
       _$RemoveCartFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RemoveCartFailImplCopyWith<T, _$RemoveCartFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AddOrderLoadingImplCopyWith<T, $Res> {
-  factory _$$AddOrderLoadingImplCopyWith(
-    _$AddOrderLoadingImpl<T> value,
-    $Res Function(_$AddOrderLoadingImpl<T>) then,
-  ) = __$$AddOrderLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$AddOrderLoadingImplCopyWith(_$AddOrderLoadingImpl<T> value,
+          $Res Function(_$AddOrderLoadingImpl<T>) then) =
+      __$$AddOrderLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$AddOrderLoadingImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$AddOrderLoadingImpl<T>>
     implements _$$AddOrderLoadingImplCopyWith<T, $Res> {
-  __$$AddOrderLoadingImplCopyWithImpl(
-    _$AddOrderLoadingImpl<T> _value,
-    $Res Function(_$AddOrderLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$AddOrderLoadingImplCopyWithImpl(_$AddOrderLoadingImpl<T> _value,
+      $Res Function(_$AddOrderLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -4236,10 +4078,9 @@ abstract class AddOrderLoading<T> implements AddToCartState<T> {
 
 /// @nodoc
 abstract class _$$AddOrderSuccessImplCopyWith<T, $Res> {
-  factory _$$AddOrderSuccessImplCopyWith(
-    _$AddOrderSuccessImpl<T> value,
-    $Res Function(_$AddOrderSuccessImpl<T>) then,
-  ) = __$$AddOrderSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$AddOrderSuccessImplCopyWith(_$AddOrderSuccessImpl<T> value,
+          $Res Function(_$AddOrderSuccessImpl<T>) then) =
+      __$$AddOrderSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -4248,24 +4089,21 @@ abstract class _$$AddOrderSuccessImplCopyWith<T, $Res> {
 class __$$AddOrderSuccessImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$AddOrderSuccessImpl<T>>
     implements _$$AddOrderSuccessImplCopyWith<T, $Res> {
-  __$$AddOrderSuccessImplCopyWithImpl(
-    _$AddOrderSuccessImpl<T> _value,
-    $Res Function(_$AddOrderSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AddOrderSuccessImplCopyWithImpl(_$AddOrderSuccessImpl<T> _value,
+      $Res Function(_$AddOrderSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$AddOrderSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$AddOrderSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -4294,16 +4132,12 @@ class _$AddOrderSuccessImpl<T> implements AddOrderSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddOrderSuccessImplCopyWith<T, _$AddOrderSuccessImpl<T>> get copyWith =>
       __$$AddOrderSuccessImplCopyWithImpl<T, _$AddOrderSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4474,20 +4308,16 @@ abstract class AddOrderSuccess<T> implements AddToCartState<T> {
   const factory AddOrderSuccess(final T data) = _$AddOrderSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddOrderSuccessImplCopyWith<T, _$AddOrderSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AddOrderFailImplCopyWith<T, $Res> {
-  factory _$$AddOrderFailImplCopyWith(
-    _$AddOrderFailImpl<T> value,
-    $Res Function(_$AddOrderFailImpl<T>) then,
-  ) = __$$AddOrderFailImplCopyWithImpl<T, $Res>;
+  factory _$$AddOrderFailImplCopyWith(_$AddOrderFailImpl<T> value,
+          $Res Function(_$AddOrderFailImpl<T>) then) =
+      __$$AddOrderFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -4497,23 +4327,20 @@ class __$$AddOrderFailImplCopyWithImpl<T, $Res>
     extends _$AddToCartStateCopyWithImpl<T, $Res, _$AddOrderFailImpl<T>>
     implements _$$AddOrderFailImplCopyWith<T, $Res> {
   __$$AddOrderFailImplCopyWithImpl(
-    _$AddOrderFailImpl<T> _value,
-    $Res Function(_$AddOrderFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$AddOrderFailImpl<T> _value, $Res Function(_$AddOrderFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$AddOrderFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AddOrderFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -4541,16 +4368,12 @@ class _$AddOrderFailImpl<T> implements AddOrderFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddOrderFailImplCopyWith<T, _$AddOrderFailImpl<T>> get copyWith =>
       __$$AddOrderFailImplCopyWithImpl<T, _$AddOrderFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4721,10 +4544,7 @@ abstract class AddOrderFail<T> implements AddToCartState<T> {
   const factory AddOrderFail(final ApiErrorModel error) = _$AddOrderFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AddToCartState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddOrderFailImplCopyWith<T, _$AddOrderFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

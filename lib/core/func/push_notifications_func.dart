@@ -14,6 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 void pushNotification(
   BuildContext context,
   TextEditingController messageController,
+  TextEditingController titleController,
   bool isUser,
 ) {
   if (messageController.text.trim().isNotEmpty) {
@@ -39,6 +40,7 @@ void pushNotification(
                 child: UsersScreen(
                   isFromNotification: true,
                   message: messageController.text,
+                  notificationTitle: titleController.text,
                 ),
               ),
         ),
@@ -60,13 +62,13 @@ void pushNotification(
                               ..getAllResturantsForAdmin(),
                   ),
                   BlocProvider(
-                    create: (context) => getIt<NotificationsCubit>()
-                              
+                    create: (context) => getIt<NotificationsCubit>(),    
                   ),
                 ],
                 child: ResturantAdminScreen(
                   isFromNotification: true,
                   message: messageController.text,
+                  notificationTitle: titleController.text,
                 ),
               ),
         ),

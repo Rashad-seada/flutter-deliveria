@@ -188,6 +188,7 @@ class _DeliveryAgentsScreenState extends State<DeliveryAgentsScreen> {
                                                     getIt<AgentsCubit>()
                                                       ..getAllOrdersEachAgent(
                                                         agent.value.id,
+                                                        status: 'active',
                                                       ),
                                             child: OrdersForEachAgentScreen(id: agent.value.id,
                                             

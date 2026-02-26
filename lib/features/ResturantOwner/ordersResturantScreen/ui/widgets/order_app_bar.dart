@@ -11,17 +11,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OrderAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final bool isDeliveryAgent;
   final String orderId;
   final VoidCallback? onUpdateTap;
 
-  const OrderAppBar({Key? key, required this.orderId, this.onUpdateTap})
-    : super(key: key);
+  const OrderAppBar({
+    Key? key,
+    required this.orderId,
+    this.onUpdateTap,
+    this.isDeliveryAgent = false,
+  }) : super(key: key);
 
   @override
   Size get preferredSize => const Size.fromHeight(60);
 
   @override
   Widget build(BuildContext context) {
+    if (!isDeliveryAgent) {
+      return ArrowBackAppBarWithTitle(
+        showTitle: true,
+        onUpdateTap: onUpdateTap,
+        update: false,
+        title: "Order # $orderId",
+        titleStyle: TextStyles.bimini20W700.copyWith(
+          color: AppColors.primaryDeafult,
+        ),
+      );
+    }
     return BlocConsumer<AgentOrdersCubit, AgentOrdersState>(
       builder: (context, state) {
         return ArrowBackAppBarWithTitle(

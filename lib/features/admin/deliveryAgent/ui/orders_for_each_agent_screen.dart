@@ -113,7 +113,8 @@ class _OrdersForEachAgentScreenState extends State<OrdersForEachAgentScreen>
             leading: IconButton(
               icon: Icon(Icons.refresh, color: AppColors.primaryDeafult),
               onPressed: () {
-                context.read<AgentsCubit>().getAllOrdersEachAgent(widget.id);
+                final status = _tabController.index == 0 ? 'active' : 'history';
+                context.read<AgentsCubit>().getAllOrdersEachAgent(widget.id, status: status);
               },
             ),
           ),
@@ -141,8 +142,8 @@ class _OrdersForEachAgentScreenState extends State<OrdersForEachAgentScreen>
                     orders
                         .where(
                           (order) =>
-                              order.status == "Completed" &&
-                              order.status != "Canceled",
+                              order.status == "Completed" ||
+                              order.status == "Canceled",
                         )
                         .toList();
 
@@ -194,6 +195,10 @@ class _OrdersForEachAgentScreenState extends State<OrdersForEachAgentScreen>
                       ],
                       onTap: (index) {
                         setState(() {});
+                        final status = index == 0 ? 'active' : 'history';
+                        context
+                            .read<AgentsCubit>()
+                            .getAllOrdersEachAgent(widget.id, status: status);
                       },
                     ),
                     Expanded(

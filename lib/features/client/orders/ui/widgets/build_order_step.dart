@@ -14,7 +14,8 @@ class BuildOrderStep extends StatelessWidget {
   const BuildOrderStep({
     super.key,
     required this.index,
-    required this.themeState, required this.time,
+    required this.themeState,
+    required this.time,
   });
   final ThemeState themeState;
 
@@ -28,33 +29,47 @@ class BuildOrderStep extends StatelessWidget {
         final isCompleted = index < state.currentStep;
         final isCurrent = index == state.currentStep;
 
-        return Container(
-          margin: const EdgeInsets.only(bottom: 16),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  StepIcon(isCompleted: isCompleted, isCurrent: isCurrent),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 4),
+          child: IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Timeline column (icon + connector line)
+                SizedBox(
+                  width: 44,
+                  child: Column(
+                    children: [
+                      StepIcon(
+                        isCompleted: isCompleted,
+                        isCurrent: isCurrent,
+                        stepIndex: index,
+                      ),
+                      if (!isLast)
+                        Expanded(
+                          child: AnimatedBuilderForDashLine(
+                            isCompleted: isCompleted,
+                            isCurrent: isCurrent,
+                            state: state,
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 12),
 
-                  if (!isLast)
-                    AnimatedBuilderForDashLine(
-                      isCompleted: isCompleted,
-                      isCurrent: isCurrent,
-                      state: state,
-                    ),
-                ],
-              ),
-              const SizedBox(width: 16),
-
-              StepContainerInformation(
-                isCompleted: isCompleted,
-                isCurrent: isCurrent,
-                step: context.locale.languageCode=="ar"?arabicStep: step,
-                themeState: themeState,
-                time: time,
-              ),
-            ],
+                // Step information card
+                StepContainerInformation(
+                  isCompleted: isCompleted,
+                  isCurrent: isCurrent,
+                  step: context.locale.languageCode == "ar"
+                      ? arabicStep
+                      : step,
+                  themeState: themeState,
+                  time: time,
+                ),
+              ],
+            ),
           ),
         );
       },

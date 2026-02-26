@@ -11,6 +11,7 @@ class NotificationRepo {
   Future<ApiResult<NotificationsModel>> getNotification() async {
     try {
       final res = await apiServices.getNotification({});
+      print("Notification Response: ${res.toJson()}");
       return ApiResult.success(res);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

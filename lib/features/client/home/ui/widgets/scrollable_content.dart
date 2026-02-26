@@ -14,6 +14,7 @@ import 'package:delveria/features/client/home/ui/widgets/sections/home_categorie
 import 'package:delveria/features/client/home/ui/widgets/sections/home_nearby_section.dart';
 import 'package:delveria/features/client/home/ui/widgets/sections/home_offers_section.dart';
 import 'package:delveria/features/client/home/ui/widgets/sections/home_top_restaurants_section.dart';
+import 'package:delveria/features/client/home/ui/widgets/sections/home_best_sellers_section.dart';
 import 'package:delveria/features/client/home/ui/widgets/slider_section.dart';
 import 'package:delveria/features/client/orders/logic/cubit/get_orders_cubit.dart';
 import 'package:delveria/features/client/orders/logic/cubit/get_orders_state.dart';
@@ -52,7 +53,13 @@ class _ScrollableContentState extends State<ScrollableContent> {
   @override
   void initState() {
     super.initState();
+    // Fetch offers data
     context.read<SlidersCubit>().getRestaurantsWithOffers(
+      lat: widget.lat,
+      long: widget.long,
+    );
+    // Fetch best sellers data
+    context.read<SlidersCubit>().getBestSellers(
       lat: widget.lat,
       long: widget.long,
     );
@@ -99,11 +106,13 @@ class _ScrollableContentState extends State<ScrollableContent> {
                                 setState(() {
                                   query = value;
                                 });
-                                await context.read<SlidersCubit>().searchResturantUserSide(
-                                  query: query,
-                                  lat: widget.lat,
-                                  long: widget.long,
-                                );
+                                if (value.trim().isNotEmpty) {
+                                  await context.read<SlidersCubit>().searchResturantUserSide(
+                                    query: query,
+                                    lat: widget.lat,
+                                    long: widget.long,
+                                  );
+                                }
                               },
                             ),
                           ),
@@ -133,7 +142,6 @@ class _ScrollableContentState extends State<ScrollableContent> {
                             index: 2,
                             child: SliderSection(
                               state: carouselState,
-                              resId: restaurantsList.map((e) => e.id).toString(),
                               resturantAdmin: restaurantsList.cast(),
                             ),
                           ),
@@ -193,6 +201,18 @@ class _ScrollableContentState extends State<ScrollableContent> {
                               onPageChanged: (index) => setState(() => _nearbyRestIndex = index),
                             ),
                           ),
+                        // Best Sellers Section
+                        if (query.isEmpty && 
+                            (_selectedCategory == "All" || _selectedCategory == null) &&
+                            cubit.bestSellers.isNotEmpty)
+                          StaggeredSlideFade(
+                            index: 8,
+                            child: HomeBestSellersSection(
+                              themeState: widget.themeState,
+                              lat: widget.lat,
+                              long: widget.long,
+                            ),
+                          ),
                         verticalSpace(80),
                       ],
                     );
@@ -215,11 +235,13 @@ class _ScrollableContentState extends State<ScrollableContent> {
         long: widget.long,
         onChanged: (value) async {
           setState(() => query = value);
-          await context.read<SlidersCubit>().searchResturantUserSide(
-            query: query,
-            lat: widget.lat,
-            long: widget.long,
-          );
+          if (value.trim().isNotEmpty) {
+            await context.read<SlidersCubit>().searchResturantUserSide(
+              query: query,
+              lat: widget.lat,
+              long: widget.long,
+            );
+          }
         },
       ),
     );
@@ -273,7 +295,6 @@ class _ScrollableContentState extends State<ScrollableContent> {
     if (showSliderSection) {
       return SliderSection(
         state: state,
-        resId: restaurantsList.map((e) => e.id).toString(),
         resturantAdmin: restaurantsList.cast(),
       );
     }

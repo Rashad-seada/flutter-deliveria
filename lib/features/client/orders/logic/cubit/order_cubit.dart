@@ -13,19 +13,25 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 /// - Delivered
 class OrderCubit extends Cubit<OrderState> {
   static const List<String> orderStates = [
-    "Preparing",
+    "Waiting for Approval",
     "Accepted",
-    "Ready for pickup",
-    "On the Way",
-    "DELIVERED",
+    "Approved / Preparing",
+    "Ready for Delivery",
+    "Pick up",
+    "On the way",
+    "Delivered",
+    "Completed",
   ];
 
   static const List<String> orderStatesArabic = [
-    "جاري التحضير",
+    "في انتظار الموافقة",
     "تم القبول",
-    "جاهز للاستلام",
+    "تمت الموافقة / جاري التحضير",
+    "جاهز للتوصيل",
+    "استلام",
     "في الطريق",
     "تم التوصيل",
+    "مكتمل",
   ];
 
   OrderCubit({
@@ -41,19 +47,13 @@ class OrderCubit extends Cubit<OrderState> {
             currentStep: currentStep,
             orderSteps: orderSteps ??
                 [
-                  OrderStep(title: orderStates[0], time: "", isCompleted: false),
-                  OrderStep(title: orderStates[1], time: "", isCompleted: false),
-                  OrderStep(title: orderStates[2], time: "", isCompleted: false),
-                  OrderStep(title: orderStates[3], time: "", isCompleted: false),
-                  OrderStep(title: orderStates[4], time: "", isCompleted: false),
+                  for (int i = 0; i < orderStates.length; i++)
+                    OrderStep(title: orderStates[i], time: "", isCompleted: false),
                 ],
             orderStepsArabic: orderStepsArabic ??
                 [
-                  OrderStep(title: orderStatesArabic[0], time: "", isCompleted: false),
-                  OrderStep(title: orderStatesArabic[1], time: "", isCompleted: false),
-                  OrderStep(title: orderStatesArabic[2], time: "", isCompleted: false),
-                  OrderStep(title: orderStatesArabic[3], time: "", isCompleted: false),
-                  OrderStep(title: orderStatesArabic[4], time: "", isCompleted: false),
+                  for (int i = 0; i < orderStatesArabic.length; i++)
+                    OrderStep(title: orderStatesArabic[i], time: "", isCompleted: false),
                 ],
           ),
         );
@@ -66,15 +66,65 @@ class OrderCubit extends Cubit<OrderState> {
 
   int _getStepIndexFromStatus(String status) {
     final normalized = status.trim().toLowerCase();
-    if (normalized == "preparing") return 0;
+
+    // Step 0: Waiting for Approval
+    if (normalized == "waiting for approval" ||
+        normalized == "waiting_for_approval" ||
+        normalized == "pending") return 0;
+
+    // Step 1: Accepted
     if (normalized == "accepted") return 1;
-    if (normalized == "ready for pickup" || normalized == "ready for pick up" || normalized == "ready_for_pickup") return 2;
-    if (normalized == "on the way" || normalized == "on_the_way") return 3;
-    if (normalized == "delivered") return 4;
+
+    // Step 2: Approved / Preparing
+    if (normalized == "approved / preparing" ||
+        normalized == "approved/preparing" ||
+        normalized == "approved_preparing" ||
+        normalized == "preparing" ||
+        normalized == "approved") return 2;
+
+    // Step 3: Ready for Delivery
+    if (normalized == "ready for delivery" ||
+        normalized == "ready_for_delivery" ||
+        normalized == "ready for pickup" ||
+        normalized == "ready_for_pickup" ||
+        normalized == "ready") return 3;
+
+    // Step 4: Pick up
+    if (normalized == "pick up" ||
+        normalized == "pick_up" ||
+        normalized == "pickup" ||
+        normalized == "picked up" ||
+        normalized == "picked_up") return 4;
+
+    // Step 5: On the way (includes "Out for Delivery" from backend)
+    if (normalized == "on the way" ||
+        normalized == "on_the_way" ||
+        normalized == "out for delivery" ||
+        normalized == "out_for_delivery" ||
+        normalized == "in transit" ||
+        normalized == "in_transit" ||
+        normalized == "shipped") return 5;
+
+    // Step 6: Delivered
+    if (normalized == "delivered") return 6;
+
+    // Step 7: Completed
+    if (normalized == "completed") return 7;
+
     // fallback: try to match by partial
     for (int i = 0; i < orderStates.length; i++) {
       if (orderStates[i].toLowerCase() == normalized) return i;
     }
+
+    // Second fallback: check if status contains any known keyword
+    if (normalized.contains("deliver") && !normalized.contains("ready")) return 6;
+    if (normalized.contains("way") || normalized.contains("transit") || normalized.contains("out for")) return 5;
+    if (normalized.contains("pick")) return 4;
+    if (normalized.contains("ready")) return 3;
+    if (normalized.contains("prepar")) return 2;
+    if (normalized.contains("accept") || normalized.contains("approv")) return 1;
+    if (normalized.contains("complet")) return 7;
+
     return 0;
   }
 

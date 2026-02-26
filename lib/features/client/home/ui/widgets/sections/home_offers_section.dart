@@ -7,7 +7,7 @@ import 'package:delveria/features/client/home/logic/cubit/sliders_cubit.dart';
 import 'package:delveria/features/client/home/logic/cubit/sliders_state.dart';
 import 'package:delveria/features/client/home/ui/widgets/cards/offer_restaurant_card.dart';
 import 'package:delveria/features/client/home/ui/widgets/shared/empty_restaurants_widget.dart';
-import 'package:delveria/features/client/filter/ui/offers_see_all_screen.dart';
+import 'package:delveria/features/client/filter/ui/generic_see_all_screen.dart';
 import 'package:delveria/features/client/settings/logic/theme_state.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -118,12 +118,17 @@ class HomeOffersSection extends StatelessWidget {
     final sliderCubit = context.read<SlidersCubit>();
     final offersList = sliderCubit.restaurantsWithOffers;
     
+    // Convert to ResturantAdmin list for generic screen
+    final restaurants = offersList.map((offer) => offer.toResturantAdmin()).toList();
+    
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => OffersSeeAllScreen(
-          themeState: themeState,
-          offersList: offersList,
+        builder: (_) => GenericSeeAllScreen(
+          title: AppStrings.discount.tr(),
+          restaurants: restaurants,
+          titleIcon: Icons.local_offer_rounded,
+          titleIconColor: Colors.red,
         ),
       ),
     );

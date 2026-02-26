@@ -47,6 +47,10 @@ Widget buildMenuItem(
         isAdmin
             ? () {}
             : () {
+              if (res?.isOpen == false) {
+                 showErrorSnackBar(context, "Restaurant is Closed");
+                 return;
+              }
               if (edit == true) {
                 Navigator.push(
                   context,
@@ -60,13 +64,10 @@ Widget buildMenuItem(
                             BlocProvider(
                               create: (context) => getIt<ItemCubit>(),
                             ),
-                            BlocProvider(
-                              create:
-                                  (context) => getIt<AllresturantsadminCubit>(),
+                            BlocProvider.value(
+                              value: getIt<AllresturantsadminCubit>(),
                             ),
-                            BlocProvider<AddToCartCubit>(
-                              create: (context) => getIt(),
-                            ),
+                            BlocProvider.value(value: getIt<AddToCartCubit>() as dynamic),
                           ],
                           child: EditYourItemScreen(
                             itemImageUrl:
@@ -77,6 +78,7 @@ Widget buildMenuItem(
                             itemName: item.name,
                             sizes: item.sizes,
                             toppings: item.toppings ?? [],
+                            itemCategoryId: item.itemCategory, // Pass category ID
                           ),
                         ),
                   ),
@@ -94,9 +96,7 @@ Widget buildMenuItem(
                             BlocProvider<CarouselCubit>(
                               create: (context) => getIt(),
                             ),
-                            BlocProvider<AddToCartCubit>(
-                              create: (context) => getIt(),
-                            ),
+                            BlocProvider.value(value: getIt<AddToCartCubit>()),
                           ],
                           child: AddItemScreen(
                             item: items,
@@ -115,17 +115,55 @@ Widget buildMenuItem(
           Container(
             height: 112.h,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: CachedNetworkImage(
-                width: 100.w,
-                height: 100.h,
-                imageUrl: "${ApiConstants.baseUrl}/${item.photo}",
-                placeholder: (context, url) => Center(child: CustomLoading()),
-                errorWidget: (context, url, error) {
-                  return Center(child: CustomLoading());
-                },
-              ),
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: CachedNetworkImage(
+                    width: 100.w,
+                    height: 100.h,
+                    imageUrl: "${ApiConstants.baseUrl}/${item.photo}",
+                    placeholder: (context, url) => Center(child: CustomLoading()),
+                    errorWidget: (context, url, error) {
+                      return Center(child: CustomLoading());
+                    },
+                  ),
+                ),
+                Builder(
+                  builder: (context) {
+                    final size = item.sizes?.first;
+                    final priceBefore = double.tryParse(size?.priceBefore?.toString() ?? '0') ?? 0;
+                    final priceAfter = double.tryParse(size?.priceAfter?.toString() ?? '0') ?? 0;
+
+                    if (priceBefore > priceAfter && priceBefore > 0) {
+                      final int percentage = ((priceBefore - priceAfter) / priceBefore * 100).round();
+                      return Positioned(
+                        top: 0,
+                        right: 0, // Top-right corner of the image
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(8),
+                              bottomLeft: Radius.circular(8),
+                            ),
+                          ),
+                          child: Text(
+                            "$percentage% OFF",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10.sp,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      );
+                    }
+                    return const SizedBox.shrink();
+                  },
+                ),
+              ],
             ),
           ),
           SizedBox(width: 12),
@@ -240,11 +278,39 @@ Widget buildMenuItem(
                           isAdmin
                               ? SizedBox()
                               : GestureDetector(
+                                onTap: () {
+                                  if (res?.isOpen == false) {
+                                    showErrorSnackBar(context, "Restaurant is Closed");
+                                    return;
+                                  }
+                                  // existing logic... navigation to AddItemScreen
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder:
+                                          (_) => MultiBlocProvider(
+                                            providers: [
+                                              BlocProvider<ResturantMenuCubit>(
+                                                create: (context) => getIt(),
+                                              ),
+                                              BlocProvider<CarouselCubit>(
+                                                create: (context) => getIt(),
+                                              ),
+                                              BlocProvider.value(value: getIt<AddToCartCubit>()),
+                                            ],
+                                            child: AddItemScreen(
+                                              item: items,
+                                              restaurantModel: res,
+                                            ),
+                                          ),
+                                    ),
+                                  );
+                                },
                                 child: Container(
                                   width: 24.w,
                                   height: 24.h,
                                   decoration: BoxDecoration(
-                                    color: AppColors.primaryDeafult,
+                                    color: res?.isOpen == false ? Colors.grey : AppColors.primaryDeafult,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Icon(

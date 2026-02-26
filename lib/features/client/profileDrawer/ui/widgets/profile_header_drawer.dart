@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:delveria/core/func/continue_as_a_guest.dart';
 import 'package:delveria/core/helper/images.dart';
 import 'package:delveria/core/helper/spacing.dart';
 import 'package:delveria/core/network/api_constants.dart';
@@ -57,9 +58,11 @@ class ProfileHeaderDrawer extends StatelessWidget {
                         SizedBox(
                           width: 120.w,
                           child: Text(
-                            resturantCubit.name.isNotEmpty
-                                ? resturantCubit.name
-                                : "${cubit.firstName}${cubit.lastName}",
+                            isContinueAsGuest 
+                                ? "Guest"
+                                : resturantCubit.name.isNotEmpty
+                                    ? resturantCubit.name
+                                    : "${cubit.firstName}${cubit.lastName}",
                             style: TextStyles.bimini16W400Body.copyWith(
                               color:
                                   themeState.themeMode == ThemeMode.dark
@@ -71,9 +74,11 @@ class ProfileHeaderDrawer extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          resturantCubit.address.isNotEmpty
-                              ? resturantCubit.address.substring(1, 20)
-                              : cubit.email,
+                          isContinueAsGuest
+                              ? "Welcome to Delveria"
+                              : resturantCubit.address.isNotEmpty
+                                  ? resturantCubit.address.substring(1, 20)
+                                  : cubit.email,
                           style: TextStyles.bimini12W400Grey.copyWith(
                             color:
                                 themeState.themeMode == ThemeMode.dark

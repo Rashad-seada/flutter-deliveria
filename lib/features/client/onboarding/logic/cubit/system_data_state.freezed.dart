@@ -12,8 +12,7 @@ part of 'system_data_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SystemDataState {
@@ -23,14 +22,16 @@ mixin _$SystemDataState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel error) fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel error)? fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -38,21 +39,24 @@ mixin _$SystemDataState {
     TResult Function()? success,
     TResult Function(ApiErrorModel error)? fail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Fail value) fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Fail value)? fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -60,15 +64,15 @@ mixin _$SystemDataState {
     TResult Function(Success value)? success,
     TResult Function(Fail value)? fail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SystemDataStateCopyWith<$Res> {
   factory $SystemDataStateCopyWith(
-    SystemDataState value,
-    $Res Function(SystemDataState) then,
-  ) = _$SystemDataStateCopyWithImpl<$Res, SystemDataState>;
+          SystemDataState value, $Res Function(SystemDataState) then) =
+      _$SystemDataStateCopyWithImpl<$Res, SystemDataState>;
 }
 
 /// @nodoc
@@ -80,17 +84,13 @@ class _$SystemDataStateCopyWithImpl<$Res, $Val extends SystemDataState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl value,
-    $Res Function(_$InitialImpl) then,
-  ) = __$$InitialImplCopyWithImpl<$Res>;
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -98,12 +98,8 @@ class __$$InitialImplCopyWithImpl<$Res>
     extends _$SystemDataStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl _value,
-    $Res Function(_$InitialImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -207,9 +203,8 @@ abstract class _Initial implements SystemDataState {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl value,
-    $Res Function(_$LoadingImpl) then,
-  ) = __$$LoadingImplCopyWithImpl<$Res>;
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+      __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -217,12 +212,8 @@ class __$$LoadingImplCopyWithImpl<$Res>
     extends _$SystemDataStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl _value,
-    $Res Function(_$LoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -326,9 +317,8 @@ abstract class Loading implements SystemDataState {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<$Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl value,
-    $Res Function(_$SuccessImpl) then,
-  ) = __$$SuccessImplCopyWithImpl<$Res>;
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -336,12 +326,8 @@ class __$$SuccessImplCopyWithImpl<$Res>
     extends _$SystemDataStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl _value,
-    $Res Function(_$SuccessImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -445,9 +431,8 @@ abstract class Success implements SystemDataState {
 /// @nodoc
 abstract class _$$FailImplCopyWith<$Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl value,
-    $Res Function(_$FailImpl) then,
-  ) = __$$FailImplCopyWithImpl<$Res>;
+          _$FailImpl value, $Res Function(_$FailImpl) then) =
+      __$$FailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -457,21 +442,19 @@ class __$$FailImplCopyWithImpl<$Res>
     extends _$SystemDataStateCopyWithImpl<$Res, _$FailImpl>
     implements _$$FailImplCopyWith<$Res> {
   __$$FailImplCopyWithImpl(_$FailImpl _value, $Res Function(_$FailImpl) _then)
-    : super(_value, _then);
+      : super(_value, _then);
 
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -499,9 +482,7 @@ class _$FailImpl implements Fail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<_$FailImpl> get copyWith =>
@@ -586,10 +567,7 @@ abstract class Fail implements SystemDataState {
   const factory Fail(final ApiErrorModel error) = _$FailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of SystemDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<_$FailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

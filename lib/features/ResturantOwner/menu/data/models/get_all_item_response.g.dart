@@ -8,59 +8,52 @@ part of 'get_all_item_response.dart';
 
 GetAllItemsResponse _$GetAllItemsResponseFromJson(Map<String, dynamic> json) =>
     GetAllItemsResponse(
-      response:
-          json['response'] == null
-              ? null
-              : GetAllItemsResponseData.fromJson(
-                json['response'] as Map<String, dynamic>,
-              ),
+      response: json['response'] == null
+          ? null
+          : GetAllItemsResponseData.fromJson(
+              json['response'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$GetAllItemsResponseToJson(
-  GetAllItemsResponse instance,
-) => <String, dynamic>{'response': instance.response?.toJson()};
+        GetAllItemsResponse instance) =>
+    <String, dynamic>{
+      'response': instance.response?.toJson(),
+    };
 
 GetAllItemsResponseData _$GetAllItemsResponseDataFromJson(
-  Map<String, dynamic> json,
-) => GetAllItemsResponseData(
-  restaurant:
-      json['restaurant'] == null
+        Map<String, dynamic> json) =>
+    GetAllItemsResponseData(
+      restaurant: json['restaurant'] == null
           ? null
           : RestaurantModel.fromJson(
-            json['restaurant'] as Map<String, dynamic>,
-          ),
-  items:
-      (json['items'] as List<dynamic>?)
+              json['restaurant'] as Map<String, dynamic>),
+      items: (json['items'] as List<dynamic>?)
           ?.map((e) => ItemModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-);
+    );
 
 Map<String, dynamic> _$GetAllItemsResponseDataToJson(
-  GetAllItemsResponseData instance,
-) => <String, dynamic>{
-  'restaurant': instance.restaurant?.toJson(),
-  'items': instance.items?.map((e) => e.toJson()).toList(),
-};
+        GetAllItemsResponseData instance) =>
+    <String, dynamic>{
+      'restaurant': instance.restaurant?.toJson(),
+      'items': instance.items?.map((e) => e.toJson()).toList(),
+    };
 
 RestaurantModel _$RestaurantModelFromJson(Map<String, dynamic> json) =>
     RestaurantModel(
-      coordinates:
-          json['coordinates'] == null
-              ? null
-              : CoordinatesModel.fromJson(
-                json['coordinates'] as Map<String, dynamic>,
-              ),
+      coordinates: json['coordinates'] == null
+          ? null
+          : CoordinatesModel.fromJson(
+              json['coordinates'] as Map<String, dynamic>),
       id: json['_id'] as String?,
       photo: json['photo'] as String?,
       logo: json['logo'] as String?,
-      superCategory:
-          (json['super_category'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
-      subCategory:
-          (json['sub_category'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
+      superCategory: (json['super_category'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      subCategory: (json['sub_category'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       name: json['name'] as String?,
       phone: json['phone'] as String?,
       aboutUs: json['about_us'] as String?,
@@ -120,62 +113,64 @@ Map<String, dynamic> _$CoordinatesModelToJson(CoordinatesModel instance) =>
     };
 
 ItemModel _$ItemModelFromJson(Map<String, dynamic> json) => ItemModel(
-  id: json['_id'] as String?,
-  restaurantId: json['restaurant_id'] as String?,
-  photo: json['photo'] as String?,
-  name: json['name'] as String?,
-  description: json['description'] as String?,
-  sizes:
-      (json['sizes'] as List<dynamic>?)
+      id: json['_id'] as String?,
+      restaurantId: json['restaurant_id'] as String?,
+      photo: json['photo'] as String?,
+      name: json['name'] as String?,
+      description: json['description'] as String?,
+      sizes: (json['sizes'] as List<dynamic>?)
           ?.map((e) => SizeModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-  toppings:
-      (json['toppings'] as List<dynamic>?)
+      toppings: (json['toppings'] as List<dynamic>?)
           ?.map((e) => ToppingModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-  createdAt: json['createdAt'] as String?,
-  updatedAt: json['updatedAt'] as String?,
-  v: (json['__v'] as num?)?.toInt(),
-  enable: json['enable'] as bool?,
-  haveOption: json['have_option'] as bool?,
-);
+      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updatedAt'] as String?,
+      v: (json['__v'] as num?)?.toInt(),
+      enable: json['enable'] as bool?,
+      haveOption: json['have_option'] as bool?,
+      isBestSeller: json['is_best_seller'] as bool?,
+      itemCategory: json['item_category'] as String?,
+    );
 
 Map<String, dynamic> _$ItemModelToJson(ItemModel instance) => <String, dynamic>{
-  '_id': instance.id,
-  'restaurant_id': instance.restaurantId,
-  'photo': instance.photo,
-  'name': instance.name,
-  'description': instance.description,
-  'sizes': instance.sizes?.map((e) => e.toJson()).toList(),
-  'toppings': instance.toppings?.map((e) => e.toJson()).toList(),
-  'createdAt': instance.createdAt,
-  'updatedAt': instance.updatedAt,
-  '__v': instance.v,
-  'enable': instance.enable,
-  'have_option': instance.haveOption,
-};
+      '_id': instance.id,
+      'restaurant_id': instance.restaurantId,
+      'photo': instance.photo,
+      'name': instance.name,
+      'description': instance.description,
+      'sizes': instance.sizes?.map((e) => e.toJson()).toList(),
+      'toppings': instance.toppings?.map((e) => e.toJson()).toList(),
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+      '__v': instance.v,
+      'enable': instance.enable,
+      'have_option': instance.haveOption,
+      'is_best_seller': instance.isBestSeller,
+      'item_category': instance.itemCategory,
+    };
 
 SizeModel _$SizeModelFromJson(Map<String, dynamic> json) => SizeModel(
-  size: json['size'] as String?,
-  priceBefore: json['price_before'] as num?,
-  priceAfter: json['price_after'] as num?,
-  offer: json['offer'] as num?,
-  id: json['_id'] as String?,
-);
+      size: json['size'] as String?,
+      priceBefore: json['price_before'] as num?,
+      priceAfter: json['price_after'] as num?,
+      offer: json['offer'] as num?,
+      id: json['_id'] as String?,
+    );
 
 Map<String, dynamic> _$SizeModelToJson(SizeModel instance) => <String, dynamic>{
-  'size': instance.size,
-  'price_before': instance.priceBefore,
-  'price_after': instance.priceAfter,
-  'offer': instance.offer,
-  '_id': instance.id,
-};
+      'size': instance.size,
+      'price_before': instance.priceBefore,
+      'price_after': instance.priceAfter,
+      'offer': instance.offer,
+      '_id': instance.id,
+    };
 
 ToppingModel _$ToppingModelFromJson(Map<String, dynamic> json) => ToppingModel(
-  topping: json['topping'] as String?,
-  price: json['price'] as num?,
-  id: json['_id'] as String?,
-);
+      topping: json['topping'] as String?,
+      price: json['price'] as num?,
+      id: json['_id'] as String?,
+    );
 
 Map<String, dynamic> _$ToppingModelToJson(ToppingModel instance) =>
     <String, dynamic>{

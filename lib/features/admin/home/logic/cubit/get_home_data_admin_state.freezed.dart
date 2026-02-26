@@ -12,8 +12,7 @@ part of 'get_home_data_admin_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$GetHomeDataAdminState<T> {
@@ -23,14 +22,16 @@ mixin _$GetHomeDataAdminState<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(ApiErrorModel error) fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(ApiErrorModel error)? fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -38,21 +39,24 @@ mixin _$GetHomeDataAdminState<T> {
     TResult Function(T data)? success,
     TResult Function(ApiErrorModel error)? fail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Fail<T> value) fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Fail<T> value)? fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -60,23 +64,20 @@ mixin _$GetHomeDataAdminState<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Fail<T> value)? fail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetHomeDataAdminStateCopyWith<T, $Res> {
-  factory $GetHomeDataAdminStateCopyWith(
-    GetHomeDataAdminState<T> value,
-    $Res Function(GetHomeDataAdminState<T>) then,
-  ) = _$GetHomeDataAdminStateCopyWithImpl<T, $Res, GetHomeDataAdminState<T>>;
+  factory $GetHomeDataAdminStateCopyWith(GetHomeDataAdminState<T> value,
+          $Res Function(GetHomeDataAdminState<T>) then) =
+      _$GetHomeDataAdminStateCopyWithImpl<T, $Res, GetHomeDataAdminState<T>>;
 }
 
 /// @nodoc
-class _$GetHomeDataAdminStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends GetHomeDataAdminState<T>
->
+class _$GetHomeDataAdminStateCopyWithImpl<T, $Res,
+        $Val extends GetHomeDataAdminState<T>>
     implements $GetHomeDataAdminStateCopyWith<T, $Res> {
   _$GetHomeDataAdminStateCopyWithImpl(this._value, this._then);
 
@@ -84,17 +85,13 @@ class _$GetHomeDataAdminStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -102,12 +99,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$GetHomeDataAdminStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -211,9 +204,8 @@ abstract class _Initial<T> implements GetHomeDataAdminState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -221,12 +213,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$GetHomeDataAdminStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -330,9 +318,8 @@ abstract class Loading<T> implements GetHomeDataAdminState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -342,23 +329,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$GetHomeDataAdminStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -387,9 +371,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -474,10 +456,7 @@ abstract class Success<T> implements GetHomeDataAdminState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -485,9 +464,8 @@ abstract class Success<T> implements GetHomeDataAdminState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -497,23 +475,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$GetHomeDataAdminStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -541,9 +516,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -628,10 +601,7 @@ abstract class Fail<T> implements GetHomeDataAdminState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of GetHomeDataAdminState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

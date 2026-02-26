@@ -13,4 +13,7 @@ BanUserResponse _$BanUserResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$BanUserResponseToJson(BanUserResponse instance) =>
-    <String, dynamic>{'message': instance.message, 'ban': instance.ban};
+    <String, dynamic>{
+      'message': instance.message,
+      'ban': instance.ban,
+    };

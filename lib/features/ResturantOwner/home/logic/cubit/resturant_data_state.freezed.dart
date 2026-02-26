@@ -12,8 +12,7 @@ part of 'resturant_data_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ResturantDataState<T> {
@@ -29,7 +28,8 @@ mixin _$ResturantDataState<T> {
     required TResult Function() getHomeResLoading,
     required TResult Function(T data) getHomeResSuccess,
     required TResult Function(ApiErrorModel error) getHomeResFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -42,7 +42,8 @@ mixin _$ResturantDataState<T> {
     TResult? Function()? getHomeResLoading,
     TResult? Function(T data)? getHomeResSuccess,
     TResult? Function(ApiErrorModel error)? getHomeResFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -56,7 +57,8 @@ mixin _$ResturantDataState<T> {
     TResult Function(T data)? getHomeResSuccess,
     TResult Function(ApiErrorModel error)? getHomeResFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -69,7 +71,8 @@ mixin _$ResturantDataState<T> {
     required TResult Function(GetHomeResLoading<T> value) getHomeResLoading,
     required TResult Function(GetHomeResSuccess<T> value) getHomeResSuccess,
     required TResult Function(GetHomeResFail<T> value) getHomeResFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -82,7 +85,8 @@ mixin _$ResturantDataState<T> {
     TResult? Function(GetHomeResLoading<T> value)? getHomeResLoading,
     TResult? Function(GetHomeResSuccess<T> value)? getHomeResSuccess,
     TResult? Function(GetHomeResFail<T> value)? getHomeResFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -96,23 +100,20 @@ mixin _$ResturantDataState<T> {
     TResult Function(GetHomeResSuccess<T> value)? getHomeResSuccess,
     TResult Function(GetHomeResFail<T> value)? getHomeResFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResturantDataStateCopyWith<T, $Res> {
-  factory $ResturantDataStateCopyWith(
-    ResturantDataState<T> value,
-    $Res Function(ResturantDataState<T>) then,
-  ) = _$ResturantDataStateCopyWithImpl<T, $Res, ResturantDataState<T>>;
+  factory $ResturantDataStateCopyWith(ResturantDataState<T> value,
+          $Res Function(ResturantDataState<T>) then) =
+      _$ResturantDataStateCopyWithImpl<T, $Res, ResturantDataState<T>>;
 }
 
 /// @nodoc
-class _$ResturantDataStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends ResturantDataState<T>
->
+class _$ResturantDataStateCopyWithImpl<T, $Res,
+        $Val extends ResturantDataState<T>>
     implements $ResturantDataStateCopyWith<T, $Res> {
   _$ResturantDataStateCopyWithImpl(this._value, this._then);
 
@@ -120,17 +121,13 @@ class _$ResturantDataStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -138,12 +135,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$ResturantDataStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -283,9 +276,8 @@ abstract class _Initial<T> implements ResturantDataState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -293,12 +285,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$ResturantDataStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -438,9 +426,8 @@ abstract class Loading<T> implements ResturantDataState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -450,23 +437,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$ResturantDataStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -495,9 +479,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -618,10 +600,7 @@ abstract class Success<T> implements ResturantDataState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -629,9 +608,8 @@ abstract class Success<T> implements ResturantDataState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -641,23 +619,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$ResturantDataStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -685,9 +660,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -808,34 +781,26 @@ abstract class Fail<T> implements ResturantDataState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeEnableLoadingImplCopyWith<T, $Res> {
-  factory _$$ChangeEnableLoadingImplCopyWith(
-    _$ChangeEnableLoadingImpl<T> value,
-    $Res Function(_$ChangeEnableLoadingImpl<T>) then,
-  ) = __$$ChangeEnableLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$ChangeEnableLoadingImplCopyWith(_$ChangeEnableLoadingImpl<T> value,
+          $Res Function(_$ChangeEnableLoadingImpl<T>) then) =
+      __$$ChangeEnableLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$ChangeEnableLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$ResturantDataStateCopyWithImpl<T, $Res, _$ChangeEnableLoadingImpl<T>>
+    extends _$ResturantDataStateCopyWithImpl<T, $Res,
+        _$ChangeEnableLoadingImpl<T>>
     implements _$$ChangeEnableLoadingImplCopyWith<T, $Res> {
-  __$$ChangeEnableLoadingImplCopyWithImpl(
-    _$ChangeEnableLoadingImpl<T> _value,
-    $Res Function(_$ChangeEnableLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$ChangeEnableLoadingImplCopyWithImpl(_$ChangeEnableLoadingImpl<T> _value,
+      $Res Function(_$ChangeEnableLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -975,37 +940,33 @@ abstract class ChangeEnableLoading<T> implements ResturantDataState<T> {
 
 /// @nodoc
 abstract class _$$ChangeEnableSuccessImplCopyWith<T, $Res> {
-  factory _$$ChangeEnableSuccessImplCopyWith(
-    _$ChangeEnableSuccessImpl<T> value,
-    $Res Function(_$ChangeEnableSuccessImpl<T>) then,
-  ) = __$$ChangeEnableSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$ChangeEnableSuccessImplCopyWith(_$ChangeEnableSuccessImpl<T> value,
+          $Res Function(_$ChangeEnableSuccessImpl<T>) then) =
+      __$$ChangeEnableSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$ChangeEnableSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$ResturantDataStateCopyWithImpl<T, $Res, _$ChangeEnableSuccessImpl<T>>
+    extends _$ResturantDataStateCopyWithImpl<T, $Res,
+        _$ChangeEnableSuccessImpl<T>>
     implements _$$ChangeEnableSuccessImplCopyWith<T, $Res> {
-  __$$ChangeEnableSuccessImplCopyWithImpl(
-    _$ChangeEnableSuccessImpl<T> _value,
-    $Res Function(_$ChangeEnableSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$ChangeEnableSuccessImplCopyWithImpl(_$ChangeEnableSuccessImpl<T> _value,
+      $Res Function(_$ChangeEnableSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$ChangeEnableSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$ChangeEnableSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1034,17 +995,12 @@ class _$ChangeEnableSuccessImpl<T> implements ChangeEnableSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeEnableSuccessImplCopyWith<T, _$ChangeEnableSuccessImpl<T>>
-  get copyWith =>
-      __$$ChangeEnableSuccessImplCopyWithImpl<T, _$ChangeEnableSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$ChangeEnableSuccessImplCopyWithImpl<T,
+          _$ChangeEnableSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1162,20 +1118,16 @@ abstract class ChangeEnableSuccess<T> implements ResturantDataState<T> {
       _$ChangeEnableSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangeEnableSuccessImplCopyWith<T, _$ChangeEnableSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeEnableFailImplCopyWith<T, $Res> {
-  factory _$$ChangeEnableFailImplCopyWith(
-    _$ChangeEnableFailImpl<T> value,
-    $Res Function(_$ChangeEnableFailImpl<T>) then,
-  ) = __$$ChangeEnableFailImplCopyWithImpl<T, $Res>;
+  factory _$$ChangeEnableFailImplCopyWith(_$ChangeEnableFailImpl<T> value,
+          $Res Function(_$ChangeEnableFailImpl<T>) then) =
+      __$$ChangeEnableFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1184,24 +1136,21 @@ abstract class _$$ChangeEnableFailImplCopyWith<T, $Res> {
 class __$$ChangeEnableFailImplCopyWithImpl<T, $Res>
     extends _$ResturantDataStateCopyWithImpl<T, $Res, _$ChangeEnableFailImpl<T>>
     implements _$$ChangeEnableFailImplCopyWith<T, $Res> {
-  __$$ChangeEnableFailImplCopyWithImpl(
-    _$ChangeEnableFailImpl<T> _value,
-    $Res Function(_$ChangeEnableFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$ChangeEnableFailImplCopyWithImpl(_$ChangeEnableFailImpl<T> _value,
+      $Res Function(_$ChangeEnableFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$ChangeEnableFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ChangeEnableFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1229,16 +1178,12 @@ class _$ChangeEnableFailImpl<T> implements ChangeEnableFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeEnableFailImplCopyWith<T, _$ChangeEnableFailImpl<T>> get copyWith =>
       __$$ChangeEnableFailImplCopyWithImpl<T, _$ChangeEnableFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1356,34 +1301,26 @@ abstract class ChangeEnableFail<T> implements ResturantDataState<T> {
       _$ChangeEnableFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangeEnableFailImplCopyWith<T, _$ChangeEnableFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetHomeResLoadingImplCopyWith<T, $Res> {
-  factory _$$GetHomeResLoadingImplCopyWith(
-    _$GetHomeResLoadingImpl<T> value,
-    $Res Function(_$GetHomeResLoadingImpl<T>) then,
-  ) = __$$GetHomeResLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$GetHomeResLoadingImplCopyWith(_$GetHomeResLoadingImpl<T> value,
+          $Res Function(_$GetHomeResLoadingImpl<T>) then) =
+      __$$GetHomeResLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetHomeResLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$ResturantDataStateCopyWithImpl<T, $Res, _$GetHomeResLoadingImpl<T>>
+    extends _$ResturantDataStateCopyWithImpl<T, $Res,
+        _$GetHomeResLoadingImpl<T>>
     implements _$$GetHomeResLoadingImplCopyWith<T, $Res> {
-  __$$GetHomeResLoadingImplCopyWithImpl(
-    _$GetHomeResLoadingImpl<T> _value,
-    $Res Function(_$GetHomeResLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$GetHomeResLoadingImplCopyWithImpl(_$GetHomeResLoadingImpl<T> _value,
+      $Res Function(_$GetHomeResLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1523,37 +1460,33 @@ abstract class GetHomeResLoading<T> implements ResturantDataState<T> {
 
 /// @nodoc
 abstract class _$$GetHomeResSuccessImplCopyWith<T, $Res> {
-  factory _$$GetHomeResSuccessImplCopyWith(
-    _$GetHomeResSuccessImpl<T> value,
-    $Res Function(_$GetHomeResSuccessImpl<T>) then,
-  ) = __$$GetHomeResSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$GetHomeResSuccessImplCopyWith(_$GetHomeResSuccessImpl<T> value,
+          $Res Function(_$GetHomeResSuccessImpl<T>) then) =
+      __$$GetHomeResSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$GetHomeResSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$ResturantDataStateCopyWithImpl<T, $Res, _$GetHomeResSuccessImpl<T>>
+    extends _$ResturantDataStateCopyWithImpl<T, $Res,
+        _$GetHomeResSuccessImpl<T>>
     implements _$$GetHomeResSuccessImplCopyWith<T, $Res> {
-  __$$GetHomeResSuccessImplCopyWithImpl(
-    _$GetHomeResSuccessImpl<T> _value,
-    $Res Function(_$GetHomeResSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetHomeResSuccessImplCopyWithImpl(_$GetHomeResSuccessImpl<T> _value,
+      $Res Function(_$GetHomeResSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetHomeResSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetHomeResSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1582,17 +1515,13 @@ class _$GetHomeResSuccessImpl<T> implements GetHomeResSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetHomeResSuccessImplCopyWith<T, _$GetHomeResSuccessImpl<T>>
-  get copyWith =>
-      __$$GetHomeResSuccessImplCopyWithImpl<T, _$GetHomeResSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$GetHomeResSuccessImplCopyWithImpl<T, _$GetHomeResSuccessImpl<T>>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1709,20 +1638,16 @@ abstract class GetHomeResSuccess<T> implements ResturantDataState<T> {
   const factory GetHomeResSuccess(final T data) = _$GetHomeResSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetHomeResSuccessImplCopyWith<T, _$GetHomeResSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetHomeResFailImplCopyWith<T, $Res> {
-  factory _$$GetHomeResFailImplCopyWith(
-    _$GetHomeResFailImpl<T> value,
-    $Res Function(_$GetHomeResFailImpl<T>) then,
-  ) = __$$GetHomeResFailImplCopyWithImpl<T, $Res>;
+  factory _$$GetHomeResFailImplCopyWith(_$GetHomeResFailImpl<T> value,
+          $Res Function(_$GetHomeResFailImpl<T>) then) =
+      __$$GetHomeResFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1731,24 +1656,21 @@ abstract class _$$GetHomeResFailImplCopyWith<T, $Res> {
 class __$$GetHomeResFailImplCopyWithImpl<T, $Res>
     extends _$ResturantDataStateCopyWithImpl<T, $Res, _$GetHomeResFailImpl<T>>
     implements _$$GetHomeResFailImplCopyWith<T, $Res> {
-  __$$GetHomeResFailImplCopyWithImpl(
-    _$GetHomeResFailImpl<T> _value,
-    $Res Function(_$GetHomeResFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetHomeResFailImplCopyWithImpl(_$GetHomeResFailImpl<T> _value,
+      $Res Function(_$GetHomeResFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetHomeResFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetHomeResFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1776,16 +1698,12 @@ class _$GetHomeResFailImpl<T> implements GetHomeResFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetHomeResFailImplCopyWith<T, _$GetHomeResFailImpl<T>> get copyWith =>
       __$$GetHomeResFailImplCopyWithImpl<T, _$GetHomeResFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1903,10 +1821,7 @@ abstract class GetHomeResFail<T> implements ResturantDataState<T> {
       _$GetHomeResFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ResturantDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetHomeResFailImplCopyWith<T, _$GetHomeResFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

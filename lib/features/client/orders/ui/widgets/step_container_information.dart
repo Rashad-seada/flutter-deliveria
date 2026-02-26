@@ -13,7 +13,7 @@ class StepContainerInformation extends StatelessWidget {
     required this.isCurrent,
     required this.step,
     required this.themeState,
-    required this.time
+    required this.time,
   });
 
   final bool isCompleted;
@@ -21,43 +21,74 @@ class StepContainerInformation extends StatelessWidget {
   final OrderStep step;
   final ThemeState themeState;
   final String time;
+
   @override
   Widget build(BuildContext context) {
+    final textColor = getStepTextColor(
+      isCompleted: isCompleted,
+      isCurrent: isCurrent,
+    );
+    final timeColor = getStepTimeColor(
+      isCompleted: isCompleted,
+      isCurrent: isCurrent,
+    );
+
     return Expanded(
-      child: Container(
-        width: 319.w,
-        height: 76.h,
-        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 7.h),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 10.h),
         decoration: BoxDecoration(
           color: getStepBgColor(isCompleted: isCompleted, isCurrent: isCurrent),
-          borderRadius: BorderRadius.circular(5.r),
+          borderRadius: BorderRadius.circular(12.r),
           border: Border.all(
             color: getStepBorderColor(
               isCompleted: isCompleted,
               isCurrent: isCurrent,
             ),
+            width: isCurrent ? 1.5 : 1,
           ),
+          boxShadow: isCurrent
+              ? [
+                  BoxShadow(
+                    color: const Color(0xFFFF9800).withOpacity(0.08),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ]
+              : isCompleted
+                  ? [
+                      BoxShadow(
+                        color: const Color(0xFF2ECC71).withOpacity(0.06),
+                        blurRadius: 4,
+                        offset: const Offset(0, 1),
+                      ),
+                    ]
+                  : [],
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Row(
           children: [
-            Text(
-              step.title,
-              style: TextStyles.bimini20W400.copyWith(
-                color:
-                    themeState.themeMode == ThemeMode.dark
-                        ? Colors.black
-                        : null,
+            Expanded(
+              child: Text(
+                step.title,
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight:
+                      isCurrent ? FontWeight.w700 : FontWeight.w500,
+                  color: textColor,
+                  letterSpacing: 0.2,
+                ),
               ),
             ),
-            const SizedBox(height: 4),
-            Text(
-              time,
-              style: TextStyles.bimini16W400Body.copyWith(
-                fontStyle: FontStyle.italic,
-                color: AppColors.grey,
+            if (isCompleted || isCurrent)
+              Text(
+                time,
+                style: TextStyle(
+                  fontSize: 11.sp,
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.italic,
+                  color: timeColor,
+                ),
               ),
-            ),
           ],
         ),
       ),

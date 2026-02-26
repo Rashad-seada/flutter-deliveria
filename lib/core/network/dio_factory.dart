@@ -35,8 +35,14 @@ class DioFactory {
       InterceptorsWrapper(
         onRequest: (options, handler) async {
           final token = await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
-          print("🔑 Token in Interceptor: ${token.isEmpty ? 'EMPTY' : 'FOUND (${token.substring(0, token.length > 5 ? 5 : token.length)}...)'}");
-          if (token.isNotEmpty) {
+          final isGuest = await SharedPrefHelper.getBool(SharedPrefKeys.isGuest);
+          
+          print("🔑 Token: ${token.isEmpty ? 'EMPTY' : 'FOUND'}, Guest: $isGuest");
+          
+          // Don't attach our app token to external API calls (e.g. Paymob)
+          final isExternalApi = options.uri.host.contains('paymob.com');
+          
+          if (token.isNotEmpty && !isGuest && !isExternalApi) {
             options.headers['Authorization'] = 'Bearer $token';
           }
           return handler.next(options);
@@ -46,10 +52,10 @@ class DioFactory {
 
     dio?.interceptors.add(
       PrettyDioLogger(
-        responseBody: false,
-        requestBody: false,
+        responseBody: true,
+        requestBody: true,
         requestHeader: true,
-        responseHeader: false,
+        responseHeader: true,
       ),
     );
   }

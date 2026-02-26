@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:custom_form_w/custom_form_w.dart';
+import 'package:delveria/core/di/dependancy_injection.dart';
 import 'package:delveria/core/func/format_time_to_day_24hrs.dart';
 import 'package:delveria/core/helper/spacing.dart';
 import 'package:delveria/core/helper/strings.dart';
@@ -22,6 +23,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:delveria/features/ResturantOwner/branches/ui/branches_screen.dart';
+import 'package:delveria/features/ResturantOwner/branches/logic/cubit/branches_cubit.dart';
 
 class ResturantProfile extends StatefulWidget {
   const ResturantProfile({super.key});
@@ -127,12 +130,41 @@ class _ResturantProfileState extends State<ResturantProfile> {
                           ),
                           cubit.isUpdate == true
                               ? OpeningHoursSection(cubit: dateCubit)
-                              : InfoItemForProfile(
-                                  isResturant: true,
-                                  icon: Icons.access_time_rounded,
-                                  label: AppStrings.operatingHour.tr(),
-                                  value: "${cubit.openHour}__${cubit.closeHour}",
-                                  iconColor: Colors.red[800]!,
+                              : Column(
+                                  children: [
+                                    InfoItemForProfile(
+                                      isResturant: true,
+                                      icon: Icons.access_time_rounded,
+                                      label: AppStrings.operatingHour.tr(),
+                                      value: "${cubit.openHour}__${cubit.closeHour}",
+                                      iconColor: Colors.red[800]!,
+                                    ),
+                                    SizedBox(height: 30.h),
+                                    InkWell(
+                                      onTap: () {
+                                        if (cubit.id != null) {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => BlocProvider(
+                                                create: (context) => getIt<BranchesCubit>(),
+                                                child: BranchesScreen(
+                                                  restaurantId: cubit.id!,
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      child: InfoItemForProfile(
+                                        isResturant: true,
+                                        icon: Icons.store_mall_directory_outlined,
+                                        label: "Branches",
+                                        value: "Manage Branches",
+                                        iconColor: Colors.red[800]!,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                           cubit.isUpdate == true
                               ? state is UpdateLoading

@@ -133,6 +133,21 @@ class MenuItemButtonDrawerAdmin extends StatelessWidget {
               context.pushNamed(Routes.addSliderScreen);
             },
           ),
+          // Loyalty Points section
+          buildMenuItemDrawer(
+            img: AppImages.myOrder, // Using existing icon
+            title: 'Reward Tiers',
+            onTap: () {
+              context.pushNamed(Routes.adminRewardTiersScreen);
+            },
+          ),
+          buildMenuItemDrawer(
+            img: AppImages.usersAdmin,
+            title: 'Users Points',
+            onTap: () {
+              context.pushNamed(Routes.adminUsersPointsScreen);
+            },
+          ),
           buildMenuItemDrawer(
             img: AppImages.settings,
             title: AppStrings.setting.tr(),

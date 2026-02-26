@@ -22,19 +22,25 @@ class NewOrdersTapBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (isDeliveryAgent == true) {
-      return BlocBuilder<AgentOrdersCubit, agent.AgentOrdersState>(
-        builder: (context, agentState) {
-          List<AgentOrder> newOrders = [];
-          if (agentState is agent.Success) {
-            newOrders = context.read<AgentOrdersCubit>().agentOrders;
+      return BlocConsumer<AgentOrdersCubit, agent.AgentOrdersState>(
+        listener: (context, agentState) {
+          if (agentState is agent.AcceptOrderSuccess) {
+            context.read<AgentOrdersCubit>().getCurrentOrdersAgent();
           }
-          print(newOrders);
-          if (agentState is Loading) {
+        },
+        builder: (context, agentState) {
+          final cubit = context.read<AgentOrdersCubit>();
+          
+          if (agentState is agent.Loading) {
             return CustomLoading();
           }
-          if (agentState is Fail) {
+          if (agentState is agent.Fail) {
             return Center(child: Text("Error"));
           }
+          
+          // Check for data in the cubit regardless of state type
+          final newOrders = cubit.agentOrders;
+          print("Coming orders: $newOrders");
           if (newOrders.isEmpty) {
             return const Center(child: Text("No new orders"));
           }
@@ -54,8 +60,8 @@ class NewOrdersTapBody extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder:
-                            (_) => BlocProvider(
-                              create: (context) => getIt<AgentOrdersCubit>(),
+                            (_) => BlocProvider.value(
+                              value: context.read<AgentOrdersCubit>(),
                               child: NewOrdersDetailsScreen(
                                 singleStatus:
                                     order.orders.isNotEmpty
@@ -105,7 +111,12 @@ class NewOrdersTapBody extends StatelessWidget {
         },
       );
     } else {
-      return BlocBuilder<OrdersResturantCubit, OrdersResturantState>(
+      return BlocConsumer<OrdersResturantCubit, OrdersResturantState>(
+        listener: (context, state) {
+          if (state is AcceptOrderSuccess) {
+            context.read<OrdersResturantCubit>().getOrdersRestaurant();
+          }
+        },
         builder: (context, state) {
           if (state is Loading) {
             return CustomLoading();
@@ -115,7 +126,10 @@ class NewOrdersTapBody extends StatelessWidget {
               cubit.ordersResturant
                   .where(
                     (e) =>
-                        (e.orders?.any((order) => order.status == "Pending Approval") ??
+                        (e.orders?.any(
+                              (order) =>
+                                  order.status == "Waiting for Approval",
+                            ) ??
                             false),
                   )
                   .toList();
@@ -124,19 +138,27 @@ class NewOrdersTapBody extends StatelessWidget {
             itemCount: newOrders.length,
             itemBuilder: (BuildContext context, int index) {
               final order = newOrders[index];
-              final restOrder =
-                  order.orders != null && order.orders!.isNotEmpty
-                      ? order.orders!.first
-                      : null;
-              final restaurantId = restOrder?.restaurantId;
-              String restaurantName;
-              if (restaurantId != null && restaurantId.length > 5) {
-                restaurantName = restaurantId.substring(1, 5);
-              } else if (restaurantId != null) {
-                restaurantName = restaurantId;
-              } else {
-                restaurantName = 'ID #0123456789';
-              }
+              final restOrder = order.orders != null && order.orders!.isNotEmpty
+                  ? (order.orders!.any((element) =>
+                          element.status == order.status ||
+                          (order.status == "Approved / Preparing" &&
+                              (element.status == "Preparing" ||
+                                  element.status == "Approved")))
+                      ? order.orders!.firstWhere(
+                          (element) =>
+                              element.status == order.status ||
+                              (order.status == "Approved / Preparing" &&
+                                  (element.status == "Preparing" ||
+                                      element.status == "Approved")),
+                        )
+                      : order.orders!.firstWhere(
+                          (element) =>
+                              element.status != "Canceled" &&
+                              element.status != "Rejected",
+                          orElse: () => order.orders!.first,
+                        ))
+                  : null;
+              final restaurantName = restOrder?.restaurant?.name ?? 'Unknown';
               // Calculate items count
               int itemsCount = 0;
               if (order.orders != null) {
@@ -149,32 +171,36 @@ class NewOrdersTapBody extends StatelessWidget {
                 child: MyOrderCard(
                   isResturant: true,
                   onTap: () {
-                    print("🔘 Tapped order: ${order.id}");
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder:
                             (_) => MultiBlocProvider(
                               providers: [
-                                BlocProvider(
-                                  create:
-                                      (context) => getIt<AgentOrdersCubit>(),
-                                ),
-                                BlocProvider(
-                                  create:
-                                      (context) =>
-                                          getIt<OrdersResturantCubit>(),
+                                BlocProvider.value(
+                                  value: context.read<OrdersResturantCubit>(),
                                 ),
                               ],
                               child: NewOrdersDetailsScreen(
-                                singleStatus:
-                                    order.orders?.isNotEmpty == true
-                                        ? order.orders!
-                                            .where(
-                                              (e) => e.status == "Preparing",
-                                            )
-                                            .join(', ')
-                                        : "",
+                                singleStatus: (() {
+                                  String status =
+                                      order.orders?.isNotEmpty == true
+                                          ? order.orders!
+                                              .where(
+                                                (e) =>
+                                                    e.status == "Preparing" ||
+                                                    e.status ==
+                                                        "Approved / Preparing",
+                                              )
+                                              .join(', ')
+                                          : "";
+                                  if (status.isEmpty &&
+                                      order.status != null &&
+                                      order.status != "Canceled") {
+                                    return order.status!;
+                                  }
+                                  return status;
+                                })(),
 
                                 orderStatus: order.status ?? "",
                                 isResturant: true,
@@ -199,10 +225,14 @@ class NewOrdersTapBody extends StatelessWidget {
                           ? "في الطريق"
                           : order.status == "Pick up"
                           ? "جاري التحضير "
+                          : order.status == "Ready for Delivery"
+                          ? "جاهز للتوصيل"
                           : order.status,
                   orderStatusColor:
                       order.status == "Pick up"
                           ? Colors.yellow
+                          : order.status == "Ready for Delivery"
+                          ? Colors.blue
                           : order.status == "On the way"
                           ? Colors.green
                           : AppColors.lightGreySecond,

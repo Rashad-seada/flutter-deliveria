@@ -57,6 +57,9 @@ class _ActiveOrderTrackingBarState extends State<ActiveOrderTrackingBar>
         return Colors.green;
       case "canceled":
         return Colors.red;
+      case "ready for delivery":
+      case "ready_for_delivery":
+        return Colors.blue;
       case "on the way":
       case "ontheway":
         return Colors.blue;
@@ -73,6 +76,9 @@ class _ActiveOrderTrackingBarState extends State<ActiveOrderTrackingBar>
         return Icons.pending_outlined;
       case "preparing":
         return Icons.restaurant_outlined;
+      case "ready for delivery":
+      case "ready_for_delivery":
+        return Icons.card_giftcard;
       case "on the way":
       case "ontheway":
         return Icons.delivery_dining_outlined;

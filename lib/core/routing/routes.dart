@@ -61,4 +61,12 @@ class Routes {
   static const String addReviewScreen = "/addReviewScreen";
 
   static const String searchRestuarnt = "/searchRestaurnt";
+
+  //! Loyalty Points
+  static const String loyaltyScreen = "/loyaltyScreen";
+  static const String pointsHistoryScreen = "/pointsHistoryScreen";
+  static const String adminRewardTiersScreen = "/adminRewardTiersScreen";
+  static const String adminUsersPointsScreen = "/adminUsersPointsScreen";
+  static const String locationPickerScreen = "/locationPickerScreen";
+  static const String addAddressScreen = "/addAddressScreen";
 }

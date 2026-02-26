@@ -24,7 +24,7 @@ class _DropDownOrderStatusCouponState extends State<DropDownOrderStatusCoupon> {
         return BlocBuilder<AllresturantsadminCubit, AllresturantsadminState>(
           builder: (context, resturantState) {
             final resCubit = context.read<AllresturantsadminCubit>();
-            List<String> items =
+            List<String?> items =
                 resCubit.allResturants.map((e) => e.name).toList();
             return StyledDropDown(
               maxHeight: 150,
@@ -45,12 +45,12 @@ class _DropDownOrderStatusCouponState extends State<DropDownOrderStatusCoupon> {
                   couponeCubit.selectedResValue.length > 20
                       ? couponeCubit.selectedResValue.substring(0, 20)
                       : couponeCubit.selectedResValue,
-              items: items,
+              items: items.map((item)=> item ?? "Unknown").toList(),
               onChanged: (value) {
                 final selectedRestaurant = resCubit.allResturants.firstWhere(
                   (element) => element.name == value,
                 );
-                final selectedId = selectedRestaurant != null ? selectedRestaurant.id : "0";
+                final selectedId = selectedRestaurant.id;
                 couponeCubit.updateSelectedRes(newVal: value, resId: selectedId);
                 setState(() {}); 
               },

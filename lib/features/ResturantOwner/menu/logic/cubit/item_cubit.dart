@@ -395,6 +395,8 @@ class ItemCubit extends Cubit<ItemState> {
     required String description,
     required List<SizeItem> sizes,
     required List<ToppingItem> toppings,
+    File? photo,
+    String? itemCategory,
   }) async {
     try {
       print("🚀 Starting editMenuItem...");
@@ -450,6 +452,13 @@ class ItemCubit extends Cubit<ItemState> {
       print("📊 Converted data:");
       print("   Sizes JSON: $sizesJson");
       print("   Toppings JSON: $toppingsJson");
+      print("   Photo: ${photo?.path}");
+      
+      // Note: itemCategory is not currently supported by backend edit endpoint 
+      // based on the provided guide and API definition, but we are passing it 
+      // in case the backend is updated or if it's handled implicitly.
+      // If backend adds support for category update in the same endpoint, 
+      // we would add it to the body/formData in ItemsRepo.
 
       final response = await itemsRepo.editItem(
         itemId: itemId,
@@ -457,6 +466,8 @@ class ItemCubit extends Cubit<ItemState> {
         description: description,
         sizes: jsonEncode(sizesJson),
         toppings: jsonEncode(toppingsJson),
+        photo: photo,
+        itemCategory: itemCategory,
       );
 
       print("📡 API call completed");
@@ -556,6 +567,7 @@ class ItemCubit extends Cubit<ItemState> {
   }
 
   void getItemCategories() async {
+
     emit(ItemState.getItemsCategoriesLoading());
     try {
       final response = await itemsRepo.getItemCategories();

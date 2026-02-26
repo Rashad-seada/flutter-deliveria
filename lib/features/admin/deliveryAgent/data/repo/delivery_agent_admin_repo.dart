@@ -44,9 +44,32 @@ class DeliveryAgentAdminRepo {
     }
   }
 
-  Future<ApiResult<AllOrdersModel>> getAllOrders() async {
+  Future<ApiResult<AllOrdersModel>> getAllOrders({
+    String? date,
+    String? startDate,
+    String? endDate,
+    String? paymentType,
+    String? status,
+    String? restaurantId,
+    String? userId,
+    String? agentId,
+    String? orderType,
+    String? deliveryType,
+  }) async {
     try {
-      final res = await apiServices.getAllOrders({});
+      final res = await apiServices.getAllOrders(
+        {},
+        date: date,
+        startDate: startDate,
+        endDate: endDate,
+        paymentType: paymentType,
+        status: status,
+        restaurantId: restaurantId,
+        userId: userId,
+        agentId: agentId,
+        orderType: orderType,
+        deliveryType: deliveryType,
+      );
       return ApiResult.success(res);
     } catch (e) {
       print("eee all $e");
@@ -57,9 +80,11 @@ class DeliveryAgentAdminRepo {
 
   Future<ApiResult<EachAgentOrderResponse>> getAllOrdersForEachAgent({
     required String id,
+    String? status,
   }) async {
     try {
-      final res = await apiServices.getAllOrdersForEachAgent({}, id);
+      final res = await apiServices.getAllOrdersForEachAgent({}, id, status);
+      // print(res.);
       return ApiResult.success(res);
     } catch (e) {
       print("eee order $e");

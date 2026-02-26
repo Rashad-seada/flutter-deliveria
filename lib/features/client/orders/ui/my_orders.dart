@@ -51,11 +51,11 @@ class _MyOrdersScreenState extends State<MyOrdersScreen>
             List<OrderModel> ongoingOrders =
                 cubit.orders
                     .where(
-                      (e) => e.status != "DELIVERED" && e.status != "Completed",
+                      (e) => !["Delivered", "Completed", "Canceled"].contains(e.status),
                     )
                     .toList();
             List<OrderModel> historyOrders =
-                cubit.orders.where((e) => e.status == "Completed").toList();
+                cubit.orders.where((e) => ["Delivered", "Completed", "Canceled"].contains(e.status)).toList();
 
             // Sort ongoingOrders and historyOrders from newest to oldest
             // Assuming each order has a `createdAt` field of type DateTime, otherwise use appropriate field

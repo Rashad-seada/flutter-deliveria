@@ -12,8 +12,7 @@ part of 'agent_orders_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AgentOrdersState<T> {
@@ -38,7 +37,8 @@ mixin _$AgentOrdersState<T> {
     required TResult Function() readyForPickUpLoading,
     required TResult Function(T data) readyForPickUpSuccess,
     required TResult Function(ApiErrorModel error) readyForPickUpFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -60,7 +60,8 @@ mixin _$AgentOrdersState<T> {
     TResult? Function()? readyForPickUpLoading,
     TResult? Function(T data)? readyForPickUpSuccess,
     TResult? Function(ApiErrorModel error)? readyForPickUpFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -83,7 +84,8 @@ mixin _$AgentOrdersState<T> {
     TResult Function(T data)? readyForPickUpSuccess,
     TResult Function(ApiErrorModel error)? readyForPickUpFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -94,27 +96,28 @@ mixin _$AgentOrdersState<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -128,18 +131,19 @@ mixin _$AgentOrdersState<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
     TResult? Function(ReadyForPickUpLoading<T> value)? readyForPickUpLoading,
     TResult? Function(ReadyForPickUpSuccess<T> value)? readyForPickUpSuccess,
     TResult? Function(ReadyForPickUpFail<T> value)? readyForPickUpFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -153,11 +157,11 @@ mixin _$AgentOrdersState<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -165,15 +169,15 @@ mixin _$AgentOrdersState<T> {
     TResult Function(ReadyForPickUpSuccess<T> value)? readyForPickUpSuccess,
     TResult Function(ReadyForPickUpFail<T> value)? readyForPickUpFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AgentOrdersStateCopyWith<T, $Res> {
   factory $AgentOrdersStateCopyWith(
-    AgentOrdersState<T> value,
-    $Res Function(AgentOrdersState<T>) then,
-  ) = _$AgentOrdersStateCopyWithImpl<T, $Res, AgentOrdersState<T>>;
+          AgentOrdersState<T> value, $Res Function(AgentOrdersState<T>) then) =
+      _$AgentOrdersStateCopyWithImpl<T, $Res, AgentOrdersState<T>>;
 }
 
 /// @nodoc
@@ -185,17 +189,13 @@ class _$AgentOrdersStateCopyWithImpl<T, $Res, $Val extends AgentOrdersState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -203,12 +203,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -323,25 +319,25 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return initial(this);
@@ -361,11 +357,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -390,11 +386,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -417,9 +413,8 @@ abstract class _Initial<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -427,12 +422,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -547,25 +538,25 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return loading(this);
@@ -585,11 +576,11 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -614,11 +605,11 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -641,9 +632,8 @@ abstract class Loading<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -653,23 +643,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -698,9 +685,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -799,25 +784,25 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return success(this);
@@ -837,11 +822,11 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -866,11 +851,11 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -890,10 +875,7 @@ abstract class Success<T> implements AgentOrdersState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -901,9 +883,8 @@ abstract class Success<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -913,23 +894,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -957,9 +935,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -1058,25 +1034,25 @@ class _$FailImpl<T> implements Fail<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return fail(this);
@@ -1096,11 +1072,11 @@ class _$FailImpl<T> implements Fail<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1125,11 +1101,11 @@ class _$FailImpl<T> implements Fail<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1149,33 +1125,25 @@ abstract class Fail<T> implements AgentOrdersState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AcceptOrderLoadingImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderLoadingImplCopyWith(
-    _$AcceptOrderLoadingImpl<T> value,
-    $Res Function(_$AcceptOrderLoadingImpl<T>) then,
-  ) = __$$AcceptOrderLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderLoadingImplCopyWith(_$AcceptOrderLoadingImpl<T> value,
+          $Res Function(_$AcceptOrderLoadingImpl<T>) then) =
+      __$$AcceptOrderLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$AcceptOrderLoadingImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$AcceptOrderLoadingImpl<T>>
     implements _$$AcceptOrderLoadingImplCopyWith<T, $Res> {
-  __$$AcceptOrderLoadingImplCopyWithImpl(
-    _$AcceptOrderLoadingImpl<T> _value,
-    $Res Function(_$AcceptOrderLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$AcceptOrderLoadingImplCopyWithImpl(_$AcceptOrderLoadingImpl<T> _value,
+      $Res Function(_$AcceptOrderLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1291,25 +1259,25 @@ class _$AcceptOrderLoadingImpl<T> implements AcceptOrderLoading<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return acceptOrderLoading(this);
@@ -1329,11 +1297,11 @@ class _$AcceptOrderLoadingImpl<T> implements AcceptOrderLoading<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1358,11 +1326,11 @@ class _$AcceptOrderLoadingImpl<T> implements AcceptOrderLoading<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1384,10 +1352,9 @@ abstract class AcceptOrderLoading<T> implements AgentOrdersState<T> {
 
 /// @nodoc
 abstract class _$$AcceptOrderSuccessImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderSuccessImplCopyWith(
-    _$AcceptOrderSuccessImpl<T> value,
-    $Res Function(_$AcceptOrderSuccessImpl<T>) then,
-  ) = __$$AcceptOrderSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderSuccessImplCopyWith(_$AcceptOrderSuccessImpl<T> value,
+          $Res Function(_$AcceptOrderSuccessImpl<T>) then) =
+      __$$AcceptOrderSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -1396,24 +1363,21 @@ abstract class _$$AcceptOrderSuccessImplCopyWith<T, $Res> {
 class __$$AcceptOrderSuccessImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$AcceptOrderSuccessImpl<T>>
     implements _$$AcceptOrderSuccessImplCopyWith<T, $Res> {
-  __$$AcceptOrderSuccessImplCopyWithImpl(
-    _$AcceptOrderSuccessImpl<T> _value,
-    $Res Function(_$AcceptOrderSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AcceptOrderSuccessImplCopyWithImpl(_$AcceptOrderSuccessImpl<T> _value,
+      $Res Function(_$AcceptOrderSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$AcceptOrderSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$AcceptOrderSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1442,17 +1406,12 @@ class _$AcceptOrderSuccessImpl<T> implements AcceptOrderSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AcceptOrderSuccessImplCopyWith<T, _$AcceptOrderSuccessImpl<T>>
-  get copyWith =>
-      __$$AcceptOrderSuccessImplCopyWithImpl<T, _$AcceptOrderSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$AcceptOrderSuccessImplCopyWithImpl<T,
+          _$AcceptOrderSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1547,25 +1506,25 @@ class _$AcceptOrderSuccessImpl<T> implements AcceptOrderSuccess<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return acceptOrderSuccess(this);
@@ -1585,11 +1544,11 @@ class _$AcceptOrderSuccessImpl<T> implements AcceptOrderSuccess<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1614,11 +1573,11 @@ class _$AcceptOrderSuccessImpl<T> implements AcceptOrderSuccess<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1638,20 +1597,16 @@ abstract class AcceptOrderSuccess<T> implements AgentOrdersState<T> {
   const factory AcceptOrderSuccess(final T data) = _$AcceptOrderSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AcceptOrderSuccessImplCopyWith<T, _$AcceptOrderSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AcceptOrderFailImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderFailImplCopyWith(
-    _$AcceptOrderFailImpl<T> value,
-    $Res Function(_$AcceptOrderFailImpl<T>) then,
-  ) = __$$AcceptOrderFailImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderFailImplCopyWith(_$AcceptOrderFailImpl<T> value,
+          $Res Function(_$AcceptOrderFailImpl<T>) then) =
+      __$$AcceptOrderFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1660,24 +1615,21 @@ abstract class _$$AcceptOrderFailImplCopyWith<T, $Res> {
 class __$$AcceptOrderFailImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$AcceptOrderFailImpl<T>>
     implements _$$AcceptOrderFailImplCopyWith<T, $Res> {
-  __$$AcceptOrderFailImplCopyWithImpl(
-    _$AcceptOrderFailImpl<T> _value,
-    $Res Function(_$AcceptOrderFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AcceptOrderFailImplCopyWithImpl(_$AcceptOrderFailImpl<T> _value,
+      $Res Function(_$AcceptOrderFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$AcceptOrderFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AcceptOrderFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1705,16 +1657,12 @@ class _$AcceptOrderFailImpl<T> implements AcceptOrderFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AcceptOrderFailImplCopyWith<T, _$AcceptOrderFailImpl<T>> get copyWith =>
       __$$AcceptOrderFailImplCopyWithImpl<T, _$AcceptOrderFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1809,25 +1757,25 @@ class _$AcceptOrderFailImpl<T> implements AcceptOrderFail<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return acceptOrderFail(this);
@@ -1847,11 +1795,11 @@ class _$AcceptOrderFailImpl<T> implements AcceptOrderFail<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1876,11 +1824,11 @@ class _$AcceptOrderFailImpl<T> implements AcceptOrderFail<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -1901,10 +1849,7 @@ abstract class AcceptOrderFail<T> implements AgentOrdersState<T> {
       _$AcceptOrderFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AcceptOrderFailImplCopyWith<T, _$AcceptOrderFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1912,23 +1857,20 @@ abstract class AcceptOrderFail<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$GetAcceptOrderLoadingImplCopyWith<T, $Res> {
   factory _$$GetAcceptOrderLoadingImplCopyWith(
-    _$GetAcceptOrderLoadingImpl<T> value,
-    $Res Function(_$GetAcceptOrderLoadingImpl<T>) then,
-  ) = __$$GetAcceptOrderLoadingImplCopyWithImpl<T, $Res>;
+          _$GetAcceptOrderLoadingImpl<T> value,
+          $Res Function(_$GetAcceptOrderLoadingImpl<T>) then) =
+      __$$GetAcceptOrderLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetAcceptOrderLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<T, $Res, _$GetAcceptOrderLoadingImpl<T>>
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$GetAcceptOrderLoadingImpl<T>>
     implements _$$GetAcceptOrderLoadingImplCopyWith<T, $Res> {
   __$$GetAcceptOrderLoadingImplCopyWithImpl(
-    _$GetAcceptOrderLoadingImpl<T> _value,
-    $Res Function(_$GetAcceptOrderLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$GetAcceptOrderLoadingImpl<T> _value,
+      $Res Function(_$GetAcceptOrderLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2044,25 +1986,25 @@ class _$GetAcceptOrderLoadingImpl<T> implements GetAcceptOrderLoading<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return getAcceptOrderLoading(this);
@@ -2082,11 +2024,11 @@ class _$GetAcceptOrderLoadingImpl<T> implements GetAcceptOrderLoading<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2111,11 +2053,11 @@ class _$GetAcceptOrderLoadingImpl<T> implements GetAcceptOrderLoading<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2138,36 +2080,34 @@ abstract class GetAcceptOrderLoading<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$GetAcceptOrderSuccessImplCopyWith<T, $Res> {
   factory _$$GetAcceptOrderSuccessImplCopyWith(
-    _$GetAcceptOrderSuccessImpl<T> value,
-    $Res Function(_$GetAcceptOrderSuccessImpl<T>) then,
-  ) = __$$GetAcceptOrderSuccessImplCopyWithImpl<T, $Res>;
+          _$GetAcceptOrderSuccessImpl<T> value,
+          $Res Function(_$GetAcceptOrderSuccessImpl<T>) then) =
+      __$$GetAcceptOrderSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$GetAcceptOrderSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<T, $Res, _$GetAcceptOrderSuccessImpl<T>>
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$GetAcceptOrderSuccessImpl<T>>
     implements _$$GetAcceptOrderSuccessImplCopyWith<T, $Res> {
   __$$GetAcceptOrderSuccessImplCopyWithImpl(
-    _$GetAcceptOrderSuccessImpl<T> _value,
-    $Res Function(_$GetAcceptOrderSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetAcceptOrderSuccessImpl<T> _value,
+      $Res Function(_$GetAcceptOrderSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetAcceptOrderSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetAcceptOrderSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -2196,16 +2136,12 @@ class _$GetAcceptOrderSuccessImpl<T> implements GetAcceptOrderSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAcceptOrderSuccessImplCopyWith<T, _$GetAcceptOrderSuccessImpl<T>>
-  get copyWith => __$$GetAcceptOrderSuccessImplCopyWithImpl<
-    T,
-    _$GetAcceptOrderSuccessImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$GetAcceptOrderSuccessImplCopyWithImpl<T,
+          _$GetAcceptOrderSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2300,25 +2236,25 @@ class _$GetAcceptOrderSuccessImpl<T> implements GetAcceptOrderSuccess<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return getAcceptOrderSuccess(this);
@@ -2338,11 +2274,11 @@ class _$GetAcceptOrderSuccessImpl<T> implements GetAcceptOrderSuccess<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2367,11 +2303,11 @@ class _$GetAcceptOrderSuccessImpl<T> implements GetAcceptOrderSuccess<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2392,20 +2328,16 @@ abstract class GetAcceptOrderSuccess<T> implements AgentOrdersState<T> {
       _$GetAcceptOrderSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetAcceptOrderSuccessImplCopyWith<T, _$GetAcceptOrderSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetAcceptOrderFailImplCopyWith<T, $Res> {
-  factory _$$GetAcceptOrderFailImplCopyWith(
-    _$GetAcceptOrderFailImpl<T> value,
-    $Res Function(_$GetAcceptOrderFailImpl<T>) then,
-  ) = __$$GetAcceptOrderFailImplCopyWithImpl<T, $Res>;
+  factory _$$GetAcceptOrderFailImplCopyWith(_$GetAcceptOrderFailImpl<T> value,
+          $Res Function(_$GetAcceptOrderFailImpl<T>) then) =
+      __$$GetAcceptOrderFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -2414,24 +2346,21 @@ abstract class _$$GetAcceptOrderFailImplCopyWith<T, $Res> {
 class __$$GetAcceptOrderFailImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$GetAcceptOrderFailImpl<T>>
     implements _$$GetAcceptOrderFailImplCopyWith<T, $Res> {
-  __$$GetAcceptOrderFailImplCopyWithImpl(
-    _$GetAcceptOrderFailImpl<T> _value,
-    $Res Function(_$GetAcceptOrderFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetAcceptOrderFailImplCopyWithImpl(_$GetAcceptOrderFailImpl<T> _value,
+      $Res Function(_$GetAcceptOrderFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetAcceptOrderFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetAcceptOrderFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -2459,17 +2388,12 @@ class _$GetAcceptOrderFailImpl<T> implements GetAcceptOrderFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAcceptOrderFailImplCopyWith<T, _$GetAcceptOrderFailImpl<T>>
-  get copyWith =>
-      __$$GetAcceptOrderFailImplCopyWithImpl<T, _$GetAcceptOrderFailImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$GetAcceptOrderFailImplCopyWithImpl<T,
+          _$GetAcceptOrderFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2564,25 +2488,25 @@ class _$GetAcceptOrderFailImpl<T> implements GetAcceptOrderFail<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return getAcceptOrderFail(this);
@@ -2602,11 +2526,11 @@ class _$GetAcceptOrderFailImpl<T> implements GetAcceptOrderFail<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2631,11 +2555,11 @@ class _$GetAcceptOrderFailImpl<T> implements GetAcceptOrderFail<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2656,38 +2580,28 @@ abstract class GetAcceptOrderFail<T> implements AgentOrdersState<T> {
       _$GetAcceptOrderFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetAcceptOrderFailImplCopyWith<T, _$GetAcceptOrderFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UpdateOrderStatusAgentLoadingImplCopyWith<T, $Res> {
   factory _$$UpdateOrderStatusAgentLoadingImplCopyWith(
-    _$UpdateOrderStatusAgentLoadingImpl<T> value,
-    $Res Function(_$UpdateOrderStatusAgentLoadingImpl<T>) then,
-  ) = __$$UpdateOrderStatusAgentLoadingImplCopyWithImpl<T, $Res>;
+          _$UpdateOrderStatusAgentLoadingImpl<T> value,
+          $Res Function(_$UpdateOrderStatusAgentLoadingImpl<T>) then) =
+      __$$UpdateOrderStatusAgentLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$UpdateOrderStatusAgentLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<
-          T,
-          $Res,
-          _$UpdateOrderStatusAgentLoadingImpl<T>
-        >
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$UpdateOrderStatusAgentLoadingImpl<T>>
     implements _$$UpdateOrderStatusAgentLoadingImplCopyWith<T, $Res> {
   __$$UpdateOrderStatusAgentLoadingImplCopyWithImpl(
-    _$UpdateOrderStatusAgentLoadingImpl<T> _value,
-    $Res Function(_$UpdateOrderStatusAgentLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$UpdateOrderStatusAgentLoadingImpl<T> _value,
+      $Res Function(_$UpdateOrderStatusAgentLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2804,25 +2718,25 @@ class _$UpdateOrderStatusAgentLoadingImpl<T>
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return updateOrderStatusAgentLoading(this);
@@ -2842,11 +2756,11 @@ class _$UpdateOrderStatusAgentLoadingImpl<T>
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2871,11 +2785,11 @@ class _$UpdateOrderStatusAgentLoadingImpl<T>
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -2899,40 +2813,34 @@ abstract class UpdateOrderStatusAgentLoading<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$UpdateOrderStatusAgentSuccessImplCopyWith<T, $Res> {
   factory _$$UpdateOrderStatusAgentSuccessImplCopyWith(
-    _$UpdateOrderStatusAgentSuccessImpl<T> value,
-    $Res Function(_$UpdateOrderStatusAgentSuccessImpl<T>) then,
-  ) = __$$UpdateOrderStatusAgentSuccessImplCopyWithImpl<T, $Res>;
+          _$UpdateOrderStatusAgentSuccessImpl<T> value,
+          $Res Function(_$UpdateOrderStatusAgentSuccessImpl<T>) then) =
+      __$$UpdateOrderStatusAgentSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$UpdateOrderStatusAgentSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<
-          T,
-          $Res,
-          _$UpdateOrderStatusAgentSuccessImpl<T>
-        >
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$UpdateOrderStatusAgentSuccessImpl<T>>
     implements _$$UpdateOrderStatusAgentSuccessImplCopyWith<T, $Res> {
   __$$UpdateOrderStatusAgentSuccessImplCopyWithImpl(
-    _$UpdateOrderStatusAgentSuccessImpl<T> _value,
-    $Res Function(_$UpdateOrderStatusAgentSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$UpdateOrderStatusAgentSuccessImpl<T> _value,
+      $Res Function(_$UpdateOrderStatusAgentSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$UpdateOrderStatusAgentSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$UpdateOrderStatusAgentSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -2962,19 +2870,13 @@ class _$UpdateOrderStatusAgentSuccessImpl<T>
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdateOrderStatusAgentSuccessImplCopyWith<
-    T,
-    _$UpdateOrderStatusAgentSuccessImpl<T>
-  >
-  get copyWith => __$$UpdateOrderStatusAgentSuccessImplCopyWithImpl<
-    T,
-    _$UpdateOrderStatusAgentSuccessImpl<T>
-  >(this, _$identity);
+  _$$UpdateOrderStatusAgentSuccessImplCopyWith<T,
+          _$UpdateOrderStatusAgentSuccessImpl<T>>
+      get copyWith => __$$UpdateOrderStatusAgentSuccessImplCopyWithImpl<T,
+          _$UpdateOrderStatusAgentSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3069,25 +2971,25 @@ class _$UpdateOrderStatusAgentSuccessImpl<T>
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return updateOrderStatusAgentSuccess(this);
@@ -3107,11 +3009,11 @@ class _$UpdateOrderStatusAgentSuccessImpl<T>
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3136,11 +3038,11 @@ class _$UpdateOrderStatusAgentSuccessImpl<T>
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3161,54 +3063,43 @@ abstract class UpdateOrderStatusAgentSuccess<T> implements AgentOrdersState<T> {
       _$UpdateOrderStatusAgentSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdateOrderStatusAgentSuccessImplCopyWith<
-    T,
-    _$UpdateOrderStatusAgentSuccessImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$UpdateOrderStatusAgentSuccessImplCopyWith<T,
+          _$UpdateOrderStatusAgentSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UpdateOrderStatusAgentFailImplCopyWith<T, $Res> {
   factory _$$UpdateOrderStatusAgentFailImplCopyWith(
-    _$UpdateOrderStatusAgentFailImpl<T> value,
-    $Res Function(_$UpdateOrderStatusAgentFailImpl<T>) then,
-  ) = __$$UpdateOrderStatusAgentFailImplCopyWithImpl<T, $Res>;
+          _$UpdateOrderStatusAgentFailImpl<T> value,
+          $Res Function(_$UpdateOrderStatusAgentFailImpl<T>) then) =
+      __$$UpdateOrderStatusAgentFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
 
 /// @nodoc
 class __$$UpdateOrderStatusAgentFailImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<
-          T,
-          $Res,
-          _$UpdateOrderStatusAgentFailImpl<T>
-        >
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$UpdateOrderStatusAgentFailImpl<T>>
     implements _$$UpdateOrderStatusAgentFailImplCopyWith<T, $Res> {
   __$$UpdateOrderStatusAgentFailImplCopyWithImpl(
-    _$UpdateOrderStatusAgentFailImpl<T> _value,
-    $Res Function(_$UpdateOrderStatusAgentFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$UpdateOrderStatusAgentFailImpl<T> _value,
+      $Res Function(_$UpdateOrderStatusAgentFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$UpdateOrderStatusAgentFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$UpdateOrderStatusAgentFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3237,19 +3128,13 @@ class _$UpdateOrderStatusAgentFailImpl<T>
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdateOrderStatusAgentFailImplCopyWith<
-    T,
-    _$UpdateOrderStatusAgentFailImpl<T>
-  >
-  get copyWith => __$$UpdateOrderStatusAgentFailImplCopyWithImpl<
-    T,
-    _$UpdateOrderStatusAgentFailImpl<T>
-  >(this, _$identity);
+  _$$UpdateOrderStatusAgentFailImplCopyWith<T,
+          _$UpdateOrderStatusAgentFailImpl<T>>
+      get copyWith => __$$UpdateOrderStatusAgentFailImplCopyWithImpl<T,
+          _$UpdateOrderStatusAgentFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3344,25 +3229,25 @@ class _$UpdateOrderStatusAgentFailImpl<T>
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return updateOrderStatusAgentFail(this);
@@ -3382,11 +3267,11 @@ class _$UpdateOrderStatusAgentFailImpl<T>
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3411,11 +3296,11 @@ class _$UpdateOrderStatusAgentFailImpl<T>
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3436,37 +3321,29 @@ abstract class UpdateOrderStatusAgentFail<T> implements AgentOrdersState<T> {
       _$UpdateOrderStatusAgentFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdateOrderStatusAgentFailImplCopyWith<
-    T,
-    _$UpdateOrderStatusAgentFailImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$UpdateOrderStatusAgentFailImplCopyWith<T,
+          _$UpdateOrderStatusAgentFailImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AcceptOrderResLoadingImplCopyWith<T, $Res> {
   factory _$$AcceptOrderResLoadingImplCopyWith(
-    _$AcceptOrderResLoadingImpl<T> value,
-    $Res Function(_$AcceptOrderResLoadingImpl<T>) then,
-  ) = __$$AcceptOrderResLoadingImplCopyWithImpl<T, $Res>;
+          _$AcceptOrderResLoadingImpl<T> value,
+          $Res Function(_$AcceptOrderResLoadingImpl<T>) then) =
+      __$$AcceptOrderResLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$AcceptOrderResLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<T, $Res, _$AcceptOrderResLoadingImpl<T>>
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$AcceptOrderResLoadingImpl<T>>
     implements _$$AcceptOrderResLoadingImplCopyWith<T, $Res> {
   __$$AcceptOrderResLoadingImplCopyWithImpl(
-    _$AcceptOrderResLoadingImpl<T> _value,
-    $Res Function(_$AcceptOrderResLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$AcceptOrderResLoadingImpl<T> _value,
+      $Res Function(_$AcceptOrderResLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -3582,25 +3459,25 @@ class _$AcceptOrderResLoadingImpl<T> implements AcceptOrderResLoading<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return acceptOrderResLoading(this);
@@ -3620,11 +3497,11 @@ class _$AcceptOrderResLoadingImpl<T> implements AcceptOrderResLoading<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3649,11 +3526,11 @@ class _$AcceptOrderResLoadingImpl<T> implements AcceptOrderResLoading<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3676,36 +3553,34 @@ abstract class AcceptOrderResLoading<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$AcceptOrderResSuccessImplCopyWith<T, $Res> {
   factory _$$AcceptOrderResSuccessImplCopyWith(
-    _$AcceptOrderResSuccessImpl<T> value,
-    $Res Function(_$AcceptOrderResSuccessImpl<T>) then,
-  ) = __$$AcceptOrderResSuccessImplCopyWithImpl<T, $Res>;
+          _$AcceptOrderResSuccessImpl<T> value,
+          $Res Function(_$AcceptOrderResSuccessImpl<T>) then) =
+      __$$AcceptOrderResSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$AcceptOrderResSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<T, $Res, _$AcceptOrderResSuccessImpl<T>>
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$AcceptOrderResSuccessImpl<T>>
     implements _$$AcceptOrderResSuccessImplCopyWith<T, $Res> {
   __$$AcceptOrderResSuccessImplCopyWithImpl(
-    _$AcceptOrderResSuccessImpl<T> _value,
-    $Res Function(_$AcceptOrderResSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$AcceptOrderResSuccessImpl<T> _value,
+      $Res Function(_$AcceptOrderResSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$AcceptOrderResSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$AcceptOrderResSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -3734,16 +3609,12 @@ class _$AcceptOrderResSuccessImpl<T> implements AcceptOrderResSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AcceptOrderResSuccessImplCopyWith<T, _$AcceptOrderResSuccessImpl<T>>
-  get copyWith => __$$AcceptOrderResSuccessImplCopyWithImpl<
-    T,
-    _$AcceptOrderResSuccessImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$AcceptOrderResSuccessImplCopyWithImpl<T,
+          _$AcceptOrderResSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3838,25 +3709,25 @@ class _$AcceptOrderResSuccessImpl<T> implements AcceptOrderResSuccess<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return acceptOrderResSuccess(this);
@@ -3876,11 +3747,11 @@ class _$AcceptOrderResSuccessImpl<T> implements AcceptOrderResSuccess<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3905,11 +3776,11 @@ class _$AcceptOrderResSuccessImpl<T> implements AcceptOrderResSuccess<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -3930,20 +3801,16 @@ abstract class AcceptOrderResSuccess<T> implements AgentOrdersState<T> {
       _$AcceptOrderResSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AcceptOrderResSuccessImplCopyWith<T, _$AcceptOrderResSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AcceptOrderResFailImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderResFailImplCopyWith(
-    _$AcceptOrderResFailImpl<T> value,
-    $Res Function(_$AcceptOrderResFailImpl<T>) then,
-  ) = __$$AcceptOrderResFailImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderResFailImplCopyWith(_$AcceptOrderResFailImpl<T> value,
+          $Res Function(_$AcceptOrderResFailImpl<T>) then) =
+      __$$AcceptOrderResFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -3952,24 +3819,21 @@ abstract class _$$AcceptOrderResFailImplCopyWith<T, $Res> {
 class __$$AcceptOrderResFailImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$AcceptOrderResFailImpl<T>>
     implements _$$AcceptOrderResFailImplCopyWith<T, $Res> {
-  __$$AcceptOrderResFailImplCopyWithImpl(
-    _$AcceptOrderResFailImpl<T> _value,
-    $Res Function(_$AcceptOrderResFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AcceptOrderResFailImplCopyWithImpl(_$AcceptOrderResFailImpl<T> _value,
+      $Res Function(_$AcceptOrderResFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$AcceptOrderResFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AcceptOrderResFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3997,17 +3861,12 @@ class _$AcceptOrderResFailImpl<T> implements AcceptOrderResFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AcceptOrderResFailImplCopyWith<T, _$AcceptOrderResFailImpl<T>>
-  get copyWith =>
-      __$$AcceptOrderResFailImplCopyWithImpl<T, _$AcceptOrderResFailImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$AcceptOrderResFailImplCopyWithImpl<T,
+          _$AcceptOrderResFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4102,25 +3961,25 @@ class _$AcceptOrderResFailImpl<T> implements AcceptOrderResFail<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return acceptOrderResFail(this);
@@ -4140,11 +3999,11 @@ class _$AcceptOrderResFailImpl<T> implements AcceptOrderResFail<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4169,11 +4028,11 @@ class _$AcceptOrderResFailImpl<T> implements AcceptOrderResFail<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4194,34 +4053,28 @@ abstract class AcceptOrderResFail<T> implements AgentOrdersState<T> {
       _$AcceptOrderResFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AcceptOrderResFailImplCopyWith<T, _$AcceptOrderResFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadyForPickUpLoadingImplCopyWith<T, $Res> {
   factory _$$ReadyForPickUpLoadingImplCopyWith(
-    _$ReadyForPickUpLoadingImpl<T> value,
-    $Res Function(_$ReadyForPickUpLoadingImpl<T>) then,
-  ) = __$$ReadyForPickUpLoadingImplCopyWithImpl<T, $Res>;
+          _$ReadyForPickUpLoadingImpl<T> value,
+          $Res Function(_$ReadyForPickUpLoadingImpl<T>) then) =
+      __$$ReadyForPickUpLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$ReadyForPickUpLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<T, $Res, _$ReadyForPickUpLoadingImpl<T>>
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$ReadyForPickUpLoadingImpl<T>>
     implements _$$ReadyForPickUpLoadingImplCopyWith<T, $Res> {
   __$$ReadyForPickUpLoadingImplCopyWithImpl(
-    _$ReadyForPickUpLoadingImpl<T> _value,
-    $Res Function(_$ReadyForPickUpLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$ReadyForPickUpLoadingImpl<T> _value,
+      $Res Function(_$ReadyForPickUpLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -4337,25 +4190,25 @@ class _$ReadyForPickUpLoadingImpl<T> implements ReadyForPickUpLoading<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return readyForPickUpLoading(this);
@@ -4375,11 +4228,11 @@ class _$ReadyForPickUpLoadingImpl<T> implements ReadyForPickUpLoading<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4404,11 +4257,11 @@ class _$ReadyForPickUpLoadingImpl<T> implements ReadyForPickUpLoading<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4431,36 +4284,34 @@ abstract class ReadyForPickUpLoading<T> implements AgentOrdersState<T> {
 /// @nodoc
 abstract class _$$ReadyForPickUpSuccessImplCopyWith<T, $Res> {
   factory _$$ReadyForPickUpSuccessImplCopyWith(
-    _$ReadyForPickUpSuccessImpl<T> value,
-    $Res Function(_$ReadyForPickUpSuccessImpl<T>) then,
-  ) = __$$ReadyForPickUpSuccessImplCopyWithImpl<T, $Res>;
+          _$ReadyForPickUpSuccessImpl<T> value,
+          $Res Function(_$ReadyForPickUpSuccessImpl<T>) then) =
+      __$$ReadyForPickUpSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$ReadyForPickUpSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentOrdersStateCopyWithImpl<T, $Res, _$ReadyForPickUpSuccessImpl<T>>
+    extends _$AgentOrdersStateCopyWithImpl<T, $Res,
+        _$ReadyForPickUpSuccessImpl<T>>
     implements _$$ReadyForPickUpSuccessImplCopyWith<T, $Res> {
   __$$ReadyForPickUpSuccessImplCopyWithImpl(
-    _$ReadyForPickUpSuccessImpl<T> _value,
-    $Res Function(_$ReadyForPickUpSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$ReadyForPickUpSuccessImpl<T> _value,
+      $Res Function(_$ReadyForPickUpSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$ReadyForPickUpSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$ReadyForPickUpSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -4489,16 +4340,12 @@ class _$ReadyForPickUpSuccessImpl<T> implements ReadyForPickUpSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReadyForPickUpSuccessImplCopyWith<T, _$ReadyForPickUpSuccessImpl<T>>
-  get copyWith => __$$ReadyForPickUpSuccessImplCopyWithImpl<
-    T,
-    _$ReadyForPickUpSuccessImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$ReadyForPickUpSuccessImplCopyWithImpl<T,
+          _$ReadyForPickUpSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4593,25 +4440,25 @@ class _$ReadyForPickUpSuccessImpl<T> implements ReadyForPickUpSuccess<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return readyForPickUpSuccess(this);
@@ -4631,11 +4478,11 @@ class _$ReadyForPickUpSuccessImpl<T> implements ReadyForPickUpSuccess<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4660,11 +4507,11 @@ class _$ReadyForPickUpSuccessImpl<T> implements ReadyForPickUpSuccess<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4685,20 +4532,16 @@ abstract class ReadyForPickUpSuccess<T> implements AgentOrdersState<T> {
       _$ReadyForPickUpSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReadyForPickUpSuccessImplCopyWith<T, _$ReadyForPickUpSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadyForPickUpFailImplCopyWith<T, $Res> {
-  factory _$$ReadyForPickUpFailImplCopyWith(
-    _$ReadyForPickUpFailImpl<T> value,
-    $Res Function(_$ReadyForPickUpFailImpl<T>) then,
-  ) = __$$ReadyForPickUpFailImplCopyWithImpl<T, $Res>;
+  factory _$$ReadyForPickUpFailImplCopyWith(_$ReadyForPickUpFailImpl<T> value,
+          $Res Function(_$ReadyForPickUpFailImpl<T>) then) =
+      __$$ReadyForPickUpFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -4707,24 +4550,21 @@ abstract class _$$ReadyForPickUpFailImplCopyWith<T, $Res> {
 class __$$ReadyForPickUpFailImplCopyWithImpl<T, $Res>
     extends _$AgentOrdersStateCopyWithImpl<T, $Res, _$ReadyForPickUpFailImpl<T>>
     implements _$$ReadyForPickUpFailImplCopyWith<T, $Res> {
-  __$$ReadyForPickUpFailImplCopyWithImpl(
-    _$ReadyForPickUpFailImpl<T> _value,
-    $Res Function(_$ReadyForPickUpFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$ReadyForPickUpFailImplCopyWithImpl(_$ReadyForPickUpFailImpl<T> _value,
+      $Res Function(_$ReadyForPickUpFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$ReadyForPickUpFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ReadyForPickUpFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -4752,17 +4592,12 @@ class _$ReadyForPickUpFailImpl<T> implements ReadyForPickUpFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReadyForPickUpFailImplCopyWith<T, _$ReadyForPickUpFailImpl<T>>
-  get copyWith =>
-      __$$ReadyForPickUpFailImplCopyWithImpl<T, _$ReadyForPickUpFailImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$ReadyForPickUpFailImplCopyWithImpl<T,
+          _$ReadyForPickUpFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4857,25 +4692,25 @@ class _$ReadyForPickUpFailImpl<T> implements ReadyForPickUpFail<T> {
     required TResult Function(AcceptOrderSuccess<T> value) acceptOrderSuccess,
     required TResult Function(AcceptOrderFail<T> value) acceptOrderFail,
     required TResult Function(GetAcceptOrderLoading<T> value)
-    getAcceptOrderLoading,
+        getAcceptOrderLoading,
     required TResult Function(GetAcceptOrderSuccess<T> value)
-    getAcceptOrderSuccess,
+        getAcceptOrderSuccess,
     required TResult Function(GetAcceptOrderFail<T> value) getAcceptOrderFail,
     required TResult Function(UpdateOrderStatusAgentLoading<T> value)
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     required TResult Function(UpdateOrderStatusAgentSuccess<T> value)
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     required TResult Function(UpdateOrderStatusAgentFail<T> value)
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     required TResult Function(AcceptOrderResLoading<T> value)
-    acceptOrderResLoading,
+        acceptOrderResLoading,
     required TResult Function(AcceptOrderResSuccess<T> value)
-    acceptOrderResSuccess,
+        acceptOrderResSuccess,
     required TResult Function(AcceptOrderResFail<T> value) acceptOrderResFail,
     required TResult Function(ReadyForPickUpLoading<T> value)
-    readyForPickUpLoading,
+        readyForPickUpLoading,
     required TResult Function(ReadyForPickUpSuccess<T> value)
-    readyForPickUpSuccess,
+        readyForPickUpSuccess,
     required TResult Function(ReadyForPickUpFail<T> value) readyForPickUpFail,
   }) {
     return readyForPickUpFail(this);
@@ -4895,11 +4730,11 @@ class _$ReadyForPickUpFailImpl<T> implements ReadyForPickUpFail<T> {
     TResult? Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult? Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult? Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult? Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult? Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult? Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult? Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult? Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4924,11 +4759,11 @@ class _$ReadyForPickUpFailImpl<T> implements ReadyForPickUpFail<T> {
     TResult Function(GetAcceptOrderSuccess<T> value)? getAcceptOrderSuccess,
     TResult Function(GetAcceptOrderFail<T> value)? getAcceptOrderFail,
     TResult Function(UpdateOrderStatusAgentLoading<T> value)?
-    updateOrderStatusAgentLoading,
+        updateOrderStatusAgentLoading,
     TResult Function(UpdateOrderStatusAgentSuccess<T> value)?
-    updateOrderStatusAgentSuccess,
+        updateOrderStatusAgentSuccess,
     TResult Function(UpdateOrderStatusAgentFail<T> value)?
-    updateOrderStatusAgentFail,
+        updateOrderStatusAgentFail,
     TResult Function(AcceptOrderResLoading<T> value)? acceptOrderResLoading,
     TResult Function(AcceptOrderResSuccess<T> value)? acceptOrderResSuccess,
     TResult Function(AcceptOrderResFail<T> value)? acceptOrderResFail,
@@ -4949,10 +4784,7 @@ abstract class ReadyForPickUpFail<T> implements AgentOrdersState<T> {
       _$ReadyForPickUpFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentOrdersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReadyForPickUpFailImplCopyWith<T, _$ReadyForPickUpFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

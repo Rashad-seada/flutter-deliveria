@@ -13,6 +13,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'package:delveria/features/client/settings/logic/theme_cubit.dart';
+import 'package:delveria/features/client/settings/logic/theme_state.dart';
+
 class FoodTypeTaps extends StatefulWidget {
   const FoodTypeTaps({
     super.key,
@@ -45,9 +48,11 @@ class _FoodTypeTapsState extends State<FoodTypeTaps> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ItemCubit, ItemState>(
-      builder: (context, state) {
-        final cubit = context.read<ItemCubit>();
+    return BlocBuilder<ThemeCubit, ThemeState>(
+      builder: (context, themeState) {
+        return BlocBuilder<ItemCubit, ItemState>(
+          builder: (context, state) {
+            final cubit = context.read<ItemCubit>();
 
         if (cubit.allItemsCategoriesUser.isEmpty) {
           return const SizedBox.shrink();
@@ -161,6 +166,8 @@ class _FoodTypeTapsState extends State<FoodTypeTaps> {
               ),
             ),
           ],
+        );
+      },
         );
       },
     );

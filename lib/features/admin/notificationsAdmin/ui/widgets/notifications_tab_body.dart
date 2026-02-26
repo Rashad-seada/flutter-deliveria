@@ -3,9 +3,15 @@ import 'package:delveria/features/admin/notificationsAdmin/ui/widgets/users_tap_
 import 'package:flutter/material.dart';
 
 class NotificationsTabBody extends StatelessWidget {
-  const NotificationsTabBody({super.key, required this.tabController, required this.messageController});
+  const NotificationsTabBody({
+    super.key,
+    required this.tabController,
+    required this.messageController,
+    required this.titleController,
+  });
   final TabController tabController;
   final TextEditingController messageController;
+  final TextEditingController titleController;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +20,14 @@ class NotificationsTabBody extends StatelessWidget {
       child: TabBarView(
         controller: tabController,
         children: [
-          UsersTapBody(messageController: messageController),
-          ResturantsTapBody(messageController: messageController),
+          UsersTapBody(
+            messageController: messageController,
+            titleController: titleController,
+          ),
+          ResturantsTapBody(
+            messageController: messageController,
+            titleController: titleController,
+          ),
         ],
       ),
     );

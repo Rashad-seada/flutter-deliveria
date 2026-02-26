@@ -51,10 +51,16 @@ class ResturantDataCubit extends Cubit<ResturantDataState> {
       final response = await resturantDataRepo.getResturantDataForHome();
       response.when(
         success: (resDataHome) async {
-          ordersNumber = resDataHome.totalOrders;
-          netRevenue = resDataHome.netRevenue;
-          customerFeedBack = resDataHome.customerFeedback;
-          ordersOfLastWeek = resDataHome.ordersOfLastWeek;
+          final homeData = resDataHome.response;
+          final stats = homeData.restaurant.statistics;
+          
+          // Use statistics from the restaurant object as they appear to be populated,
+          // falling back to the root response values if needed.
+          ordersNumber = stats.totalOrders;
+          netRevenue = stats.totalRevenue;
+          customerFeedBack = stats.averageRating.toDouble();
+          
+          ordersOfLastWeek = homeData.ordersOfLastWeek;
           emit(ResturantDataState.getHomeResSuccess(resDataHome));
         },
         failure: (error) => emit(ResturantDataState.getHomeResFail(error)),

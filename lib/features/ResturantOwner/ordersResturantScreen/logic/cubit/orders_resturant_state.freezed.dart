@@ -12,8 +12,7 @@ part of 'orders_resturant_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$OrdersResturantState<T> {
@@ -29,7 +28,8 @@ mixin _$OrdersResturantState<T> {
     required TResult Function() markReadyLoading,
     required TResult Function(T data) markReadySuccess,
     required TResult Function(ApiErrorModel error) markReadyFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -42,7 +42,8 @@ mixin _$OrdersResturantState<T> {
     TResult? Function()? markReadyLoading,
     TResult? Function(T data)? markReadySuccess,
     TResult? Function(ApiErrorModel error)? markReadyFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -56,7 +57,8 @@ mixin _$OrdersResturantState<T> {
     TResult Function(T data)? markReadySuccess,
     TResult Function(ApiErrorModel error)? markReadyFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -69,7 +71,8 @@ mixin _$OrdersResturantState<T> {
     required TResult Function(MarkReadyLoading<T> value) markReadyLoading,
     required TResult Function(MarkReadySuccess<T> value) markReadySuccess,
     required TResult Function(MarkReadyFail<T> value) markReadyFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -82,7 +85,8 @@ mixin _$OrdersResturantState<T> {
     TResult? Function(MarkReadyLoading<T> value)? markReadyLoading,
     TResult? Function(MarkReadySuccess<T> value)? markReadySuccess,
     TResult? Function(MarkReadyFail<T> value)? markReadyFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -96,23 +100,20 @@ mixin _$OrdersResturantState<T> {
     TResult Function(MarkReadySuccess<T> value)? markReadySuccess,
     TResult Function(MarkReadyFail<T> value)? markReadyFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $OrdersResturantStateCopyWith<T, $Res> {
-  factory $OrdersResturantStateCopyWith(
-    OrdersResturantState<T> value,
-    $Res Function(OrdersResturantState<T>) then,
-  ) = _$OrdersResturantStateCopyWithImpl<T, $Res, OrdersResturantState<T>>;
+  factory $OrdersResturantStateCopyWith(OrdersResturantState<T> value,
+          $Res Function(OrdersResturantState<T>) then) =
+      _$OrdersResturantStateCopyWithImpl<T, $Res, OrdersResturantState<T>>;
 }
 
 /// @nodoc
-class _$OrdersResturantStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends OrdersResturantState<T>
->
+class _$OrdersResturantStateCopyWithImpl<T, $Res,
+        $Val extends OrdersResturantState<T>>
     implements $OrdersResturantStateCopyWith<T, $Res> {
   _$OrdersResturantStateCopyWithImpl(this._value, this._then);
 
@@ -120,17 +121,13 @@ class _$OrdersResturantStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -138,12 +135,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$OrdersResturantStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -283,9 +276,8 @@ abstract class _Initial<T> implements OrdersResturantState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -293,12 +285,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$OrdersResturantStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -438,9 +426,8 @@ abstract class Loading<T> implements OrdersResturantState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -450,23 +437,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$OrdersResturantStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -495,9 +479,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -618,10 +600,7 @@ abstract class Success<T> implements OrdersResturantState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -629,9 +608,8 @@ abstract class Success<T> implements OrdersResturantState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -641,23 +619,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$OrdersResturantStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -685,9 +660,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -808,34 +781,26 @@ abstract class Fail<T> implements OrdersResturantState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AcceptOrderLoadingImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderLoadingImplCopyWith(
-    _$AcceptOrderLoadingImpl<T> value,
-    $Res Function(_$AcceptOrderLoadingImpl<T>) then,
-  ) = __$$AcceptOrderLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderLoadingImplCopyWith(_$AcceptOrderLoadingImpl<T> value,
+          $Res Function(_$AcceptOrderLoadingImpl<T>) then) =
+      __$$AcceptOrderLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$AcceptOrderLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$OrdersResturantStateCopyWithImpl<T, $Res, _$AcceptOrderLoadingImpl<T>>
+    extends _$OrdersResturantStateCopyWithImpl<T, $Res,
+        _$AcceptOrderLoadingImpl<T>>
     implements _$$AcceptOrderLoadingImplCopyWith<T, $Res> {
-  __$$AcceptOrderLoadingImplCopyWithImpl(
-    _$AcceptOrderLoadingImpl<T> _value,
-    $Res Function(_$AcceptOrderLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$AcceptOrderLoadingImplCopyWithImpl(_$AcceptOrderLoadingImpl<T> _value,
+      $Res Function(_$AcceptOrderLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -975,37 +940,33 @@ abstract class AcceptOrderLoading<T> implements OrdersResturantState<T> {
 
 /// @nodoc
 abstract class _$$AcceptOrderSuccessImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderSuccessImplCopyWith(
-    _$AcceptOrderSuccessImpl<T> value,
-    $Res Function(_$AcceptOrderSuccessImpl<T>) then,
-  ) = __$$AcceptOrderSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderSuccessImplCopyWith(_$AcceptOrderSuccessImpl<T> value,
+          $Res Function(_$AcceptOrderSuccessImpl<T>) then) =
+      __$$AcceptOrderSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$AcceptOrderSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$OrdersResturantStateCopyWithImpl<T, $Res, _$AcceptOrderSuccessImpl<T>>
+    extends _$OrdersResturantStateCopyWithImpl<T, $Res,
+        _$AcceptOrderSuccessImpl<T>>
     implements _$$AcceptOrderSuccessImplCopyWith<T, $Res> {
-  __$$AcceptOrderSuccessImplCopyWithImpl(
-    _$AcceptOrderSuccessImpl<T> _value,
-    $Res Function(_$AcceptOrderSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AcceptOrderSuccessImplCopyWithImpl(_$AcceptOrderSuccessImpl<T> _value,
+      $Res Function(_$AcceptOrderSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$AcceptOrderSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$AcceptOrderSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1034,17 +995,12 @@ class _$AcceptOrderSuccessImpl<T> implements AcceptOrderSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AcceptOrderSuccessImplCopyWith<T, _$AcceptOrderSuccessImpl<T>>
-  get copyWith =>
-      __$$AcceptOrderSuccessImplCopyWithImpl<T, _$AcceptOrderSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$AcceptOrderSuccessImplCopyWithImpl<T,
+          _$AcceptOrderSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1161,47 +1117,40 @@ abstract class AcceptOrderSuccess<T> implements OrdersResturantState<T> {
   const factory AcceptOrderSuccess(final T data) = _$AcceptOrderSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AcceptOrderSuccessImplCopyWith<T, _$AcceptOrderSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AcceptOrderFailImplCopyWith<T, $Res> {
-  factory _$$AcceptOrderFailImplCopyWith(
-    _$AcceptOrderFailImpl<T> value,
-    $Res Function(_$AcceptOrderFailImpl<T>) then,
-  ) = __$$AcceptOrderFailImplCopyWithImpl<T, $Res>;
+  factory _$$AcceptOrderFailImplCopyWith(_$AcceptOrderFailImpl<T> value,
+          $Res Function(_$AcceptOrderFailImpl<T>) then) =
+      __$$AcceptOrderFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
 
 /// @nodoc
 class __$$AcceptOrderFailImplCopyWithImpl<T, $Res>
-    extends
-        _$OrdersResturantStateCopyWithImpl<T, $Res, _$AcceptOrderFailImpl<T>>
+    extends _$OrdersResturantStateCopyWithImpl<T, $Res,
+        _$AcceptOrderFailImpl<T>>
     implements _$$AcceptOrderFailImplCopyWith<T, $Res> {
-  __$$AcceptOrderFailImplCopyWithImpl(
-    _$AcceptOrderFailImpl<T> _value,
-    $Res Function(_$AcceptOrderFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$AcceptOrderFailImplCopyWithImpl(_$AcceptOrderFailImpl<T> _value,
+      $Res Function(_$AcceptOrderFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$AcceptOrderFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AcceptOrderFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1229,16 +1178,12 @@ class _$AcceptOrderFailImpl<T> implements AcceptOrderFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AcceptOrderFailImplCopyWith<T, _$AcceptOrderFailImpl<T>> get copyWith =>
       __$$AcceptOrderFailImplCopyWithImpl<T, _$AcceptOrderFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1356,34 +1301,26 @@ abstract class AcceptOrderFail<T> implements OrdersResturantState<T> {
       _$AcceptOrderFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AcceptOrderFailImplCopyWith<T, _$AcceptOrderFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$MarkReadyLoadingImplCopyWith<T, $Res> {
-  factory _$$MarkReadyLoadingImplCopyWith(
-    _$MarkReadyLoadingImpl<T> value,
-    $Res Function(_$MarkReadyLoadingImpl<T>) then,
-  ) = __$$MarkReadyLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$MarkReadyLoadingImplCopyWith(_$MarkReadyLoadingImpl<T> value,
+          $Res Function(_$MarkReadyLoadingImpl<T>) then) =
+      __$$MarkReadyLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$MarkReadyLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$OrdersResturantStateCopyWithImpl<T, $Res, _$MarkReadyLoadingImpl<T>>
+    extends _$OrdersResturantStateCopyWithImpl<T, $Res,
+        _$MarkReadyLoadingImpl<T>>
     implements _$$MarkReadyLoadingImplCopyWith<T, $Res> {
-  __$$MarkReadyLoadingImplCopyWithImpl(
-    _$MarkReadyLoadingImpl<T> _value,
-    $Res Function(_$MarkReadyLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$MarkReadyLoadingImplCopyWithImpl(_$MarkReadyLoadingImpl<T> _value,
+      $Res Function(_$MarkReadyLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1523,37 +1460,33 @@ abstract class MarkReadyLoading<T> implements OrdersResturantState<T> {
 
 /// @nodoc
 abstract class _$$MarkReadySuccessImplCopyWith<T, $Res> {
-  factory _$$MarkReadySuccessImplCopyWith(
-    _$MarkReadySuccessImpl<T> value,
-    $Res Function(_$MarkReadySuccessImpl<T>) then,
-  ) = __$$MarkReadySuccessImplCopyWithImpl<T, $Res>;
+  factory _$$MarkReadySuccessImplCopyWith(_$MarkReadySuccessImpl<T> value,
+          $Res Function(_$MarkReadySuccessImpl<T>) then) =
+      __$$MarkReadySuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$MarkReadySuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$OrdersResturantStateCopyWithImpl<T, $Res, _$MarkReadySuccessImpl<T>>
+    extends _$OrdersResturantStateCopyWithImpl<T, $Res,
+        _$MarkReadySuccessImpl<T>>
     implements _$$MarkReadySuccessImplCopyWith<T, $Res> {
-  __$$MarkReadySuccessImplCopyWithImpl(
-    _$MarkReadySuccessImpl<T> _value,
-    $Res Function(_$MarkReadySuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$MarkReadySuccessImplCopyWithImpl(_$MarkReadySuccessImpl<T> _value,
+      $Res Function(_$MarkReadySuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$MarkReadySuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$MarkReadySuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1582,16 +1515,12 @@ class _$MarkReadySuccessImpl<T> implements MarkReadySuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MarkReadySuccessImplCopyWith<T, _$MarkReadySuccessImpl<T>> get copyWith =>
       __$$MarkReadySuccessImplCopyWithImpl<T, _$MarkReadySuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1708,20 +1637,16 @@ abstract class MarkReadySuccess<T> implements OrdersResturantState<T> {
   const factory MarkReadySuccess(final T data) = _$MarkReadySuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MarkReadySuccessImplCopyWith<T, _$MarkReadySuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$MarkReadyFailImplCopyWith<T, $Res> {
-  factory _$$MarkReadyFailImplCopyWith(
-    _$MarkReadyFailImpl<T> value,
-    $Res Function(_$MarkReadyFailImpl<T>) then,
-  ) = __$$MarkReadyFailImplCopyWithImpl<T, $Res>;
+  factory _$$MarkReadyFailImplCopyWith(_$MarkReadyFailImpl<T> value,
+          $Res Function(_$MarkReadyFailImpl<T>) then) =
+      __$$MarkReadyFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1730,24 +1655,21 @@ abstract class _$$MarkReadyFailImplCopyWith<T, $Res> {
 class __$$MarkReadyFailImplCopyWithImpl<T, $Res>
     extends _$OrdersResturantStateCopyWithImpl<T, $Res, _$MarkReadyFailImpl<T>>
     implements _$$MarkReadyFailImplCopyWith<T, $Res> {
-  __$$MarkReadyFailImplCopyWithImpl(
-    _$MarkReadyFailImpl<T> _value,
-    $Res Function(_$MarkReadyFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$MarkReadyFailImplCopyWithImpl(_$MarkReadyFailImpl<T> _value,
+      $Res Function(_$MarkReadyFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$MarkReadyFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$MarkReadyFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1775,16 +1697,12 @@ class _$MarkReadyFailImpl<T> implements MarkReadyFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MarkReadyFailImplCopyWith<T, _$MarkReadyFailImpl<T>> get copyWith =>
       __$$MarkReadyFailImplCopyWithImpl<T, _$MarkReadyFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1902,10 +1820,7 @@ abstract class MarkReadyFail<T> implements OrdersResturantState<T> {
       _$MarkReadyFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of OrdersResturantState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MarkReadyFailImplCopyWith<T, _$MarkReadyFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

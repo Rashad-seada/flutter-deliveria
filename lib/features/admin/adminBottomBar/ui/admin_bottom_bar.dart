@@ -48,15 +48,12 @@ class _AdminBottomBarState extends State<AdminBottomBar> {
     final List<Widget> pages = [
       MultiBlocProvider(
         providers: [
-          BlocProvider(
-            create:
-                (context) =>
-                    getIt<AllresturantsadminCubit>()
-                      ..getAllRatedResturantsWithoutLocation(),
+          BlocProvider.value(
+            value: getIt<AllresturantsadminCubit>()
+              ..getAllRatedResturantsWithoutLocation(),
           ),
-          BlocProvider(
-            create:
-                (context) => getIt<GetHomeDataAdminCubit>()..getHomeDataAdmin(),
+          BlocProvider.value(
+            value: getIt<GetHomeDataAdminCubit>()..getHomeDataAdmin(),
           ),
         ],
         child: HomeAdmin(),
@@ -64,11 +61,11 @@ class _AdminBottomBarState extends State<AdminBottomBar> {
       MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => getIt<AdminUserFilterCubit>()),
-          BlocProvider(
-            create: (context) => getIt<GetAllUsersAdminCubit>()..getAllUsers(),
+          BlocProvider.value(
+            value: getIt<GetAllUsersAdminCubit>()..getAllUsers(),
           ),
-          BlocProvider(
-            create: (context) => getIt<NotificationsCubit>()
+          BlocProvider.value(
+            value: getIt<NotificationsCubit>(),
           ),
         ],
         child: UsersScreen(isFromNotification: widget.isFromNotificationUsers),
@@ -76,11 +73,9 @@ class _AdminBottomBarState extends State<AdminBottomBar> {
       MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => getIt<AdminResturantFilterCubit>()),
-          BlocProvider(
-            create:
-                (context) =>
-                    getIt<AllresturantsadminCubit>()
-                      ..getAllResturantsForAdmin(),
+          BlocProvider.value(
+            value: getIt<AllresturantsadminCubit>()
+              ..getAllResturantsForAdmin(),
           ),
         ],
         child: ResturantAdminScreen(
@@ -95,6 +90,7 @@ class _AdminBottomBarState extends State<AdminBottomBar> {
         return PopScope(
           canPop: false,
           child: Scaffold(
+            resizeToAvoidBottomInset: false,
             key: _scaffoldKey,
             drawer: const AdminDrawer(),
             appBar:

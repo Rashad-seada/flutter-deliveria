@@ -3,9 +3,11 @@ import 'dart:io';
 
 import 'package:delveria/core/helper/constants.dart';
 import 'package:delveria/core/helper/shared_pref_helper.dart';
+import 'package:delveria/core/network/api_constants.dart';
 import 'package:delveria/core/network/api_error_handler.dart';
 import 'package:delveria/core/network/api_result.dart';
 import 'package:delveria/core/network/api_services.dart';
+import 'package:delveria/core/network/dio_factory.dart';
 import 'package:delveria/features/admin/resturantAdmin/data/models/all_resturant_admin_response.dart';
 import 'package:delveria/features/admin/resturantAdmin/data/models/change_enable_response.dart';
 import 'package:delveria/features/admin/resturantAdmin/data/models/create_resturant_request.dart';
@@ -175,6 +177,94 @@ class ResturantAdminRepo {
       return ApiResult.success(res);
     } catch (e) {
       print("🤬 error $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  /// Update restaurant by ID
+  Future<ApiResult<Map<String, dynamic>>> updateResturant({
+    required String restaurantId,
+    required Map<String, dynamic> updateData,
+  }) async {
+    final token =
+        'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}';
+    try {
+      final dio = DioFactory.getDio();
+      final response = await dio.put(
+        '${ApiConstants.baseUrl}${ApiConstants.updateResturantLink}/$restaurantId',
+        data: updateData,
+        options: Options(headers: {'Authorization': token}),
+      );
+      return ApiResult.success(response.data);
+    } catch (e) {
+      print("🔥 Update restaurant error: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  /// Delete restaurant by ID (Admin only)
+  Future<ApiResult<Map<String, dynamic>>> deleteResturant({
+    required String restaurantId,
+  }) async {
+    final token =
+        'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}';
+    try {
+      final dio = DioFactory.getDio();
+      final response = await dio.delete(
+        '${ApiConstants.baseUrl}${ApiConstants.deleteResturantLink}/$restaurantId',
+        options: Options(headers: {'Authorization': token}),
+      );
+      return ApiResult.success(response.data);
+    } catch (e) {
+      print("🔥 Delete restaurant error: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  /// Upload restaurant photo
+  Future<ApiResult<Map<String, dynamic>>> uploadResturantPhoto({
+    required String restaurantId,
+    required File photo,
+  }) async {
+    final token =
+        'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}';
+    try {
+      final dio = DioFactory.getDio();
+      FormData formData = FormData.fromMap({
+        'photo': await MultipartFile.fromFile(photo.path),
+      });
+      final response = await dio.post(
+        '${ApiConstants.baseUrl}${ApiConstants.uploadResturantPhotoLink}/$restaurantId',
+        data: formData,
+        options: Options(headers: {'Authorization': token}),
+      );
+      return ApiResult.success(response.data);
+    } catch (e) {
+      print("🔥 Upload photo error: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  /// Upload restaurant logo
+  Future<ApiResult<Map<String, dynamic>>> uploadResturantLogo({
+    required String restaurantId,
+    required File logo,
+  }) async {
+    final token =
+        'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}';
+    try {
+      final dio = DioFactory.getDio();
+      FormData formData = FormData.fromMap({
+        'logo': await MultipartFile.fromFile(logo.path),
+      });
+      final response = await dio.post(
+        '${ApiConstants.baseUrl}${ApiConstants.uploadResturantLogoLink}/$restaurantId',
+        data: formData,
+        options: Options(headers: {'Authorization': token}),
+      );
+      return ApiResult.success(response.data);
+    } catch (e) {
+      print("🔥 Upload logo error: $e");
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }

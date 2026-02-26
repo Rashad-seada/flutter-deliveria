@@ -1,3 +1,4 @@
+import 'package:delveria/features/admin/resturantAdmin/data/models/all_resturant_admin_response.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'offers_response.g.dart';
@@ -57,6 +58,34 @@ class RestaurantWithOffers {
       _$RestaurantWithOffersFromJson(json);
 
   Map<String, dynamic> toJson() => _$RestaurantWithOffersToJson(this);
+
+  /// Convert to ResturantAdmin for use with generic screens
+  ResturantAdmin toResturantAdmin() {
+    return ResturantAdmin(
+      id: id ?? "",
+      name: name ?? "",
+      phone: "",
+      aboutUs: "",
+      rate: (rating ?? 4.5).toDouble(),
+      deliveryCost: 0,
+      locationMap: "",
+      openHour: "",
+      closeHour: "",
+      haveDelivery: true,
+      isShow: true,
+      isShowInHome: true,
+      createdAt: "",
+      updatedAt: "",
+      v: 0,
+      isOpen: isOpen ?? true,
+      photo: cover ?? logo ?? "",
+      logo: logo ?? "",
+      coordinates: Coordinates(latitude: 0.0, longitude: 0.0),
+      superCategory: [],
+      subCategory: [],
+      reviews: [],
+    );
+  }
 }
 
 /// Response model for GET /restaurants/:id/offers

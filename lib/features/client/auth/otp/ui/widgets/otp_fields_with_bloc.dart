@@ -7,31 +7,57 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class OtpFieldsWithBloc extends StatelessWidget {
+/// A StatefulWidget so it owns its TextEditingController lifecycle.
+/// The parent should use a GlobalKey<OtpFieldsWithBlocState> to call clearFields().
+class OtpFieldsWithBloc extends StatefulWidget {
   const OtpFieldsWithBloc({
     super.key,
     required this.theme,
-    required this.controller,
     this.onCompleted,
     this.onChanged,
   });
+
   final ThemeState theme;
-  final TextEditingController controller;
   final void Function(String)? onCompleted;
   final void Function(String)? onChanged;
+
+  @override
+  State<OtpFieldsWithBloc> createState() => OtpFieldsWithBlocState();
+}
+
+class OtpFieldsWithBlocState extends State<OtpFieldsWithBloc> {
+  // Controller is fully owned here — no disposal race with the parent.
+  late final TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  /// Call this from the parent via GlobalKey to clear the OTP field.
+  void clearFields() {
+    if (mounted) {
+      _controller.clear();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<OtpCubit, OtpState>(
       builder: (context, state) {
-        final cubit = context.read<OtpCubit>();
         return PinCodeTextField(
           appContext: context,
           length: 6,
-          controller: controller,
+          controller: _controller,
           autoFocus: true,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
           cursorColor: AppColors.primary,
           keyboardType: TextInputType.number,
           textStyle: TextStyles.bimini16W400Body,
@@ -41,30 +67,29 @@ class OtpFieldsWithBloc extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             fieldHeight: 56,
             fieldWidth: 56,
-
             activeFillColor:
-                theme.themeMode == ThemeMode.dark
+                widget.theme.themeMode == ThemeMode.dark
                     ? Colors.transparent
                     : AppColors.lightGrey,
             inactiveFillColor:
-                theme.themeMode == ThemeMode.dark
+                widget.theme.themeMode == ThemeMode.dark
                     ? AppColors.darkGrey
                     : AppColors.lightGrey,
             selectedFillColor:
-                theme.themeMode == ThemeMode.dark
+                widget.theme.themeMode == ThemeMode.dark
                     ? AppColors.darkGrey
                     : AppColors.lightGrey,
             activeColor: AppColors.lightGrey,
             selectedColor:
-                theme.themeMode == ThemeMode.dark
+                widget.theme.themeMode == ThemeMode.dark
                     ? AppColors.darkGrey
                     : AppColors.primary,
             inactiveColor: AppColors.lightGrey,
             borderWidth: .2,
           ),
           enableActiveFill: true,
-          onChanged: onChanged,
-          onCompleted: onCompleted,
+          onChanged: widget.onChanged,
+          onCompleted: widget.onCompleted,
         );
       },
     );

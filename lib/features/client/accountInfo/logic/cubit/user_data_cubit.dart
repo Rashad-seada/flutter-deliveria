@@ -11,36 +11,42 @@ class UserDataCubit extends Cubit<UserDataState> {
   String email = "";
   String phone = "";
   void getUserData() async {
-    emit(UserDataState.loading());
+    if (!isClosed) emit(UserDataState.loading());
     try {
       final response = await getDataRepo.getUserData();
+      if (isClosed) return;
       response.when(
         success: (userData) {
           firstName = userData.user?.firstName??"deliveria";
           lastName = userData.user?.lastName??" user ";
           email = userData.user?.email??"deliveriaUser@gmail.com";
           phone = userData.user?.phone??"";
-          emit(UserDataState.success(userData));
+          if (!isClosed) emit(UserDataState.success(userData));
         },
-        failure: (error) => emit(UserDataState.fail(error)),
+        failure: (error) {
+           if (!isClosed) emit(UserDataState.fail(error));
+        },
       );
     } catch (e) {
-      emit(UserDataState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(UserDataState.fail(ApiErrorHandler.handle(e)));
     }
   }
 
   void updateUserData({required Map<String, dynamic> body}) async {
-    emit(UserDataState.updateLoading());
+    if (!isClosed) emit(UserDataState.updateLoading());
     try {
       final response = await getDataRepo.updateUserInfo(body: body);
+      if (isClosed) return;
       response.when(
         success: (createRes) {
-          emit(UserDataState.updateSuccess(createRes));
+          if (!isClosed) emit(UserDataState.updateSuccess(createRes));
         },
-        failure: (error) => emit(UserDataState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(UserDataState.fail(error));
+        },
       );
     } catch (e) {
-      emit(UserDataState.updateFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(UserDataState.updateFail(ApiErrorHandler.handle(e)));
     }
   }
 }

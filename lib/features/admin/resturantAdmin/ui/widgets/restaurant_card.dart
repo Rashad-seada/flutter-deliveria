@@ -1,4 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:delveria/core/di/dependancy_injection.dart';
+import 'package:delveria/core/func/show_snack_bar.dart';
 import 'package:delveria/core/helper/images.dart';
 import 'package:delveria/core/helper/spacing.dart';
 import 'package:delveria/core/helper/strings.dart';
@@ -6,14 +8,19 @@ import 'package:delveria/core/network/api_constants.dart';
 import 'package:delveria/core/theme/color.dart';
 import 'package:delveria/core/theme/styles.dart';
 import 'package:delveria/core/widgets/custom_loading.dart';
+import 'package:delveria/core/widgets/delete_confirmation_dialog.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart';
 import 'package:delveria/features/admin/resturantAdmin/logic/cubit/all_resturants_admin_state.dart';
+import 'package:delveria/features/admin/resturantAdmin/ui/edit_restaurant_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
+import 'package:delveria/features/admin/resturantAdmin/ui/branch_list_screen.dart';
+import '../../../../../core/helper/image_helper.dart';
 
 class RestaurantCard extends StatefulWidget {
   const RestaurantCard({
@@ -92,7 +99,7 @@ class _RestaurantCardState extends State<RestaurantCard> {
                   height: 137.h,
                   child: CachedNetworkImage(
                     imageUrl:
-                        "${ApiConstants.baseUrl}/${restaurant.photo ?? ''}",
+                        ImageHelper.getRestaurantImageUrl(restaurant.photo),
                     width: 162,
                     height: 137.h,
                     fit: BoxFit.cover,
@@ -100,7 +107,8 @@ class _RestaurantCardState extends State<RestaurantCard> {
                         (context, url) => Center(child: CustomLoading())
                         ,
                    errorWidget: (context, url, error) {
-                      return Center(child: CustomLoading());
+                      print(error);
+                      return Center(child: Icon(Icons.error, color: Colors.red));
                     },
                   ),
                 ),
@@ -209,6 +217,98 @@ class _RestaurantCardState extends State<RestaurantCard> {
                   activeTrackColor: const Color(0xFF4CAF50),
                   inactiveThumbColor: Colors.white,
                   inactiveTrackColor: const Color(0xFFE0E0E0),
+                ),
+              ],
+            ),
+            
+            // Edit/Delete Section
+            verticalSpace(8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                // Branches Button
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BranchListScreen(
+                          restaurantId: restaurant.id!,
+                          restaurantName: restaurant.name ?? '',
+                        ),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.r),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+                  ),
+                  icon: Icon(Icons.store_mall_directory, size: 16.sp),
+                  label: Text("Branches", style: TextStyle(fontSize: 12.sp)),
+                ),
+                SizedBox(width: 8.w),
+
+                // Edit Button
+                ElevatedButton.icon(
+                  onPressed: () async {
+                    final result = await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditRestaurantScreen(
+                          restaurant: restaurant,
+                        ),
+                      ),
+                    );
+                    
+                    if (result == true) {
+                      // Call onUpdate if provided, or handle refresh
+                      // currently handled by parent refresh
+                      cubit.getAllResturantsForAdmin();
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primaryDeafult,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.r),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+                  ),
+                  icon: Icon(Icons.edit, size: 16.sp),
+                  label: Text("Edit", style: TextStyle(fontSize: 12.sp)),
+                ),
+                SizedBox(width: 8.w),
+                
+                // Delete Button
+                ElevatedButton.icon(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) => DeleteConfirmationDialog(
+                        title: "Delete Restaurant",
+                        message: "Are you sure you want to delete '${restaurant.name}'? This action cannot be undone.",
+                        itemName: restaurant.name ?? "Unknown Restaurant",
+                        onConfirm: () {
+                          cubit.deleteResturant(resID: restaurant.id!);
+                          Navigator.pop(context);
+                        },
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.r),
+                    ),
+                  ),
+                  icon: Icon(Icons.delete, size: 16.sp),
+                  label: Text("Delete", style: TextStyle(fontSize: 12.sp)),
                 ),
               ],
             ),

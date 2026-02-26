@@ -27,31 +27,67 @@ class _PaymentWebViewScreenState extends State<PaymentWebViewScreen> {
   void initState() {
     super.initState();
 
-    _controller =
-        WebViewController()
-          ..setJavaScriptMode(JavaScriptMode.unrestricted)
-          ..setNavigationDelegate(
-            NavigationDelegate(
-              onPageStarted: (String url) {
-                setState(() {
-                  isLoading = true;
-                });
-              },
-              onPageFinished: (String url) {
-                setState(() {
-                  isLoading = false;
-                });
-                _checkForPaymentSuccess();
-              },
-              onNavigationRequest: (NavigationRequest request) {
-                return NavigationDecision.navigate;
-              },
-            ),
-          )
-          ..loadRequest(Uri.parse(widget.paymentUrl));
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onPageStarted: (String url) {
+            setState(() {
+              isLoading = true;
+            });
+          },
+          onPageFinished: (String url) {
+            setState(() {
+              isLoading = false;
+            });
+            // Check URL-based success detection (more reliable)
+            _checkUrlForPaymentResult(url);
+            // Also check page content as fallback
+            _checkPageContentForSuccess();
+          },
+          onNavigationRequest: (NavigationRequest request) {
+            // Intercept Paymob redirect URLs
+            _checkUrlForPaymentResult(request.url);
+            return NavigationDecision.navigate;
+          },
+        ),
+      )
+      ..loadRequest(Uri.parse(widget.paymentUrl));
   }
 
-  void _checkForPaymentSuccess() {
+  /// Primary detection: Check URL query parameters for payment result
+  /// Paymob redirects to a URL with ?success=true or ?success=false
+  void _checkUrlForPaymentResult(String url) {
+    if (hasTriggeredSuccess) return;
+
+    try {
+      final uri = Uri.parse(url);
+      final queryParams = uri.queryParameters;
+
+      // Paymob includes 'success' parameter in the redirect URL
+      if (queryParams.containsKey('success')) {
+        final success = queryParams['success']?.toLowerCase();
+        if (success == 'true') {
+          _handlePaymentSuccess();
+        } else if (success == 'false') {
+          _handlePaymentFailure();
+        }
+      }
+
+      // Also check for transaction response data in URL
+      if (queryParams.containsKey('txn_response_code')) {
+        final responseCode = queryParams['txn_response_code'];
+        if (responseCode == 'APPROVED') {
+          _handlePaymentSuccess();
+        }
+      }
+    } catch (e) {
+      print('Error parsing payment URL: $e');
+    }
+  }
+
+  /// Fallback detection: Check page content via JavaScript
+  void _checkPageContentForSuccess() {
     if (hasTriggeredSuccess) return;
 
     _controller
@@ -66,9 +102,9 @@ class _PaymentWebViewScreenState extends State<PaymentWebViewScreen> {
               pageText = pageText.substring(1, pageText.length - 1);
             }
             pageText = pageText.replaceAll(r'\"', '"').replaceAll(r'\n', '\n');
-          } else          pageText = content.toString();
-        
-
+          } else {
+            pageText = content.toString();
+          }
 
           if (pageText.contains('approved') ||
               pageText.contains('thank you') ||
@@ -85,11 +121,56 @@ class _PaymentWebViewScreenState extends State<PaymentWebViewScreen> {
   void _handlePaymentSuccess() {
     if (!hasTriggeredSuccess) {
       hasTriggeredSuccess = true;
-      print("Payment approved detected in WebView!");
+      print("✅ Payment approved detected!");
 
       widget.onPaymentApproved();
 
-      Navigator.of(context).pop(true);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Row(
+              children: [
+                Icon(Icons.check_circle, color: Colors.white),
+                SizedBox(width: 8),
+                Text('Payment Successful!'),
+              ],
+            ),
+            backgroundColor: Color(0xFF2ECC71),
+            duration: Duration(seconds: 2),
+          ),
+        );
+
+        // Brief delay for user to see success, then pop
+        Future.delayed(const Duration(milliseconds: 1500), () {
+          if (mounted) {
+            Navigator.of(context).pop(true);
+          }
+        });
+      }
+    }
+  }
+
+  void _handlePaymentFailure() {
+    if (!hasTriggeredSuccess && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Row(
+            children: [
+              Icon(Icons.error_outline, color: Colors.white),
+              SizedBox(width: 8),
+              Text('Payment failed. Please try again.'),
+            ],
+          ),
+          backgroundColor: Colors.red,
+          duration: Duration(seconds: 3),
+        ),
+      );
+
+      Future.delayed(const Duration(milliseconds: 2000), () {
+        if (mounted) {
+          Navigator.of(context).pop(false);
+        }
+      });
     }
   }
 
@@ -97,36 +178,35 @@ class _PaymentWebViewScreenState extends State<PaymentWebViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Payment', style: TextStyles.bimini20W700.copyWith(
-          color: AppColors.primaryDeafult
-        ),),
-        iconTheme: IconThemeData(
-          color: AppColors.primaryDeafult
+        title: Text(
+          'Payment',
+          style: TextStyles.bimini20W700.copyWith(
+            color: AppColors.primaryDeafult,
+          ),
         ),
+        iconTheme: const IconThemeData(color: AppColors.primaryDeafult),
         backgroundColor: Colors.white,
         foregroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.close),
+          icon: const Icon(Icons.close),
           onPressed: () => Navigator.of(context).pop(false),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-
-            child: Text('Done', style: TextStyles.bimini16W700.copyWith(
-              color: AppColors.primaryDeafult
-            )),
+            child: Text(
+              'Done',
+              style: TextStyles.bimini16W700.copyWith(
+                color: AppColors.primaryDeafult,
+              ),
+            ),
           ),
         ],
       ),
       body: Stack(
-        
         children: [
           WebViewWidget(controller: _controller),
-          if (isLoading)
-            Center(
-              child: CustomLoading(),
-            ),
+          if (isLoading) const Center(child: CustomLoading()),
         ],
       ),
     );

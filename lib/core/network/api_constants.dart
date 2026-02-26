@@ -1,5 +1,5 @@
 class ApiConstants {
-  static const String baseUrl = "https://deliveria.low-high.org";
+  static const String baseUrl = "https://delveria.online";
   static const String signUpUrl = "$baseUrl/users/signup";
   static const String loginUrl = "/auth/login";
   static const String allResturantAdmin = "/restaurants/all";
@@ -68,6 +68,43 @@ class ApiConstants {
   static const String getRestaurantsWithOffersLink = "/restaurants/with_offers";
   static const String getRestaurantOffersLink = "/restaurants"; // /{id}/offers
   static const String getRestaurantDetailsLink = "/restaurants/details"; // /{id}
+  
+  // Best Sellers API endpoint
+  static const String getBestSellersLink = "/restaurants/best_sellers"; // /{lat}/{long}
+  
+  // Zone Coverage API endpoints
+  static const String zonesAllLink = "/zones/all";
+  static const String zonesCheckLink = "/zones/check";
+  static const String zonesRestaurantsLink = "/zones/restaurants";
+  
+  // Restaurant CRUD endpoints
+  static const String updateResturantLink = "/restaurants/update"; // /:id
+  static const String deleteResturantLink = "/restaurants/delete"; // /:id
+  static const String uploadResturantPhotoLink = "/restaurants/upload-photo"; // /:id
+  static const String uploadResturantLogoLink = "/restaurants/upload-logo"; // /:id
+  
+  // Item CRUD endpoints
+  static const String updateItemLink = "/items/update"; // /:id
+  static const String deleteItemLink = "/items/delete"; // /:id
+  static const String uploadItemImageLink = "/items/upload-image"; // /:id
+  
+  // Branch Management endpoints
+  static const String getBranchesLink = "/restaurants"; // /:id/branches
+  static const String branchLink = "/restaurants/branches"; // /:branchId
+  static const String toggleBranchLink = "/restaurants/branches"; // /:branchId/toggle
+  
+  // Loyalty Points - User endpoints
+  static const String loyaltyDashboard = "/loyalty/users/loyalty";
+  static const String loyaltyHistory = "/loyalty/users/loyalty/history";
+  static const String loyaltyValidateCode = "/loyalty/users/loyalty/validate";
+  static const String loyaltyRewardTiers = "/loyalty/reward-tiers";
+  static const String getItemsCategoriesLink = "/item_categories/restaurant";
+  
+  // Loyalty Points - Admin endpoints
+  static const String adminRewardTiers = "/loyalty/admin/reward-tiers";
+  static const String adminLoyaltyUsers = "/loyalty/admin/loyalty/users";
+  static const String adminLoyaltyAdjust = "/loyalty/admin/loyalty/adjust";
+  static const String adminLoyaltyAnalytics = "/loyalty/admin/loyalty/analytics";
 }
 
 class ApiErrors {

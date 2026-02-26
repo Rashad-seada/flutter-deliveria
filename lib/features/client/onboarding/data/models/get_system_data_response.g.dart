@@ -7,19 +7,19 @@ part of 'get_system_data_response.dart';
 // **************************************************************************
 
 GetSystemDataResponse _$GetSystemDataResponseFromJson(
-  Map<String, dynamic> json,
-) => GetSystemDataResponse(
-  response:
-      json['response'] == null
+        Map<String, dynamic> json) =>
+    GetSystemDataResponse(
+      response: json['response'] == null
           ? null
           : SystemDataResponse.fromJson(
-            json['response'] as Map<String, dynamic>,
-          ),
-);
+              json['response'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$GetSystemDataResponseToJson(
-  GetSystemDataResponse instance,
-) => <String, dynamic>{'response': instance.response};
+        GetSystemDataResponse instance) =>
+    <String, dynamic>{
+      'response': instance.response,
+    };
 
 SystemDataResponse _$SystemDataResponseFromJson(Map<String, dynamic> json) =>
     SystemDataResponse(

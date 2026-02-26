@@ -123,6 +123,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                                 body: {
                                   "payment_type": "card",
                                   "address_id": widget.selectedAdress,
+                                  "status": "Waiting for Approval",
                                 },
                               );
                               // cubit.getCart();
@@ -153,6 +154,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                                                   "payment_type": "cash",
                                                   "address_id":
                                                       widget.selectedAdress,
+                                                  "status": "Waiting for Approval",
                                                 },
                                               );
                                               context.pop();

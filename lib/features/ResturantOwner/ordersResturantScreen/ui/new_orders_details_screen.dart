@@ -19,6 +19,7 @@ import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_cubit.d
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/order_summary_section.dart';
 
@@ -90,46 +91,44 @@ class _NewOrdersDetailsScreenState extends State<NewOrdersDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OrderAppBar(
+        isDeliveryAgent: widget.isDeliveryAgent,
         orderId: viewModel.formattedOrderId,
-        onUpdateTap: () async {
-          final status = await SharedPrefHelper.getString(
-            SharedPrefKeys.agentStatus,
-          );
-          context.read<AgentOrdersCubit>().updateOrderStatusAgent(
-            orderId: viewModel.formattedOrderId,
-            body: {"status": status ?? ""},
-          );
-        },
+        onUpdateTap: widget.isDeliveryAgent
+            ? () async {
+                final status = await SharedPrefHelper.getString(
+                  SharedPrefKeys.agentStatus,
+                );
+                context.read<AgentOrdersCubit>().updateOrderStatusAgent(
+                  orderId: viewModel.formattedOrderId,
+                  body: {"status": status ?? ""},
+                );
+              }
+            : null,
       ),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
             return SingleChildScrollView(
               padding: const EdgeInsets.all(16.0),
-              child: ConstrainedBox(
-                constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                child: IntrinsicHeight(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      verticalSpace(20),
-                      CustomerInfoSection(
-                        name: viewModel.customerName,
-                        phone: viewModel.customerPhone,
-                        address: viewModel.customerAddress,
-                        addressDetails: viewModel.addressDetails,
-                        isDeliveryAgent: viewModel.isDeliveryAgent,
-                      ),
-                      viewModel.isDeliveryAgent
-                          ? SizedBox()
-                          : const SizedBox(height: 32),
-                      _buildOrderSection(),
-                      verticalSpace(40),
-                      OrderActionButtons(viewModel: viewModel),
-                      verticalSpace(100),
-                    ],
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  verticalSpace(20),
+                  CustomerInfoSection(
+                    name: viewModel.customerName,
+                    phone: viewModel.customerPhone,
+                    address: viewModel.customerAddress,
+                    addressDetails: viewModel.addressDetails,
+                    isDeliveryAgent: viewModel.isDeliveryAgent,
                   ),
-                ),
+                  viewModel.isDeliveryAgent
+                      ? SizedBox()
+                      : const SizedBox(height: 32),
+                  _buildOrderSection(),
+                  verticalSpace(40),
+                  OrderActionButtons(viewModel: viewModel),
+                  verticalSpace(100),
+                ],
               ),
             );
           },
@@ -147,10 +146,44 @@ class _NewOrdersDetailsScreenState extends State<NewOrdersDetailsScreen> {
 
   Widget _buildRestaurantOrderSection() {
     final items = viewModel.restaurantOrderModel?.items ?? [];
+    final branch = viewModel.restaurantOrderModel?.branchId;
+    
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(AppStrings.ordersDetails.tr(), style: TextStyles.bimini20W700),
+        if (branch != null && (branch.branchName ?? branch.name ?? '').isNotEmpty) ...[
+          verticalSpace(8),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+            decoration: BoxDecoration(
+              color: AppColors.primaryDeafult.withOpacity(0.08),
+              borderRadius: BorderRadius.circular(8.r),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.store_outlined, size: 18.sp, color: AppColors.primaryDeafult),
+                SizedBox(width: 8.w),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        branch.branchName ?? branch.name ?? '',
+                        style: TextStyles.bimini14W700.copyWith(color: AppColors.primaryDeafult),
+                      ),
+                      if (branch.address != null && branch.address!.isNotEmpty)
+                        Text(
+                          branch.address!,
+                          style: TextStyles.bimini12W500.copyWith(color: Colors.grey.shade600),
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
         verticalSpace(24),
         ...items.map((item) {
           return Column(

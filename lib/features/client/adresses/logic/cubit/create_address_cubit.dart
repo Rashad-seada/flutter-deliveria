@@ -64,6 +64,22 @@ class CreateAddressCubit extends Cubit<CreateAddressState> {
   }
 
   Future<void> getAdresses() async {
+    // Skip for guests - they don't have saved addresses but use geolocation
+    final isGuest = await SharedPrefHelper.getBool(SharedPrefKeys.isGuest);
+    if (isGuest) {
+      addresses = [];
+      // Get location from SharedPreferences (saved during guest login)
+      lat = await SharedPrefHelper.getDouble(SharedPrefKeys.lat);
+      long = await SharedPrefHelper.getDouble(SharedPrefKeys.long);
+      lat = await SharedPrefHelper.getDouble(SharedPrefKeys.lat);
+      long = await SharedPrefHelper.getDouble(SharedPrefKeys.long);
+      
+      final token = await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+
+      emit(CreateAddressState.getAddressSuccess(GetAddressesResponse(success: true, address: [])));
+      return;
+    }
+    
     emit(CreateAddressState.getAddressLoading());
     try {
       final response = await addressRepo.getAdresses();

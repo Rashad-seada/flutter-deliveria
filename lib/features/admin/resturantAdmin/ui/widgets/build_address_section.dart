@@ -7,8 +7,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class BuildAddressSection extends StatelessWidget {
-  const BuildAddressSection({super.key, required this.addressController});
+  const BuildAddressSection({super.key, required this.addressController, this.onPickLocation});
   final TextEditingController addressController;
+  final VoidCallback? onPickLocation;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,12 @@ class BuildAddressSection extends StatelessWidget {
           decoration: InputDecoration(
             hintText:AppStrings.enterDetailsAddress.tr(),
             hintStyle: TextStyles.bimini13W400Grey,
+            suffixIcon: onPickLocation != null 
+                ? IconButton(
+                    icon: const Icon(Icons.map, color: Color(0xFFD32F2F)), // AppColors.primaryDeafult logic is red
+                    onPressed: onPickLocation,
+                  )
+                : null,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(color: Colors.grey[300]!),

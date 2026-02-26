@@ -7,9 +7,13 @@ part of 'delete_slider_response.dart';
 // **************************************************************************
 
 DeleteSliderResponse _$DeleteSliderResponseFromJson(
-  Map<String, dynamic> json,
-) => DeleteSliderResponse(message: json['message'] as String);
+        Map<String, dynamic> json) =>
+    DeleteSliderResponse(
+      message: json['message'] as String,
+    );
 
 Map<String, dynamic> _$DeleteSliderResponseToJson(
-  DeleteSliderResponse instance,
-) => <String, dynamic>{'message': instance.message};
+        DeleteSliderResponse instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+    };

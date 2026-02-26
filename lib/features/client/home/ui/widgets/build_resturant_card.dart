@@ -87,7 +87,6 @@ class _BuildResturantCardState extends State<BuildResturantCard> {
       builder: (context, state) {
         return ScaleOnTap(
           onTap: () {
-            if (isClosed) return;
             _navigateToDetails(context, resturantId);
           },
           child: Stack(

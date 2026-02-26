@@ -27,6 +27,7 @@ class RestaurantCard extends StatelessWidget {
   final bool? isAdmin;
   final bool? isFromNotification;
   final bool isUser, isTopten;
+  final bool allowClosedNavigation;
 
   const RestaurantCard({
     super.key,
@@ -37,6 +38,7 @@ class RestaurantCard extends StatelessWidget {
     this.isFromNotification,
     required this.isUser,
     required this.isTopten,
+    this.allowClosedNavigation = false,
   });
 
   @override
@@ -61,7 +63,7 @@ class RestaurantCard extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap:
-                        isUser && isClosed == false
+                        isUser && (isClosed == false || allowClosedNavigation)
                             ? () {
                               Navigator.push(
                                 context,
@@ -110,7 +112,7 @@ class RestaurantCard extends StatelessWidget {
                                 ),
                               );
                             }
-                            : isClosed
+                            : isClosed && !allowClosedNavigation
                             ? () {}
                             : () {
                               Navigator.push(

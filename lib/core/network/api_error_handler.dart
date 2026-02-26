@@ -38,23 +38,19 @@ class ApiErrorHandler {
 }
 
 ApiErrorModel _handleError(dynamic data) {
-  // If the response body contains a "success" field and it's false, use its message
   if (data is Map<String, dynamic>) {
-    if (data.containsKey('success') && data['success'] == false) {
-      return ApiErrorModel(
-        success: false,
-        message: data['message'] ?? "Unknown error occurred",
-      );
-    }
-    // If "success" is not present, fallback to message if available
     return ApiErrorModel(
       success: false,
-      message: data['message'] ?? "Unknown error occurred",
+      message: data['message'] ?? 'Unknown error occurred',
+      errorCode: data['error_code'],
+      field: data['field'],
+      missingFields: data['missing_fields'] != null
+          ? List<String>.from(data['missing_fields'])
+          : null,
     );
   }
-  // If data is not a map, fallback to generic error
   return ApiErrorModel(
     success: false,
-    message: "Unknown error occurred",
+    message: 'Unknown error occurred',
   );
 }

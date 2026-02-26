@@ -17,7 +17,7 @@ class FilterCategoryCubit extends Cubit<FilterCategoryState> {
     required double lat,
     required double long,
   }) async {
-    emit(FilterCategoryState.loading());
+    if (!isClosed) emit(FilterCategoryState.loading());
     try {
       final respone = await filterCategoryRepo.filterByCategory(
         superId: superId,
@@ -25,31 +25,37 @@ class FilterCategoryCubit extends Cubit<FilterCategoryState> {
         lat: lat,
         long: long,
       );
+      if (isClosed) return;
       respone.when(
         success: (filterCateRes) {
           resturants = filterCateRes.response;
-          emit(FilterCategoryState.success(filterCateRes));
+          if (!isClosed) emit(FilterCategoryState.success(filterCateRes));
         },
-        failure: (error) => emit(FilterCategoryState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(FilterCategoryState.fail(error));
+        },
       );
     } catch (e) {
-      emit(FilterCategoryState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(FilterCategoryState.fail(ApiErrorHandler.handle(e)));
     }
   }
 
  Future <void> sortByPrice({required String resId}) async {
-    emit(FilterCategoryState.sortByPriceLoading());
+    if (!isClosed) emit(FilterCategoryState.sortByPriceLoading());
     try {
       final response = await filterCategoryRepo.sortByPrice(resId: resId);
+      if (isClosed) return;
       response.when(
         success: (sortRes) {
           sortedPriceItems = sortRes.response;
-          emit(FilterCategoryState.sortByPriceSuccess(sortRes));
+          if (!isClosed) emit(FilterCategoryState.sortByPriceSuccess(sortRes));
         },
-        failure: (error) => emit(FilterCategoryState.sortByPriceFail(error)),
+        failure: (error) {
+          if (!isClosed) emit(FilterCategoryState.sortByPriceFail(error));
+        },
       );
     } catch (e) {
-      emit(FilterCategoryState.sortByPriceFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(FilterCategoryState.sortByPriceFail(ApiErrorHandler.handle(e)));
     }
   }
 }

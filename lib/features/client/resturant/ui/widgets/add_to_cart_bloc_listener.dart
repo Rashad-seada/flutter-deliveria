@@ -27,69 +27,71 @@ class AddToCartBlocListener extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AddToCartCubit, AddToCartState>(
+    return BlocConsumer<AddToCartCubit, dynamic>(
       listenWhen: (previous, current) => current is Success || current is Fail,
       listener: (context, state) {
-        state.whenOrNull(
-          success: (data) async {
-          
-            showSuccessSnackBar(context, "Item added to cart successfully");
-          
-            await showDialog(
-              context: context,
-              barrierDismissible: false,
-              builder: (context) {
-                return BlocBuilder<ThemeCubit, ThemeState>(
-                  builder: (context, state) {
-                    return AlertDialog(
-                      backgroundColor:
-                          state.themeMode == ThemeMode.dark
-                              ? AppColors.darkGrey
-                              : Colors.white,
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            AppStrings.conti.tr(),
-                            style: TextStyles.bimini16W700.copyWith(
-                              color: AppColors.primary,
+        if (state is AddToCartState) {
+          state.whenOrNull(
+            success: (data) async {
+            
+              showSuccessSnackBar(context, "Item added to cart successfully");
+            
+              await showDialog(
+                context: context,
+                barrierDismissible: false,
+                builder: (context) {
+                  return BlocBuilder<ThemeCubit, ThemeState>(
+                    builder: (context, state) {
+                      return AlertDialog(
+                        backgroundColor:
+                            state.themeMode == ThemeMode.dark
+                                ? AppColors.darkGrey
+                                : Colors.white,
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              AppStrings.conti.tr(),
+                              style: TextStyles.bimini16W700.copyWith(
+                                color: AppColors.primary,
+                              ),
                             ),
-                          ),
-                          verticalSpace(20),
-                          TrackOrderButtonRow(
-                            ftitle: AppStrings.shopping.tr(),
-                            sTitle: AppStrings.myCart.tr(),
-                            fWidth: 120.w,
-                            sWidth: 120.w,
-                            sOnPressed: () {
-                              context.pushReplacementNamed(
-                                Routes.bottomBarScreen,
-                                arguments: newIndex,
-                              );
-                            },
-                            fOnPressed: () {
-                              context.pop();
-                              context.pop();
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                );
-              },
-            );
-          },
-          fail: (error) {
-            showErrorSnackBar(context, error.message);
-          },
-        );
+                            verticalSpace(20),
+                            TrackOrderButtonRow(
+                              ftitle: AppStrings.shopping.tr(),
+                              sTitle: AppStrings.myCart.tr(),
+                              fWidth: 120.w,
+                              sWidth: 120.w,
+                              sOnPressed: () {
+                                context.pushReplacementNamed(
+                                  Routes.bottomBarScreen,
+                                  arguments: newIndex,
+                                );
+                              },
+                              fOnPressed: () {
+                                context.pop();
+                                context.pop();
+                              },
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
+              );
+            },
+            fail: (error) {
+              showErrorSnackBar(context, error.message);
+            },
+          );
+        }
       },
       buildWhen:
           (previous, current) => current is Loading || current is! Loading,
       builder: (context, state) {
         if (state is Loading ||
-            state.maybeWhen(loading: () => true, orElse: () => false)) {
+            (state is AddToCartState && state.maybeWhen(loading: () => true, orElse: () => false))) {
           return CustomLoading();
         }
         return child;

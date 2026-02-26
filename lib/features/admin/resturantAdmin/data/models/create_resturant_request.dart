@@ -14,12 +14,12 @@ class CreatResturantRequest {
   final String? aboutUs;
 
   @JsonKey(name: "super_category")
-  final List<String>? superCategory; // Changed from String to List<String>
+  final List<String>? superCategory;
 
   @JsonKey(name: "delivery_cost")
   final String? deliveryCost;
 
-  @JsonKey(name: "loacation_map")
+  @JsonKey(name: "location_map")
   final String? locationMap;
 
   @JsonKey(name: "open_hour")
@@ -28,9 +28,6 @@ class CreatResturantRequest {
   @JsonKey(name: "close_hour")
   final String? closeHour;
 
-  // @JsonKey(name: "have_delivery")
-  // final String? haveDelivery;
-
   @JsonKey(name: "phone")
   final String? phone;
 
@@ -38,13 +35,23 @@ class CreatResturantRequest {
   final String? estimatedTime;
 
   @JsonKey(name: "sub_category")
-  final List<String>? subCategory; // Changed from String to List<String>
+  final List<String>? subCategory;
 
   @JsonKey(name: "latitude")
   final String? latitude;
 
   @JsonKey(name: "longitude")
   final String? longitude;
+
+  // New Admin Fields
+  @JsonKey(name: "commission_percentage")
+  final double? commissionPercentage;
+
+  @JsonKey(name: "preparation_time")
+  final int? preparationTime;
+
+  @JsonKey(name: "delivery_time")
+  final int? deliveryTime;
 
   CreatResturantRequest({
     this.name,
@@ -55,12 +62,14 @@ class CreatResturantRequest {
     this.locationMap,
     this.openHour,
     this.closeHour,
-    // this.haveDelivery,
     this.phone,
     this.estimatedTime,
     this.subCategory,
     this.latitude,
     this.longitude,
+    this.commissionPercentage,
+    this.preparationTime,
+    this.deliveryTime,
   });
 
   factory CreatResturantRequest.fromJson(Map<String, dynamic> json) =>
@@ -68,3 +77,4 @@ class CreatResturantRequest {
 
   Map<String, dynamic> toJson() => _$CreatResturantRequestToJson(this);
 }
+

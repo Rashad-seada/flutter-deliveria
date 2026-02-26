@@ -324,7 +324,7 @@ class OfferRestaurantCard extends StatelessWidget {
               aboutUs: "",
               rate: offer.rating ?? 4.5,
               deliveryCost: 0,
-              loacationMap: "",
+              locationMap: "",
               openHour: "",
               closeHour: "",
               haveDelivery: true,

@@ -8,51 +8,51 @@ part of 'search_response.dart';
 
 SearchResponse _$SearchResponseFromJson(Map<String, dynamic> json) =>
     SearchResponse(
-      users:
-          (json['users'] as List<dynamic>)
-              .map((e) => User.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      users: (json['users'] as List<dynamic>)
+          .map((e) => User.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$SearchResponseToJson(SearchResponse instance) =>
-    <String, dynamic>{'users': instance.users};
+    <String, dynamic>{
+      'users': instance.users,
+    };
 
 User _$UserFromJson(Map<String, dynamic> json) => User(
-  id: json['_id'] as String,
-  firstName: json['first_name'] as String,
-  lastName: json['last_name'] as String,
-  phone: json['phone'] as String,
-  email: json['email'] as String,
-  password: json['password'] as String,
-  coordinates: Coordinates.fromJson(
-    json['coordinates'] as Map<String, dynamic>,
-  ),
-  createdAt: json['createdAt'] as String,
-  updatedAt: json['updatedAt'] as String,
-  v: (json['__v'] as num).toInt(),
-  ban: json['ban'] as bool,
-  addressId: json['address_id'] as String,
-);
+      id: json['_id'] as String,
+      firstName: json['first_name'] as String,
+      lastName: json['last_name'] as String,
+      phone: json['phone'] as String,
+      email: json['email'] as String,
+      password: json['password'] as String,
+      coordinates:
+          Coordinates.fromJson(json['coordinates'] as Map<String, dynamic>),
+      createdAt: json['createdAt'] as String,
+      updatedAt: json['updatedAt'] as String,
+      v: (json['__v'] as num).toInt(),
+      ban: json['ban'] as bool,
+      addressId: json['address_id'] as String,
+    );
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
-  '_id': instance.id,
-  'first_name': instance.firstName,
-  'last_name': instance.lastName,
-  'phone': instance.phone,
-  'email': instance.email,
-  'password': instance.password,
-  'coordinates': instance.coordinates,
-  'createdAt': instance.createdAt,
-  'updatedAt': instance.updatedAt,
-  '__v': instance.v,
-  'ban': instance.ban,
-  'address_id': instance.addressId,
-};
+      '_id': instance.id,
+      'first_name': instance.firstName,
+      'last_name': instance.lastName,
+      'phone': instance.phone,
+      'email': instance.email,
+      'password': instance.password,
+      'coordinates': instance.coordinates,
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+      '__v': instance.v,
+      'ban': instance.ban,
+      'address_id': instance.addressId,
+    };
 
 Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) => Coordinates(
-  latitude: json['latitude'] as String,
-  longitude: json['longitude'] as String,
-);
+      latitude: json['latitude'] as String,
+      longitude: json['longitude'] as String,
+    );
 
 Map<String, dynamic> _$CoordinatesToJson(Coordinates instance) =>
     <String, dynamic>{

@@ -44,6 +44,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
   List<String> selectedToppingIds = [];
   String? selectedNecessaryToppingId;
   String? selectedOption;
+  int _quantity = 1;
   @override
   void initState() {
     // TODO: implement initState
@@ -69,331 +70,414 @@ class _AddItemScreenState extends State<AddItemScreen> {
       ),
       body: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (context, themeState) {
-          return SingleChildScrollView(
-            padding: const EdgeInsets.all(16.0),
-            child: BlocBuilder<ResturantMenuCubit, ResturantMenuState>(
-              builder: (context, state) {
-                String? selectedSizeId;
-                if (widget.item?.sizes != null &&
-                    widget.item!.sizes!.isNotEmpty) {
-                  final selectedSize =
-                      widget.item!.sizes!
-                          .where((size) => size.size == state.selectedSize)
-                          .toList();
-                  if (selectedSize.isNotEmpty) {
-                    selectedSizeId = selectedSize.first.id;
+          return BlocBuilder<ResturantMenuCubit, ResturantMenuState>(
+            builder: (context, state) {
+              // --- Logic to calculate Price and Selections ---
+              String? selectedSizeId;
+              double sizePrice = 0;
+              if (widget.item?.sizes != null &&
+                  widget.item!.sizes!.isNotEmpty) {
+                final selectedSize =
+                    widget.item!.sizes!
+                        .where((size) => size.size == state.selectedSize)
+                        .toList();
+                if (selectedSize.isNotEmpty) {
+                  selectedSizeId = selectedSize.first.id;
+                  sizePrice = double.tryParse(selectedSize.first.priceAfter?.toString() ?? "0") ?? 0;
+                  // Fallback to priceBefore if priceAfter is 0 or null?
+                  if (sizePrice == 0) {
+                      sizePrice = double.tryParse(selectedSize.first.priceBefore?.toString() ?? "0") ?? 0;
                   }
                 }
+              }
 
-                List<ToppingModel> necessaryToppings = [];
-                List<ToppingModel> normalToppings = [];
-                if (widget.item?.toppings != null &&
-                    widget.item!.toppings!.isNotEmpty) {
-                  for (final topping in widget.item!.toppings!) {
-                    if ((topping.price ?? 0) == 0) {
-                      necessaryToppings.add(topping);
-                    } else {
-                      normalToppings.add(topping);
-                    }
+              List<ToppingModel> necessaryToppings = [];
+              List<ToppingModel> normalToppings = [];
+              if (widget.item?.toppings != null &&
+                  widget.item!.toppings!.isNotEmpty) {
+                for (final topping in widget.item!.toppings!) {
+                  if ((topping.price ?? 0) == 0) {
+                    necessaryToppings.add(topping);
+                  } else {
+                    normalToppings.add(topping);
                   }
                 }
+              }
 
-                List<ToppingRequest> selectedToppings = [];
-                if (selectedNecessaryToppingId != null) {
-                  selectedToppings.add(
-                    ToppingRequest(topping: selectedNecessaryToppingId!),
-                  );
-                }
-                for (final topping in normalToppings) {
-                  if (selectedToppingIds.contains(topping.id)) {
-                    selectedToppings.add(ToppingRequest(topping: topping.id!));
-                  }
-                }
+              List<ToppingRequest> selectedToppingsRequests = [];
+              double toppingsPrice = 0;
 
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    widget.item?.photo != null
-                        ? CachedNetworkImage(
-                          placeholder:
-                              (context, url) => Center(child: CustomLoading()),
-                          errorWidget: (context, url, error) {
-                            return Center(child: CustomLoading());
-                          },
-                          imageUrl:
-                              "${ApiConstants.baseUrl}/${widget.item?.photo}",
-                        )
-                        : Image.asset(AppImages.resturantImage),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: 250.w,
-                          child: Text(
-                            widget.item?.name != null
-                                ? widget.item!.name!
-                                : AppStrings.classicBurger.tr(),
+              if (selectedNecessaryToppingId != null) {
+                selectedToppingsRequests.add(
+                  ToppingRequest(topping: selectedNecessaryToppingId!),
+                );
+              }
+              for (final topping in normalToppings) {
+                if (selectedToppingIds.contains(topping.id)) {
+                  selectedToppingsRequests.add(ToppingRequest(topping: topping.id!));
+                  toppingsPrice += double.tryParse(topping.price?.toString() ?? "0") ?? 0;
+                }
+              }
+
+              final totalPrice = (sizePrice + toppingsPrice) * _quantity;
+
+
+              return Column(
+                children: [
+                  Expanded(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          widget.item?.photo != null
+                              ? CachedNetworkImage(
+                                placeholder:
+                                    (context, url) => Center(child: CustomLoading()),
+                                errorWidget: (context, url, error) {
+                                  return Center(child: CustomLoading());
+                                },
+                                imageUrl:
+                                    "${ApiConstants.baseUrl}/${widget.item?.photo}",
+                              )
+                              : Image.asset(AppImages.resturantImage),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: 250.w,
+                                child: Text(
+                                  widget.item?.name != null
+                                      ? widget.item!.name!
+                                      : AppStrings.classicBurger.tr(),
+                                  style: TextStyles.bimini20W700,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            widget.item?.description != null
+                                ? widget.item!.description!
+                                : AppStrings.classicBurgerDes.tr(),
+                            style: TextStyles.bimini16W400Body.copyWith(
+                              color: AppColors.grey,
+                            ),
+                          ),
+                          const SizedBox(height: 24),
+                          Text(
+                            AppStrings.requireSize.tr(),
                             style: TextStyles.bimini20W700,
                           ),
+                          verticalSpace(20),
+                          RequiredSizeList(
+                            state: state,
+                            themeState: themeState,
+                            item: widget.item,
+                          ),
+                          verticalSpace(20),
+                          if (widget.item?.haveOption == true) ...[
+                            Text(
+                              AppStrings.chooseOption.tr(),
+                              style: TextStyles.bimini20W700,
+                            ),
+                            verticalSpace(10),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: RadioListTile<String>(
+                                    value: AppStrings.spicy.tr(),
+                                    groupValue: selectedOption,
+                                    onChanged: (val) {
+                                      setState(() {
+                                        selectedOption = val;
+                                      });
+                                    },
+                                    title: Text(
+                                      AppStrings.spicy.tr(),
+                                      style: TextStyles.bimini16W400Body.copyWith(
+                                        color:
+                                            selectedOption == AppStrings.spicy.tr()
+                                                ? AppColors.primaryDeafult
+                                                : themeState.themeMode ==
+                                                    ThemeMode.dark
+                                                ? Colors.white
+                                                : Colors.black,
+                                      ),
+                                    ),
+                                    activeColor: AppColors.primary,
+                                  ),
+                                ),
+                                Expanded(
+                                  child: RadioListTile<String>(
+                                    value: AppStrings.normal.tr(),
+                                    groupValue: selectedOption,
+                                    onChanged: (val) {
+                                      setState(() {
+                                        selectedOption = val;
+                                      });
+                                    },
+                                    title: Text(
+                                      AppStrings.normal.tr(),
+                                      style: TextStyles.bimini16W400Body.copyWith(
+                                        color:
+                                            selectedOption == AppStrings.normal.tr()
+                                                ? AppColors.primaryDeafult
+                                                : themeState.themeMode ==
+                                                    ThemeMode.dark
+                                                ? Colors.white
+                                                : Colors.black,
+                                      ),
+                                    ),
+                                    activeColor: AppColors.primary,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            verticalSpace(24),
+                          ],
+
+                          // Necessary toppings group (price == 0)
+                          if (necessaryToppings.isNotEmpty) ...[
+                            Text(
+                              AppStrings.neccessaryToppings.tr(),
+                              style: TextStyles.bimini20W700,
+                            ),
+                            verticalSpace(12),
+                            Column(
+                              children:
+                                  necessaryToppings.map((topping) {
+                                    return RadioListTile<String>(
+                                      value: topping.id ?? "",
+                                      groupValue: selectedNecessaryToppingId,
+                                      onChanged: (val) {
+                                        setState(() {
+                                          selectedNecessaryToppingId = val;
+                                        });
+                                      },
+                                      title: Text(
+                                        topping.topping ?? "",
+                                        style: TextStyles.bimini16W400Body.copyWith(
+                                          color:
+                                              selectedNecessaryToppingId == topping.id
+                                                  ? AppColors.primaryDeafult
+                                                  : themeState.themeMode ==
+                                                      ThemeMode.dark
+                                                  ? Colors.white
+                                                  : Colors.black,
+                                        ),
+                                      ),
+                                      activeColor: AppColors.primary,
+                                    );
+                                  }).toList(),
+                            ),
+                            verticalSpace(20),
+                          ],
+                          Text(
+                            AppStrings.desireToppings.tr(),
+                            style: TextStyles.bimini20W700,
+                          ),
+                          verticalSpace(20),
+                          // --- Multi-topping selection with checkboxes for normal toppings ---
+                          if (normalToppings.isNotEmpty)
+                            Column(
+                              children:
+                                  normalToppings.map((topping) {
+                                    final isChecked = selectedToppingIds.contains(
+                                      topping.id,
+                                    );
+                                    return CheckboxListTile(
+                                      value: isChecked,
+
+                                      onChanged: (checked) {
+                                        setState(() {
+                                          if (checked == true) {
+                                            if (!selectedToppingIds.contains(
+                                              topping.id,
+                                            )) {
+                                              selectedToppingIds.add(topping.id!);
+                                            }
+                                          } else {
+                                            selectedToppingIds.remove(topping.id);
+                                          }
+                                        });
+                                      },
+                                      title: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            topping.topping ?? "",
+                                            style: TextStyles.bimini16W400Body
+                                                .copyWith(
+                                                  color:
+                                                      isChecked
+                                                          ? AppColors.primaryDeafult
+                                                          : themeState.themeMode ==
+                                                              ThemeMode.dark
+                                                          ? Colors.white
+                                                          : Colors.black,
+                                                ),
+                                          ),
+
+                                          Text(
+                                            "${topping.price.toString()} L.E",
+                                            style: TextStyles.bimini16W400Body
+                                                .copyWith(
+                                                  color:
+                                                      isChecked
+                                                          ? AppColors.primaryDeafult
+                                                          : themeState.themeMode ==
+                                                              ThemeMode.dark
+                                                          ? Colors.white
+                                                          : Colors.grey,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                      controlAffinity:
+                                          ListTileControlAffinity.leading,
+                                      activeColor: AppColors.primary,
+                                    );
+                                  }).toList(),
+                            )
+                          else
+                            Text(
+                              AppStrings.noToppingsAvailable.tr(),
+                              style: TextStyles.bimini16W400Body.copyWith(
+                                color: AppColors.grey,
+                              ),
+                            ),
+                          verticalSpace(30),
+                          Text(
+                            AppStrings.customizationOption.tr(),
+                            style: TextStyles.bimini20W700,
+                          ),
+                          verticalSpace(20),
+                          CustomizeOrderTextField(
+                            state: state,
+                            controller: state.customizationController,
+                          ),
+                          const SizedBox(height: 32),
+                          // Previous Button Location (Removed)
+                          verticalSpace(20),
+                        ],
+                      ),
+                    ),
+                  ),
+                  
+                  // --- Sticky Footer via Container ---
+                  Container(
+                    padding: const EdgeInsets.all(16.0),
+                    decoration: BoxDecoration(
+                      color: themeState.themeMode == ThemeMode.dark ? Colors.grey[900] : Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          offset: const Offset(0, -5),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 8),
-                    Text(
-                      widget.item?.description != null
-                          ? widget.item!.description!
-                          : AppStrings.classicBurgerDes.tr(),
-                      style: TextStyles.bimini16W400Body.copyWith(
-                        color: AppColors.grey,
-                      ),
-                    ),
-                    const SizedBox(height: 24),
-                    Text(
-                      AppStrings.requireSize.tr(),
-                      style: TextStyles.bimini20W700,
-                    ),
-                    verticalSpace(20),
-                    RequiredSizeList(
-                      state: state,
-                      themeState: themeState,
-                      item: widget.item,
-                    ),
-                    verticalSpace(20),
-                    if (widget.item?.haveOption == true) ...[
-                      Text(
-                        AppStrings.chooseOption.tr(),
-                        style: TextStyles.bimini20W700,
-                      ),
-                      verticalSpace(10),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: RadioListTile<String>(
-                              value: AppStrings.spicy.tr(),
-                              groupValue: selectedOption,
-                              onChanged: (val) {
-                                setState(() {
-                                  selectedOption = val;
-                                });
-                              },
-                              title: Text(
-                                AppStrings.spicy.tr(),
-                                style: TextStyles.bimini16W400Body.copyWith(
-                                  color:
-                                      selectedOption == AppStrings.spicy.tr()
-                                          ? AppColors.primaryDeafult
-                                          : themeState.themeMode ==
-                                              ThemeMode.dark
-                                          ? Colors.white
-                                          : Colors.black,
-                                ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            // Quantity Selector
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey[300]!),
+                                borderRadius: BorderRadius.circular(8),
                               ),
-                              activeColor: AppColors.primary,
-                            ),
-                          ),
-                          Expanded(
-                            child: RadioListTile<String>(
-                              value: AppStrings.normal.tr(),
-                              groupValue: selectedOption,
-                              onChanged: (val) {
-                                setState(() {
-                                  selectedOption = val;
-                                });
-                              },
-                              title: Text(
-                                AppStrings.normal.tr(),
-                                style: TextStyles.bimini16W400Body.copyWith(
-                                  color:
-                                      selectedOption == AppStrings.normal.tr()
-                                          ? AppColors.primaryDeafult
-                                          : themeState.themeMode ==
-                                              ThemeMode.dark
-                                          ? Colors.white
-                                          : Colors.black,
-                                ),
-                              ),
-                              activeColor: AppColors.primary,
-                            ),
-                          ),
-                        ],
-                      ),
-                      verticalSpace(24),
-                    ],
-
-                    // Necessary toppings group (price == 0)
-                    if (necessaryToppings.isNotEmpty) ...[
-                      Text(
-                        AppStrings.neccessaryToppings.tr(),
-                        style: TextStyles.bimini20W700,
-                      ),
-                      verticalSpace(12),
-                      Column(
-                        children:
-                            necessaryToppings.map((topping) {
-                              return RadioListTile<String>(
-                                value: topping.id ?? "",
-                                groupValue: selectedNecessaryToppingId,
-                                onChanged: (val) {
-                                  setState(() {
-                                    selectedNecessaryToppingId = val;
-                                  });
-                                },
-                                title: Text(
-                                  topping.topping ?? "",
-                                  style: TextStyles.bimini16W400Body.copyWith(
-                                    color:
-                                        selectedNecessaryToppingId == topping.id
-                                            ? AppColors.primaryDeafult
-                                            : themeState.themeMode ==
-                                                ThemeMode.dark
-                                            ? Colors.white
-                                            : Colors.black,
-                                  ),
-                                ),
-                                activeColor: AppColors.primary,
-                              );
-                            }).toList(),
-                      ),
-                      verticalSpace(20),
-                    ],
-                    Text(
-                      AppStrings.desireToppings.tr(),
-                      style: TextStyles.bimini20W700,
-                    ),
-                    verticalSpace(20),
-                    // --- Multi-topping selection with checkboxes for normal toppings ---
-                    if (normalToppings.isNotEmpty)
-                      Column(
-                        children:
-                            normalToppings.map((topping) {
-                              final isChecked = selectedToppingIds.contains(
-                                topping.id,
-                              );
-                              return CheckboxListTile(
-                                value: isChecked,
-
-                                onChanged: (checked) {
-                                  setState(() {
-                                    if (checked == true) {
-                                      if (!selectedToppingIds.contains(
-                                        topping.id,
-                                      )) {
-                                        selectedToppingIds.add(topping.id!);
+                              child: Row(
+                                children: [
+                                  IconButton(
+                                    onPressed: () {
+                                      if (_quantity < 99) {
+                                          setState(() => _quantity++);
                                       }
-                                    } else {
-                                      selectedToppingIds.remove(topping.id);
-                                    }
-                                  });
-                                },
-                                title: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      topping.topping ?? "",
-                                      style: TextStyles.bimini16W400Body
-                                          .copyWith(
-                                            color:
-                                                isChecked
-                                                    ? AppColors.primaryDeafult
-                                                    : themeState.themeMode ==
-                                                        ThemeMode.dark
-                                                    ? Colors.white
-                                                    : Colors.black,
-                                          ),
+                                    },
+                                    icon: Icon(Icons.add, color: AppColors.primaryDeafult),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                                    child: Text(
+                                      "$_quantity",
+                                      style: TextStyle(
+                                          fontSize: 18, 
+                                          fontWeight: FontWeight.bold,
+                                          color: themeState.themeMode == ThemeMode.dark ? Colors.white : Colors.black
+                                      ),
                                     ),
-
-                                    Text(
-                                      "${topping.price.toString()} L.E",
-                                      style: TextStyles.bimini16W400Body
-                                          .copyWith(
-                                            color:
-                                                isChecked
-                                                    ? AppColors.primaryDeafult
-                                                    : themeState.themeMode ==
-                                                        ThemeMode.dark
-                                                    ? Colors.white
-                                                    : Colors.grey,
-                                          ),
-                                    ),
-                                  ],
-                                ),
-                                controlAffinity:
-                                    ListTileControlAffinity.leading,
-                                activeColor: AppColors.primary,
-                              );
-                            }).toList(),
-                      )
-                    else
-                      Text(
-                        AppStrings.noToppingsAvailable.tr(),
-                        style: TextStyles.bimini16W400Body.copyWith(
-                          color: AppColors.grey,
+                                  ),
+                                  IconButton(
+                                    onPressed: () {
+                                      if (_quantity > 1) {
+                                        setState(() => _quantity--);
+                                      }
+                                    },
+                                    icon: Icon(Icons.remove, color: AppColors.primaryDeafult),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            // Total Price
+                            Text(
+                              "${totalPrice.toStringAsFixed(2)} EGP",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: themeState.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    verticalSpace(30),
-                    Text(
-                      AppStrings.customizationOption.tr(),
-                      style: TextStyles.bimini20W700,
-                    ),
-                    verticalSpace(20),
-                    CustomizeOrderTextField(
-                      state: state,
-                      controller: state.customizationController,
-                    ),
-                    const SizedBox(height: 32),
-                    BlocBuilder<CarouselCubit, CarouselState>(
-                      builder: (context, cState) {
-                        return BlocBuilder<AddToCartCubit, AddToCartState>(
-                          builder: (context, cartState) {
-                            final addToCartCubit =
-                                context.read<AddToCartCubit>();
-                            return AddToCartBlocListener(
-                              newIndex: cState.selectedIndex + 1,
-                              child: Center(
-                                child: BlocBuilder<
-                                  CarouselCubit,
-                                  CarouselState
-                                >(
-                                  builder: (context, carouselState) {
-                                    return AppButton(
+                        const SizedBox(height: 16),
+                        BlocBuilder<CarouselCubit, CarouselState>(
+                          builder: (context, cState) {
+                            return BlocBuilder<AddToCartCubit, dynamic>(
+                              builder: (context, cartState) {
+                                final addToCartCubit = context.read<AddToCartCubit>();
+                                return AddToCartBlocListener(
+                                  newIndex: cState.selectedIndex + 1,
+                                  child: SizedBox(
+                                    width: double.infinity,
+                                    child: AppButton(
                                       title: AppStrings.addToCart.tr(),
                                       onPressed: () async {
+                                        if (widget.restaurantModel?.isOpen == false) {
+                                          showErrorSnackBar(context, "Restaurant is Closed");
+                                          return;
+                                        }
                                         await SharedPrefHelper.setData(
                                           SharedPrefKeys.onlineGuest,
                                           false,
                                         );
-                                        final newIndex =
-                                            carouselState.selectedIndex + 1;
-
-                                        // If no size is selected, show warning and do not proceed
-                                        if (selectedSizeId == null ||
-                                            selectedSizeId.isEmpty) {
+                                        
+                                        // Validation Logic
+                                        print("Debug: Add to Cart Pressed");
+                                        print("Debug: selectedSizeId: $selectedSizeId");
+                                        print("Debug: selectedOption: $selectedOption");
+                                        print("Debug: necessaryToppings count: ${necessaryToppings.length}");
+                                        print("Debug: selectedNecessaryToppingId: $selectedNecessaryToppingId");
+                                        if (selectedSizeId == null || selectedSizeId!.isEmpty) {
                                           showWarningSnackBar(
                                             context,
                                             AppStrings.pleaseSelectSize.tr(),
                                           );
                                           return;
                                         }
-
-                                        //  item has option
-                                        if (widget.item?.haveOption == true &&
-                                            (selectedOption == null ||
-                                                selectedOption!.isEmpty)) {
+                                        if (widget.item?.haveOption == true && (selectedOption == null || selectedOption!.isEmpty)) {
                                           showWarningSnackBar(
                                             context,
                                             "Please select an option (Spicy or Normal)",
                                           );
                                           return;
                                         }
-
-                                        // If necessary toppings exist, validate selection
-                                        if (necessaryToppings.isNotEmpty &&
-                                            (selectedNecessaryToppingId ==
-                                                    null ||
-                                                selectedNecessaryToppingId!
-                                                    .isEmpty)) {
+                                        if (necessaryToppings.isNotEmpty && (selectedNecessaryToppingId == null || selectedNecessaryToppingId!.isEmpty)) {
                                           showWarningSnackBar(
                                             context,
                                             "Please select a necessary topping",
@@ -401,48 +485,36 @@ class _AddItemScreenState extends State<AddItemScreen> {
                                           return;
                                         }
 
-                                        // Debug prints
-                                        print(
-                                          "Selected Size ID: $selectedSizeId",
-                                        );
-                                        print(
-                                          "Selected Toppings: ${selectedToppings.map((t) => t.topping).toList()}",
-                                        );
-                                        print(
-                                          "Selected Option: $selectedOption",
-                                        );
-                                        print(
-                                          "Selected Necessary Topping: $selectedNecessaryToppingId",
-                                        );
-
-                                        addToCartCubit.addToCart(
-                                          addToCart: AddToCartRequest(
-                                            restaurantId:
-                                                widget.restaurantModel?.id ??
-                                                "",
-                                            itemId: widget.item?.id ?? "",
-                                            size: selectedSizeId ?? "",
-                                            toppings: selectedToppings,
-                                            description:
-                                                "${state.customizationController.text} ${widget.item?.haveOption == true ? selectedOption : null}",
-                                          ),
-                                        );
-                                        print(newIndex);
+                                        print("Debug: Calling addToCartCubit.addToCart");
+                                        try {
+                                          addToCartCubit.addToCart(
+                                            addToCart: AddToCartRequest(
+                                              restaurantId: widget.restaurantModel?.id ?? "",
+                                              itemId: widget.item?.id ?? "",
+                                              size: selectedSizeId ?? "",
+                                              toppings: selectedToppingsRequests,
+                                              description: "${state.customizationController.text} ${widget.item?.haveOption == true ? selectedOption : null}",
+                                              quantity: _quantity, 
+                                            ),
+                                          );
+                                          print("Debug: Called addToCartCubit.addToCart");
+                                        } catch (e) {
+                                          print("Debug: Error calling addToCart: $e");
+                                        }
                                       },
-                                    );
-                                  },
-                                ),
-                              ),
+                                    ),
+                                  ),
+                                );
+                              },
                             );
                           },
-                        );
-                      },
+                        ),
+                      ],
                     ),
-                    verticalSpace(20),
-                  ],
-                );
-              },
-            ),
+                  ),
+                ],
+              );
+            },
           );
         },
       ),

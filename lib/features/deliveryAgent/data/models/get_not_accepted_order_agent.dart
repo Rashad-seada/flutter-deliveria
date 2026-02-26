@@ -43,6 +43,8 @@ class AgentOrder {
   /// Add orderId field, not affecting serializable body.
   @JsonKey(name: 'order_id')
   final int? orderId;
+  @JsonKey(name: 'acceptance_status')
+  final AcceptanceStatus? acceptanceStatus;
 
   AgentOrder({
     required this.address,
@@ -59,12 +61,26 @@ class AgentOrder {
     required this.updatedAt,
     required this.v,
     this.orderId, // optional for "order_id"
+    this.acceptanceStatus,
   });
 
   factory AgentOrder.fromJson(Map<String, dynamic> json) =>
       _$AgentOrderFromJson(json);
 
   Map<String, dynamic> toJson() => _$AgentOrderToJson(this);
+}
+
+@JsonSerializable()
+class AcceptanceStatus {
+  @JsonKey(name: 'accepted_by_delivery_agents')
+  final List<String>? acceptedByDeliveryAgents;
+
+  AcceptanceStatus({this.acceptedByDeliveryAgents});
+
+  factory AcceptanceStatus.fromJson(Map<String, dynamic> json) =>
+      _$AcceptanceStatusFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AcceptanceStatusToJson(this);
 }
 
 /// Robust num parsing to avoid type errors from backend
@@ -177,6 +193,8 @@ class AgentOrderUser {
 class AgentOrderRestaurant {
   @JsonKey(name: 'restaurant_id')
   final AgentOrderRestaurantInfo restaurantId;
+  @JsonKey(name: 'branch_id', fromJson: _branchInfoFromJson)
+  final AgentOrderBranchInfo? branch;
   final List<AgentOrderItem> items;
   @JsonKey(name: 'price_of_restaurant', fromJson: _safeNumFromJson)
   final num priceOfRestaurant;
@@ -188,6 +206,7 @@ class AgentOrderRestaurant {
 
   AgentOrderRestaurant({
     required this.restaurantId,
+    this.branch,
     required this.items,
     required this.priceOfRestaurant,
     required this.status,
@@ -199,6 +218,51 @@ class AgentOrderRestaurant {
       _$AgentOrderRestaurantFromJson(json);
 
   Map<String, dynamic> toJson() => _$AgentOrderRestaurantToJson(this);
+}
+
+/// Safely parse branch_id which can be a String (old) or Map (new)
+AgentOrderBranchInfo? _branchInfoFromJson(dynamic json) {
+  if (json == null) return null;
+  if (json is Map<String, dynamic>) {
+    return AgentOrderBranchInfo.fromJson(json);
+  }
+  // Legacy: branch_id was just a string ID
+  if (json is String) {
+    return AgentOrderBranchInfo(id: json);
+  }
+  return null;
+}
+
+@JsonSerializable(explicitToJson: true)
+class AgentOrderBranchInfo {
+  @JsonKey(name: '_id')
+  final String? id;
+  final String? name;
+  @JsonKey(name: 'branch_name')
+  final String? branchName;
+  final String? address;
+  final String? phone;
+  final AgentOrderCoordinates? coordinates;
+  @JsonKey(name: 'location_map')
+  final String? locationMap;
+
+  AgentOrderBranchInfo({
+    this.id,
+    this.name,
+    this.branchName,
+    this.address,
+    this.phone,
+    this.coordinates,
+    this.locationMap,
+  });
+
+  /// Display name helper: prefer branchName, fallback to name
+  String get displayName => branchName ?? name ?? '';
+
+  factory AgentOrderBranchInfo.fromJson(Map<String, dynamic> json) =>
+      _$AgentOrderBranchInfoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AgentOrderBranchInfoToJson(this);
 }
 
 @JsonSerializable()

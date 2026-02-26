@@ -7,7 +7,11 @@ part of 'coupone_response.dart';
 // **************************************************************************
 
 CouponeResponse _$CouponeResponseFromJson(Map<String, dynamic> json) =>
-    CouponeResponse(message: json['message'] as String);
+    CouponeResponse(
+      message: json['message'] as String,
+    );
 
 Map<String, dynamic> _$CouponeResponseToJson(CouponeResponse instance) =>
-    <String, dynamic>{'message': instance.message};
+    <String, dynamic>{
+      'message': instance.message,
+    };

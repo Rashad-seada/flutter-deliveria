@@ -97,5 +97,8 @@ class LoginCubit extends Cubit<LoginState> {
 
   Future<void> saveUserToken(String token) async {
     await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
+    await SharedPrefHelper.setData(SharedPrefKeys.isGuest, false);
+    // Also clear legacy flag if any
+    await SharedPrefHelper.setData(SharedPrefKeys.continueAsGuest, false);
   }
 }

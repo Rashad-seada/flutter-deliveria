@@ -7,7 +7,11 @@ part of 'reorder_response.dart';
 // **************************************************************************
 
 ReorderResponse _$ReorderResponseFromJson(Map<String, dynamic> json) =>
-    ReorderResponse(message: json['message'] as String?);
+    ReorderResponse(
+      message: json['message'] as String?,
+    );
 
 Map<String, dynamic> _$ReorderResponseToJson(ReorderResponse instance) =>
-    <String, dynamic>{'message': instance.message};
+    <String, dynamic>{
+      'message': instance.message,
+    };

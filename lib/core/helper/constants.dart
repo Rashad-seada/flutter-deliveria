@@ -24,7 +24,9 @@ class SharedPrefKeys {
 
   static String isDeleted = "isDeleted";
 
-  static String onlineGuest = "onlineGuest";
+  static const String onlineGuest = "onlineGuest";
+  static const String isGuest = "isGuest"; // Guest Mode flag
+  static const String guestCart = "guestCart"; // Key for local cart items
 
   static String showbtn = "showbtn";
 }

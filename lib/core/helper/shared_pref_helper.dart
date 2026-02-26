@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'package:delveria/core/helper/constants.dart';
+import 'package:delveria/features/client/cart/data/models/local_cart_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -80,5 +83,84 @@ class SharedPrefHelper {
   static clearAllSecuredData() async {
     const flutterSecureStorage = FlutterSecureStorage();
     await flutterSecureStorage.deleteAll();
+  }
+
+  // --- Local Cart Methods (Guest Mode) ---
+
+  /// Get list of LocalCartItems
+  static Future<List<LocalCartItem>> getLocalCartItems() async {
+    final jsonString = await getString(SharedPrefKeys.guestCart);
+    if (jsonString.isEmpty) return [];
+    try {
+      final List<dynamic> jsonList = jsonDecode(jsonString);
+      return jsonList.map((e) => LocalCartItem.fromJson(e)).toList();
+    } catch (e) {
+      print("Error decoding local cart: $e");
+      return [];
+    }
+  }
+
+  /// Save new item to local cart
+  static Future<void> saveLocalCartItem(LocalCartItem newItem) async {
+    final items = await getLocalCartItems();
+    // Check if item exists (same IDs, size, toppings) -> Update quantity
+    int index = -1;
+    for(int i=0; i<items.length; i++) {
+        final existing = items[i];
+        if(existing.addRequest.itemId == newItem.addRequest.itemId &&
+           existing.addRequest.size == newItem.addRequest.size) {
+           
+           // Compare toppings (IDs)
+           final existingToppings = existing.addRequest.toppings.map((e) => e.topping).toSet();
+           final newToppings = newItem.addRequest.toppings.map((e) => e.topping).toSet();
+           
+           if (existingToppings.length == newToppings.length && existingToppings.containsAll(newToppings)) {
+             index = i; 
+             break; 
+           }
+        }
+    }
+
+    if (index != -1) {
+       // Update quantity
+       final updatedItem = items[index].copyWith(quantity: items[index].quantity + newItem.quantity);
+       items[index] = updatedItem;
+    } else {
+       items.add(newItem);
+    }
+    
+    await _saveLocalCartList(items);
+  }
+
+  /// Update quantity of specific item
+  static Future<void> updateLocalCartItemQuantity(int index, int quantity) async {
+     final items = await getLocalCartItems();
+     if(index >=0 && index < items.length) {
+        if(quantity <= 0) {
+           items.removeAt(index);
+        } else {
+           items[index] = items[index].copyWith(quantity: quantity);
+        }
+        await _saveLocalCartList(items);
+     }
+  }
+
+  /// Remove item
+  static Future<void> removeLocalCartItem(int index) async {
+     final items = await getLocalCartItems();
+     if(index >=0 && index < items.length) {
+        items.removeAt(index);
+        await _saveLocalCartList(items);
+     }
+  }
+
+  /// Clear local cart
+  static Future<void> clearLocalCart() async {
+    await removeData(SharedPrefKeys.guestCart);
+  }
+
+  static Future<void> _saveLocalCartList(List<LocalCartItem> items) async {
+    final String jsonString = jsonEncode(items.map((e) => e.toJson()).toList());
+    await setData(SharedPrefKeys.guestCart, jsonString);
   }
 }

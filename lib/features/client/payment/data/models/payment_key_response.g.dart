@@ -7,7 +7,11 @@ part of 'payment_key_response.dart';
 // **************************************************************************
 
 PaymentKeyResponse _$PaymentKeyResponseFromJson(Map<String, dynamic> json) =>
-    PaymentKeyResponse(paymentKey: json['token'] as String?);
+    PaymentKeyResponse(
+      paymentKey: json['token'] as String?,
+    );
 
 Map<String, dynamic> _$PaymentKeyResponseToJson(PaymentKeyResponse instance) =>
-    <String, dynamic>{'token': instance.paymentKey};
+    <String, dynamic>{
+      'token': instance.paymentKey,
+    };

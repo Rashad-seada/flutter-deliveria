@@ -13,4 +13,7 @@ AddOrderResponse _$AddOrderResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AddOrderResponseToJson(AddOrderResponse instance) =>
-    <String, dynamic>{'success': instance.success, 'message': instance.message};
+    <String, dynamic>{
+      'success': instance.success,
+      'message': instance.message,
+    };

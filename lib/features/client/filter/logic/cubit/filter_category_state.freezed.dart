@@ -12,8 +12,7 @@ part of 'filter_category_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FilterCategoryState<T> {
@@ -26,7 +25,8 @@ mixin _$FilterCategoryState<T> {
     required TResult Function() sortByPriceLoading,
     required TResult Function(T data) sortByPriceSuccess,
     required TResult Function(ApiErrorModel erro) sortByPriceFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -36,7 +36,8 @@ mixin _$FilterCategoryState<T> {
     TResult? Function()? sortByPriceLoading,
     TResult? Function(T data)? sortByPriceSuccess,
     TResult? Function(ApiErrorModel erro)? sortByPriceFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -47,7 +48,8 @@ mixin _$FilterCategoryState<T> {
     TResult Function(T data)? sortByPriceSuccess,
     TResult Function(ApiErrorModel erro)? sortByPriceFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -57,7 +59,8 @@ mixin _$FilterCategoryState<T> {
     required TResult Function(SortByPriceLoading<T> value) sortByPriceLoading,
     required TResult Function(SortByPriceSuccess<T> value) sortByPriceSuccess,
     required TResult Function(SortByPriceFail<T> value) sortByPriceFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -67,7 +70,8 @@ mixin _$FilterCategoryState<T> {
     TResult? Function(SortByPriceLoading<T> value)? sortByPriceLoading,
     TResult? Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
     TResult? Function(SortByPriceFail<T> value)? sortByPriceFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -78,23 +82,20 @@ mixin _$FilterCategoryState<T> {
     TResult Function(SortByPriceSuccess<T> value)? sortByPriceSuccess,
     TResult Function(SortByPriceFail<T> value)? sortByPriceFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FilterCategoryStateCopyWith<T, $Res> {
-  factory $FilterCategoryStateCopyWith(
-    FilterCategoryState<T> value,
-    $Res Function(FilterCategoryState<T>) then,
-  ) = _$FilterCategoryStateCopyWithImpl<T, $Res, FilterCategoryState<T>>;
+  factory $FilterCategoryStateCopyWith(FilterCategoryState<T> value,
+          $Res Function(FilterCategoryState<T>) then) =
+      _$FilterCategoryStateCopyWithImpl<T, $Res, FilterCategoryState<T>>;
 }
 
 /// @nodoc
-class _$FilterCategoryStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends FilterCategoryState<T>
->
+class _$FilterCategoryStateCopyWithImpl<T, $Res,
+        $Val extends FilterCategoryState<T>>
     implements $FilterCategoryStateCopyWith<T, $Res> {
   _$FilterCategoryStateCopyWithImpl(this._value, this._then);
 
@@ -102,17 +103,13 @@ class _$FilterCategoryStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -120,12 +117,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -247,9 +240,8 @@ abstract class _Initial<T> implements FilterCategoryState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -257,12 +249,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -384,9 +372,8 @@ abstract class Loading<T> implements FilterCategoryState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -396,23 +383,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -441,9 +425,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -546,10 +528,7 @@ abstract class Success<T> implements FilterCategoryState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -557,9 +536,8 @@ abstract class Success<T> implements FilterCategoryState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel erro});
 }
@@ -569,23 +547,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? erro = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == erro
-            ? _value.erro
-            : erro // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? erro = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == erro
+          ? _value.erro
+          : erro // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -613,9 +588,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, erro);
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -718,34 +691,26 @@ abstract class Fail<T> implements FilterCategoryState<T> {
   const factory Fail(final ApiErrorModel erro) = _$FailImpl<T>;
 
   ApiErrorModel get erro;
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SortByPriceLoadingImplCopyWith<T, $Res> {
-  factory _$$SortByPriceLoadingImplCopyWith(
-    _$SortByPriceLoadingImpl<T> value,
-    $Res Function(_$SortByPriceLoadingImpl<T>) then,
-  ) = __$$SortByPriceLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$SortByPriceLoadingImplCopyWith(_$SortByPriceLoadingImpl<T> value,
+          $Res Function(_$SortByPriceLoadingImpl<T>) then) =
+      __$$SortByPriceLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$SortByPriceLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$FilterCategoryStateCopyWithImpl<T, $Res, _$SortByPriceLoadingImpl<T>>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res,
+        _$SortByPriceLoadingImpl<T>>
     implements _$$SortByPriceLoadingImplCopyWith<T, $Res> {
-  __$$SortByPriceLoadingImplCopyWithImpl(
-    _$SortByPriceLoadingImpl<T> _value,
-    $Res Function(_$SortByPriceLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$SortByPriceLoadingImplCopyWithImpl(_$SortByPriceLoadingImpl<T> _value,
+      $Res Function(_$SortByPriceLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -867,37 +832,33 @@ abstract class SortByPriceLoading<T> implements FilterCategoryState<T> {
 
 /// @nodoc
 abstract class _$$SortByPriceSuccessImplCopyWith<T, $Res> {
-  factory _$$SortByPriceSuccessImplCopyWith(
-    _$SortByPriceSuccessImpl<T> value,
-    $Res Function(_$SortByPriceSuccessImpl<T>) then,
-  ) = __$$SortByPriceSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$SortByPriceSuccessImplCopyWith(_$SortByPriceSuccessImpl<T> value,
+          $Res Function(_$SortByPriceSuccessImpl<T>) then) =
+      __$$SortByPriceSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$SortByPriceSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$FilterCategoryStateCopyWithImpl<T, $Res, _$SortByPriceSuccessImpl<T>>
+    extends _$FilterCategoryStateCopyWithImpl<T, $Res,
+        _$SortByPriceSuccessImpl<T>>
     implements _$$SortByPriceSuccessImplCopyWith<T, $Res> {
-  __$$SortByPriceSuccessImplCopyWithImpl(
-    _$SortByPriceSuccessImpl<T> _value,
-    $Res Function(_$SortByPriceSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$SortByPriceSuccessImplCopyWithImpl(_$SortByPriceSuccessImpl<T> _value,
+      $Res Function(_$SortByPriceSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SortByPriceSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SortByPriceSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -926,17 +887,12 @@ class _$SortByPriceSuccessImpl<T> implements SortByPriceSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SortByPriceSuccessImplCopyWith<T, _$SortByPriceSuccessImpl<T>>
-  get copyWith =>
-      __$$SortByPriceSuccessImplCopyWithImpl<T, _$SortByPriceSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$SortByPriceSuccessImplCopyWithImpl<T,
+          _$SortByPriceSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1035,20 +991,16 @@ abstract class SortByPriceSuccess<T> implements FilterCategoryState<T> {
   const factory SortByPriceSuccess(final T data) = _$SortByPriceSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SortByPriceSuccessImplCopyWith<T, _$SortByPriceSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SortByPriceFailImplCopyWith<T, $Res> {
-  factory _$$SortByPriceFailImplCopyWith(
-    _$SortByPriceFailImpl<T> value,
-    $Res Function(_$SortByPriceFailImpl<T>) then,
-  ) = __$$SortByPriceFailImplCopyWithImpl<T, $Res>;
+  factory _$$SortByPriceFailImplCopyWith(_$SortByPriceFailImpl<T> value,
+          $Res Function(_$SortByPriceFailImpl<T>) then) =
+      __$$SortByPriceFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel erro});
 }
@@ -1057,24 +1009,21 @@ abstract class _$$SortByPriceFailImplCopyWith<T, $Res> {
 class __$$SortByPriceFailImplCopyWithImpl<T, $Res>
     extends _$FilterCategoryStateCopyWithImpl<T, $Res, _$SortByPriceFailImpl<T>>
     implements _$$SortByPriceFailImplCopyWith<T, $Res> {
-  __$$SortByPriceFailImplCopyWithImpl(
-    _$SortByPriceFailImpl<T> _value,
-    $Res Function(_$SortByPriceFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$SortByPriceFailImplCopyWithImpl(_$SortByPriceFailImpl<T> _value,
+      $Res Function(_$SortByPriceFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? erro = null}) {
-    return _then(
-      _$SortByPriceFailImpl<T>(
-        null == erro
-            ? _value.erro
-            : erro // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? erro = null,
+  }) {
+    return _then(_$SortByPriceFailImpl<T>(
+      null == erro
+          ? _value.erro
+          : erro // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1102,16 +1051,12 @@ class _$SortByPriceFailImpl<T> implements SortByPriceFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, erro);
 
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SortByPriceFailImplCopyWith<T, _$SortByPriceFailImpl<T>> get copyWith =>
       __$$SortByPriceFailImplCopyWithImpl<T, _$SortByPriceFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1211,10 +1156,7 @@ abstract class SortByPriceFail<T> implements FilterCategoryState<T> {
       _$SortByPriceFailImpl<T>;
 
   ApiErrorModel get erro;
-
-  /// Create a copy of FilterCategoryState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SortByPriceFailImplCopyWith<T, _$SortByPriceFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

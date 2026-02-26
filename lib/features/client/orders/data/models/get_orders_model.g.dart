@@ -8,10 +8,9 @@ part of 'get_orders_model.dart';
 
 GetOrdersModel _$GetOrdersModelFromJson(Map<String, dynamic> json) =>
     GetOrdersModel(
-      orders:
-          (json['orders'] as List<dynamic>?)
-              ?.map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      orders: (json['orders'] as List<dynamic>?)
+          ?.map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$GetOrdersModelToJson(GetOrdersModel instance) =>
@@ -20,29 +19,27 @@ Map<String, dynamic> _$GetOrdersModelToJson(GetOrdersModel instance) =>
     };
 
 OrderModel _$OrderModelFromJson(Map<String, dynamic> json) => OrderModel(
-  address:
-      json['address'] == null
+      address: json['address'] == null
           ? null
           : OrderAddress.fromJson(json['address'] as Map<String, dynamic>),
-  id: json['_id'] as String?,
-  user_id: json['user_id'] as String?,
-  orders:
-      (json['orders'] as List<dynamic>?)
+      id: json['_id'] as String?,
+      user_id: json['user_id'] as String?,
+      orders: (json['orders'] as List<dynamic>?)
           ?.map((e) => RestaurantOrder.fromJson(e as Map<String, dynamic>))
           .toList(),
-  final_price_without_delivery_cost:
-      json['final_price_without_delivery_cost'] as num?,
-  final_delivery_cost: json['final_delivery_cost'] as num?,
-  final_price: json['final_price'] as num?,
-  delivery_type: json['delivery_type'] as String?,
-  delivery_id: json['delivery_id'] as String?,
-  payment_type: json['payment_type'] as String?,
-  status: json['status'] as String?,
-  createdAt: json['createdAt'] as String?,
-  updatedAt: json['updatedAt'] as String?,
-  v: (json['__v'] as num?)?.toInt(),
-  orderId: (json['order_id'] as num?)?.toInt(),
-);
+      final_price_without_delivery_cost:
+          json['final_price_without_delivery_cost'] as num?,
+      final_delivery_cost: json['final_delivery_cost'] as num?,
+      final_price: json['final_price'] as num?,
+      delivery_type: json['delivery_type'] as String?,
+      delivery_id: json['delivery_id'] as String?,
+      payment_type: json['payment_type'] as String?,
+      status: json['status'] as String?,
+      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updatedAt'] as String?,
+      v: (json['__v'] as num?)?.toInt(),
+      orderId: (json['order_id'] as num?)?.toInt(),
+    );
 
 Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
     <String, dynamic>{
@@ -65,16 +62,14 @@ Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
     };
 
 OrderAddress _$OrderAddressFromJson(Map<String, dynamic> json) => OrderAddress(
-  coordinates:
-      json['coordinates'] == null
+      coordinates: json['coordinates'] == null
           ? null
           : OrderCoordinates.fromJson(
-            json['coordinates'] as Map<String, dynamic>,
-          ),
-  address_title: json['address_title'] as String?,
-  phone: json['phone'] as String?,
-  details: json['details'] as String?,
-);
+              json['coordinates'] as Map<String, dynamic>),
+      address_title: json['address_title'] as String?,
+      phone: json['phone'] as String?,
+      details: json['details'] as String?,
+    );
 
 Map<String, dynamic> _$OrderAddressToJson(OrderAddress instance) =>
     <String, dynamic>{
@@ -86,8 +81,8 @@ Map<String, dynamic> _$OrderAddressToJson(OrderAddress instance) =>
 
 OrderCoordinates _$OrderCoordinatesFromJson(Map<String, dynamic> json) =>
     OrderCoordinates(
-      latitude: json['latitude'] as double?,
-      longitude: json['longitude'] as double?,
+      latitude: (json['latitude'] as num?)?.toDouble(),
+      longitude: (json['longitude'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$OrderCoordinatesToJson(OrderCoordinates instance) =>
@@ -99,10 +94,9 @@ Map<String, dynamic> _$OrderCoordinatesToJson(OrderCoordinates instance) =>
 RestaurantOrder _$RestaurantOrderFromJson(Map<String, dynamic> json) =>
     RestaurantOrder(
       restaurant_id: json['restaurant_id'] as String?,
-      items:
-          (json['items'] as List<dynamic>?)
-              ?.map((e) => OrderItem.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      items: (json['items'] as List<dynamic>?)
+          ?.map((e) => OrderItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
       price_of_restaurant: json['price_of_restaurant'] as num?,
       status: json['status'] as String?,
       cancel_me: json['cancel_me'] as bool?,
@@ -120,33 +114,29 @@ Map<String, dynamic> _$RestaurantOrderToJson(RestaurantOrder instance) =>
     };
 
 OrderItem _$OrderItemFromJson(Map<String, dynamic> json) => OrderItem(
-  item_details:
-      json['item_details'] == null
+      item_details: json['item_details'] == null
           ? null
           : OrderItemDetails.fromJson(
-            json['item_details'] as Map<String, dynamic>,
-          ),
-  size_details:
-      json['size_details'] == null
+              json['item_details'] as Map<String, dynamic>),
+      size_details: json['size_details'] == null
           ? null
           : OrderSizeDetails.fromJson(
-            json['size_details'] as Map<String, dynamic>,
-          ),
-  topping_details:
-      (json['topping_details'] as List<dynamic>?)
+              json['size_details'] as Map<String, dynamic>),
+      topping_details: (json['topping_details'] as List<dynamic>?)
           ?.map((e) => OrderToppingDetails.fromJson(e as Map<String, dynamic>))
           .toList(),
-  total_price: json['total_price'] as num?,
-  id: json['_id'] as String?,
-);
+      total_price: json['total_price'] as num?,
+      id: json['_id'] as String?,
+    );
 
 Map<String, dynamic> _$OrderItemToJson(OrderItem instance) => <String, dynamic>{
-  'item_details': instance.item_details?.toJson(),
-  'size_details': instance.size_details?.toJson(),
-  'topping_details': instance.topping_details?.map((e) => e.toJson()).toList(),
-  'total_price': instance.total_price,
-  '_id': instance.id,
-};
+      'item_details': instance.item_details?.toJson(),
+      'size_details': instance.size_details?.toJson(),
+      'topping_details':
+          instance.topping_details?.map((e) => e.toJson()).toList(),
+      'total_price': instance.total_price,
+      '_id': instance.id,
+    };
 
 OrderItemDetails _$OrderItemDetailsFromJson(Map<String, dynamic> json) =>
     OrderItemDetails(
@@ -195,10 +185,10 @@ OrderToppingDetails _$OrderToppingDetailsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$OrderToppingDetailsToJson(
-  OrderToppingDetails instance,
-) => <String, dynamic>{
-  'topping': instance.topping,
-  'price': instance.price,
-  'quantity': instance.quantity,
-  '_id': instance.id,
-};
+        OrderToppingDetails instance) =>
+    <String, dynamic>{
+      'topping': instance.topping,
+      'price': instance.price,
+      'quantity': instance.quantity,
+      '_id': instance.id,
+    };

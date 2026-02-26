@@ -12,8 +12,7 @@ part of 'agents_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AgentsState<T> {
@@ -38,7 +37,8 @@ mixin _$AgentsState<T> {
     required TResult Function(T data) getEachOrderDetailsSuccess,
     required TResult Function() getEachOrderDetailsLoading,
     required TResult Function(ApiErrorModel error) getEachOrderDetailsFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -60,7 +60,8 @@ mixin _$AgentsState<T> {
     TResult? Function(T data)? getEachOrderDetailsSuccess,
     TResult? Function()? getEachOrderDetailsLoading,
     TResult? Function(ApiErrorModel error)? getEachOrderDetailsFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -83,7 +84,8 @@ mixin _$AgentsState<T> {
     TResult Function()? getEachOrderDetailsLoading,
     TResult Function(ApiErrorModel error)? getEachOrderDetailsFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -100,18 +102,19 @@ mixin _$AgentsState<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
-  }) => throw _privateConstructorUsedError;
+        getEachOrderDetailsFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -128,18 +131,19 @@ mixin _$AgentsState<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
-  }) => throw _privateConstructorUsedError;
+        getEachOrderDetailsFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -156,26 +160,26 @@ mixin _$AgentsState<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AgentsStateCopyWith<T, $Res> {
   factory $AgentsStateCopyWith(
-    AgentsState<T> value,
-    $Res Function(AgentsState<T>) then,
-  ) = _$AgentsStateCopyWithImpl<T, $Res, AgentsState<T>>;
+          AgentsState<T> value, $Res Function(AgentsState<T>) then) =
+      _$AgentsStateCopyWithImpl<T, $Res, AgentsState<T>>;
 }
 
 /// @nodoc
@@ -187,17 +191,13 @@ class _$AgentsStateCopyWithImpl<T, $Res, $Val extends AgentsState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -205,12 +205,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -331,17 +327,17 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return initial(this);
   }
@@ -363,17 +359,17 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return initial?.call(this);
   }
@@ -395,15 +391,15 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -421,9 +417,8 @@ abstract class _Initial<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -433,23 +428,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -478,9 +470,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -585,17 +575,17 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return success(this);
   }
@@ -617,17 +607,17 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return success?.call(this);
   }
@@ -649,15 +639,15 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -672,10 +662,7 @@ abstract class Success<T> implements AgentsState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -683,9 +670,8 @@ abstract class Success<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -693,12 +679,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -819,17 +801,17 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return loading(this);
   }
@@ -851,17 +833,17 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return loading?.call(this);
   }
@@ -883,15 +865,15 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -909,9 +891,8 @@ abstract class Loading<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -921,23 +902,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -965,9 +943,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -1072,17 +1048,17 @@ class _$FailImpl<T> implements Fail<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return fail(this);
   }
@@ -1104,17 +1080,17 @@ class _$FailImpl<T> implements Fail<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return fail?.call(this);
   }
@@ -1136,15 +1112,15 @@ class _$FailImpl<T> implements Fail<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -1159,20 +1135,16 @@ abstract class Fail<T> implements AgentsState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateSuccessImplCopyWith<T, $Res> {
-  factory _$$CreateSuccessImplCopyWith(
-    _$CreateSuccessImpl<T> value,
-    $Res Function(_$CreateSuccessImpl<T>) then,
-  ) = __$$CreateSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$CreateSuccessImplCopyWith(_$CreateSuccessImpl<T> value,
+          $Res Function(_$CreateSuccessImpl<T>) then) =
+      __$$CreateSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -1181,24 +1153,21 @@ abstract class _$$CreateSuccessImplCopyWith<T, $Res> {
 class __$$CreateSuccessImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$CreateSuccessImpl<T>>
     implements _$$CreateSuccessImplCopyWith<T, $Res> {
-  __$$CreateSuccessImplCopyWithImpl(
-    _$CreateSuccessImpl<T> _value,
-    $Res Function(_$CreateSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$CreateSuccessImplCopyWithImpl(_$CreateSuccessImpl<T> _value,
+      $Res Function(_$CreateSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$CreateSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$CreateSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1227,16 +1196,12 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateSuccessImplCopyWith<T, _$CreateSuccessImpl<T>> get copyWith =>
       __$$CreateSuccessImplCopyWithImpl<T, _$CreateSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1337,17 +1302,17 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return createSuccess(this);
   }
@@ -1369,17 +1334,17 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return createSuccess?.call(this);
   }
@@ -1401,15 +1366,15 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -1424,33 +1389,25 @@ abstract class CreateSuccess<T> implements AgentsState<T> {
   const factory CreateSuccess(final T data) = _$CreateSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateSuccessImplCopyWith<T, _$CreateSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateLoadingImplCopyWith<T, $Res> {
-  factory _$$CreateLoadingImplCopyWith(
-    _$CreateLoadingImpl<T> value,
-    $Res Function(_$CreateLoadingImpl<T>) then,
-  ) = __$$CreateLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$CreateLoadingImplCopyWith(_$CreateLoadingImpl<T> value,
+          $Res Function(_$CreateLoadingImpl<T>) then) =
+      __$$CreateLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$CreateLoadingImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$CreateLoadingImpl<T>>
     implements _$$CreateLoadingImplCopyWith<T, $Res> {
-  __$$CreateLoadingImplCopyWithImpl(
-    _$CreateLoadingImpl<T> _value,
-    $Res Function(_$CreateLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$CreateLoadingImplCopyWithImpl(_$CreateLoadingImpl<T> _value,
+      $Res Function(_$CreateLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1571,17 +1528,17 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return createLoading(this);
   }
@@ -1603,17 +1560,17 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return createLoading?.call(this);
   }
@@ -1635,15 +1592,15 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -1661,9 +1618,8 @@ abstract class CreateLoading<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$CreateFailImplCopyWith<T, $Res> {
   factory _$$CreateFailImplCopyWith(
-    _$CreateFailImpl<T> value,
-    $Res Function(_$CreateFailImpl<T>) then,
-  ) = __$$CreateFailImplCopyWithImpl<T, $Res>;
+          _$CreateFailImpl<T> value, $Res Function(_$CreateFailImpl<T>) then) =
+      __$$CreateFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1673,23 +1629,20 @@ class __$$CreateFailImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$CreateFailImpl<T>>
     implements _$$CreateFailImplCopyWith<T, $Res> {
   __$$CreateFailImplCopyWithImpl(
-    _$CreateFailImpl<T> _value,
-    $Res Function(_$CreateFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$CreateFailImpl<T> _value, $Res Function(_$CreateFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$CreateFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$CreateFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1717,9 +1670,7 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateFailImplCopyWith<T, _$CreateFailImpl<T>> get copyWith =>
@@ -1824,17 +1775,17 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return createFail(this);
   }
@@ -1856,17 +1807,17 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return createFail?.call(this);
   }
@@ -1888,15 +1839,15 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -1911,20 +1862,16 @@ abstract class CreateFail<T> implements AgentsState<T> {
   const factory CreateFail(final ApiErrorModel error) = _$CreateFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateFailImplCopyWith<T, _$CreateFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$BanAgentSuccessImplCopyWith<T, $Res> {
-  factory _$$BanAgentSuccessImplCopyWith(
-    _$BanAgentSuccessImpl<T> value,
-    $Res Function(_$BanAgentSuccessImpl<T>) then,
-  ) = __$$BanAgentSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$BanAgentSuccessImplCopyWith(_$BanAgentSuccessImpl<T> value,
+          $Res Function(_$BanAgentSuccessImpl<T>) then) =
+      __$$BanAgentSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -1933,24 +1880,21 @@ abstract class _$$BanAgentSuccessImplCopyWith<T, $Res> {
 class __$$BanAgentSuccessImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$BanAgentSuccessImpl<T>>
     implements _$$BanAgentSuccessImplCopyWith<T, $Res> {
-  __$$BanAgentSuccessImplCopyWithImpl(
-    _$BanAgentSuccessImpl<T> _value,
-    $Res Function(_$BanAgentSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$BanAgentSuccessImplCopyWithImpl(_$BanAgentSuccessImpl<T> _value,
+      $Res Function(_$BanAgentSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$BanAgentSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$BanAgentSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1979,16 +1923,12 @@ class _$BanAgentSuccessImpl<T> implements BanAgentSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BanAgentSuccessImplCopyWith<T, _$BanAgentSuccessImpl<T>> get copyWith =>
       __$$BanAgentSuccessImplCopyWithImpl<T, _$BanAgentSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2089,17 +2029,17 @@ class _$BanAgentSuccessImpl<T> implements BanAgentSuccess<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return banAgentSuccess(this);
   }
@@ -2121,17 +2061,17 @@ class _$BanAgentSuccessImpl<T> implements BanAgentSuccess<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return banAgentSuccess?.call(this);
   }
@@ -2153,15 +2093,15 @@ class _$BanAgentSuccessImpl<T> implements BanAgentSuccess<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -2176,33 +2116,25 @@ abstract class BanAgentSuccess<T> implements AgentsState<T> {
   const factory BanAgentSuccess(final T data) = _$BanAgentSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BanAgentSuccessImplCopyWith<T, _$BanAgentSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$BanAgentLoadingImplCopyWith<T, $Res> {
-  factory _$$BanAgentLoadingImplCopyWith(
-    _$BanAgentLoadingImpl<T> value,
-    $Res Function(_$BanAgentLoadingImpl<T>) then,
-  ) = __$$BanAgentLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$BanAgentLoadingImplCopyWith(_$BanAgentLoadingImpl<T> value,
+          $Res Function(_$BanAgentLoadingImpl<T>) then) =
+      __$$BanAgentLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$BanAgentLoadingImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$BanAgentLoadingImpl<T>>
     implements _$$BanAgentLoadingImplCopyWith<T, $Res> {
-  __$$BanAgentLoadingImplCopyWithImpl(
-    _$BanAgentLoadingImpl<T> _value,
-    $Res Function(_$BanAgentLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$BanAgentLoadingImplCopyWithImpl(_$BanAgentLoadingImpl<T> _value,
+      $Res Function(_$BanAgentLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2323,17 +2255,17 @@ class _$BanAgentLoadingImpl<T> implements BanAgentLoading<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return banAgentLoading(this);
   }
@@ -2355,17 +2287,17 @@ class _$BanAgentLoadingImpl<T> implements BanAgentLoading<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return banAgentLoading?.call(this);
   }
@@ -2387,15 +2319,15 @@ class _$BanAgentLoadingImpl<T> implements BanAgentLoading<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -2412,10 +2344,9 @@ abstract class BanAgentLoading<T> implements AgentsState<T> {
 
 /// @nodoc
 abstract class _$$BanAgentFailImplCopyWith<T, $Res> {
-  factory _$$BanAgentFailImplCopyWith(
-    _$BanAgentFailImpl<T> value,
-    $Res Function(_$BanAgentFailImpl<T>) then,
-  ) = __$$BanAgentFailImplCopyWithImpl<T, $Res>;
+  factory _$$BanAgentFailImplCopyWith(_$BanAgentFailImpl<T> value,
+          $Res Function(_$BanAgentFailImpl<T>) then) =
+      __$$BanAgentFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -2425,23 +2356,20 @@ class __$$BanAgentFailImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$BanAgentFailImpl<T>>
     implements _$$BanAgentFailImplCopyWith<T, $Res> {
   __$$BanAgentFailImplCopyWithImpl(
-    _$BanAgentFailImpl<T> _value,
-    $Res Function(_$BanAgentFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$BanAgentFailImpl<T> _value, $Res Function(_$BanAgentFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$BanAgentFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$BanAgentFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -2469,16 +2397,12 @@ class _$BanAgentFailImpl<T> implements BanAgentFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BanAgentFailImplCopyWith<T, _$BanAgentFailImpl<T>> get copyWith =>
       __$$BanAgentFailImplCopyWithImpl<T, _$BanAgentFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2579,17 +2503,17 @@ class _$BanAgentFailImpl<T> implements BanAgentFail<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return banAgentFail(this);
   }
@@ -2611,17 +2535,17 @@ class _$BanAgentFailImpl<T> implements BanAgentFail<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return banAgentFail?.call(this);
   }
@@ -2643,15 +2567,15 @@ class _$BanAgentFailImpl<T> implements BanAgentFail<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -2666,20 +2590,16 @@ abstract class BanAgentFail<T> implements AgentsState<T> {
   const factory BanAgentFail(final ApiErrorModel error) = _$BanAgentFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BanAgentFailImplCopyWith<T, _$BanAgentFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetAllOrdersSuccessImplCopyWith<T, $Res> {
-  factory _$$GetAllOrdersSuccessImplCopyWith(
-    _$GetAllOrdersSuccessImpl<T> value,
-    $Res Function(_$GetAllOrdersSuccessImpl<T>) then,
-  ) = __$$GetAllOrdersSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$GetAllOrdersSuccessImplCopyWith(_$GetAllOrdersSuccessImpl<T> value,
+          $Res Function(_$GetAllOrdersSuccessImpl<T>) then) =
+      __$$GetAllOrdersSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -2688,24 +2608,21 @@ abstract class _$$GetAllOrdersSuccessImplCopyWith<T, $Res> {
 class __$$GetAllOrdersSuccessImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$GetAllOrdersSuccessImpl<T>>
     implements _$$GetAllOrdersSuccessImplCopyWith<T, $Res> {
-  __$$GetAllOrdersSuccessImplCopyWithImpl(
-    _$GetAllOrdersSuccessImpl<T> _value,
-    $Res Function(_$GetAllOrdersSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetAllOrdersSuccessImplCopyWithImpl(_$GetAllOrdersSuccessImpl<T> _value,
+      $Res Function(_$GetAllOrdersSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetAllOrdersSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetAllOrdersSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -2734,17 +2651,12 @@ class _$GetAllOrdersSuccessImpl<T> implements GetAllOrdersSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAllOrdersSuccessImplCopyWith<T, _$GetAllOrdersSuccessImpl<T>>
-  get copyWith =>
-      __$$GetAllOrdersSuccessImplCopyWithImpl<T, _$GetAllOrdersSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$GetAllOrdersSuccessImplCopyWithImpl<T,
+          _$GetAllOrdersSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2845,17 +2757,17 @@ class _$GetAllOrdersSuccessImpl<T> implements GetAllOrdersSuccess<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersSuccess(this);
   }
@@ -2877,17 +2789,17 @@ class _$GetAllOrdersSuccessImpl<T> implements GetAllOrdersSuccess<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersSuccess?.call(this);
   }
@@ -2909,15 +2821,15 @@ class _$GetAllOrdersSuccessImpl<T> implements GetAllOrdersSuccess<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -2933,33 +2845,25 @@ abstract class GetAllOrdersSuccess<T> implements AgentsState<T> {
       _$GetAllOrdersSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetAllOrdersSuccessImplCopyWith<T, _$GetAllOrdersSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetAllOrdersLoadingImplCopyWith<T, $Res> {
-  factory _$$GetAllOrdersLoadingImplCopyWith(
-    _$GetAllOrdersLoadingImpl<T> value,
-    $Res Function(_$GetAllOrdersLoadingImpl<T>) then,
-  ) = __$$GetAllOrdersLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$GetAllOrdersLoadingImplCopyWith(_$GetAllOrdersLoadingImpl<T> value,
+          $Res Function(_$GetAllOrdersLoadingImpl<T>) then) =
+      __$$GetAllOrdersLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetAllOrdersLoadingImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$GetAllOrdersLoadingImpl<T>>
     implements _$$GetAllOrdersLoadingImplCopyWith<T, $Res> {
-  __$$GetAllOrdersLoadingImplCopyWithImpl(
-    _$GetAllOrdersLoadingImpl<T> _value,
-    $Res Function(_$GetAllOrdersLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$GetAllOrdersLoadingImplCopyWithImpl(_$GetAllOrdersLoadingImpl<T> _value,
+      $Res Function(_$GetAllOrdersLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -3081,17 +2985,17 @@ class _$GetAllOrdersLoadingImpl<T> implements GetAllOrdersLoading<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersLoading(this);
   }
@@ -3113,17 +3017,17 @@ class _$GetAllOrdersLoadingImpl<T> implements GetAllOrdersLoading<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersLoading?.call(this);
   }
@@ -3145,15 +3049,15 @@ class _$GetAllOrdersLoadingImpl<T> implements GetAllOrdersLoading<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -3170,10 +3074,9 @@ abstract class GetAllOrdersLoading<T> implements AgentsState<T> {
 
 /// @nodoc
 abstract class _$$GetAllOrdersFailImplCopyWith<T, $Res> {
-  factory _$$GetAllOrdersFailImplCopyWith(
-    _$GetAllOrdersFailImpl<T> value,
-    $Res Function(_$GetAllOrdersFailImpl<T>) then,
-  ) = __$$GetAllOrdersFailImplCopyWithImpl<T, $Res>;
+  factory _$$GetAllOrdersFailImplCopyWith(_$GetAllOrdersFailImpl<T> value,
+          $Res Function(_$GetAllOrdersFailImpl<T>) then) =
+      __$$GetAllOrdersFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -3182,24 +3085,21 @@ abstract class _$$GetAllOrdersFailImplCopyWith<T, $Res> {
 class __$$GetAllOrdersFailImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$GetAllOrdersFailImpl<T>>
     implements _$$GetAllOrdersFailImplCopyWith<T, $Res> {
-  __$$GetAllOrdersFailImplCopyWithImpl(
-    _$GetAllOrdersFailImpl<T> _value,
-    $Res Function(_$GetAllOrdersFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetAllOrdersFailImplCopyWithImpl(_$GetAllOrdersFailImpl<T> _value,
+      $Res Function(_$GetAllOrdersFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetAllOrdersFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetAllOrdersFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3227,16 +3127,12 @@ class _$GetAllOrdersFailImpl<T> implements GetAllOrdersFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAllOrdersFailImplCopyWith<T, _$GetAllOrdersFailImpl<T>> get copyWith =>
       __$$GetAllOrdersFailImplCopyWithImpl<T, _$GetAllOrdersFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3337,17 +3233,17 @@ class _$GetAllOrdersFailImpl<T> implements GetAllOrdersFail<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersFail(this);
   }
@@ -3369,17 +3265,17 @@ class _$GetAllOrdersFailImpl<T> implements GetAllOrdersFail<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersFail?.call(this);
   }
@@ -3401,15 +3297,15 @@ class _$GetAllOrdersFailImpl<T> implements GetAllOrdersFail<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -3425,10 +3321,7 @@ abstract class GetAllOrdersFail<T> implements AgentsState<T> {
       _$GetAllOrdersFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetAllOrdersFailImplCopyWith<T, _$GetAllOrdersFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3436,40 +3329,34 @@ abstract class GetAllOrdersFail<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$GetAllOrdersEachAgentSuccessImplCopyWith<T, $Res> {
   factory _$$GetAllOrdersEachAgentSuccessImplCopyWith(
-    _$GetAllOrdersEachAgentSuccessImpl<T> value,
-    $Res Function(_$GetAllOrdersEachAgentSuccessImpl<T>) then,
-  ) = __$$GetAllOrdersEachAgentSuccessImplCopyWithImpl<T, $Res>;
+          _$GetAllOrdersEachAgentSuccessImpl<T> value,
+          $Res Function(_$GetAllOrdersEachAgentSuccessImpl<T>) then) =
+      __$$GetAllOrdersEachAgentSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$GetAllOrdersEachAgentSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentsStateCopyWithImpl<
-          T,
-          $Res,
-          _$GetAllOrdersEachAgentSuccessImpl<T>
-        >
+    extends _$AgentsStateCopyWithImpl<T, $Res,
+        _$GetAllOrdersEachAgentSuccessImpl<T>>
     implements _$$GetAllOrdersEachAgentSuccessImplCopyWith<T, $Res> {
   __$$GetAllOrdersEachAgentSuccessImplCopyWithImpl(
-    _$GetAllOrdersEachAgentSuccessImpl<T> _value,
-    $Res Function(_$GetAllOrdersEachAgentSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetAllOrdersEachAgentSuccessImpl<T> _value,
+      $Res Function(_$GetAllOrdersEachAgentSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetAllOrdersEachAgentSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetAllOrdersEachAgentSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -3499,19 +3386,13 @@ class _$GetAllOrdersEachAgentSuccessImpl<T>
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetAllOrdersEachAgentSuccessImplCopyWith<
-    T,
-    _$GetAllOrdersEachAgentSuccessImpl<T>
-  >
-  get copyWith => __$$GetAllOrdersEachAgentSuccessImplCopyWithImpl<
-    T,
-    _$GetAllOrdersEachAgentSuccessImpl<T>
-  >(this, _$identity);
+  _$$GetAllOrdersEachAgentSuccessImplCopyWith<T,
+          _$GetAllOrdersEachAgentSuccessImpl<T>>
+      get copyWith => __$$GetAllOrdersEachAgentSuccessImplCopyWithImpl<T,
+          _$GetAllOrdersEachAgentSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3612,17 +3493,17 @@ class _$GetAllOrdersEachAgentSuccessImpl<T>
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersEachAgentSuccess(this);
   }
@@ -3644,17 +3525,17 @@ class _$GetAllOrdersEachAgentSuccessImpl<T>
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersEachAgentSuccess?.call(this);
   }
@@ -3676,15 +3557,15 @@ class _$GetAllOrdersEachAgentSuccessImpl<T>
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -3700,41 +3581,29 @@ abstract class GetAllOrdersEachAgentSuccess<T> implements AgentsState<T> {
       _$GetAllOrdersEachAgentSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetAllOrdersEachAgentSuccessImplCopyWith<
-    T,
-    _$GetAllOrdersEachAgentSuccessImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$GetAllOrdersEachAgentSuccessImplCopyWith<T,
+          _$GetAllOrdersEachAgentSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetAllOrdersEachAgentLoadingImplCopyWith<T, $Res> {
   factory _$$GetAllOrdersEachAgentLoadingImplCopyWith(
-    _$GetAllOrdersEachAgentLoadingImpl<T> value,
-    $Res Function(_$GetAllOrdersEachAgentLoadingImpl<T>) then,
-  ) = __$$GetAllOrdersEachAgentLoadingImplCopyWithImpl<T, $Res>;
+          _$GetAllOrdersEachAgentLoadingImpl<T> value,
+          $Res Function(_$GetAllOrdersEachAgentLoadingImpl<T>) then) =
+      __$$GetAllOrdersEachAgentLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetAllOrdersEachAgentLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentsStateCopyWithImpl<
-          T,
-          $Res,
-          _$GetAllOrdersEachAgentLoadingImpl<T>
-        >
+    extends _$AgentsStateCopyWithImpl<T, $Res,
+        _$GetAllOrdersEachAgentLoadingImpl<T>>
     implements _$$GetAllOrdersEachAgentLoadingImplCopyWith<T, $Res> {
   __$$GetAllOrdersEachAgentLoadingImplCopyWithImpl(
-    _$GetAllOrdersEachAgentLoadingImpl<T> _value,
-    $Res Function(_$GetAllOrdersEachAgentLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+      _$GetAllOrdersEachAgentLoadingImpl<T> _value,
+      $Res Function(_$GetAllOrdersEachAgentLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -3857,17 +3726,17 @@ class _$GetAllOrdersEachAgentLoadingImpl<T>
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersEachAgentLoading(this);
   }
@@ -3889,17 +3758,17 @@ class _$GetAllOrdersEachAgentLoadingImpl<T>
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersEachAgentLoading?.call(this);
   }
@@ -3921,15 +3790,15 @@ class _$GetAllOrdersEachAgentLoadingImpl<T>
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -3948,36 +3817,34 @@ abstract class GetAllOrdersEachAgentLoading<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$GetAllOrdersEachAgentFailImplCopyWith<T, $Res> {
   factory _$$GetAllOrdersEachAgentFailImplCopyWith(
-    _$GetAllOrdersEachAgentFailImpl<T> value,
-    $Res Function(_$GetAllOrdersEachAgentFailImpl<T>) then,
-  ) = __$$GetAllOrdersEachAgentFailImplCopyWithImpl<T, $Res>;
+          _$GetAllOrdersEachAgentFailImpl<T> value,
+          $Res Function(_$GetAllOrdersEachAgentFailImpl<T>) then) =
+      __$$GetAllOrdersEachAgentFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
 
 /// @nodoc
 class __$$GetAllOrdersEachAgentFailImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentsStateCopyWithImpl<T, $Res, _$GetAllOrdersEachAgentFailImpl<T>>
+    extends _$AgentsStateCopyWithImpl<T, $Res,
+        _$GetAllOrdersEachAgentFailImpl<T>>
     implements _$$GetAllOrdersEachAgentFailImplCopyWith<T, $Res> {
   __$$GetAllOrdersEachAgentFailImplCopyWithImpl(
-    _$GetAllOrdersEachAgentFailImpl<T> _value,
-    $Res Function(_$GetAllOrdersEachAgentFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetAllOrdersEachAgentFailImpl<T> _value,
+      $Res Function(_$GetAllOrdersEachAgentFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetAllOrdersEachAgentFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetAllOrdersEachAgentFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -4006,19 +3873,13 @@ class _$GetAllOrdersEachAgentFailImpl<T>
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetAllOrdersEachAgentFailImplCopyWith<
-    T,
-    _$GetAllOrdersEachAgentFailImpl<T>
-  >
-  get copyWith => __$$GetAllOrdersEachAgentFailImplCopyWithImpl<
-    T,
-    _$GetAllOrdersEachAgentFailImpl<T>
-  >(this, _$identity);
+  _$$GetAllOrdersEachAgentFailImplCopyWith<T,
+          _$GetAllOrdersEachAgentFailImpl<T>>
+      get copyWith => __$$GetAllOrdersEachAgentFailImplCopyWithImpl<T,
+          _$GetAllOrdersEachAgentFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4119,17 +3980,17 @@ class _$GetAllOrdersEachAgentFailImpl<T>
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersEachAgentFail(this);
   }
@@ -4151,17 +4012,17 @@ class _$GetAllOrdersEachAgentFailImpl<T>
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getAllOrdersEachAgentFail?.call(this);
   }
@@ -4183,15 +4044,15 @@ class _$GetAllOrdersEachAgentFailImpl<T>
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -4207,50 +4068,43 @@ abstract class GetAllOrdersEachAgentFail<T> implements AgentsState<T> {
       _$GetAllOrdersEachAgentFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetAllOrdersEachAgentFailImplCopyWith<
-    T,
-    _$GetAllOrdersEachAgentFailImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$GetAllOrdersEachAgentFailImplCopyWith<T,
+          _$GetAllOrdersEachAgentFailImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetEachOrderDetailsSuccessImplCopyWith<T, $Res> {
   factory _$$GetEachOrderDetailsSuccessImplCopyWith(
-    _$GetEachOrderDetailsSuccessImpl<T> value,
-    $Res Function(_$GetEachOrderDetailsSuccessImpl<T>) then,
-  ) = __$$GetEachOrderDetailsSuccessImplCopyWithImpl<T, $Res>;
+          _$GetEachOrderDetailsSuccessImpl<T> value,
+          $Res Function(_$GetEachOrderDetailsSuccessImpl<T>) then) =
+      __$$GetEachOrderDetailsSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$GetEachOrderDetailsSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentsStateCopyWithImpl<T, $Res, _$GetEachOrderDetailsSuccessImpl<T>>
+    extends _$AgentsStateCopyWithImpl<T, $Res,
+        _$GetEachOrderDetailsSuccessImpl<T>>
     implements _$$GetEachOrderDetailsSuccessImplCopyWith<T, $Res> {
   __$$GetEachOrderDetailsSuccessImplCopyWithImpl(
-    _$GetEachOrderDetailsSuccessImpl<T> _value,
-    $Res Function(_$GetEachOrderDetailsSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetEachOrderDetailsSuccessImpl<T> _value,
+      $Res Function(_$GetEachOrderDetailsSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetEachOrderDetailsSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetEachOrderDetailsSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -4280,19 +4134,13 @@ class _$GetEachOrderDetailsSuccessImpl<T>
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetEachOrderDetailsSuccessImplCopyWith<
-    T,
-    _$GetEachOrderDetailsSuccessImpl<T>
-  >
-  get copyWith => __$$GetEachOrderDetailsSuccessImplCopyWithImpl<
-    T,
-    _$GetEachOrderDetailsSuccessImpl<T>
-  >(this, _$identity);
+  _$$GetEachOrderDetailsSuccessImplCopyWith<T,
+          _$GetEachOrderDetailsSuccessImpl<T>>
+      get copyWith => __$$GetEachOrderDetailsSuccessImplCopyWithImpl<T,
+          _$GetEachOrderDetailsSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4393,17 +4241,17 @@ class _$GetEachOrderDetailsSuccessImpl<T>
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getEachOrderDetailsSuccess(this);
   }
@@ -4425,17 +4273,17 @@ class _$GetEachOrderDetailsSuccessImpl<T>
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getEachOrderDetailsSuccess?.call(this);
   }
@@ -4457,15 +4305,15 @@ class _$GetEachOrderDetailsSuccessImpl<T>
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -4481,37 +4329,29 @@ abstract class GetEachOrderDetailsSuccess<T> implements AgentsState<T> {
       _$GetEachOrderDetailsSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetEachOrderDetailsSuccessImplCopyWith<
-    T,
-    _$GetEachOrderDetailsSuccessImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$GetEachOrderDetailsSuccessImplCopyWith<T,
+          _$GetEachOrderDetailsSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetEachOrderDetailsLoadingImplCopyWith<T, $Res> {
   factory _$$GetEachOrderDetailsLoadingImplCopyWith(
-    _$GetEachOrderDetailsLoadingImpl<T> value,
-    $Res Function(_$GetEachOrderDetailsLoadingImpl<T>) then,
-  ) = __$$GetEachOrderDetailsLoadingImplCopyWithImpl<T, $Res>;
+          _$GetEachOrderDetailsLoadingImpl<T> value,
+          $Res Function(_$GetEachOrderDetailsLoadingImpl<T>) then) =
+      __$$GetEachOrderDetailsLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetEachOrderDetailsLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$AgentsStateCopyWithImpl<T, $Res, _$GetEachOrderDetailsLoadingImpl<T>>
+    extends _$AgentsStateCopyWithImpl<T, $Res,
+        _$GetEachOrderDetailsLoadingImpl<T>>
     implements _$$GetEachOrderDetailsLoadingImplCopyWith<T, $Res> {
   __$$GetEachOrderDetailsLoadingImplCopyWithImpl(
-    _$GetEachOrderDetailsLoadingImpl<T> _value,
-    $Res Function(_$GetEachOrderDetailsLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
+      _$GetEachOrderDetailsLoadingImpl<T> _value,
+      $Res Function(_$GetEachOrderDetailsLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -4634,17 +4474,17 @@ class _$GetEachOrderDetailsLoadingImpl<T>
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getEachOrderDetailsLoading(this);
   }
@@ -4666,17 +4506,17 @@ class _$GetEachOrderDetailsLoadingImpl<T>
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getEachOrderDetailsLoading?.call(this);
   }
@@ -4698,15 +4538,15 @@ class _$GetEachOrderDetailsLoadingImpl<T>
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -4725,9 +4565,9 @@ abstract class GetEachOrderDetailsLoading<T> implements AgentsState<T> {
 /// @nodoc
 abstract class _$$GetEachOrderDetailsFailImplCopyWith<T, $Res> {
   factory _$$GetEachOrderDetailsFailImplCopyWith(
-    _$GetEachOrderDetailsFailImpl<T> value,
-    $Res Function(_$GetEachOrderDetailsFailImpl<T>) then,
-  ) = __$$GetEachOrderDetailsFailImplCopyWithImpl<T, $Res>;
+          _$GetEachOrderDetailsFailImpl<T> value,
+          $Res Function(_$GetEachOrderDetailsFailImpl<T>) then) =
+      __$$GetEachOrderDetailsFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -4737,23 +4577,21 @@ class __$$GetEachOrderDetailsFailImplCopyWithImpl<T, $Res>
     extends _$AgentsStateCopyWithImpl<T, $Res, _$GetEachOrderDetailsFailImpl<T>>
     implements _$$GetEachOrderDetailsFailImplCopyWith<T, $Res> {
   __$$GetEachOrderDetailsFailImplCopyWithImpl(
-    _$GetEachOrderDetailsFailImpl<T> _value,
-    $Res Function(_$GetEachOrderDetailsFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$GetEachOrderDetailsFailImpl<T> _value,
+      $Res Function(_$GetEachOrderDetailsFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetEachOrderDetailsFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetEachOrderDetailsFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -4781,16 +4619,12 @@ class _$GetEachOrderDetailsFailImpl<T> implements GetEachOrderDetailsFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetEachOrderDetailsFailImplCopyWith<T, _$GetEachOrderDetailsFailImpl<T>>
-  get copyWith => __$$GetEachOrderDetailsFailImplCopyWithImpl<
-    T,
-    _$GetEachOrderDetailsFailImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$GetEachOrderDetailsFailImplCopyWithImpl<T,
+          _$GetEachOrderDetailsFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4891,17 +4725,17 @@ class _$GetEachOrderDetailsFailImpl<T> implements GetEachOrderDetailsFail<T> {
     required TResult Function(GetAllOrdersLoading<T> value) getAllOrdersLoading,
     required TResult Function(GetAllOrdersFail<T> value) getAllOrdersFail,
     required TResult Function(GetAllOrdersEachAgentSuccess<T> value)
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     required TResult Function(GetAllOrdersEachAgentLoading<T> value)
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     required TResult Function(GetAllOrdersEachAgentFail<T> value)
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     required TResult Function(GetEachOrderDetailsSuccess<T> value)
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     required TResult Function(GetEachOrderDetailsLoading<T> value)
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     required TResult Function(GetEachOrderDetailsFail<T> value)
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getEachOrderDetailsFail(this);
   }
@@ -4923,17 +4757,17 @@ class _$GetEachOrderDetailsFailImpl<T> implements GetEachOrderDetailsFail<T> {
     TResult? Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult? Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult? Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult? Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult? Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult? Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult? Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult? Function(GetEachOrderDetailsFail<T> value)?
-    getEachOrderDetailsFail,
+        getEachOrderDetailsFail,
   }) {
     return getEachOrderDetailsFail?.call(this);
   }
@@ -4955,15 +4789,15 @@ class _$GetEachOrderDetailsFailImpl<T> implements GetEachOrderDetailsFail<T> {
     TResult Function(GetAllOrdersLoading<T> value)? getAllOrdersLoading,
     TResult Function(GetAllOrdersFail<T> value)? getAllOrdersFail,
     TResult Function(GetAllOrdersEachAgentSuccess<T> value)?
-    getAllOrdersEachAgentSuccess,
+        getAllOrdersEachAgentSuccess,
     TResult Function(GetAllOrdersEachAgentLoading<T> value)?
-    getAllOrdersEachAgentLoading,
+        getAllOrdersEachAgentLoading,
     TResult Function(GetAllOrdersEachAgentFail<T> value)?
-    getAllOrdersEachAgentFail,
+        getAllOrdersEachAgentFail,
     TResult Function(GetEachOrderDetailsSuccess<T> value)?
-    getEachOrderDetailsSuccess,
+        getEachOrderDetailsSuccess,
     TResult Function(GetEachOrderDetailsLoading<T> value)?
-    getEachOrderDetailsLoading,
+        getEachOrderDetailsLoading,
     TResult Function(GetEachOrderDetailsFail<T> value)? getEachOrderDetailsFail,
     required TResult orElse(),
   }) {
@@ -4979,10 +4813,7 @@ abstract class GetEachOrderDetailsFail<T> implements AgentsState<T> {
       _$GetEachOrderDetailsFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of AgentsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetEachOrderDetailsFailImplCopyWith<T, _$GetEachOrderDetailsFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

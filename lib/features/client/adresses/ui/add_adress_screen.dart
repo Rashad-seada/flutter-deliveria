@@ -16,6 +16,7 @@ import 'package:delveria/features/client/adresses/ui/widgets/save_changes_and_di
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class AddAddressScreen extends StatefulWidget {
@@ -31,7 +32,8 @@ class AddAddressScreen extends StatefulWidget {
 class _AddAddressScreenState extends State<AddAddressScreen> {
   LatLng? _selectedLocation;
   String _selectedAddress = "No location selected";
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>(); 
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  
   @override
   void initState() {
     super.initState();
@@ -66,8 +68,6 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
 
       final cubit = context.read<AddressCubit>();
 
-      // cubit.state.titleController.text = _selectedAddress;
-
       if (_selectedLocation != null) {
         cubit.state.linkController.text =
             '${_selectedLocation!.latitude.toStringAsFixed(6)},${_selectedLocation!.longitude.toStringAsFixed(6)}';
@@ -79,9 +79,21 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     }
   }
 
+  void _removeLocation() {
+    setState(() {
+      _selectedLocation = null;
+      _selectedAddress = "No location selected";
+    });
+    
+    final cubit = context.read<AddressCubit>();
+    cubit.state.linkController.clear();
+    cubit.updateLatLong(0.0, 0.0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: ArrowBackAppBarWithTitle(
@@ -100,60 +112,74 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
-        child: BlocBuilder<AddressCubit, AddressState>(
-          builder: (context, state) {
-            return Column(
-              spacing: 5,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  AppStrings.addressTitle.tr(),
-                  style: TextStyles.bimini16W400Body,
-                ),
-                verticalSpace(10),
-                AddressTitleTextField(titleController: state.titleController),
-                SizedBox(height: 24),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
+          child: BlocBuilder<AddressCubit, AddressState>(
+            builder: (context, state) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                   _buildSectionTitle(AppStrings.addressTitle.tr(), Icons.label_outline),
+                  verticalSpace(12),
+                  AddressTitleTextField(titleController: state.titleController),
+                  verticalSpace(24),
 
-                verticalSpace(8),
-                MobileNumberTextField(
-                  selectedCountryCode: state.selectedCountryCode,
-                  phoneController: state.phoneController,
-                ),
-                verticalSpace(24),
-                Text(
-                  AppStrings.detailedAddress.tr(),
-                  style: TextStyles.bimini16W400Body,
-                ),
-                verticalSpace(8),
-                DetailsAdressTextField(
-                  detailsController: state.detailsController,
-                ),
-                verticalSpace(24),
-                Text(
-                  AppStrings.linkAddressText.tr(),
-                  style: TextStyles.bimini16W400Body,
-                ),
-                SizedBox(height: 8),
+                  _buildSectionTitle("Contact Info", Icons.phone_android_outlined),
+                  verticalSpace(12),
+                  MobileNumberTextField(
+                    selectedCountryCode: state.selectedCountryCode,
+                    phoneController: state.phoneController,
+                  ),
+                  verticalSpace(24),
 
-                LinkAddressTextField(
-                  addressLinkController: state.linkController,
-                ),
-                verticalSpace(20),
+                  _buildSectionTitle(AppStrings.detailedAddress.tr(), Icons.location_city_outlined),
+                  verticalSpace(12),
+                  DetailsAdressTextField(
+                    detailsController: state.detailsController,
+                  ),
+                  verticalSpace(24),
 
-                LocationOnMapButton(onPressed: _pickLocation),
-                verticalSpace(40),
+                  // Hidden link field - still functional but not visible
+                  // The link is automatically populated when location is picked
+                  Offstage(
+                    offstage: true,
+                    child: LinkAddressTextField(
+                      addressLinkController: state.linkController,
+                    ),
+                  ),
+                  
+                  _buildSectionTitle(AppStrings.location.tr(), Icons.location_on_outlined),
+                  verticalSpace(12),
+                  LocationOnMapButton(
+                    onPressed: _pickLocation,
+                    hasLocation: _selectedLocation != null,
+                    locationAddress: _selectedAddress != "No location selected" ? _selectedAddress : null,
+                    onRemove: _removeLocation,
+                  ),
+                  verticalSpace(40),
 
-                // SwitchRow(state: state),
-                SizedBox(height: 40),
-
-                SaveChangesAndDiscaredBtn(widget: widget, state: state),
-              ],
-            );
-          },
+                  SaveChangesAndDiscaredBtn(widget: widget, state: state),
+                  verticalSpace(20),
+                ],
+              );
+            },
+          ),
         ),
       ),
+    );
+  }
+
+  Widget _buildSectionTitle(String title, IconData icon) {
+    return Row(
+      children: [
+        Icon(icon, size: 18.sp, color: AppColors.primaryDeafult),
+        horizontalSpace(8),
+        Text(
+          title,
+          style: TextStyles.bimini16W700.copyWith(color: Colors.black87),
+        ),
+      ],
     );
   }
 }

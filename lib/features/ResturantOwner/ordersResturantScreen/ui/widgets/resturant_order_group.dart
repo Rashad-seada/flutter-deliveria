@@ -31,6 +31,9 @@ class RestaurantOrderGroup extends StatelessWidget {
   }
 
   Widget _buildRestaurantHeader(String name, String logo) {
+    final branchName = _getBranchName(restaurantOrder);
+    final branchAddress = _getBranchAddress(restaurantOrder);
+
     return Row(
       children: [
         if (logo.isNotEmpty)
@@ -51,13 +54,52 @@ class RestaurantOrderGroup extends StatelessWidget {
               ),
             ),
           ),
-        SizedBox(
-          width: 200.w,
-          child: Text(
-            name,
-            style: TextStyles.bimini18W700.copyWith(
-              color: AppColors.primaryDeafult,
-            ),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                name,
+                style: TextStyles.bimini18W700.copyWith(
+                  color: AppColors.primaryDeafult,
+                ),
+              ),
+              if (branchName != null && branchName.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.store_outlined, size: 14.sp, color: Colors.grey.shade600),
+                      SizedBox(width: 4.w),
+                      Expanded(
+                        child: Text(
+                          branchName,
+                          style: TextStyles.bimini14W500.copyWith(color: Colors.grey.shade600),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              if (branchAddress != null && branchAddress.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 2.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.location_on_outlined, size: 14.sp, color: Colors.grey.shade500),
+                      SizedBox(width: 4.w),
+                      Expanded(
+                        child: Text(
+                          branchAddress,
+                          style: TextStyles.bimini12W500.copyWith(color: Colors.grey.shade500),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+            ],
           ),
         ),
       ],
@@ -85,5 +127,37 @@ class RestaurantOrderGroup extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  /// Safely access branch name from either branchId (restaurant model) or branch (agent model)
+  String? _getBranchName(dynamic restaurantOrder) {
+    try {
+      // Try agent model field 'branch' first
+      final branch = restaurantOrder.branch;
+      if (branch != null) {
+        return branch.displayName ?? branch.branchName ?? branch.name;
+      }
+    } catch (_) {}
+    try {
+      // Fallback to restaurant model field 'branchId'
+      final branchId = restaurantOrder.branchId;
+      if (branchId != null) {
+        return branchId.branchName ?? branchId.name;
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  /// Safely access branch address from either branchId or branch
+  String? _getBranchAddress(dynamic restaurantOrder) {
+    try {
+      final branch = restaurantOrder.branch;
+      if (branch != null) return branch.address;
+    } catch (_) {}
+    try {
+      final branchId = restaurantOrder.branchId;
+      if (branchId != null) return branchId.address;
+    } catch (_) {}
+    return null;
   }
 }

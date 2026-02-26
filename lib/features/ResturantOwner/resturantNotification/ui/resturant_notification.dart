@@ -107,7 +107,7 @@ class _ResturantNotificationState extends State<ResturantNotification> {
     String? lastDateLabel;
 
     for (var notification in paginatedNotifications) {
-      final createdAt = DateTime.tryParse(notification.createdAt);
+      final createdAt = DateTime.tryParse(notification.createdAt ?? "");
       if (createdAt == null) continue;
       final dateLabel = _getDateLabel(createdAt);
 
@@ -164,9 +164,9 @@ class _ResturantNotificationState extends State<ResturantNotification> {
                   // Sort notifications from newest to oldest
                   notifications.sort((a, b) {
                     final aDate =
-                        DateTime.tryParse(a.createdAt) ?? DateTime(1970);
+                        DateTime.tryParse(a.createdAt ?? "") ?? DateTime(1970);
                     final bDate =
-                        DateTime.tryParse(b.createdAt) ?? DateTime(1970);
+                        DateTime.tryParse(b.createdAt ?? "") ?? DateTime(1970);
                     return bDate.compareTo(aDate);
                   });
 
@@ -211,8 +211,8 @@ class _ResturantNotificationState extends State<ResturantNotification> {
                           children: [
                             verticalSpace(10),
                             NotificationItem(
-                              name: notification.senderName,
-                              action: notification.message,
+                              name: notification.senderName ?? "Deliveria",
+                              action: notification.message ?? "",
                               time: formatDate(notification.createdAt),
                             ),
                             verticalSpace(10),

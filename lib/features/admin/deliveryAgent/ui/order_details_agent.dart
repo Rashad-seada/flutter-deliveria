@@ -126,6 +126,44 @@ verticalSpace(10),                  Row(
                     ),
                   ),
                   const SizedBox(height: 16),
+                  // Show branch info for each sub-order
+                  ...order.orders.map((restOrder) {
+                    final branch = restOrder.branch;
+                    if (branch != null && (branch.displayName.isNotEmpty || (branch.address ?? '').isNotEmpty)) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 12.h),
+                        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
+                        decoration: BoxDecoration(
+                          color: AppColors.primaryDeafult.withOpacity(0.08),
+                          borderRadius: BorderRadius.circular(8.r),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.store_outlined, size: 18.sp, color: AppColors.primaryDeafult),
+                            SizedBox(width: 8.w),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  if (branch.displayName.isNotEmpty)
+                                    Text(
+                                      branch.displayName,
+                                      style: TextStyles.bimini14W700.copyWith(color: AppColors.primaryDeafult),
+                                    ),
+                                  if (branch.address != null && branch.address!.isNotEmpty)
+                                    Text(
+                                      branch.address!,
+                                      style: TextStyles.bimini12W500.copyWith(color: Colors.grey.shade600),
+                                    ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    }
+                    return const SizedBox.shrink();
+                  }),
                   ...order.orders.expand((restOrder) {
                     return [
                       ...restOrder.items.map((item) {
@@ -141,9 +179,44 @@ verticalSpace(10),                  Row(
                               color: Colors.grey[100],
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                            child: Stack(
                               children: [
+                                if (sizeDetails.priceBefore != null && sizeDetails.priceAfter != null)
+                                  Builder(
+                                    builder: (context) {
+                                      final double before = double.tryParse(sizeDetails.priceBefore.toString()) ?? 0;
+                                      final double after = double.tryParse(sizeDetails.priceAfter.toString()) ?? 0;
+                                      if (before > after && before > 0) {
+                                        final int percentage = ((before - after) / before * 100).round();
+                                        return Positioned(
+                                          top: 0,
+                                          left: 0, // English LTR
+                                          child: Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                            decoration: const BoxDecoration(
+                                              color: Colors.red,
+                                              borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(8),
+                                                bottomRight: Radius.circular(8),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              "$percentage% OFF", // Or "خصم" for Arabic if desired
+                                              style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      return const SizedBox.shrink();
+                                    },
+                                  ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
                                 Text(
                                   itemDetails.name ?? '',
                                   style: TextStyles.bimini16W700,
@@ -191,7 +264,9 @@ verticalSpace(10),                  Row(
                                 ),
                               ],
                             ),
-                          ),
+                          ],
+                        ),
+                      ),
                         );
                       }),
                     ];

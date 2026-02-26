@@ -13,4 +13,7 @@ SignUpResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SignUpResponseToJson(SignUpResponse instance) =>
-    <String, dynamic>{'success': instance.success, 'message': instance.message};
+    <String, dynamic>{
+      'success': instance.success,
+      'message': instance.message,
+    };

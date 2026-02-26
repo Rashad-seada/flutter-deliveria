@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RatingText extends StatelessWidget {
-  const RatingText({super.key, required this.totalText});
+  const RatingText({super.key, required this.totalText, required this.rating});
   final String totalText;
+  final String rating;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class RatingText extends StatelessWidget {
         Icon(Icons.star, color: AppColors.primaryDeafult, size: 25.sp),
         SizedBox(width: 4),
         Text(
-          '4.8',
+          rating,
           style: TextStyles.bimini16W700BoldWhite.copyWith(
             color: AppColors.primaryDeafult,
           ),

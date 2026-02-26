@@ -8,18 +8,21 @@ class SystemDataCubit extends Cubit<SystemDataState> {
   SystemDataCubit(this.getSystemDataRepo) : super(SystemDataState.initial());
   bool? isUploaded;
   void getSystemData() async {
-    emit(SystemDataState.loading());
+    if (!isClosed) emit(SystemDataState.loading());
     try {
       final result = await getSystemDataRepo.getSystemData();
+      if (isClosed) return;
       result.when(
         success: (data) {
           isUploaded = data.response?.isUploaded;
-          emit(SystemDataState.success());
+          if (!isClosed) emit(SystemDataState.success());
         },
-        failure: (error) => emit(SystemDataState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(SystemDataState.fail(error));
+        },
       );
     } catch (e) {
-      emit(SystemDataState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(SystemDataState.fail(ApiErrorHandler.handle(e)));
     }
   }
 }

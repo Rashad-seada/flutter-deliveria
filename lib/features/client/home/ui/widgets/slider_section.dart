@@ -1,6 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:delveria/core/di/dependancy_injection.dart';
+import 'package:delveria/features/client/home/data/models/best_sellers_response.dart' hide Coordinates;
+import 'package:delveria/features/client/home/data/models/get_nearby_response.dart' hide Coordinates;
+import 'package:delveria/features/client/home/data/models/offers_response.dart';
+
 import 'package:delveria/core/network/api_constants.dart';
 import 'package:delveria/core/theme/animations.dart';
 import 'package:delveria/features/ResturantOwner/menu/logic/cubit/item_cubit.dart';
@@ -28,12 +32,10 @@ class SliderSection extends StatelessWidget {
   const SliderSection({
     super.key,
     required this.state,
-    required this.resId,
     required this.resturantAdmin,
   });
 
   final CarouselState state;
-  final String resId;
   final List<ResturantAdmin> resturantAdmin;
 
   @override
@@ -63,7 +65,6 @@ class SliderSection extends StatelessWidget {
                 key: ValueKey(sliders[index].id ?? index),
                 slider: sliders[index],
                 isActive: state.currentPage == index,
-                resId: resId,
                 resturantAdmin: resturantAdmin,
               );
             },
@@ -99,13 +100,11 @@ class _SliderItem extends StatelessWidget {
     super.key,
     required this.slider,
     required this.isActive,
-    required this.resId,
     required this.resturantAdmin,
   });
 
   final dynamic slider;
   final bool isActive;
-  final String resId;
   final List<ResturantAdmin> resturantAdmin;
 
   // Cached static decorations to avoid recreation
@@ -125,10 +124,61 @@ class _SliderItem extends StatelessWidget {
   static const _gradientStops = [0.0, 0.6, 1.0];
 
   void _navigateToRestaurant(BuildContext context) {
-    final restaurant = resturantAdmin.firstWhere(
-      (e) => e.id == slider.restaurantId,
-      orElse: () => resturantAdmin.first,
-    );
+    // Find the restaurant matching the slider's restaurantId
+    ResturantAdmin? restaurant;
+    NearbyRestaurant? nearbyRestaurant;
+
+    // 1. Try to find in the passed list (Admin list)
+    try {
+      restaurant = resturantAdmin.firstWhere(
+        (e) => e.id == slider.restaurantId,
+      );
+    } catch (_) {
+      // Not found in admin list
+    }
+
+    // 2. If not found, try Best Sellers
+    if (restaurant == null) {
+      final slidersCubit = context.read<SlidersCubit>();
+      try {
+        final bestSeller = slidersCubit.bestSellers.firstWhere(
+          (e) => e.id == slider.restaurantId,
+        );
+        restaurant = _mapBestSellerToAdmin(bestSeller);
+      } catch (_) {}
+    }
+
+    // 3. If not found, try Offers
+    if (restaurant == null) {
+      final slidersCubit = context.read<SlidersCubit>();
+      try {
+        final offerRestaurant = slidersCubit.restaurantsWithOffers.firstWhere(
+          (e) => e.id == slider.restaurantId,
+        );
+        restaurant = _mapOfferToAdmin(offerRestaurant);
+      } catch (_) {}
+    }
+
+    // 4. If not found, try Nearby Restaurants
+    if (restaurant == null) {
+      final adminCubit = context.read<AllresturantsadminCubit>();
+      try {
+        nearbyRestaurant = adminCubit.allNearbyResturant.firstWhere(
+          (e) => e.id == slider.restaurantId,
+        );
+      } catch (_) {}
+    }
+
+    // If still not found, we can't navigate effectively
+    if (restaurant == null && nearbyRestaurant == null) {
+      print("⚠️ Restaurant with ID ${slider.restaurantId} not found in any list.");
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Restaurant not found')),
+      );
+      return;
+    }
+
+    final String resId = restaurant?.id ?? nearbyRestaurant?.id ?? '';
 
     Navigator.push(
       context,
@@ -144,9 +194,71 @@ class _SliderItem extends StatelessWidget {
             ),
             BlocProvider(create: (_) => getIt<FavoriteCubit>()),
           ],
-          child: ResturantScreen(resturantAdmin: restaurant),
+          child: ResturantScreen(
+            resturantAdmin: restaurant,
+            nearbyRestaurant: nearbyRestaurant,
+          ),
         ),
       ),
+    );
+  }
+
+  ResturantAdmin _mapBestSellerToAdmin(BestSellerRestaurant restaurant) {
+    return ResturantAdmin(
+      coordinates: Coordinates(
+        latitude: restaurant.coordinates?.latitude ?? 0.0,
+        longitude: restaurant.coordinates?.longitude ?? 0.0,
+      ),
+      id: restaurant.id ?? "",
+      photo: restaurant.photo ?? "",
+      logo: restaurant.logo ?? "",
+      superCategory: [],
+      subCategory: [],
+      name: restaurant.name ?? "",
+      phone: "",
+      aboutUs: restaurant.aboutUs ?? "",
+      rate: restaurant.effectiveRating,
+      reviews: [],
+      deliveryCost: (restaurant.deliveryCost ?? 0).toDouble(),
+      locationMap: "",
+      openHour: restaurant.openHour ?? "",
+      closeHour: restaurant.closeHour ?? "",
+      haveDelivery: restaurant.haveDelivery ?? false,
+      isShow: true,
+      isShowInHome: true,
+      estimatedTime: restaurant.estimatedTime ?? 30,
+      createdAt: "",
+      updatedAt: "",
+      v: 0,
+      isOpen: restaurant.isOpen ?? false,
+    );
+  }
+
+  ResturantAdmin _mapOfferToAdmin(RestaurantWithOffers restaurant) {
+    return ResturantAdmin(
+      coordinates: Coordinates(latitude: 0, longitude: 0),
+      id: restaurant.id ?? "",
+      photo: restaurant.cover ?? "", // Use cover as photo
+      logo: restaurant.logo ?? "",
+      superCategory: [],
+      subCategory: [],
+      name: restaurant.name ?? "",
+      phone: "",
+      aboutUs: "",
+      rate: (restaurant.rating ?? 0).toDouble(),
+      reviews: [],
+      deliveryCost: 0, // Not available in offer model usually
+      locationMap: "",
+      openHour: "",
+      closeHour: "",
+      haveDelivery: true,
+      isShow: true,
+      isShowInHome: true,
+      estimatedTime: 30,
+      createdAt: "",
+      updatedAt: "",
+      v: 0,
+      isOpen: restaurant.isOpen ?? false,
     );
   }
 

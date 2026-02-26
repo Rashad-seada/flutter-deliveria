@@ -367,6 +367,10 @@ class AppStrings {
   static const String arabicNameOfItemCategory = "arabicNameOfItemCategory";
 
   static const String defineLocationOnMap = "defineLocationOnMap";
+  static const String locationSelected = "locationSelected";
+  static const String changeLocation = "changeLocation";
+  static const String removeLocation = "removeLocation";
+  static const String location = "location";
 
   static const String pleaseSelectSize = "pleaseSelectSize";
 
@@ -402,4 +406,154 @@ class AppStrings {
   static const String searchForMeals = "searchForMeals";
 
   static String mostPopular = "mostPopular";
+  static String le = "le";
+
+  // Location picker strings
+  static const String locationPermissionDenied = "locationPermissionDenied";
+  static const String locationPermissionPermanentlyDenied = "locationPermissionPermanentlyDenied";
+  static const String errorGettingLocation = "errorGettingLocation";
+  static const String selectedLocation = "selectedLocation";
+  static const String pleaseSelectLocationFirst = "pleaseSelectLocationFirst";
+  static const String deliveryAvailable = "deliveryAvailable";
+  static const String zone = "zone";
+  static const String outsideDeliveryArea = "outsideDeliveryArea";
+  static const String myLocation = "myLocation";
+  static const String zoomIn = "zoomIn";
+  static const String zoomOut = "zoomOut";
+  static const String useMyCurrentLocation = "useMyCurrentLocation";
+  static const String pleaseSelectLocationInDeliveryZone = "pleaseSelectLocationInDeliveryZone";
+  static const String noLocationSelected = "noLocationSelected";
+
+  // Coupon Strings
+  static const String usageLimit = "usageLimit";
+  static const String usagePerUserLimit = "usagePerUserLimit";
+  static const String minimumOrderValue = "minimumOrderValue";
+  static const String discountValue = "discountValue";
+  static const String couponType = "couponType";
+  static const String discountType = "discountType";
+  static const String applicableRestaurants = "applicableRestaurants";
+  
+  static const String usageLimitHelper = "usageLimitHelper";
+  static const String usagePerUserLimitHelper = "usagePerUserLimitHelper";
+  static const String minOrderValueHelper = "minOrderValueHelper";
+  static const String valueHelper = "valueHelper";
+  static const String selectDiscountType = "selectDiscountType";
+  static const String selectCouponType = "selectCouponType";
+  static const String allRestaurants = "allRestaurants";
+  static const String specificRestaurant = "specificRestaurant";
+  static const String percentage = "percentage";
+  static const String fixed = "fixed";
+  static const String delivery = "delivery";
+  static const String freeDelivery = "freeDelivery";
+  static const String updateCoupon = "updateCoupon";
+  static const String branchName = "branchName";
+  static const String branchNameRequired = "branchNameRequired";
+  static const String phoneRequired = "phoneRequired";
+  static const String addressRequired = "addressRequired";
+  static const String googleMapsUrl = "googleMapsUrl";
+  static const String openHour = "openHour";
+  static const String closeHour = "closeHour";
+  static const String deliveryCost = "deliveryCost";
+  static const String prepTime = "prepTime";
+  static const String deliveryTime = "deliveryTime";
+  static const String createBranch = "createBranch";
+  static const String updateBranch = "updateBranch";
+  static const String branchCreatedSuccess = "branchCreatedSuccess";
+  static const String branchUpdatedSuccess = "branchUpdatedSuccess";
+  static const String selectOpenCloseHours = "selectOpenCloseHours";
+  static const String editBranch = "editBranch";
+  static const String addNewBranch = "addNewBranch";
+  static const String select = "select";
+  static const String optional = "optional";
+  static const String required = "required";
+  static const String manageBranches = "manageBranches";
+  static const String searchBranch = "searchBranch";
+  static const String noBranchesFound = "noBranchesFound";
+  static const String deleteBranch = "deleteBranch";
+  static const String confirmDeleteBranch = "confirmDeleteBranch";
+  static const String closed = "closed";
+  static const String mins = "mins";
+  static const String tapToSetDefault = "tapToSetDefault";
+  static const String deleteAddress = "deleteAddress";
+  static const String areYouSureYouWantToDeleteThisAddress = "areYouSureYouWantToDeleteThisAddress";
+  static const String defaultT = "defaultT";
+  static const String noAddressesYet = "noAddressesYet";
+  static const String addYourFirstAddress = "addYourFirstAddress";
+
+  // ── Loyalty / Rewards ──
+  static const String myRewards = "myRewards";
+  static const String retry = "retry";
+  static const String tierProgress = "tierProgress";
+  static const String yourCodes = "yourCodes";
+  static const String usedCodes = "usedCodes";
+  static const String viewPointsHistory = "viewPointsHistory";
+  static const String totalPoints = "totalPoints";
+  static const String reward = "reward";
+  static const String percentOff = "percentOff";
+  static const String egpOff = "egpOff";
+  static const String used = "used";
+  static const String usedOn = "usedOn";
+  static const String codeCopied = "codeCopied";
+  static const String morePointsNeeded = "morePointsNeeded";
+  static const String points = "points";
+  static const String start = "start";
+
+  // ── Admin Reward Tiers ──
+  static const String rewardTiers = "rewardTiers";
+  static const String noRewardTiersYet = "noRewardTiersYet";
+  static const String tapPlusToCreateTier = "tapPlusToCreateTier";
+  static const String pointsRequired = "pointsRequired";
+  static const String inactive = "inactive";
+  static const String deactivate = "deactivate";
+  static const String activate = "activate";
+  static const String deleteTier = "deleteTier";
+  static const String confirmDeleteTier = "confirmDeleteTier";
+  static const String editTier = "editTier";
+  static const String createNewTier = "createNewTier";
+  static const String tierName = "tierName";
+  static const String tierNameHint = "tierNameHint";
+  static const String pleaseEnterTierName = "pleaseEnterTierName";
+  static const String pleaseEnterPointsRequired = "pleaseEnterPointsRequired";
+  static const String pleaseEnterValidNumber = "pleaseEnterValidNumber";
+  static const String fixedAmountEgp = "fixedAmountEgp";
+  static const String discountPercentage = "discountPercentage";
+  static const String discountAmountEgp = "discountAmountEgp";
+  static const String pleaseEnterDiscountValue = "pleaseEnterDiscountValue";
+  static const String maxDiscountCap = "maxDiscountCap";
+  static const String descriptionOptional = "descriptionOptional";
+  static const String descriptionHint = "descriptionHint";
+  static const String update = "update";
+  static const String create = "create";
+
+  // ── Admin Users Points ──
+  static const String usersPoints = "usersPoints";
+  static const String searchByNameOrPhone = "searchByNameOrPhone";
+  static const String noUsersWithPointsYet = "noUsersWithPointsYet";
+  static const String noUsersFound = "noUsersFound";
+  static const String unknownUser = "unknownUser";
+  static const String noPhone = "noPhone";
+  static const String legacy = "legacy";
+  static const String pts = "pts";
+  static const String rewards = "rewards";
+  static const String adjustPoints = "adjustPoints";
+  static const String user = "user";
+  static const String currentPoints = "currentPoints";
+  static const String addPoints = "addPoints";
+  static const String remove = "remove";
+  static const String removePoints = "removePoints";
+  static const String pointsAmount = "pointsAmount";
+  static const String pleaseEnterPointsAmount = "pleaseEnterPointsAmount";
+  static const String pleaseEnterValidPositiveNumber = "pleaseEnterValidPositiveNumber";
+  static const String reasonOptional = "reasonOptional";
+  static const String reasonHint = "reasonHint";
+
+  // ── Points History ──
+  static const String pointsHistory = "pointsHistory";
+  static const String noTransactionsYet = "noTransactionsYet";
+  static const String balance = "balance";
+  static const String pointsEarned = "pointsEarned";
+  static const String pointsRedeemed = "pointsRedeemed";
+  static const String adminAdjustment = "adminAdjustment";
+  static const String pointsExpired = "pointsExpired";
+  static const String transaction = "transaction";
 }

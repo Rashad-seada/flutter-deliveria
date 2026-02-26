@@ -15,6 +15,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../admin/resturantAdmin/logic/cubit/all_resturants_admin_cubit.dart';
+
 class SettingsResturantScreen extends StatefulWidget {
   const SettingsResturantScreen({super.key, this.isAdmin});
   final bool? isAdmin;
@@ -65,11 +67,20 @@ class _SettingsResturantScreenState extends State<SettingsResturantScreen> {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (_) => BlocProvider(
-                            create:
-                                (context) =>
-                                    getIt<ResturantProfileDataCubit>()
-                                      ..getResturantProfileData(),
+                          (_) => MultiBlocProvider(
+                            providers: [
+                              BlocProvider(
+                                create:
+                                    (context) =>
+                                        getIt<ResturantProfileDataCubit>()
+                                          ..getResturantProfileData(),
+                              ),
+                              BlocProvider(
+                                create:
+                                    (context) =>
+                                        getIt<AllresturantsadminCubit>(),
+                              ),
+                            ],
                             child: ResturantProfile(),
                           ),
                     ),

@@ -12,8 +12,7 @@ part of 'sliders_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SlidersState<T> {
@@ -35,7 +34,8 @@ mixin _$SlidersState<T> {
     required TResult Function() searchRestuantItemLoading,
     required TResult Function(T data) searchRestuantItemSuccess,
     required TResult Function(ApiErrorModel error) searchRestuantItemFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -54,7 +54,8 @@ mixin _$SlidersState<T> {
     TResult? Function()? searchRestuantItemLoading,
     TResult? Function(T data)? searchRestuantItemSuccess,
     TResult? Function(ApiErrorModel error)? searchRestuantItemFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -74,7 +75,8 @@ mixin _$SlidersState<T> {
     TResult Function(T data)? searchRestuantItemSuccess,
     TResult Function(ApiErrorModel error)? searchRestuantItemFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -88,18 +90,19 @@ mixin _$SlidersState<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
-  }) => throw _privateConstructorUsedError;
+        searchRestuantItemFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -113,16 +116,17 @@ mixin _$SlidersState<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -136,25 +140,25 @@ mixin _$SlidersState<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SlidersStateCopyWith<T, $Res> {
   factory $SlidersStateCopyWith(
-    SlidersState<T> value,
-    $Res Function(SlidersState<T>) then,
-  ) = _$SlidersStateCopyWithImpl<T, $Res, SlidersState<T>>;
+          SlidersState<T> value, $Res Function(SlidersState<T>) then) =
+      _$SlidersStateCopyWithImpl<T, $Res, SlidersState<T>>;
 }
 
 /// @nodoc
@@ -166,17 +170,13 @@ class _$SlidersStateCopyWithImpl<T, $Res, $Val extends SlidersState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -184,12 +184,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -298,17 +294,17 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return initial(this);
   }
@@ -327,14 +323,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return initial?.call(this);
@@ -354,14 +350,14 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -379,9 +375,8 @@ abstract class _Initial<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -389,12 +384,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -503,17 +494,17 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return loading(this);
   }
@@ -532,14 +523,14 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return loading?.call(this);
@@ -559,14 +550,14 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -584,9 +575,8 @@ abstract class Loading<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -596,23 +586,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -641,9 +628,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -736,17 +721,17 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return success(this);
   }
@@ -765,14 +750,14 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return success?.call(this);
@@ -792,14 +777,14 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -814,10 +799,7 @@ abstract class Success<T> implements SlidersState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -825,9 +807,8 @@ abstract class Success<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -837,23 +818,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -881,9 +859,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -976,17 +952,17 @@ class _$FailImpl<T> implements Fail<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return fail(this);
   }
@@ -1005,14 +981,14 @@ class _$FailImpl<T> implements Fail<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return fail?.call(this);
@@ -1032,14 +1008,14 @@ class _$FailImpl<T> implements Fail<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -1054,20 +1030,16 @@ abstract class Fail<T> implements SlidersState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateLoadingImplCopyWith<T, $Res> {
-  factory _$$CreateLoadingImplCopyWith(
-    _$CreateLoadingImpl<T> value,
-    $Res Function(_$CreateLoadingImpl<T>) then,
-  ) = __$$CreateLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$CreateLoadingImplCopyWith(_$CreateLoadingImpl<T> value,
+          $Res Function(_$CreateLoadingImpl<T>) then) =
+      __$$CreateLoadingImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({int index});
 }
@@ -1076,24 +1048,21 @@ abstract class _$$CreateLoadingImplCopyWith<T, $Res> {
 class __$$CreateLoadingImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$CreateLoadingImpl<T>>
     implements _$$CreateLoadingImplCopyWith<T, $Res> {
-  __$$CreateLoadingImplCopyWithImpl(
-    _$CreateLoadingImpl<T> _value,
-    $Res Function(_$CreateLoadingImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$CreateLoadingImplCopyWithImpl(_$CreateLoadingImpl<T> _value,
+      $Res Function(_$CreateLoadingImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? index = null}) {
-    return _then(
-      _$CreateLoadingImpl<T>(
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$CreateLoadingImpl<T>(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -1121,16 +1090,12 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
   @override
   int get hashCode => Object.hash(runtimeType, index);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateLoadingImplCopyWith<T, _$CreateLoadingImpl<T>> get copyWith =>
       __$$CreateLoadingImplCopyWithImpl<T, _$CreateLoadingImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1219,17 +1184,17 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return createLoading(this);
   }
@@ -1248,14 +1213,14 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return createLoading?.call(this);
@@ -1275,14 +1240,14 @@ class _$CreateLoadingImpl<T> implements CreateLoading<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -1297,20 +1262,16 @@ abstract class CreateLoading<T> implements SlidersState<T> {
   const factory CreateLoading(final int index) = _$CreateLoadingImpl<T>;
 
   int get index;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateLoadingImplCopyWith<T, _$CreateLoadingImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateSuccessImplCopyWith<T, $Res> {
-  factory _$$CreateSuccessImplCopyWith(
-    _$CreateSuccessImpl<T> value,
-    $Res Function(_$CreateSuccessImpl<T>) then,
-  ) = __$$CreateSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$CreateSuccessImplCopyWith(_$CreateSuccessImpl<T> value,
+          $Res Function(_$CreateSuccessImpl<T>) then) =
+      __$$CreateSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data, int index});
 }
@@ -1319,28 +1280,26 @@ abstract class _$$CreateSuccessImplCopyWith<T, $Res> {
 class __$$CreateSuccessImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$CreateSuccessImpl<T>>
     implements _$$CreateSuccessImplCopyWith<T, $Res> {
-  __$$CreateSuccessImplCopyWithImpl(
-    _$CreateSuccessImpl<T> _value,
-    $Res Function(_$CreateSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$CreateSuccessImplCopyWithImpl(_$CreateSuccessImpl<T> _value,
+      $Res Function(_$CreateSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed, Object? index = null}) {
-    return _then(
-      _$CreateSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+    Object? index = null,
+  }) {
+    return _then(_$CreateSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -1370,21 +1329,14 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
 
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(data),
-    index,
-  );
+      runtimeType, const DeepCollectionEquality().hash(data), index);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateSuccessImplCopyWith<T, _$CreateSuccessImpl<T>> get copyWith =>
       __$$CreateSuccessImplCopyWithImpl<T, _$CreateSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1473,17 +1425,17 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return createSuccess(this);
   }
@@ -1502,14 +1454,14 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return createSuccess?.call(this);
@@ -1529,14 +1481,14 @@ class _$CreateSuccessImpl<T> implements CreateSuccess<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -1553,10 +1505,7 @@ abstract class CreateSuccess<T> implements SlidersState<T> {
 
   T get data;
   int get index;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateSuccessImplCopyWith<T, _$CreateSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1564,9 +1513,8 @@ abstract class CreateSuccess<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$CreateFailImplCopyWith<T, $Res> {
   factory _$$CreateFailImplCopyWith(
-    _$CreateFailImpl<T> value,
-    $Res Function(_$CreateFailImpl<T>) then,
-  ) = __$$CreateFailImplCopyWithImpl<T, $Res>;
+          _$CreateFailImpl<T> value, $Res Function(_$CreateFailImpl<T>) then) =
+      __$$CreateFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error, int index});
 }
@@ -1576,27 +1524,25 @@ class __$$CreateFailImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$CreateFailImpl<T>>
     implements _$$CreateFailImplCopyWith<T, $Res> {
   __$$CreateFailImplCopyWithImpl(
-    _$CreateFailImpl<T> _value,
-    $Res Function(_$CreateFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$CreateFailImpl<T> _value, $Res Function(_$CreateFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null, Object? index = null}) {
-    return _then(
-      _$CreateFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+    Object? index = null,
+  }) {
+    return _then(_$CreateFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -1627,9 +1573,7 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error, index);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateFailImplCopyWith<T, _$CreateFailImpl<T>> get copyWith =>
@@ -1722,17 +1666,17 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return createFail(this);
   }
@@ -1751,14 +1695,14 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return createFail?.call(this);
@@ -1778,14 +1722,14 @@ class _$CreateFailImpl<T> implements CreateFail<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -1802,20 +1746,16 @@ abstract class CreateFail<T> implements SlidersState<T> {
 
   ApiErrorModel get error;
   int get index;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateFailImplCopyWith<T, _$CreateFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteLoadingImplCopyWith<T, $Res> {
-  factory _$$DeleteLoadingImplCopyWith(
-    _$DeleteLoadingImpl<T> value,
-    $Res Function(_$DeleteLoadingImpl<T>) then,
-  ) = __$$DeleteLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$DeleteLoadingImplCopyWith(_$DeleteLoadingImpl<T> value,
+          $Res Function(_$DeleteLoadingImpl<T>) then) =
+      __$$DeleteLoadingImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({int index});
 }
@@ -1824,24 +1764,21 @@ abstract class _$$DeleteLoadingImplCopyWith<T, $Res> {
 class __$$DeleteLoadingImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$DeleteLoadingImpl<T>>
     implements _$$DeleteLoadingImplCopyWith<T, $Res> {
-  __$$DeleteLoadingImplCopyWithImpl(
-    _$DeleteLoadingImpl<T> _value,
-    $Res Function(_$DeleteLoadingImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DeleteLoadingImplCopyWithImpl(_$DeleteLoadingImpl<T> _value,
+      $Res Function(_$DeleteLoadingImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? index = null}) {
-    return _then(
-      _$DeleteLoadingImpl<T>(
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$DeleteLoadingImpl<T>(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -1869,16 +1806,12 @@ class _$DeleteLoadingImpl<T> implements DeleteLoading<T> {
   @override
   int get hashCode => Object.hash(runtimeType, index);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteLoadingImplCopyWith<T, _$DeleteLoadingImpl<T>> get copyWith =>
       __$$DeleteLoadingImplCopyWithImpl<T, _$DeleteLoadingImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1967,17 +1900,17 @@ class _$DeleteLoadingImpl<T> implements DeleteLoading<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return deleteLoading(this);
   }
@@ -1996,14 +1929,14 @@ class _$DeleteLoadingImpl<T> implements DeleteLoading<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return deleteLoading?.call(this);
@@ -2023,14 +1956,14 @@ class _$DeleteLoadingImpl<T> implements DeleteLoading<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -2045,20 +1978,16 @@ abstract class DeleteLoading<T> implements SlidersState<T> {
   const factory DeleteLoading(final int index) = _$DeleteLoadingImpl<T>;
 
   int get index;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteLoadingImplCopyWith<T, _$DeleteLoadingImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteSuccessImplCopyWith<T, $Res> {
-  factory _$$DeleteSuccessImplCopyWith(
-    _$DeleteSuccessImpl<T> value,
-    $Res Function(_$DeleteSuccessImpl<T>) then,
-  ) = __$$DeleteSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$DeleteSuccessImplCopyWith(_$DeleteSuccessImpl<T> value,
+          $Res Function(_$DeleteSuccessImpl<T>) then) =
+      __$$DeleteSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data, int index});
 }
@@ -2067,28 +1996,26 @@ abstract class _$$DeleteSuccessImplCopyWith<T, $Res> {
 class __$$DeleteSuccessImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$DeleteSuccessImpl<T>>
     implements _$$DeleteSuccessImplCopyWith<T, $Res> {
-  __$$DeleteSuccessImplCopyWithImpl(
-    _$DeleteSuccessImpl<T> _value,
-    $Res Function(_$DeleteSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DeleteSuccessImplCopyWithImpl(_$DeleteSuccessImpl<T> _value,
+      $Res Function(_$DeleteSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed, Object? index = null}) {
-    return _then(
-      _$DeleteSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+    Object? index = null,
+  }) {
+    return _then(_$DeleteSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -2118,21 +2045,14 @@ class _$DeleteSuccessImpl<T> implements DeleteSuccess<T> {
 
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(data),
-    index,
-  );
+      runtimeType, const DeepCollectionEquality().hash(data), index);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteSuccessImplCopyWith<T, _$DeleteSuccessImpl<T>> get copyWith =>
       __$$DeleteSuccessImplCopyWithImpl<T, _$DeleteSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2221,17 +2141,17 @@ class _$DeleteSuccessImpl<T> implements DeleteSuccess<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return deleteSuccess(this);
   }
@@ -2250,14 +2170,14 @@ class _$DeleteSuccessImpl<T> implements DeleteSuccess<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return deleteSuccess?.call(this);
@@ -2277,14 +2197,14 @@ class _$DeleteSuccessImpl<T> implements DeleteSuccess<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -2301,10 +2221,7 @@ abstract class DeleteSuccess<T> implements SlidersState<T> {
 
   T get data;
   int get index;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteSuccessImplCopyWith<T, _$DeleteSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2312,9 +2229,8 @@ abstract class DeleteSuccess<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$DeleteFailImplCopyWith<T, $Res> {
   factory _$$DeleteFailImplCopyWith(
-    _$DeleteFailImpl<T> value,
-    $Res Function(_$DeleteFailImpl<T>) then,
-  ) = __$$DeleteFailImplCopyWithImpl<T, $Res>;
+          _$DeleteFailImpl<T> value, $Res Function(_$DeleteFailImpl<T>) then) =
+      __$$DeleteFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error, int index});
 }
@@ -2324,27 +2240,25 @@ class __$$DeleteFailImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$DeleteFailImpl<T>>
     implements _$$DeleteFailImplCopyWith<T, $Res> {
   __$$DeleteFailImplCopyWithImpl(
-    _$DeleteFailImpl<T> _value,
-    $Res Function(_$DeleteFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$DeleteFailImpl<T> _value, $Res Function(_$DeleteFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null, Object? index = null}) {
-    return _then(
-      _$DeleteFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-        null == index
-            ? _value.index
-            : index // ignore: cast_nullable_to_non_nullable
-                as int,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+    Object? index = null,
+  }) {
+    return _then(_$DeleteFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
   }
 }
 
@@ -2375,9 +2289,7 @@ class _$DeleteFailImpl<T> implements DeleteFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error, index);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteFailImplCopyWith<T, _$DeleteFailImpl<T>> get copyWith =>
@@ -2470,17 +2382,17 @@ class _$DeleteFailImpl<T> implements DeleteFail<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return deleteFail(this);
   }
@@ -2499,14 +2411,14 @@ class _$DeleteFailImpl<T> implements DeleteFail<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return deleteFail?.call(this);
@@ -2526,14 +2438,14 @@ class _$DeleteFailImpl<T> implements DeleteFail<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -2550,10 +2462,7 @@ abstract class DeleteFail<T> implements SlidersState<T> {
 
   ApiErrorModel get error;
   int get index;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteFailImplCopyWith<T, _$DeleteFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2561,23 +2470,20 @@ abstract class DeleteFail<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$SearchRestuantUserLoadingImplCopyWith<T, $Res> {
   factory _$$SearchRestuantUserLoadingImplCopyWith(
-    _$SearchRestuantUserLoadingImpl<T> value,
-    $Res Function(_$SearchRestuantUserLoadingImpl<T>) then,
-  ) = __$$SearchRestuantUserLoadingImplCopyWithImpl<T, $Res>;
+          _$SearchRestuantUserLoadingImpl<T> value,
+          $Res Function(_$SearchRestuantUserLoadingImpl<T>) then) =
+      __$$SearchRestuantUserLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$SearchRestuantUserLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$SlidersStateCopyWithImpl<T, $Res, _$SearchRestuantUserLoadingImpl<T>>
+    extends _$SlidersStateCopyWithImpl<T, $Res,
+        _$SearchRestuantUserLoadingImpl<T>>
     implements _$$SearchRestuantUserLoadingImplCopyWith<T, $Res> {
   __$$SearchRestuantUserLoadingImplCopyWithImpl(
-    _$SearchRestuantUserLoadingImpl<T> _value,
-    $Res Function(_$SearchRestuantUserLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$SearchRestuantUserLoadingImpl<T> _value,
+      $Res Function(_$SearchRestuantUserLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2688,17 +2594,17 @@ class _$SearchRestuantUserLoadingImpl<T>
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return searchRestuantUserLoading(this);
   }
@@ -2717,14 +2623,14 @@ class _$SearchRestuantUserLoadingImpl<T>
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return searchRestuantUserLoading?.call(this);
@@ -2744,14 +2650,14 @@ class _$SearchRestuantUserLoadingImpl<T>
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -2770,36 +2676,34 @@ abstract class SearchRestuantUserLoading<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$SearchRestuantUserSuccessImplCopyWith<T, $Res> {
   factory _$$SearchRestuantUserSuccessImplCopyWith(
-    _$SearchRestuantUserSuccessImpl<T> value,
-    $Res Function(_$SearchRestuantUserSuccessImpl<T>) then,
-  ) = __$$SearchRestuantUserSuccessImplCopyWithImpl<T, $Res>;
+          _$SearchRestuantUserSuccessImpl<T> value,
+          $Res Function(_$SearchRestuantUserSuccessImpl<T>) then) =
+      __$$SearchRestuantUserSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$SearchRestuantUserSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$SlidersStateCopyWithImpl<T, $Res, _$SearchRestuantUserSuccessImpl<T>>
+    extends _$SlidersStateCopyWithImpl<T, $Res,
+        _$SearchRestuantUserSuccessImpl<T>>
     implements _$$SearchRestuantUserSuccessImplCopyWith<T, $Res> {
   __$$SearchRestuantUserSuccessImplCopyWithImpl(
-    _$SearchRestuantUserSuccessImpl<T> _value,
-    $Res Function(_$SearchRestuantUserSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SearchRestuantUserSuccessImpl<T> _value,
+      $Res Function(_$SearchRestuantUserSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SearchRestuantUserSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SearchRestuantUserSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -2829,19 +2733,13 @@ class _$SearchRestuantUserSuccessImpl<T>
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchRestuantUserSuccessImplCopyWith<
-    T,
-    _$SearchRestuantUserSuccessImpl<T>
-  >
-  get copyWith => __$$SearchRestuantUserSuccessImplCopyWithImpl<
-    T,
-    _$SearchRestuantUserSuccessImpl<T>
-  >(this, _$identity);
+  _$$SearchRestuantUserSuccessImplCopyWith<T,
+          _$SearchRestuantUserSuccessImpl<T>>
+      get copyWith => __$$SearchRestuantUserSuccessImplCopyWithImpl<T,
+          _$SearchRestuantUserSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2930,17 +2828,17 @@ class _$SearchRestuantUserSuccessImpl<T>
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return searchRestuantUserSuccess(this);
   }
@@ -2959,14 +2857,14 @@ class _$SearchRestuantUserSuccessImpl<T>
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return searchRestuantUserSuccess?.call(this);
@@ -2986,14 +2884,14 @@ class _$SearchRestuantUserSuccessImpl<T>
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -3009,23 +2907,18 @@ abstract class SearchRestuantUserSuccess<T> implements SlidersState<T> {
       _$SearchRestuantUserSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchRestuantUserSuccessImplCopyWith<
-    T,
-    _$SearchRestuantUserSuccessImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$SearchRestuantUserSuccessImplCopyWith<T,
+          _$SearchRestuantUserSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SearchRestuantUserFailImplCopyWith<T, $Res> {
   factory _$$SearchRestuantUserFailImplCopyWith(
-    _$SearchRestuantUserFailImpl<T> value,
-    $Res Function(_$SearchRestuantUserFailImpl<T>) then,
-  ) = __$$SearchRestuantUserFailImplCopyWithImpl<T, $Res>;
+          _$SearchRestuantUserFailImpl<T> value,
+          $Res Function(_$SearchRestuantUserFailImpl<T>) then) =
+      __$$SearchRestuantUserFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -3035,23 +2928,21 @@ class __$$SearchRestuantUserFailImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$SearchRestuantUserFailImpl<T>>
     implements _$$SearchRestuantUserFailImplCopyWith<T, $Res> {
   __$$SearchRestuantUserFailImplCopyWithImpl(
-    _$SearchRestuantUserFailImpl<T> _value,
-    $Res Function(_$SearchRestuantUserFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SearchRestuantUserFailImpl<T> _value,
+      $Res Function(_$SearchRestuantUserFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$SearchRestuantUserFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$SearchRestuantUserFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3079,16 +2970,12 @@ class _$SearchRestuantUserFailImpl<T> implements SearchRestuantUserFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchRestuantUserFailImplCopyWith<T, _$SearchRestuantUserFailImpl<T>>
-  get copyWith => __$$SearchRestuantUserFailImplCopyWithImpl<
-    T,
-    _$SearchRestuantUserFailImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$SearchRestuantUserFailImplCopyWithImpl<T,
+          _$SearchRestuantUserFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3177,17 +3064,17 @@ class _$SearchRestuantUserFailImpl<T> implements SearchRestuantUserFail<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return searchRestuantUserFail(this);
   }
@@ -3206,14 +3093,14 @@ class _$SearchRestuantUserFailImpl<T> implements SearchRestuantUserFail<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return searchRestuantUserFail?.call(this);
@@ -3233,14 +3120,14 @@ class _$SearchRestuantUserFailImpl<T> implements SearchRestuantUserFail<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -3256,34 +3143,28 @@ abstract class SearchRestuantUserFail<T> implements SlidersState<T> {
       _$SearchRestuantUserFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SearchRestuantUserFailImplCopyWith<T, _$SearchRestuantUserFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SearchRestuantItemLoadingImplCopyWith<T, $Res> {
   factory _$$SearchRestuantItemLoadingImplCopyWith(
-    _$SearchRestuantItemLoadingImpl<T> value,
-    $Res Function(_$SearchRestuantItemLoadingImpl<T>) then,
-  ) = __$$SearchRestuantItemLoadingImplCopyWithImpl<T, $Res>;
+          _$SearchRestuantItemLoadingImpl<T> value,
+          $Res Function(_$SearchRestuantItemLoadingImpl<T>) then) =
+      __$$SearchRestuantItemLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$SearchRestuantItemLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$SlidersStateCopyWithImpl<T, $Res, _$SearchRestuantItemLoadingImpl<T>>
+    extends _$SlidersStateCopyWithImpl<T, $Res,
+        _$SearchRestuantItemLoadingImpl<T>>
     implements _$$SearchRestuantItemLoadingImplCopyWith<T, $Res> {
   __$$SearchRestuantItemLoadingImplCopyWithImpl(
-    _$SearchRestuantItemLoadingImpl<T> _value,
-    $Res Function(_$SearchRestuantItemLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
+      _$SearchRestuantItemLoadingImpl<T> _value,
+      $Res Function(_$SearchRestuantItemLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -3394,17 +3275,17 @@ class _$SearchRestuantItemLoadingImpl<T>
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return searchRestuantItemLoading(this);
   }
@@ -3423,14 +3304,14 @@ class _$SearchRestuantItemLoadingImpl<T>
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return searchRestuantItemLoading?.call(this);
@@ -3450,14 +3331,14 @@ class _$SearchRestuantItemLoadingImpl<T>
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -3476,36 +3357,34 @@ abstract class SearchRestuantItemLoading<T> implements SlidersState<T> {
 /// @nodoc
 abstract class _$$SearchRestuantItemSuccessImplCopyWith<T, $Res> {
   factory _$$SearchRestuantItemSuccessImplCopyWith(
-    _$SearchRestuantItemSuccessImpl<T> value,
-    $Res Function(_$SearchRestuantItemSuccessImpl<T>) then,
-  ) = __$$SearchRestuantItemSuccessImplCopyWithImpl<T, $Res>;
+          _$SearchRestuantItemSuccessImpl<T> value,
+          $Res Function(_$SearchRestuantItemSuccessImpl<T>) then) =
+      __$$SearchRestuantItemSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$SearchRestuantItemSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$SlidersStateCopyWithImpl<T, $Res, _$SearchRestuantItemSuccessImpl<T>>
+    extends _$SlidersStateCopyWithImpl<T, $Res,
+        _$SearchRestuantItemSuccessImpl<T>>
     implements _$$SearchRestuantItemSuccessImplCopyWith<T, $Res> {
   __$$SearchRestuantItemSuccessImplCopyWithImpl(
-    _$SearchRestuantItemSuccessImpl<T> _value,
-    $Res Function(_$SearchRestuantItemSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SearchRestuantItemSuccessImpl<T> _value,
+      $Res Function(_$SearchRestuantItemSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SearchRestuantItemSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SearchRestuantItemSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -3535,19 +3414,13 @@ class _$SearchRestuantItemSuccessImpl<T>
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchRestuantItemSuccessImplCopyWith<
-    T,
-    _$SearchRestuantItemSuccessImpl<T>
-  >
-  get copyWith => __$$SearchRestuantItemSuccessImplCopyWithImpl<
-    T,
-    _$SearchRestuantItemSuccessImpl<T>
-  >(this, _$identity);
+  _$$SearchRestuantItemSuccessImplCopyWith<T,
+          _$SearchRestuantItemSuccessImpl<T>>
+      get copyWith => __$$SearchRestuantItemSuccessImplCopyWithImpl<T,
+          _$SearchRestuantItemSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3636,17 +3509,17 @@ class _$SearchRestuantItemSuccessImpl<T>
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return searchRestuantItemSuccess(this);
   }
@@ -3665,14 +3538,14 @@ class _$SearchRestuantItemSuccessImpl<T>
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return searchRestuantItemSuccess?.call(this);
@@ -3692,14 +3565,14 @@ class _$SearchRestuantItemSuccessImpl<T>
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -3715,23 +3588,18 @@ abstract class SearchRestuantItemSuccess<T> implements SlidersState<T> {
       _$SearchRestuantItemSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchRestuantItemSuccessImplCopyWith<
-    T,
-    _$SearchRestuantItemSuccessImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$SearchRestuantItemSuccessImplCopyWith<T,
+          _$SearchRestuantItemSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SearchRestuantItemFailImplCopyWith<T, $Res> {
   factory _$$SearchRestuantItemFailImplCopyWith(
-    _$SearchRestuantItemFailImpl<T> value,
-    $Res Function(_$SearchRestuantItemFailImpl<T>) then,
-  ) = __$$SearchRestuantItemFailImplCopyWithImpl<T, $Res>;
+          _$SearchRestuantItemFailImpl<T> value,
+          $Res Function(_$SearchRestuantItemFailImpl<T>) then) =
+      __$$SearchRestuantItemFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -3741,23 +3609,21 @@ class __$$SearchRestuantItemFailImplCopyWithImpl<T, $Res>
     extends _$SlidersStateCopyWithImpl<T, $Res, _$SearchRestuantItemFailImpl<T>>
     implements _$$SearchRestuantItemFailImplCopyWith<T, $Res> {
   __$$SearchRestuantItemFailImplCopyWithImpl(
-    _$SearchRestuantItemFailImpl<T> _value,
-    $Res Function(_$SearchRestuantItemFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SearchRestuantItemFailImpl<T> _value,
+      $Res Function(_$SearchRestuantItemFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$SearchRestuantItemFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$SearchRestuantItemFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3785,16 +3651,12 @@ class _$SearchRestuantItemFailImpl<T> implements SearchRestuantItemFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchRestuantItemFailImplCopyWith<T, _$SearchRestuantItemFailImpl<T>>
-  get copyWith => __$$SearchRestuantItemFailImplCopyWithImpl<
-    T,
-    _$SearchRestuantItemFailImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$SearchRestuantItemFailImplCopyWithImpl<T,
+          _$SearchRestuantItemFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3883,17 +3745,17 @@ class _$SearchRestuantItemFailImpl<T> implements SearchRestuantItemFail<T> {
     required TResult Function(DeleteSuccess<T> value) deleteSuccess,
     required TResult Function(DeleteFail<T> value) deleteFail,
     required TResult Function(SearchRestuantUserLoading<T> value)
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     required TResult Function(SearchRestuantUserSuccess<T> value)
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     required TResult Function(SearchRestuantUserFail<T> value)
-    searchRestuantUserFail,
+        searchRestuantUserFail,
     required TResult Function(SearchRestuantItemLoading<T> value)
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     required TResult Function(SearchRestuantItemSuccess<T> value)
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     required TResult Function(SearchRestuantItemFail<T> value)
-    searchRestuantItemFail,
+        searchRestuantItemFail,
   }) {
     return searchRestuantItemFail(this);
   }
@@ -3912,14 +3774,14 @@ class _$SearchRestuantItemFailImpl<T> implements SearchRestuantItemFail<T> {
     TResult? Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult? Function(DeleteFail<T> value)? deleteFail,
     TResult? Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult? Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult? Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult? Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult? Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult? Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
   }) {
     return searchRestuantItemFail?.call(this);
@@ -3939,14 +3801,14 @@ class _$SearchRestuantItemFailImpl<T> implements SearchRestuantItemFail<T> {
     TResult Function(DeleteSuccess<T> value)? deleteSuccess,
     TResult Function(DeleteFail<T> value)? deleteFail,
     TResult Function(SearchRestuantUserLoading<T> value)?
-    searchRestuantUserLoading,
+        searchRestuantUserLoading,
     TResult Function(SearchRestuantUserSuccess<T> value)?
-    searchRestuantUserSuccess,
+        searchRestuantUserSuccess,
     TResult Function(SearchRestuantUserFail<T> value)? searchRestuantUserFail,
     TResult Function(SearchRestuantItemLoading<T> value)?
-    searchRestuantItemLoading,
+        searchRestuantItemLoading,
     TResult Function(SearchRestuantItemSuccess<T> value)?
-    searchRestuantItemSuccess,
+        searchRestuantItemSuccess,
     TResult Function(SearchRestuantItemFail<T> value)? searchRestuantItemFail,
     required TResult orElse(),
   }) {
@@ -3962,10 +3824,7 @@ abstract class SearchRestuantItemFail<T> implements SlidersState<T> {
       _$SearchRestuantItemFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of SlidersState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SearchRestuantItemFailImplCopyWith<T, _$SearchRestuantItemFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,6 +6,7 @@ import 'package:delveria/features/admin/resturantAdmin/data/models/all_resturant
 import 'package:delveria/features/client/home/data/models/get_sliders_response.dart';
 import 'package:delveria/features/client/home/data/models/search_response.dart';
 import 'package:delveria/features/client/home/data/models/offers_response.dart';
+import 'package:delveria/features/client/home/data/models/best_sellers_response.dart';
 import 'package:delveria/features/client/home/data/repo/sliders_repo.dart';
 import 'package:delveria/features/client/home/logic/cubit/sliders_state.dart';
 import 'package:file_picker/file_picker.dart';
@@ -25,6 +26,9 @@ class SlidersCubit extends Cubit<SlidersState> {
   bool hasOffers = false;
   int offersCount = 0;
   num maxDiscount = 0;
+
+  // Best Sellers data
+  List<BestSellerRestaurant> bestSellers = [];
 
   void getSliders() async {
     emit(SlidersState.loading());
@@ -219,6 +223,35 @@ class SlidersCubit extends Cubit<SlidersState> {
       );
     } catch (e) {
       print("🔥 Error getting restaurant details: $e");
+    }
+  }
+
+  // ============ BEST SELLERS METHODS ============
+
+  /// Get best seller restaurants (top by completed orders)
+  /// Does not emit state - just populates bestSellers list
+  Future<void> getBestSellers({
+    required double lat,
+    required double long,
+    int limit = 10,
+  }) async {
+    try {
+      final response = await slidersRepo.getBestSellers(
+        lat: lat,
+        long: long,
+        limit: limit,
+      );
+      response.when(
+        success: (bestSellersData) {
+          bestSellers = bestSellersData.restaurants ?? [];
+          print("🏆 Found ${bestSellers.length} best seller restaurants");
+        },
+        failure: (error) {
+          print("🔥 Failed to get best sellers: ${error.message}");
+        },
+      );
+    } catch (e) {
+      print("🔥 Error getting best sellers: $e");
     }
   }
 }

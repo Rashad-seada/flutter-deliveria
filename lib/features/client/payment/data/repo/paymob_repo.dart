@@ -33,7 +33,7 @@ class PaymobRepo {
         "amount_cents": (amount * 100).toInt().toString(),
         "currency": currency,
         "items": items ?? [],
-      }, token);
+      });
       return ApiResult.success(res.orderId ?? 0);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
@@ -72,7 +72,7 @@ class PaymobRepo {
             },
         "currency": currency,
         "integration_id": ApiConstants.integrationId,
-      }, token);
+      });
       return ApiResult.success(res.paymentKey ?? '');
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

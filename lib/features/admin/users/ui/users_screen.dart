@@ -24,10 +24,12 @@ class UsersScreen extends StatefulWidget {
     super.key,
     this.isFromNotification,
     this.message,
+    this.notificationTitle,
     this.selectedIds,
   });
   final bool? isFromNotification;
   final String? message;
+  final String? notificationTitle;
   final List<String>? selectedIds;
 
   @override
@@ -57,7 +59,13 @@ class _UsersScreenState extends State<UsersScreen> {
     required List<String> ids,
   }) async {
     final cubit = context.read<NotificationsCubit>();
-    await cubit.createNotification(body: {"message": message, "ids": ids});
+    final body = {
+      "message": message,
+      "ids": ids,
+      if (widget.notificationTitle?.isNotEmpty == true)
+        "title": widget.notificationTitle,
+    };
+    await cubit.createNotification(body: body);
     if (!mounted) return;
     Navigator.pop(context);
   }

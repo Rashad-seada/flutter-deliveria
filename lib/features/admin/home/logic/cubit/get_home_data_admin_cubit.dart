@@ -17,10 +17,12 @@ class GetHomeDataAdminCubit extends Cubit<GetHomeDataAdminState> {
   List<int>? ordersOfLastWeek;
 
   void getHomeDataAdmin() async {
+    if (isClosed) return;
     emit(GetHomeDataAdminState.loading());
     try {
 
       final response = await getHomeDataRepo.getHomeDataAdmin();
+      if (isClosed) return;
       response.when(
         success: (resDataHome) async {
           ordersNumber = resDataHome.totalOrders;
@@ -30,12 +32,14 @@ class GetHomeDataAdminCubit extends Cubit<GetHomeDataAdminState> {
           totalAmount = resDataHome.totalAmount;
           ordersToday = resDataHome.ordersToday;
           ordersOfLastWeek = resDataHome.ordersOfLastWeek;
-          emit(GetHomeDataAdminState.success(resDataHome));
+          if (!isClosed) emit(GetHomeDataAdminState.success(resDataHome));
         },
-        failure: (error) => emit(GetHomeDataAdminState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(GetHomeDataAdminState.fail(error));
+        },
       );
     } catch (e) {
-      emit(GetHomeDataAdminState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(GetHomeDataAdminState.fail(ApiErrorHandler.handle(e)));
     }
   }
 }

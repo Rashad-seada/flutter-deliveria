@@ -30,11 +30,11 @@ RestaurantWithOffers _$RestaurantWithOffersFromJson(
       nameAr: json['name_ar'] as String?,
       logo: json['logo'] as String?,
       cover: json['cover'] as String?,
-      rating: (json['rating'] ?? json['rate']) as num?,
+      rating: json['rating'] as num?,
       isClosed: json['is_closed'] as bool?,
       isOpen: json['is_open'] as bool?,
       hasOffers: json['has_offers'] as bool?,
-      offersCount: json['offers_count'] as int?,
+      offersCount: (json['offers_count'] as num?)?.toInt(),
       maxDiscount: json['max_discount'] as num?,
       distance: json['distance'] as num?,
     );
@@ -156,10 +156,10 @@ RestaurantDetails _$RestaurantDetailsFromJson(Map<String, dynamic> json) =>
       nameAr: json['name_ar'] as String?,
       logo: json['logo'] as String?,
       cover: json['cover'] as String?,
-      rating: (json['rating'] ?? json['rate']) as num?,
+      rating: json['rating'] as num?,
       isClosed: json['is_closed'] as bool?,
       hasOffers: json['has_offers'] as bool?,
-      offersCount: json['offers_count'] as int?,
+      offersCount: (json['offers_count'] as num?)?.toInt(),
       maxDiscount: json['max_discount'] as num?,
     );
 

@@ -136,7 +136,7 @@ class CoordinatesModel {
 @JsonSerializable(explicitToJson: true)
 class ResturantOrderModel {
   @JsonKey(name: 'restaurant_id')
-  final String? restaurantId;
+  final OrderRestaurantInfo? restaurant;
   final List<OrderItemModel>? items;
   @JsonKey(name: 'price_of_restaurant', fromJson: _numFromJson)
   final num? priceOfRestaurant;
@@ -146,19 +146,79 @@ class ResturantOrderModel {
   @JsonKey(name: '_id')
   final String? id;
 
+  @JsonKey(name: 'branch_id', fromJson: _orderBranchInfoFromJson)
+  final OrderBranchInfo? branchId;
+
   ResturantOrderModel({
-    this.restaurantId,
+    this.restaurant,
     this.items,
     this.priceOfRestaurant,
     this.status,
     this.cancelMe,
     this.id,
+    this.branchId,
   });
 
   factory ResturantOrderModel.fromJson(Map<String, dynamic> json) =>
       _$ResturantOrderModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ResturantOrderModelToJson(this);
+}
+
+/// Safely parse branch_id which can be a String (old) or Map (new)
+OrderBranchInfo? _orderBranchInfoFromJson(dynamic json) {
+  if (json == null) return null;
+  if (json is Map<String, dynamic>) {
+    return OrderBranchInfo.fromJson(json);
+  }
+  if (json is String) {
+    return OrderBranchInfo(id: json);
+  }
+  return null;
+}
+
+@JsonSerializable(explicitToJson: true)
+class OrderBranchInfo {
+  @JsonKey(name: '_id')
+  final String? id;
+  final String? name; 
+  @JsonKey(name: 'branch_name')
+  final String? branchName;
+  final String? address;
+  final String? phone;
+  final CoordinatesModel? coordinates;
+  @JsonKey(name: 'location_map')
+  final String? locationMap;
+  
+  OrderBranchInfo({
+    this.id,
+    this.name,
+    this.branchName,
+    this.address,
+    this.phone,
+    this.coordinates,
+    this.locationMap,
+  });
+  
+  factory OrderBranchInfo.fromJson(Map<String, dynamic> json) =>
+      _$OrderBranchInfoFromJson(json);
+      
+  Map<String, dynamic> toJson() => _$OrderBranchInfoToJson(this);
+}
+
+@JsonSerializable()
+class OrderRestaurantInfo {
+  @JsonKey(name: '_id')
+  final String? id;
+  final String? name;
+  final String? logo;
+
+  OrderRestaurantInfo({this.id, this.name, this.logo});
+
+  factory OrderRestaurantInfo.fromJson(Map<String, dynamic> json) =>
+      _$OrderRestaurantInfoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$OrderRestaurantInfoToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)

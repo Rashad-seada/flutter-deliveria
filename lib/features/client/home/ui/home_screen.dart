@@ -20,24 +20,22 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, ThemeState>(
       builder: (context, state) {
-        return Scaffold(
-          body: SafeArea(
-            child: Column(
-              children: [
-                HeaderSection(themeState: state, lat: widget.lat??0,
-                 long: widget.long??0,),
-                BlocBuilder<SlidersCubit, SlidersState>(
-                  builder: (context, sliderState) {
-                    return ScrollableContent(
-                      lat: widget.lat ?? 0,
-                      long: widget.long ?? 0,
-                      themeState: state,
-                      cubit: context.read<SlidersCubit>(),
-                    );
-                  },
-                ),
-              ],
-            ),
+        return SafeArea(
+          child: Column(
+            children: [
+              HeaderSection(themeState: state, lat: widget.lat??0,
+               long: widget.long??0,),
+              BlocBuilder<SlidersCubit, SlidersState>(
+                builder: (context, sliderState) {
+                  return ScrollableContent(
+                    lat: widget.lat ?? 0,
+                    long: widget.long ?? 0,
+                    themeState: state,
+                    cubit: context.read<SlidersCubit>(),
+                  );
+                },
+              ),
+            ],
           ),
         );
       },

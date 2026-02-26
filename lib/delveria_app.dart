@@ -57,6 +57,7 @@ class _DelveriaAppState extends State<DelveriaApp> {
                     scaffoldBackgroundColor: Colors.white,
                     brightness: Brightness.light,
                     primarySwatch: Colors.red,
+                    fontFamily: context.locale.languageCode == 'ar' ? 'Lantx' : 'Bimini',
                   ),
                   darkTheme: ThemeData(
                     bottomNavigationBarTheme:
@@ -65,6 +66,7 @@ class _DelveriaAppState extends State<DelveriaApp> {
                         ),
                     brightness: Brightness.dark,
                     primarySwatch: Colors.red,
+                    fontFamily: context.locale.languageCode == 'ar' ? 'Lantx' : 'Bimini',
                   ),
                   themeMode: state.themeMode,
                   debugShowCheckedModeBanner: false,

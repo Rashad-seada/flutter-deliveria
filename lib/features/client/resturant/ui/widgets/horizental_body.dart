@@ -240,6 +240,15 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
                 onTap: widget.isAdmin
                     ? () {}
                     : () {
+                        if (cubit.resturant?.isOpen == false) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text("Restaurant is Closed"),
+                                backgroundColor: Colors.red,
+                              ),
+                            );
+                            return;
+                        }
                         if (widget.edit == true) {
                           Navigator.push(
                             context,
@@ -280,9 +289,7 @@ class _HorizentalBodyForUserState extends State<HorizentalBodyForUser> {
                                   BlocProvider<CarouselCubit>(
                                     create: (context) => getIt(),
                                   ),
-                                  BlocProvider<AddToCartCubit>(
-                                    create: (context) => getIt(),
-                                  ),
+                                  BlocProvider.value(value: getIt<AddToCartCubit>()),
                                 ],
                                 child: AddItemScreen(
                                   item: item,

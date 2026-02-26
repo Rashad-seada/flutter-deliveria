@@ -58,13 +58,13 @@ class OrderActionButtons extends StatelessWidget {
   }
 
   Widget _buildRestaurantActions(BuildContext context) {
-    if (viewModel.singleStatus != "Preparing" ||
-        SharedPrefHelper.getBool(SharedPrefKeys.showbtn) == false) {
+    if (viewModel.singleStatus != "Preparing" &&
+        viewModel.singleStatus != "Approved / Preparing") {
       return SizedBox();
     }
     return Center(
       child: AppButton(
-        title: "Ready For pickUp ",
+        title: "Ready for Delivery",
         onPressed: () {
           context.read<OrdersResturantCubit>().markReady(
             orderId: viewModel.orderId ?? "",
@@ -73,7 +73,7 @@ class OrderActionButtons extends StatelessWidget {
           // getOrdersRestuant is called inside markReady success, but we can keep it here or remove it.
           // The previous code called it here.
           // context.read<OrdersResturantCubit>().getOrdersRestaurant(); 
-          SharedPrefHelper.setData(SharedPrefKeys.showbtn, false);
+          // SharedPrefHelper.setData(SharedPrefKeys.showbtn, false);
           context.pop();
         },
       ),

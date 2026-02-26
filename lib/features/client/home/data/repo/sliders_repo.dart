@@ -11,6 +11,7 @@ import 'package:delveria/features/admin/slider/data/models/delete_slider_respons
 import 'package:delveria/features/client/home/data/models/get_sliders_response.dart';
 import 'package:delveria/features/client/home/data/models/search_response.dart';
 import 'package:delveria/features/client/home/data/models/offers_response.dart';
+import 'package:delveria/features/client/home/data/models/best_sellers_response.dart';
 
 class SlidersRepo {
   final ApiServices apiServices;
@@ -56,7 +57,12 @@ class SlidersRepo {
   }) async {
     try {
       final res = await apiServices.searchResturantUserSider(
-        {"search": query},
+        {
+          "search": query,
+          "query": query,
+          "text": query,
+          "search_text": query,
+        },
         lat,
         long,
       );
@@ -133,5 +139,26 @@ class SlidersRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
-}
 
+  // ============ BEST SELLERS API METHODS ============
+
+  /// Get best seller restaurants (top 10 by completed orders)
+  Future<ApiResult<BestSellersResponse>> getBestSellers({
+    required double lat,
+    required double long,
+    int limit = 10,
+  }) async {
+    try {
+      final dio = DioFactory.getDio();
+      final response = await dio.get(
+        "${ApiConstants.baseUrl}${ApiConstants.getBestSellersLink}/$lat/$long",
+        queryParameters: {'limit': limit},
+      );
+      final res = BestSellersResponse.fromJson(response.data);
+      return ApiResult.success(res);
+    } catch (e) {
+      print("🔥 error getting best sellers: $e");
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+}

@@ -8,12 +8,14 @@ import 'package:delveria/features/ResturantOwner/menu/logic/cubit/menu_resturant
 import 'package:delveria/features/ResturantOwner/menu/ui/edit_your_item.dart';
 import 'package:delveria/features/ResturantOwner/ordersResturantScreen/ui/new_orders_details_screen.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/logic/cubit/notifications_cubit.dart';
+import 'package:delveria/features/ResturantOwner/resturantNotification/logic/cubit/notifications_cubit.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/ui/resturant_notification.dart';
 import 'package:delveria/features/ResturantOwner/resturantReviews/ui/resturant_reviews_screen.dart';
 import 'package:delveria/features/ResturantOwner/settingsResturant/ui/settings_resturant_screen.dart';
 import 'package:delveria/features/admin/adminBottomBar/logic/cubit/admin_bottom_bar_cubit.dart';
 import 'package:delveria/features/admin/adminBottomBar/ui/admin_bottom_bar.dart';
 import 'package:delveria/features/admin/coupons/logic/cubit/coupone_cubit.dart';
+import 'package:delveria/features/admin/coupons/data/models/coupon.dart';
 import 'package:delveria/features/admin/coupons/logic/cubit/pick_date_cubit.dart';
 import 'package:delveria/features/admin/coupons/ui/add_coupon_screen.dart';
 import 'package:delveria/features/admin/coupons/ui/coupons_screen.dart';
@@ -36,7 +38,9 @@ import 'package:delveria/features/client/accountInfo/ui/account_info_screen.dart
 import 'package:delveria/features/client/accountInfo/ui/edit_account_info_screen.dart';
 import 'package:delveria/features/client/adresses/logic/cubit/address_cubit.dart';
 import 'package:delveria/features/client/adresses/logic/cubit/create_address_cubit.dart';
+import 'package:delveria/features/client/adresses/ui/add_adress_screen.dart';
 import 'package:delveria/features/client/adresses/ui/my_adress.dart';
+import 'package:delveria/features/client/adresses/ui/location_picker_screen.dart';
 import 'package:delveria/features/client/auth/changePassword/ui/change_password.dart';
 import 'package:delveria/features/client/auth/changePassword/ui/success_change_password.dart';
 import 'package:delveria/features/client/auth/forgetPassword/ui/forget_password.dart';
@@ -71,6 +75,12 @@ import 'package:delveria/features/client/reviews/ui/add_review_screen.dart';
 import 'package:delveria/features/client/settings/ui/settings_screen.dart';
 import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_cubit.dart';
 import 'package:delveria/features/deliveryAgent/ui/delivery_agent_home_screen.dart';
+import 'package:delveria/features/client/loyalty/logic/cubit/loyalty_cubit.dart';
+import 'package:delveria/features/client/loyalty/ui/loyalty_screen.dart';
+import 'package:delveria/features/client/loyalty/ui/points_history_screen.dart';
+import 'package:delveria/features/admin/loyalty/logic/cubit/admin_loyalty_cubit.dart';
+import 'package:delveria/features/admin/loyalty/ui/reward_tiers_screen.dart';
+import 'package:delveria/features/admin/loyalty/ui/users_points_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -158,9 +168,15 @@ class AppRouter {
                   BlocProvider<SlidersCubit>(
                     create: (_) => getIt()..getSliders(),
                   ),
-                  BlocProvider<AllresturantsadminCubit>(create: (_) => getIt()),
+                  BlocProvider.value(value: getIt<AllresturantsadminCubit>()),
                   BlocProvider<GetOrdersCubit>(
                     create: (_) => getIt()..getOrdersUser(),
+                  ),
+                  BlocProvider.value(
+                    value: getIt<AddToCartCubit>()..getCart(),
+                  ),
+                  BlocProvider.value(
+                    value: getIt<NotificationsCubit>()..getNotifications(),
                   ),
                 ],
                 child: BottomNavBarScreen(selectedIndex: 0),
@@ -184,9 +200,15 @@ class AppRouter {
                   BlocProvider<SlidersCubit>(
                     create: (_) => getIt()..getSliders(),
                   ),
-                  BlocProvider<AllresturantsadminCubit>(create: (_) => getIt()),
+                  BlocProvider.value(value: getIt<AllresturantsadminCubit>()),
                   BlocProvider<GetOrdersCubit>(
                     create: (_) => getIt()..getOrdersUser(),
+                  ),
+                  BlocProvider.value(
+                    value: getIt<AddToCartCubit>()..getCart(),
+                  ),
+                  BlocProvider.value(
+                    value: getIt<NotificationsCubit>()..getNotifications(),
                   ),
                 ],
                 child: BottomNavBarScreen(selectedIndex: selectedIndex),
@@ -195,9 +217,8 @@ class AppRouter {
       case Routes.ratingFilterScreen:
         return MaterialPageRoute(
           builder:
-              (_) => BlocProvider(
-                create: (context) => getIt<AllresturantsadminCubit>(),
-
+              (_) => BlocProvider.value(
+                value: getIt<AllresturantsadminCubit>(),
                 child: RatingFilterScreen(),
               ),
         );
@@ -210,8 +231,8 @@ class AppRouter {
                 providers: [
                   BlocProvider(create: (context) => ResturantMenuCubit()),
                   BlocProvider(create: (context) => getIt<ItemCubit>()),
-                  BlocProvider(
-                    create: (context) => getIt<AllresturantsadminCubit>(),
+                  BlocProvider.value(
+                    value: getIt<AllresturantsadminCubit>(),
                   ),
                 ],
                 child: ResturantScreen(),
@@ -242,7 +263,7 @@ class AppRouter {
                     create: (context) => getIt(),
                   ),
                   BlocProvider<CarouselCubit>(create: (context) => getIt()),
-                  BlocProvider<AddToCartCubit>(create: (context) => getIt()),
+                  BlocProvider.value(value: getIt<AddToCartCubit>()),
                 ],
                 child: AddItemScreen(),
               ),
@@ -253,8 +274,8 @@ class AppRouter {
               (_) => MultiBlocProvider(
                 providers: [
                   BlocProvider(create: (context) => CartCubit()),
-                  BlocProvider(
-                    create: (context) => getIt<AddToCartCubit>()..getCart(),
+                  BlocProvider.value(
+                    value: getIt<AddToCartCubit>()..getCart(),
                   ),
                 ],
                 child: CartScreen(),
@@ -275,8 +296,8 @@ class AppRouter {
                     create:
                         (context) => getIt<CreateAddressCubit>()..getAdresses(),
                   ),
-                  BlocProvider(
-                    create: (context) => getIt<AddToCartCubit>()..getCart(),
+                  BlocProvider.value(
+                    value: getIt<AddToCartCubit>()..getCart(),
                   ),
                 ],
                 child: CheckoutScreen(totalPrice: totalPrice),
@@ -285,17 +306,15 @@ class AppRouter {
       case Routes.paymentScreen:
         return MaterialPageRoute(
           builder:
-              (_) => BlocProvider(
-                create: (context) => getIt<AddToCartCubit>(),
+              (_) => BlocProvider.value(
+                value: getIt<AddToCartCubit>(),
                 child: PaymentMethodScreen(),
               ),
         );
-
       case Routes.creditScreen:
         return MaterialPageRoute(builder: (_) => CreditCardScreen());
       case Routes.successOrderScreen:
         return MaterialPageRoute(builder: (_) => SuccessScreen());
-
       case Routes.myOrdersScreen:
         return MaterialPageRoute(
           builder:
@@ -381,8 +400,8 @@ class AppRouter {
                 providers: [
                   BlocProvider(create: (context) => MenuResturantCubit()),
                   BlocProvider(create: (context) => getIt<ItemCubit>()),
-                  BlocProvider(
-                    create: (context) => getIt<AllresturantsadminCubit>(),
+                  BlocProvider.value(
+                    value: getIt<AllresturantsadminCubit>(),
                   ),
                 ],
                 child: EditYourItemScreen(isAdd: isAdd),
@@ -413,10 +432,9 @@ class AppRouter {
       case Routes.notificationResturantScreen:
         return MaterialPageRoute(
           builder:
-              (_) => BlocProvider(
-                create:
-                    (context) =>
-                        getIt<NotificationsCubit>()..getNotifications(),
+              (_) => BlocProvider.value(
+                value:
+                    getIt<NotificationsCubit>()..getNotifications(),
                 child: ResturantNotification(),
               ),
         );
@@ -461,8 +479,8 @@ class AppRouter {
       case Routes.topReatedListScreen:
         return MaterialPageRoute(
           builder:
-              (_) => BlocProvider(
-                create: (context) => getIt<AllresturantsadminCubit>(),
+              (_) => BlocProvider.value(
+                value: getIt<AllresturantsadminCubit>(),
                 child: TopRatedListScreen(),
               ),
         );
@@ -491,11 +509,10 @@ class AppRouter {
                   BlocProvider(
                     create: (context) => getIt<AdminResturantFilterCubit>(),
                   ),
-                  BlocProvider(
-                    create:
-                        (context) =>
-                            getIt<AllresturantsadminCubit>()
-                              ..getAllRatedResturantsForAdmin(0, 0),
+                  BlocProvider.value(
+                    value:
+                        getIt<AllresturantsadminCubit>()
+                          ..getAllRatedResturantsForAdmin(0, 0),
                   ),
                 ],
                 child: AdminTopRatedFilter(),
@@ -504,11 +521,10 @@ class AppRouter {
       case Routes.addResturantScreen:
         return MaterialPageRoute(
           builder:
-              (_) => BlocProvider(
-                create:
-                    (context) =>
-                        getIt<AllresturantsadminCubit>()
-                          ..getAllSuperCategories(),
+              (_) => BlocProvider.value(
+                value:
+                    getIt<AllresturantsadminCubit>()
+                      ..getAllSuperCategories(),
                 child: AddRestaurantScreen(),
               ),
         );
@@ -521,27 +537,27 @@ class AppRouter {
                 providers: [
                   BlocProvider(create: (context) => getIt<PickDateCubit>()),
                   BlocProvider(
-                    create: (context) => getIt<CouponeCubit>()..getCouponse(),
+                    create: (context) => getIt<CouponeCubit>()..getCoupons(),
                   ),
                 ],
                 child: AdminCouponsScreen(),
               ),
         );
       case Routes.addCouponeScreen:
+        final coupon = settings.arguments as Coupon?;
         return MaterialPageRoute(
           builder:
               (_) => MultiBlocProvider(
                 providers: [
                   BlocProvider(create: (context) => getIt<PickDateCubit>()),
                   BlocProvider(create: (context) => getIt<CouponeCubit>()),
-                  BlocProvider(
-                    create:
-                        (context) =>
-                            getIt<AllresturantsadminCubit>()
-                              ..getAllResturantsForAdmin(),
+                  BlocProvider.value(
+                    value:
+                        getIt<AllresturantsadminCubit>()
+                          ..getAllResturantsForAdmin(),
                   ),
                 ],
-                child: AddCouponScreen(),
+                child: AddCouponScreen(coupon: coupon),
               ),
         );
       case Routes.deliveryAgentScreen:
@@ -570,11 +586,10 @@ class AppRouter {
           builder:
               (_) => MultiBlocProvider(
                 providers: [
-                  BlocProvider(
-                    create:
-                        (context) =>
-                            getIt<AllresturantsadminCubit>()
-                              ..getAllResturantsForAdmin(),
+                  BlocProvider.value(
+                    value:
+                        getIt<AllresturantsadminCubit>()
+                          ..getAllResturantsForAdmin(),
                   ),
                   BlocProvider(
                     create: (context) => getIt<SlidersCubit>()..getSliders(),
@@ -598,6 +613,49 @@ class AppRouter {
               (_) => BlocProvider(
                 create: (context) => getIt<SlidersCubit>()..getSliders(),
                 child: DeleteSliderScreen(),
+              ),
+        );
+      
+      // Loyalty Points
+      case Routes.loyaltyScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LoyaltyCubit>(),
+            child: const LoyaltyScreen(),
+          ),
+        );
+      case Routes.adminRewardTiersScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<AdminLoyaltyCubit>(),
+            child: const RewardTiersScreen(),
+          ),
+        );
+      case Routes.pointsHistoryScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LoyaltyCubit>(),
+            child: const PointsHistoryScreen(),
+          ),
+        );
+      case Routes.adminUsersPointsScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<AdminLoyaltyCubit>(),
+            child: const UsersPointsScreen(),
+          ),
+        );
+      case Routes.locationPickerScreen:
+        return MaterialPageRoute(builder: (_) => const LocationPickerScreen());
+      case Routes.addAddressScreen:
+        return MaterialPageRoute(
+          builder:
+              (_) => MultiBlocProvider(
+                providers: [
+                  BlocProvider(create: (context) => getIt<CreateAddressCubit>()),
+                  BlocProvider(create: (context) => getIt<AddressCubit>()),
+                ],
+                child: AddAddressScreen(),
               ),
         );
       default:

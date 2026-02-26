@@ -1,73 +1,153 @@
-import 'package:akedly/akedly.dart';
+import 'dart:convert';
 import 'package:delveria/core/network/api_constants.dart';
+import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 
+/// OTP Service that delegates OTP sending/verification to the backend,
+/// which uses BeOn SDK for WhatsApp/SMS delivery.
+///
+/// This replaces the old client-side Akedly SDK approach for better security —
+/// OTP generation now happens on the server, preventing bypass attacks.
 class OTPService {
-  late final AkedlyClient _client;
-
-  OTPService() {
-    _client = AkedlyClient(
-      apiKey: ApiConstants.apiKeyOtp,
-      pipelineId: ApiConstants.piplineId,
-    );
-  }
-
-  Future<String?> sendOTPToUser(
+  /// Send OTP to the given phone number via the backend
+  /// The backend will use BeOn SDK to deliver via WhatsApp (with SMS fallback)
+  Future<bool> sendOTPToUser(
     String phoneNumber, {
-    Function(String error)? onError,
+    Function(String error, int? retryAfter)? onError,
   }) async {
-    try {
-      final verificationId = await _client.sendOTP(phoneNumber, "");
-      return verificationId;
-    } on AkedlyException catch (e) {
-      final msg = e.message.toLowerCase() ?? '';
+    final url = '${ApiConstants.baseUrl}/otp/send';
+    final body = {'phone': phoneNumber, 'channel': 'whatsapp'};
+    debugPrint('[OTP] ▶ sendOTPToUser | URL: $url | body: $body');
 
-      if (msg.contains("pipeline is not configured") ||
-          msg.contains("no callback urls")) {
-        final errorMsg =
-            "Service is not available: OTP pipeline is not properly configured. Please contact support.";
-        onError?.call(errorMsg);
-      } else {
-        final errorMsg = 'Error sending OTP: ${e.message ?? "Unknown error"}';
-        onError?.call(errorMsg);
+    try {
+      final response = await http.post(
+        Uri.parse(url),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode(body),
+      );
+
+      debugPrint('[OTP] ◀ sendOTPToUser | status: ${response.statusCode} | body: ${response.body}');
+
+      // Guard against non-JSON responses (e.g. HTML 404 pages)
+      Map<String, dynamic> data = {};
+      try {
+        data = jsonDecode(response.body) as Map<String, dynamic>;
+      } catch (_) {
+        debugPrint('[OTP] ⚠️ Response is not valid JSON');
       }
-      return null;
-    } catch (e) {
-      final errorMsg = 'Error sending OTP: ${e.toString()}';
-      onError?.call(errorMsg);
-      return null;
+
+      if (response.statusCode == 200 && data['success'] == true) {
+        debugPrint('[OTP] ✅ OTP sent successfully to $phoneNumber');
+        return true;
+      } else if (response.statusCode == 429) {
+        final retryAfter = data['retry_after'] ?? 60;
+        debugPrint('[OTP] ⏳ Rate limited. Retry after: ${retryAfter}s');
+        onError?.call('Please wait $retryAfter seconds before requesting a new OTP', retryAfter);
+        return false;
+      } else {
+        final msg = data['message'] ?? 'Failed to send OTP (status ${response.statusCode})';
+        debugPrint('[OTP] ❌ sendOTPToUser error: $msg');
+        onError?.call(msg, null);
+        return false;
+      }
+    } catch (e, stack) {
+      debugPrint('[OTP] 🔥 sendOTPToUser exception: $e\n$stack');
+      onError?.call('Error sending OTP: ${e.toString()}', null);
+      return false;
     }
   }
 
+  /// Verify OTP code via the backend
+  /// The backend checks the code and marks the user as verified on success
   Future<bool> verifyUserOTP(
-    String verificationId,
+    String phoneNumber,
     String otpCode, {
-    Function(String error)? onError,
+    Function(String error, int? remainingAttempts)? onError,
   }) async {
+    final url = '${ApiConstants.baseUrl}/otp/verify';
+    final body = {'phone': phoneNumber, 'code': otpCode};
+    debugPrint('[OTP] ▶ verifyUserOTP | URL: $url | body: $body');
+
     try {
-      final result = await _client.verifyOTP(verificationId, otpCode);
+      final response = await http.post(
+        Uri.parse(url),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode(body),
+      );
 
-      return result;
-    } on AkedlyException catch (e) {
-      final msg = e.message.toLowerCase() ?? '';
+      debugPrint('[OTP] ◀ verifyUserOTP | status: ${response.statusCode} | body: ${response.body}');
 
-      if (msg.contains("pipeline is not configured") ||
-          msg.contains("no callback urls")) {
-        final errorMsg =
-            "Service is not available: OTP pipeline is not properly configured. Please contact support.";
-        onError?.call(errorMsg);
-      } else {
-        final errorMsg = 'Error verifying OTP: ${e.message ?? "Unknown error"}';
-        onError?.call(errorMsg);
+      Map<String, dynamic> data = {};
+      try {
+        data = jsonDecode(response.body) as Map<String, dynamic>;
+      } catch (_) {
+        debugPrint('[OTP] ⚠️ Response is not valid JSON');
       }
+
+      if (response.statusCode == 200 && data['success'] == true) {
+        debugPrint('[OTP] ✅ OTP verified for $phoneNumber');
+        return true;
+      } else {
+        final msg = data['message'] ?? 'Invalid OTP code';
+        final remainingAttempts = data['remaining_attempts'];
+        debugPrint('[OTP] ❌ verifyUserOTP failed: $msg | remaining attempts: $remainingAttempts');
+        onError?.call(msg, remainingAttempts);
+        return false;
+      }
+    } catch (e, stack) {
+      debugPrint('[OTP] 🔥 verifyUserOTP exception: $e\n$stack');
+      onError?.call('Error verifying OTP: ${e.toString()}', null);
       return false;
-    } catch (e) {
-      final errorMsg = 'Error verifying OTP: ${e.toString()}';
-      onError?.call(errorMsg);
+    }
+  }
+
+  /// Resend OTP via the backend (generates a fresh code)
+  Future<bool> resendOTP(
+    String phoneNumber, {
+    Function(String error, int? retryAfter)? onError,
+  }) async {
+    final url = '${ApiConstants.baseUrl}/otp/resend';
+    final body = {'phone': phoneNumber, 'channel': 'whatsapp'};
+    debugPrint('[OTP] ▶ resendOTP | URL: $url | body: $body');
+
+    try {
+      final response = await http.post(
+        Uri.parse(url),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode(body),
+      );
+
+      debugPrint('[OTP] ◀ resendOTP | status: ${response.statusCode} | body: ${response.body}');
+
+      Map<String, dynamic> data = {};
+      try {
+        data = jsonDecode(response.body) as Map<String, dynamic>;
+      } catch (_) {
+        debugPrint('[OTP] ⚠️ Response is not valid JSON');
+      }
+
+      if (response.statusCode == 200 && data['success'] == true) {
+        debugPrint('[OTP] ✅ OTP resent successfully to $phoneNumber');
+        return true;
+      } else if (response.statusCode == 429) {
+        final retryAfter = data['retry_after'] ?? 60;
+        debugPrint('[OTP] ⏳ Rate limited on resend. Retry after: ${retryAfter}s');
+        onError?.call('Please wait $retryAfter seconds before requesting a new OTP', retryAfter);
+        return false;
+      } else {
+        final msg = data['message'] ?? 'Failed to resend OTP (status ${response.statusCode})';
+        debugPrint('[OTP] ❌ resendOTP error: $msg');
+        onError?.call(msg, null);
+        return false;
+      }
+    } catch (e, stack) {
+      debugPrint('[OTP] 🔥 resendOTP exception: $e\n$stack');
+      onError?.call('Error resending OTP: ${e.toString()}', null);
       return false;
     }
   }
 
   void dispose() {
-    _client.dispose();
+    // No resources to dispose (HTTP client is stateless)
   }
 }

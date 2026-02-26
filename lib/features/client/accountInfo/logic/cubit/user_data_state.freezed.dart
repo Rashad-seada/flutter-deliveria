@@ -12,8 +12,7 @@ part of 'user_data_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UserDataState<T> {
@@ -26,7 +25,8 @@ mixin _$UserDataState<T> {
     required TResult Function() updateLoading,
     required TResult Function(T data) updateSuccess,
     required TResult Function(ApiErrorModel error) updateFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -36,7 +36,8 @@ mixin _$UserDataState<T> {
     TResult? Function()? updateLoading,
     TResult? Function(T data)? updateSuccess,
     TResult? Function(ApiErrorModel error)? updateFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -47,7 +48,8 @@ mixin _$UserDataState<T> {
     TResult Function(T data)? updateSuccess,
     TResult Function(ApiErrorModel error)? updateFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -57,7 +59,8 @@ mixin _$UserDataState<T> {
     required TResult Function(UpdateLoading<T> value) updateLoading,
     required TResult Function(UpdateSuccess<T> value) updateSuccess,
     required TResult Function(UpdateFail<T> value) updateFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -67,7 +70,8 @@ mixin _$UserDataState<T> {
     TResult? Function(UpdateLoading<T> value)? updateLoading,
     TResult? Function(UpdateSuccess<T> value)? updateSuccess,
     TResult? Function(UpdateFail<T> value)? updateFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -78,15 +82,15 @@ mixin _$UserDataState<T> {
     TResult Function(UpdateSuccess<T> value)? updateSuccess,
     TResult Function(UpdateFail<T> value)? updateFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UserDataStateCopyWith<T, $Res> {
   factory $UserDataStateCopyWith(
-    UserDataState<T> value,
-    $Res Function(UserDataState<T>) then,
-  ) = _$UserDataStateCopyWithImpl<T, $Res, UserDataState<T>>;
+          UserDataState<T> value, $Res Function(UserDataState<T>) then) =
+      _$UserDataStateCopyWithImpl<T, $Res, UserDataState<T>>;
 }
 
 /// @nodoc
@@ -98,17 +102,13 @@ class _$UserDataStateCopyWithImpl<T, $Res, $Val extends UserDataState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -116,12 +116,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -243,9 +239,8 @@ abstract class _Initial<T> implements UserDataState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -253,12 +248,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -380,9 +371,8 @@ abstract class Loading<T> implements UserDataState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -392,23 +382,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -437,9 +424,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -542,10 +527,7 @@ abstract class Success<T> implements UserDataState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -553,9 +535,8 @@ abstract class Success<T> implements UserDataState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -565,23 +546,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -609,9 +587,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -714,33 +690,25 @@ abstract class Fail<T> implements UserDataState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UpdateLoadingImplCopyWith<T, $Res> {
-  factory _$$UpdateLoadingImplCopyWith(
-    _$UpdateLoadingImpl<T> value,
-    $Res Function(_$UpdateLoadingImpl<T>) then,
-  ) = __$$UpdateLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$UpdateLoadingImplCopyWith(_$UpdateLoadingImpl<T> value,
+          $Res Function(_$UpdateLoadingImpl<T>) then) =
+      __$$UpdateLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$UpdateLoadingImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$UpdateLoadingImpl<T>>
     implements _$$UpdateLoadingImplCopyWith<T, $Res> {
-  __$$UpdateLoadingImplCopyWithImpl(
-    _$UpdateLoadingImpl<T> _value,
-    $Res Function(_$UpdateLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$UpdateLoadingImplCopyWithImpl(_$UpdateLoadingImpl<T> _value,
+      $Res Function(_$UpdateLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -861,10 +829,9 @@ abstract class UpdateLoading<T> implements UserDataState<T> {
 
 /// @nodoc
 abstract class _$$UpdateSuccessImplCopyWith<T, $Res> {
-  factory _$$UpdateSuccessImplCopyWith(
-    _$UpdateSuccessImpl<T> value,
-    $Res Function(_$UpdateSuccessImpl<T>) then,
-  ) = __$$UpdateSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$UpdateSuccessImplCopyWith(_$UpdateSuccessImpl<T> value,
+          $Res Function(_$UpdateSuccessImpl<T>) then) =
+      __$$UpdateSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -873,24 +840,21 @@ abstract class _$$UpdateSuccessImplCopyWith<T, $Res> {
 class __$$UpdateSuccessImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$UpdateSuccessImpl<T>>
     implements _$$UpdateSuccessImplCopyWith<T, $Res> {
-  __$$UpdateSuccessImplCopyWithImpl(
-    _$UpdateSuccessImpl<T> _value,
-    $Res Function(_$UpdateSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$UpdateSuccessImplCopyWithImpl(_$UpdateSuccessImpl<T> _value,
+      $Res Function(_$UpdateSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$UpdateSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$UpdateSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -919,16 +883,12 @@ class _$UpdateSuccessImpl<T> implements UpdateSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateSuccessImplCopyWith<T, _$UpdateSuccessImpl<T>> get copyWith =>
       __$$UpdateSuccessImplCopyWithImpl<T, _$UpdateSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1027,10 +987,7 @@ abstract class UpdateSuccess<T> implements UserDataState<T> {
   const factory UpdateSuccess(final T data) = _$UpdateSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UpdateSuccessImplCopyWith<T, _$UpdateSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1038,9 +995,8 @@ abstract class UpdateSuccess<T> implements UserDataState<T> {
 /// @nodoc
 abstract class _$$UpdateFailImplCopyWith<T, $Res> {
   factory _$$UpdateFailImplCopyWith(
-    _$UpdateFailImpl<T> value,
-    $Res Function(_$UpdateFailImpl<T>) then,
-  ) = __$$UpdateFailImplCopyWithImpl<T, $Res>;
+          _$UpdateFailImpl<T> value, $Res Function(_$UpdateFailImpl<T>) then) =
+      __$$UpdateFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1050,23 +1006,20 @@ class __$$UpdateFailImplCopyWithImpl<T, $Res>
     extends _$UserDataStateCopyWithImpl<T, $Res, _$UpdateFailImpl<T>>
     implements _$$UpdateFailImplCopyWith<T, $Res> {
   __$$UpdateFailImplCopyWithImpl(
-    _$UpdateFailImpl<T> _value,
-    $Res Function(_$UpdateFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$UpdateFailImpl<T> _value, $Res Function(_$UpdateFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$UpdateFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$UpdateFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1094,9 +1047,7 @@ class _$UpdateFailImpl<T> implements UpdateFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateFailImplCopyWith<T, _$UpdateFailImpl<T>> get copyWith =>
@@ -1199,10 +1150,7 @@ abstract class UpdateFail<T> implements UserDataState<T> {
   const factory UpdateFail(final ApiErrorModel error) = _$UpdateFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of UserDataState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UpdateFailImplCopyWith<T, _$UpdateFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

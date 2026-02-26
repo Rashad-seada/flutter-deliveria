@@ -12,8 +12,7 @@ part of 'create_address_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CreateAddressState<T> {
@@ -32,7 +31,8 @@ mixin _$CreateAddressState<T> {
     required TResult Function() changeEnableAddressLoading,
     required TResult Function(T data) changeEnableAddressSuccess,
     required TResult Function(ApiErrorModel error) changeEnableAddressFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -48,7 +48,8 @@ mixin _$CreateAddressState<T> {
     TResult? Function()? changeEnableAddressLoading,
     TResult? Function(T data)? changeEnableAddressSuccess,
     TResult? Function(ApiErrorModel error)? changeEnableAddressFail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -65,7 +66,8 @@ mixin _$CreateAddressState<T> {
     TResult Function(T data)? changeEnableAddressSuccess,
     TResult Function(ApiErrorModel error)? changeEnableAddressFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
@@ -76,17 +78,18 @@ mixin _$CreateAddressState<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
-  }) => throw _privateConstructorUsedError;
+        changeEnableAddressFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
@@ -100,12 +103,13 @@ mixin _$CreateAddressState<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
-  }) => throw _privateConstructorUsedError;
+        changeEnableAddressFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -119,28 +123,25 @@ mixin _$CreateAddressState<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateAddressStateCopyWith<T, $Res> {
-  factory $CreateAddressStateCopyWith(
-    CreateAddressState<T> value,
-    $Res Function(CreateAddressState<T>) then,
-  ) = _$CreateAddressStateCopyWithImpl<T, $Res, CreateAddressState<T>>;
+  factory $CreateAddressStateCopyWith(CreateAddressState<T> value,
+          $Res Function(CreateAddressState<T>) then) =
+      _$CreateAddressStateCopyWithImpl<T, $Res, CreateAddressState<T>>;
 }
 
 /// @nodoc
-class _$CreateAddressStateCopyWithImpl<
-  T,
-  $Res,
-  $Val extends CreateAddressState<T>
->
+class _$CreateAddressStateCopyWithImpl<T, $Res,
+        $Val extends CreateAddressState<T>>
     implements $CreateAddressStateCopyWith<T, $Res> {
   _$CreateAddressStateCopyWithImpl(this._value, this._then);
 
@@ -148,17 +149,13 @@ class _$CreateAddressStateCopyWithImpl<
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -166,12 +163,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$CreateAddressStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -268,16 +261,16 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return initial(this);
   }
@@ -296,11 +289,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return initial?.call(this);
   }
@@ -319,9 +312,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -339,9 +332,8 @@ abstract class _Initial<T> implements CreateAddressState<T> {
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
   factory _$$LoadingImplCopyWith(
-    _$LoadingImpl<T> value,
-    $Res Function(_$LoadingImpl<T>) then,
-  ) = __$$LoadingImplCopyWithImpl<T, $Res>;
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -349,12 +341,8 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
     extends _$CreateAddressStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
   __$$LoadingImplCopyWithImpl(
-    _$LoadingImpl<T> _value,
-    $Res Function(_$LoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -451,16 +439,16 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return loading(this);
   }
@@ -479,11 +467,11 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return loading?.call(this);
   }
@@ -502,9 +490,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -522,9 +510,8 @@ abstract class Loading<T> implements CreateAddressState<T> {
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
-    _$SuccessImpl<T> value,
-    $Res Function(_$SuccessImpl<T>) then,
-  ) = __$$SuccessImplCopyWithImpl<T, $Res>;
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -534,23 +521,20 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
     extends _$CreateAddressStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
   __$$SuccessImplCopyWithImpl(
-    _$SuccessImpl<T> _value,
-    $Res Function(_$SuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$SuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -579,9 +563,7 @@ class _$SuccessImpl<T> implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -662,16 +644,16 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return success(this);
   }
@@ -690,11 +672,11 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return success?.call(this);
   }
@@ -713,9 +695,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -730,10 +712,7 @@ abstract class Success<T> implements CreateAddressState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -741,9 +720,8 @@ abstract class Success<T> implements CreateAddressState<T> {
 /// @nodoc
 abstract class _$$FailImplCopyWith<T, $Res> {
   factory _$$FailImplCopyWith(
-    _$FailImpl<T> value,
-    $Res Function(_$FailImpl<T>) then,
-  ) = __$$FailImplCopyWithImpl<T, $Res>;
+          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
+      __$$FailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -753,23 +731,20 @@ class __$$FailImplCopyWithImpl<T, $Res>
     extends _$CreateAddressStateCopyWithImpl<T, $Res, _$FailImpl<T>>
     implements _$$FailImplCopyWith<T, $Res> {
   __$$FailImplCopyWithImpl(
-    _$FailImpl<T> _value,
-    $Res Function(_$FailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -797,9 +772,7 @@ class _$FailImpl<T> implements Fail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
@@ -880,16 +853,16 @@ class _$FailImpl<T> implements Fail<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return fail(this);
   }
@@ -908,11 +881,11 @@ class _$FailImpl<T> implements Fail<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return fail?.call(this);
   }
@@ -931,9 +904,9 @@ class _$FailImpl<T> implements Fail<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -948,34 +921,26 @@ abstract class Fail<T> implements CreateAddressState<T> {
   const factory Fail(final ApiErrorModel error) = _$FailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetAddressLoadingImplCopyWith<T, $Res> {
-  factory _$$GetAddressLoadingImplCopyWith(
-    _$GetAddressLoadingImpl<T> value,
-    $Res Function(_$GetAddressLoadingImpl<T>) then,
-  ) = __$$GetAddressLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$GetAddressLoadingImplCopyWith(_$GetAddressLoadingImpl<T> value,
+          $Res Function(_$GetAddressLoadingImpl<T>) then) =
+      __$$GetAddressLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$GetAddressLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<T, $Res, _$GetAddressLoadingImpl<T>>
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$GetAddressLoadingImpl<T>>
     implements _$$GetAddressLoadingImplCopyWith<T, $Res> {
-  __$$GetAddressLoadingImplCopyWithImpl(
-    _$GetAddressLoadingImpl<T> _value,
-    $Res Function(_$GetAddressLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$GetAddressLoadingImplCopyWithImpl(_$GetAddressLoadingImpl<T> _value,
+      $Res Function(_$GetAddressLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1073,16 +1038,16 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return getAddressLoading(this);
   }
@@ -1101,11 +1066,11 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return getAddressLoading?.call(this);
   }
@@ -1124,9 +1089,9 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -1143,37 +1108,33 @@ abstract class GetAddressLoading<T> implements CreateAddressState<T> {
 
 /// @nodoc
 abstract class _$$GetAddressSuccessImplCopyWith<T, $Res> {
-  factory _$$GetAddressSuccessImplCopyWith(
-    _$GetAddressSuccessImpl<T> value,
-    $Res Function(_$GetAddressSuccessImpl<T>) then,
-  ) = __$$GetAddressSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$GetAddressSuccessImplCopyWith(_$GetAddressSuccessImpl<T> value,
+          $Res Function(_$GetAddressSuccessImpl<T>) then) =
+      __$$GetAddressSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$GetAddressSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<T, $Res, _$GetAddressSuccessImpl<T>>
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$GetAddressSuccessImpl<T>>
     implements _$$GetAddressSuccessImplCopyWith<T, $Res> {
-  __$$GetAddressSuccessImplCopyWithImpl(
-    _$GetAddressSuccessImpl<T> _value,
-    $Res Function(_$GetAddressSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetAddressSuccessImplCopyWithImpl(_$GetAddressSuccessImpl<T> _value,
+      $Res Function(_$GetAddressSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$GetAddressSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetAddressSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1202,17 +1163,13 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAddressSuccessImplCopyWith<T, _$GetAddressSuccessImpl<T>>
-  get copyWith =>
-      __$$GetAddressSuccessImplCopyWithImpl<T, _$GetAddressSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$GetAddressSuccessImplCopyWithImpl<T, _$GetAddressSuccessImpl<T>>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1289,16 +1246,16 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return getAddressSuccess(this);
   }
@@ -1317,11 +1274,11 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return getAddressSuccess?.call(this);
   }
@@ -1340,9 +1297,9 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -1357,20 +1314,16 @@ abstract class GetAddressSuccess<T> implements CreateAddressState<T> {
   const factory GetAddressSuccess(final T data) = _$GetAddressSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetAddressSuccessImplCopyWith<T, _$GetAddressSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetAddressFailImplCopyWith<T, $Res> {
-  factory _$$GetAddressFailImplCopyWith(
-    _$GetAddressFailImpl<T> value,
-    $Res Function(_$GetAddressFailImpl<T>) then,
-  ) = __$$GetAddressFailImplCopyWithImpl<T, $Res>;
+  factory _$$GetAddressFailImplCopyWith(_$GetAddressFailImpl<T> value,
+          $Res Function(_$GetAddressFailImpl<T>) then) =
+      __$$GetAddressFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1379,24 +1332,21 @@ abstract class _$$GetAddressFailImplCopyWith<T, $Res> {
 class __$$GetAddressFailImplCopyWithImpl<T, $Res>
     extends _$CreateAddressStateCopyWithImpl<T, $Res, _$GetAddressFailImpl<T>>
     implements _$$GetAddressFailImplCopyWith<T, $Res> {
-  __$$GetAddressFailImplCopyWithImpl(
-    _$GetAddressFailImpl<T> _value,
-    $Res Function(_$GetAddressFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$GetAddressFailImplCopyWithImpl(_$GetAddressFailImpl<T> _value,
+      $Res Function(_$GetAddressFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetAddressFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetAddressFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1424,16 +1374,12 @@ class _$GetAddressFailImpl<T> implements GetAddressFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAddressFailImplCopyWith<T, _$GetAddressFailImpl<T>> get copyWith =>
       __$$GetAddressFailImplCopyWithImpl<T, _$GetAddressFailImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1510,16 +1456,16 @@ class _$GetAddressFailImpl<T> implements GetAddressFail<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return getAddressFail(this);
   }
@@ -1538,11 +1484,11 @@ class _$GetAddressFailImpl<T> implements GetAddressFail<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return getAddressFail?.call(this);
   }
@@ -1561,9 +1507,9 @@ class _$GetAddressFailImpl<T> implements GetAddressFail<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -1579,10 +1525,7 @@ abstract class GetAddressFail<T> implements CreateAddressState<T> {
       _$GetAddressFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetAddressFailImplCopyWith<T, _$GetAddressFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1590,23 +1533,19 @@ abstract class GetAddressFail<T> implements CreateAddressState<T> {
 /// @nodoc
 abstract class _$$DeleteAddressLoadingImplCopyWith<T, $Res> {
   factory _$$DeleteAddressLoadingImplCopyWith(
-    _$DeleteAddressLoadingImpl<T> value,
-    $Res Function(_$DeleteAddressLoadingImpl<T>) then,
-  ) = __$$DeleteAddressLoadingImplCopyWithImpl<T, $Res>;
+          _$DeleteAddressLoadingImpl<T> value,
+          $Res Function(_$DeleteAddressLoadingImpl<T>) then) =
+      __$$DeleteAddressLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$DeleteAddressLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<T, $Res, _$DeleteAddressLoadingImpl<T>>
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$DeleteAddressLoadingImpl<T>>
     implements _$$DeleteAddressLoadingImplCopyWith<T, $Res> {
-  __$$DeleteAddressLoadingImplCopyWithImpl(
-    _$DeleteAddressLoadingImpl<T> _value,
-    $Res Function(_$DeleteAddressLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$DeleteAddressLoadingImplCopyWithImpl(_$DeleteAddressLoadingImpl<T> _value,
+      $Res Function(_$DeleteAddressLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1704,16 +1643,16 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return deleteAddressLoading(this);
   }
@@ -1732,11 +1671,11 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return deleteAddressLoading?.call(this);
   }
@@ -1755,9 +1694,9 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -1775,36 +1714,33 @@ abstract class DeleteAddressLoading<T> implements CreateAddressState<T> {
 /// @nodoc
 abstract class _$$DeleteAddressSuccessImplCopyWith<T, $Res> {
   factory _$$DeleteAddressSuccessImplCopyWith(
-    _$DeleteAddressSuccessImpl<T> value,
-    $Res Function(_$DeleteAddressSuccessImpl<T>) then,
-  ) = __$$DeleteAddressSuccessImplCopyWithImpl<T, $Res>;
+          _$DeleteAddressSuccessImpl<T> value,
+          $Res Function(_$DeleteAddressSuccessImpl<T>) then) =
+      __$$DeleteAddressSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$DeleteAddressSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<T, $Res, _$DeleteAddressSuccessImpl<T>>
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$DeleteAddressSuccessImpl<T>>
     implements _$$DeleteAddressSuccessImplCopyWith<T, $Res> {
-  __$$DeleteAddressSuccessImplCopyWithImpl(
-    _$DeleteAddressSuccessImpl<T> _value,
-    $Res Function(_$DeleteAddressSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DeleteAddressSuccessImplCopyWithImpl(_$DeleteAddressSuccessImpl<T> _value,
+      $Res Function(_$DeleteAddressSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$DeleteAddressSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$DeleteAddressSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -1833,16 +1769,12 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteAddressSuccessImplCopyWith<T, _$DeleteAddressSuccessImpl<T>>
-  get copyWith => __$$DeleteAddressSuccessImplCopyWithImpl<
-    T,
-    _$DeleteAddressSuccessImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$DeleteAddressSuccessImplCopyWithImpl<T,
+          _$DeleteAddressSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1919,16 +1851,16 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return deleteAddressSuccess(this);
   }
@@ -1947,11 +1879,11 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return deleteAddressSuccess?.call(this);
   }
@@ -1970,9 +1902,9 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -1988,47 +1920,40 @@ abstract class DeleteAddressSuccess<T> implements CreateAddressState<T> {
       _$DeleteAddressSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteAddressSuccessImplCopyWith<T, _$DeleteAddressSuccessImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteAddressFailImplCopyWith<T, $Res> {
-  factory _$$DeleteAddressFailImplCopyWith(
-    _$DeleteAddressFailImpl<T> value,
-    $Res Function(_$DeleteAddressFailImpl<T>) then,
-  ) = __$$DeleteAddressFailImplCopyWithImpl<T, $Res>;
+  factory _$$DeleteAddressFailImplCopyWith(_$DeleteAddressFailImpl<T> value,
+          $Res Function(_$DeleteAddressFailImpl<T>) then) =
+      __$$DeleteAddressFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
 
 /// @nodoc
 class __$$DeleteAddressFailImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<T, $Res, _$DeleteAddressFailImpl<T>>
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$DeleteAddressFailImpl<T>>
     implements _$$DeleteAddressFailImplCopyWith<T, $Res> {
-  __$$DeleteAddressFailImplCopyWithImpl(
-    _$DeleteAddressFailImpl<T> _value,
-    $Res Function(_$DeleteAddressFailImpl<T>) _then,
-  ) : super(_value, _then);
+  __$$DeleteAddressFailImplCopyWithImpl(_$DeleteAddressFailImpl<T> _value,
+      $Res Function(_$DeleteAddressFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$DeleteAddressFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$DeleteAddressFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -2056,17 +1981,13 @@ class _$DeleteAddressFailImpl<T> implements DeleteAddressFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteAddressFailImplCopyWith<T, _$DeleteAddressFailImpl<T>>
-  get copyWith =>
-      __$$DeleteAddressFailImplCopyWithImpl<T, _$DeleteAddressFailImpl<T>>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$DeleteAddressFailImplCopyWithImpl<T, _$DeleteAddressFailImpl<T>>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2143,16 +2064,16 @@ class _$DeleteAddressFailImpl<T> implements DeleteAddressFail<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return deleteAddressFail(this);
   }
@@ -2171,11 +2092,11 @@ class _$DeleteAddressFailImpl<T> implements DeleteAddressFail<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return deleteAddressFail?.call(this);
   }
@@ -2194,9 +2115,9 @@ class _$DeleteAddressFailImpl<T> implements DeleteAddressFail<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -2212,38 +2133,28 @@ abstract class DeleteAddressFail<T> implements CreateAddressState<T> {
       _$DeleteAddressFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteAddressFailImplCopyWith<T, _$DeleteAddressFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeEnableAddressLoadingImplCopyWith<T, $Res> {
   factory _$$ChangeEnableAddressLoadingImplCopyWith(
-    _$ChangeEnableAddressLoadingImpl<T> value,
-    $Res Function(_$ChangeEnableAddressLoadingImpl<T>) then,
-  ) = __$$ChangeEnableAddressLoadingImplCopyWithImpl<T, $Res>;
+          _$ChangeEnableAddressLoadingImpl<T> value,
+          $Res Function(_$ChangeEnableAddressLoadingImpl<T>) then) =
+      __$$ChangeEnableAddressLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
 class __$$ChangeEnableAddressLoadingImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<
-          T,
-          $Res,
-          _$ChangeEnableAddressLoadingImpl<T>
-        >
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$ChangeEnableAddressLoadingImpl<T>>
     implements _$$ChangeEnableAddressLoadingImplCopyWith<T, $Res> {
   __$$ChangeEnableAddressLoadingImplCopyWithImpl(
-    _$ChangeEnableAddressLoadingImpl<T> _value,
-    $Res Function(_$ChangeEnableAddressLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
+      _$ChangeEnableAddressLoadingImpl<T> _value,
+      $Res Function(_$ChangeEnableAddressLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2342,16 +2253,16 @@ class _$ChangeEnableAddressLoadingImpl<T>
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return changeEnableAddressLoading(this);
   }
@@ -2370,11 +2281,11 @@ class _$ChangeEnableAddressLoadingImpl<T>
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return changeEnableAddressLoading?.call(this);
   }
@@ -2393,9 +2304,9 @@ class _$ChangeEnableAddressLoadingImpl<T>
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -2414,40 +2325,34 @@ abstract class ChangeEnableAddressLoading<T> implements CreateAddressState<T> {
 /// @nodoc
 abstract class _$$ChangeEnableAddressSuccessImplCopyWith<T, $Res> {
   factory _$$ChangeEnableAddressSuccessImplCopyWith(
-    _$ChangeEnableAddressSuccessImpl<T> value,
-    $Res Function(_$ChangeEnableAddressSuccessImpl<T>) then,
-  ) = __$$ChangeEnableAddressSuccessImplCopyWithImpl<T, $Res>;
+          _$ChangeEnableAddressSuccessImpl<T> value,
+          $Res Function(_$ChangeEnableAddressSuccessImpl<T>) then) =
+      __$$ChangeEnableAddressSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
 class __$$ChangeEnableAddressSuccessImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<
-          T,
-          $Res,
-          _$ChangeEnableAddressSuccessImpl<T>
-        >
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$ChangeEnableAddressSuccessImpl<T>>
     implements _$$ChangeEnableAddressSuccessImplCopyWith<T, $Res> {
   __$$ChangeEnableAddressSuccessImplCopyWithImpl(
-    _$ChangeEnableAddressSuccessImpl<T> _value,
-    $Res Function(_$ChangeEnableAddressSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$ChangeEnableAddressSuccessImpl<T> _value,
+      $Res Function(_$ChangeEnableAddressSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$ChangeEnableAddressSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$ChangeEnableAddressSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -2477,19 +2382,13 @@ class _$ChangeEnableAddressSuccessImpl<T>
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeEnableAddressSuccessImplCopyWith<
-    T,
-    _$ChangeEnableAddressSuccessImpl<T>
-  >
-  get copyWith => __$$ChangeEnableAddressSuccessImplCopyWithImpl<
-    T,
-    _$ChangeEnableAddressSuccessImpl<T>
-  >(this, _$identity);
+  _$$ChangeEnableAddressSuccessImplCopyWith<T,
+          _$ChangeEnableAddressSuccessImpl<T>>
+      get copyWith => __$$ChangeEnableAddressSuccessImplCopyWithImpl<T,
+          _$ChangeEnableAddressSuccessImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2566,16 +2465,16 @@ class _$ChangeEnableAddressSuccessImpl<T>
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return changeEnableAddressSuccess(this);
   }
@@ -2594,11 +2493,11 @@ class _$ChangeEnableAddressSuccessImpl<T>
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return changeEnableAddressSuccess?.call(this);
   }
@@ -2617,9 +2516,9 @@ class _$ChangeEnableAddressSuccessImpl<T>
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -2635,54 +2534,43 @@ abstract class ChangeEnableAddressSuccess<T> implements CreateAddressState<T> {
       _$ChangeEnableAddressSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChangeEnableAddressSuccessImplCopyWith<
-    T,
-    _$ChangeEnableAddressSuccessImpl<T>
-  >
-  get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$ChangeEnableAddressSuccessImplCopyWith<T,
+          _$ChangeEnableAddressSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeEnableAddressFailImplCopyWith<T, $Res> {
   factory _$$ChangeEnableAddressFailImplCopyWith(
-    _$ChangeEnableAddressFailImpl<T> value,
-    $Res Function(_$ChangeEnableAddressFailImpl<T>) then,
-  ) = __$$ChangeEnableAddressFailImplCopyWithImpl<T, $Res>;
+          _$ChangeEnableAddressFailImpl<T> value,
+          $Res Function(_$ChangeEnableAddressFailImpl<T>) then) =
+      __$$ChangeEnableAddressFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
 
 /// @nodoc
 class __$$ChangeEnableAddressFailImplCopyWithImpl<T, $Res>
-    extends
-        _$CreateAddressStateCopyWithImpl<
-          T,
-          $Res,
-          _$ChangeEnableAddressFailImpl<T>
-        >
+    extends _$CreateAddressStateCopyWithImpl<T, $Res,
+        _$ChangeEnableAddressFailImpl<T>>
     implements _$$ChangeEnableAddressFailImplCopyWith<T, $Res> {
   __$$ChangeEnableAddressFailImplCopyWithImpl(
-    _$ChangeEnableAddressFailImpl<T> _value,
-    $Res Function(_$ChangeEnableAddressFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$ChangeEnableAddressFailImpl<T> _value,
+      $Res Function(_$ChangeEnableAddressFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$ChangeEnableAddressFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ChangeEnableAddressFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -2710,16 +2598,12 @@ class _$ChangeEnableAddressFailImpl<T> implements ChangeEnableAddressFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeEnableAddressFailImplCopyWith<T, _$ChangeEnableAddressFailImpl<T>>
-  get copyWith => __$$ChangeEnableAddressFailImplCopyWithImpl<
-    T,
-    _$ChangeEnableAddressFailImpl<T>
-  >(this, _$identity);
+      get copyWith => __$$ChangeEnableAddressFailImplCopyWithImpl<T,
+          _$ChangeEnableAddressFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2796,16 +2680,16 @@ class _$ChangeEnableAddressFailImpl<T> implements ChangeEnableAddressFail<T> {
     required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
     required TResult Function(GetAddressFail<T> value) getAddressFail,
     required TResult Function(DeleteAddressLoading<T> value)
-    deleteAddressLoading,
+        deleteAddressLoading,
     required TResult Function(DeleteAddressSuccess<T> value)
-    deleteAddressSuccess,
+        deleteAddressSuccess,
     required TResult Function(DeleteAddressFail<T> value) deleteAddressFail,
     required TResult Function(ChangeEnableAddressLoading<T> value)
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     required TResult Function(ChangeEnableAddressSuccess<T> value)
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     required TResult Function(ChangeEnableAddressFail<T> value)
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return changeEnableAddressFail(this);
   }
@@ -2824,11 +2708,11 @@ class _$ChangeEnableAddressFailImpl<T> implements ChangeEnableAddressFail<T> {
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult? Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult? Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult? Function(ChangeEnableAddressFail<T> value)?
-    changeEnableAddressFail,
+        changeEnableAddressFail,
   }) {
     return changeEnableAddressFail?.call(this);
   }
@@ -2847,9 +2731,9 @@ class _$ChangeEnableAddressFailImpl<T> implements ChangeEnableAddressFail<T> {
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFail<T> value)? deleteAddressFail,
     TResult Function(ChangeEnableAddressLoading<T> value)?
-    changeEnableAddressLoading,
+        changeEnableAddressLoading,
     TResult Function(ChangeEnableAddressSuccess<T> value)?
-    changeEnableAddressSuccess,
+        changeEnableAddressSuccess,
     TResult Function(ChangeEnableAddressFail<T> value)? changeEnableAddressFail,
     required TResult orElse(),
   }) {
@@ -2865,10 +2749,7 @@ abstract class ChangeEnableAddressFail<T> implements CreateAddressState<T> {
       _$ChangeEnableAddressFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of CreateAddressState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangeEnableAddressFailImplCopyWith<T, _$ChangeEnableAddressFailImpl<T>>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

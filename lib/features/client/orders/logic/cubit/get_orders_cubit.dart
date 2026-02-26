@@ -11,19 +11,22 @@ class GetOrdersCubit extends Cubit<GetOrdersState> {
   GetOrdersCubit(this.ordersRepo) : super(GetOrdersState.initial());
 
   void getOrdersUser() async {
-    emit(GetOrdersState.loading());
+    if (!isClosed) emit(GetOrdersState.loading());
     try {
       final response = await ordersRepo.getOrders();
+      if (isClosed) return;
       response.when(
         success: (getOrdersRes) {
           orders = getOrdersRes.orders ?? [];
           orderStatus = getOrdersRes.orders?.first.status ?? "";
-          emit(GetOrdersState.success(getOrdersRes));
+          if (!isClosed) emit(GetOrdersState.success(getOrdersRes));
         },
-        failure: (error) => emit(GetOrdersState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(GetOrdersState.fail(error));
+        },
       );
     } catch (e) {
-      emit(GetOrdersState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(GetOrdersState.fail(ApiErrorHandler.handle(e)));
     }
   }
 

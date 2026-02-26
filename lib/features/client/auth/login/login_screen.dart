@@ -20,9 +20,128 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geolocator/geolocator.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool _isGettingLocation = false;
+
+  Future<void> _continueAsGuest() async {
+    setState(() => _isGettingLocation = true);
+    
+    try {
+      // Check if location services are enabled
+      bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      if (!serviceEnabled) {
+        if (mounted) {
+          _showLocationDialog(
+            'Location Services Disabled',
+            'Please enable location services to continue as a guest.',
+          );
+        }
+        setState(() => _isGettingLocation = false);
+        return;
+      }
+
+      // Check and request permission
+      LocationPermission permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+        if (permission == LocationPermission.denied) {
+          if (mounted) {
+            _showLocationDialog(
+              'Location Permission Required',
+              'Location permission is required to browse restaurants near you. Please grant location access.',
+            );
+          }
+          setState(() => _isGettingLocation = false);
+          return;
+        }
+      }
+
+      if (permission == LocationPermission.deniedForever) {
+        if (mounted) {
+          _showLocationDialog(
+            'Location Permission Denied',
+            'Location permission is permanently denied. Please enable it from app settings to continue as a guest.',
+            showSettings: true,
+          );
+        }
+        setState(() => _isGettingLocation = false);
+        return;
+      }
+
+      // Get current position
+      Position position = await Geolocator.getCurrentPosition(
+        locationSettings: const LocationSettings(
+          accuracy: LocationAccuracy.high,
+          timeLimit: Duration(seconds: 15),
+        ),
+      );
+
+      // Save location to SharedPreferences
+      await SharedPrefHelper.setData(SharedPrefKeys.lat, position.latitude);
+      await SharedPrefHelper.setData(SharedPrefKeys.long, position.longitude);
+      
+      // Set Guest Flag
+      await SharedPrefHelper.setData(SharedPrefKeys.isGuest, true);
+      
+      // Navigate to Home
+      if (mounted) {
+        context.pushReplacementNamed(Routes.bottomBarScreen, arguments: 0);
+      }
+    } catch (e) {
+      print('Error getting location: $e');
+      if (mounted) {
+        _showLocationDialog(
+          'Location Error',
+          'Failed to get your location. Please try again.',
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isGettingLocation = false);
+      }
+    }
+  }
+
+  void _showLocationDialog(String title, String message, {bool showSettings = false}) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(title, style: TextStyles.bimini16W700),
+        content: Text(message, style: TextStyles.bimini16W400Body),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          if (showSettings)
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Geolocator.openAppSettings();
+              },
+              child: Text('Open Settings', style: TextStyle(color: AppColors.primaryDeafult)),
+            )
+          else
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                _continueAsGuest(); // Retry
+              },
+              child: Text('Try Again', style: TextStyle(color: AppColors.primaryDeafult)),
+            ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,42 +189,43 @@ class LoginScreen extends StatelessWidget {
                         DoNotHaveAccountRichText(),
                         verticalSpace(20.h),
 
-                        context.read<SystemDataCubit>().isUploaded == true
-                            ? SizedBox()
-                            : Center(
-                              child: LoginBlocListener(
-                                child: GestureDetector(
-                                  onTap: () async {
-                                    await SharedPrefHelper.setData(
-                                      SharedPrefKeys.continueAsGuest,
-                                      true,
-                                    );
-                                    await SharedPrefHelper.setData(
-                                      SharedPrefKeys.isDeleted,
-                                      false,
-                                    );
-                                    context.read<LoginCubit>().login(
-                                      LoginRequestBody(
-                                        phone: "01234567891",
-                                        password: "123456",
-                                        fbToken: "",
+                        Center(
+                          child: _isGettingLocation
+                              ? Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                      height: 20,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2,
+                                        color: AppColors.primaryDeafult,
                                       ),
-                                    );
-                                    // context.pushNamed(Routes.bottomBarScreen, arguments: 0);
-                                  },
+                                    ),
+                                    SizedBox(width: 10),
+                                    Text(
+                                      'Getting location...',
+                                      style: TextStyles.bimini16W700BoldWhite.copyWith(
+                                        color: state.themeMode == ThemeMode.dark
+                                            ? Colors.white
+                                            : AppColors.primaryDeafult,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : GestureDetector(
+                                  onTap: _continueAsGuest,
                                   child: Text(
                                     AppStrings.continueAsGuest.tr(),
-                                    style: TextStyles.bimini16W700BoldWhite
-                                        .copyWith(
-                                          color:
-                                              state.themeMode == ThemeMode.dark
-                                                  ? Colors.white
-                                                  : AppColors.primaryDeafult,
-                                        ),
+                                    style: TextStyles.bimini16W700BoldWhite.copyWith(
+                                      color: state.themeMode == ThemeMode.dark
+                                          ? Colors.white
+                                          : AppColors.primaryDeafult,
+                                      decoration: TextDecoration.underline,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
+                        ),
                       ],
                     ),
                   ),

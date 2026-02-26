@@ -13,7 +13,7 @@ class PickDateCubit extends Cubit<PickDateState> {
           minPurchaseController: TextEditingController(),
           expDateController: TextEditingController(),
           isValid: List.generate(AppLists.coupons.length, (index) => true),
-          couponeState: List.generate(AppLists.coupons.length, (index) => AppLists.coupons[index].status),
+          couponeState: List.generate(AppLists.coupons.length, (index) => AppLists.coupons[index].isActive ? 'Active' : 'Expired'),
         ),
       );
 
@@ -45,6 +45,16 @@ class PickDateCubit extends Cubit<PickDateState> {
       state.expDateController.text = DateFormat('yyyy-MM-dd').format(picked);
       emit(state.copyWith(selectedExpDate: picked));
     }
+  }
+
+  void setInitialDate(DateTime date) {
+    state.expDateController.text = DateFormat('yyyy-MM-dd').format(date);
+    emit(state.copyWith(selectedExpDate: date));
+  }
+  
+  void resetDate() {
+    state.expDateController.clear();
+    emit(state.copyWith(selectedExpDate: null));
   }
 
   @override

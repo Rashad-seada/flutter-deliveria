@@ -11,53 +11,62 @@ class OrdersResturantCubit extends Cubit<OrdersResturantState> {
 
   List<OrderResturantModel> ordersResturant = [];
 
- Future <void> getOrdersRestaurant() async {
-    emit(OrdersResturantState.loading());
+  Future <void> getOrdersRestaurant() async {
+    if (!isClosed) emit(OrdersResturantState.loading());
     try {
       final response = await getOrdersRepo.getOrdersResturant();
+      if (isClosed) return; 
       response.when(
         success: (ordersRes) {
           ordersResturant = ordersRes.orders ?? [];
-          emit(OrdersResturantState.success(ordersRes));
+          if (!isClosed) emit(OrdersResturantState.success(ordersRes));
         },
-        failure: (error) => emit(OrdersResturantState.fail(error)),
+        failure: (error) {
+          if (!isClosed) emit(OrdersResturantState.fail(error));
+        },
       );
     } catch (e) {
-      emit(OrdersResturantState.fail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(OrdersResturantState.fail(ApiErrorHandler.handle(e)));
     }
   }
 
   Future<void> acceptOrder({required String orderId, required String subOrderId}) async {
-    emit(OrdersResturantState.acceptOrderLoading());
+    if (!isClosed) emit(OrdersResturantState.acceptOrderLoading());
     try {
       final response = await getOrdersRepo.acceptOrder(orderId: orderId, subOrderId: subOrderId);
+      if (isClosed) return;
       response.when(
         success: (acceptRes) {
-          emit(OrdersResturantState.acceptOrderSuccess(acceptRes));
+          if (!isClosed) emit(OrdersResturantState.acceptOrderSuccess(acceptRes));
           // Refresh orders list after accepting
           getOrdersRestaurant();
         },
-        failure: (error) => emit(OrdersResturantState.acceptOrderFail(error)),
+        failure: (error) {
+          if (!isClosed) emit(OrdersResturantState.acceptOrderFail(error));
+        },
       );
     } catch (e) {
-      emit(OrdersResturantState.acceptOrderFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(OrdersResturantState.acceptOrderFail(ApiErrorHandler.handle(e)));
     }
   }
 
   Future<void> markReady({required String orderId, required String subOrderId}) async {
-    emit(OrdersResturantState.markReadyLoading());
+    if (!isClosed) emit(OrdersResturantState.markReadyLoading());
     try {
       final response = await getOrdersRepo.markReady(orderId: orderId, subOrderId: subOrderId);
+      if (isClosed) return;
       response.when(
         success: (readyRes) {
-          emit(OrdersResturantState.markReadySuccess(readyRes));
+          if (!isClosed) emit(OrdersResturantState.markReadySuccess(readyRes));
           // Refresh orders list after marking ready
           getOrdersRestaurant();
         },
-        failure: (error) => emit(OrdersResturantState.markReadyFail(error)),
+        failure: (error) {
+          if (!isClosed) emit(OrdersResturantState.markReadyFail(error));
+        },
       );
     } catch (e) {
-      emit(OrdersResturantState.markReadyFail(ApiErrorHandler.handle(e)));
+      if (!isClosed) emit(OrdersResturantState.markReadyFail(ApiErrorHandler.handle(e)));
     }
   }
 }

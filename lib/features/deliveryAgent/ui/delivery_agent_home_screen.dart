@@ -19,6 +19,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'package:delveria/features/deliveryAgent/ui/widgets/delivery_filter_bottom_sheet.dart';
+
 class DeliveryAgentHomeScreen extends StatefulWidget {
   const DeliveryAgentHomeScreen({super.key});
 
@@ -30,6 +32,8 @@ class DeliveryAgentHomeScreen extends StatefulWidget {
 class _DeliveryAgentHomeScreenState extends State<DeliveryAgentHomeScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  FilterData _availableOrdersFilter = FilterData();
+  FilterData _myOrdersFilter = FilterData();
 
   // Add a key to force rebuild of TabBarView when refresh is pressed
   Key _tabBarViewKey = UniqueKey();
@@ -55,17 +59,55 @@ class _DeliveryAgentHomeScreenState extends State<DeliveryAgentHomeScreen>
     );
   }
 
-  void _refreshOrders(BuildContext context) {
-    // This will call the appropriate cubit method to fetch data again
+  void _fetchData() {
     if (_tabController.index == 0) {
-      context.read<AgentOrdersCubit>().getCurrentOrdersAgent();
+      context.read<AgentOrdersCubit>().getCurrentOrdersAgent(
+        date: _availableOrdersFilter.date,
+        startDate: _availableOrdersFilter.startDate,
+        endDate: _availableOrdersFilter.endDate,
+        paymentType: _availableOrdersFilter.paymentType,
+        orderType: _availableOrdersFilter.orderType,
+      );
     } else {
-      context.read<AgentOrdersCubit>().getAcceptedOrders();
+      context.read<AgentOrdersCubit>().getAcceptedOrders(
+        status: _myOrdersFilter.status,
+        date: _myOrdersFilter.date,
+        startDate: _myOrdersFilter.startDate,
+        endDate: _myOrdersFilter.endDate,
+        paymentType: _myOrdersFilter.paymentType,
+      );
     }
+  }
+
+  void _refreshOrders(BuildContext context) {
+    _fetchData();
     // Optionally, force TabBarView to rebuild if needed
     setState(() {
       _tabBarViewKey = UniqueKey();
     });
+  }
+
+  void _showFilterBottomSheet() {
+    final isAvailableTab = _tabController.index == 0;
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => DeliveryFilterBottomSheet(
+        isAvailableOrdersTab: isAvailableTab,
+        initialFilters: isAvailableTab ? _availableOrdersFilter : _myOrdersFilter,
+        onApply: (data) {
+          setState(() {
+            if (isAvailableTab) {
+              _availableOrdersFilter = data;
+            } else {
+              _myOrdersFilter = data;
+            }
+          });
+          _fetchData();
+        },
+      ),
+    );
   }
 
   @override
@@ -103,6 +145,13 @@ class _DeliveryAgentHomeScreenState extends State<DeliveryAgentHomeScreen>
                     state is GetAcceptOrderLoading
                         ? [CustomLoading()]
                         : [
+                          IconButton(
+                            onPressed: _showFilterBottomSheet,
+                            icon: Icon(
+                              Icons.filter_list,
+                              color: AppColors.primaryDeafult,
+                            ),
+                          ),
                           IconButton(
                             onPressed: () {
                               _refreshOrders(context);
@@ -178,14 +227,9 @@ class _DeliveryAgentHomeScreenState extends State<DeliveryAgentHomeScreen>
                       Tab(text: AppStrings.currentOrders.tr()),
                     ],
                     onTap: (index) {
-                      // When switching tabs, fetch the relevant data
-                      if (index == 0) {
-                        context
-                            .read<AgentOrdersCubit>()
-                            .getCurrentOrdersAgent();
-                      } else {
-                        context.read<AgentOrdersCubit>().getAcceptedOrders();
-                      }
+                      // When switching tabs, fetch the relevant data with saved filters
+                      _fetchData();
+                      
                       setState(() {
                         _tabBarViewKey = UniqueKey();
                       });

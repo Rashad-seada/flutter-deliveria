@@ -147,6 +147,8 @@ class AcceptedOrderUser {
 class AcceptedOrderRestaurantOrder {
   @JsonKey(name: 'restaurant_id')
   final AcceptedOrderRestaurantInfo restaurantId;
+  @JsonKey(name: 'branch_id', fromJson: _acceptedBranchInfoFromJson)
+  final AcceptedOrderBranchInfo? branch;
   final List<AcceptedOrderItem> items;
   @JsonKey(name: 'price_of_restaurant')
   final num priceOfRestaurant;
@@ -158,6 +160,7 @@ class AcceptedOrderRestaurantOrder {
 
   AcceptedOrderRestaurantOrder({
     required this.restaurantId,
+    this.branch,
     required this.items,
     required this.priceOfRestaurant,
     required this.id,
@@ -169,6 +172,50 @@ class AcceptedOrderRestaurantOrder {
       _$AcceptedOrderRestaurantOrderFromJson(json);
 
   Map<String, dynamic> toJson() => _$AcceptedOrderRestaurantOrderToJson(this);
+}
+
+/// Safely parse branch_id which can be a String (old) or Map (new)
+AcceptedOrderBranchInfo? _acceptedBranchInfoFromJson(dynamic json) {
+  if (json == null) return null;
+  if (json is Map<String, dynamic>) {
+    return AcceptedOrderBranchInfo.fromJson(json);
+  }
+  if (json is String) {
+    return AcceptedOrderBranchInfo(id: json);
+  }
+  return null;
+}
+
+@JsonSerializable(explicitToJson: true)
+class AcceptedOrderBranchInfo {
+  @JsonKey(name: '_id')
+  final String? id;
+  final String? name;
+  @JsonKey(name: 'branch_name')
+  final String? branchName;
+  final String? address;
+  final String? phone;
+  final AcceptedOrderCoordinates? coordinates;
+  @JsonKey(name: 'location_map')
+  final String? locationMap;
+
+  AcceptedOrderBranchInfo({
+    this.id,
+    this.name,
+    this.branchName,
+    this.address,
+    this.phone,
+    this.coordinates,
+    this.locationMap,
+  });
+
+  /// Display name helper
+  String get displayName => branchName ?? name ?? '';
+
+  factory AcceptedOrderBranchInfo.fromJson(Map<String, dynamic> json) =>
+      _$AcceptedOrderBranchInfoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AcceptedOrderBranchInfoToJson(this);
 }
 
 @JsonSerializable()

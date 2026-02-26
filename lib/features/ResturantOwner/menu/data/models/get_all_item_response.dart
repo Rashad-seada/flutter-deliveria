@@ -130,7 +130,11 @@ class ItemModel {
   @JsonKey(name: 'enable')
   final bool? enable;
   @JsonKey(name: 'have_option')
-  final bool? haveOption; // <-- Added haveOption field
+  final bool? haveOption;
+  @JsonKey(name: 'is_best_seller')
+  final bool? isBestSeller;
+  @JsonKey(name: 'item_category')
+  final String? itemCategory;
 
   ItemModel({
     this.id,
@@ -144,7 +148,9 @@ class ItemModel {
     this.updatedAt,
     this.v,
     this.enable,
-    this.haveOption, // <-- Added haveOption to constructor
+    this.haveOption,
+    this.isBestSeller,
+    this.itemCategory,
   });
 
   factory ItemModel.fromJson(Map<String, dynamic> json) =>

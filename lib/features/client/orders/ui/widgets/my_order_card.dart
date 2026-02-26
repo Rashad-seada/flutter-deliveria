@@ -27,6 +27,10 @@ Color _getStatusColor(String status) {
       return Colors.green.withOpacity(0.2);
     case "Canceled":
       return Colors.red.withOpacity(0.2);
+    case "Ready for Delivery":
+    case "On the way":
+    case "Pick up":
+       return Colors.blue.withOpacity(0.2);
     default:
       return Colors.orange.withOpacity(0.2);
   }
@@ -40,6 +44,10 @@ Color _getStatusTextColor(String status) {
       return Colors.green;
     case "Canceled":
       return Colors.red;
+    case "Ready for Delivery":
+    case "On the way":
+    case "Pick up":
+      return Colors.blue;
     default:
       return Colors.orange;
   }

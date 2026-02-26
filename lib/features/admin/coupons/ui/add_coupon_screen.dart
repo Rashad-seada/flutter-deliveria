@@ -5,6 +5,7 @@ import 'package:delveria/core/theme/styles.dart';
 import 'package:delveria/core/widgets/app_button.dart';
 import 'package:delveria/core/widgets/arrow_back_app_bar.dart';
 import 'package:delveria/core/widgets/close_app_dialog.dart';
+import 'package:delveria/features/admin/coupons/data/models/coupon.dart';
 import 'package:delveria/features/admin/coupons/data/models/coupone_request.dart';
 import 'package:delveria/features/admin/coupons/logic/cubit/coupone_cubit.dart';
 import 'package:delveria/features/admin/coupons/logic/cubit/coupone_state.dart';
@@ -18,7 +19,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddCouponScreen extends StatefulWidget {
-  const AddCouponScreen({super.key});
+  final Coupon? coupon;
+  const AddCouponScreen({super.key, this.coupon});
 
   @override
   State<AddCouponScreen> createState() => _AddCouponScreenState();
@@ -26,6 +28,22 @@ class AddCouponScreen extends StatefulWidget {
 
 class _AddCouponScreenState extends State<AddCouponScreen> {
   bool allResturants = false;
+  
+  @override
+  void initState() {
+    super.initState();
+    final couponeCubit = context.read<CouponeCubit>();
+    final pickDateCubit = context.read<PickDateCubit>();
+    
+    if (widget.coupon != null) {
+      couponeCubit.initializeForEdit(widget.coupon!);
+      pickDateCubit.setInitialDate(widget.coupon!.expiredDate);
+    } else {
+      couponeCubit.resetControllers();
+      pickDateCubit.resetDate(); 
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +60,7 @@ class _AddCouponScreenState extends State<AddCouponScreen> {
             );
           },
           showTitle: true,
-          title: AppStrings.addNewCoupon,
+          title: widget.coupon != null ? AppStrings.updateCoupon : AppStrings.addNewCoupon,
           titleStyle: TextStyles.bimini20W700.copyWith(
             color: AppColors.primaryDeafult,
           ),
@@ -59,63 +77,71 @@ class _AddCouponScreenState extends State<AddCouponScreen> {
                   vertical: 40.h,
                 ),
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      NewCouponForm(
-                        couponeCodeController:
-                            couponeCubit.couponeCodeController,
-                        discountController: couponeCubit.discountController,
-                        expDateController: state.expDateController,
-                        onTap:
-                            () => context.read<PickDateCubit>().pickExpDate(
-                              context,
-                            ),
-                        validNumberController:
-                            couponeCubit.validNumberController,
-                      ),
-                      verticalSpace(10),
-                      CheckboxListTile(
-                        contentPadding: EdgeInsetsDirectional.zero,
-                        value: allResturants,
-                        controlAffinity: ListTileControlAffinity.leading,
-                        activeColor: AppColors.primary,
-                        title: Text(
-                          "Apply For all resturants ",
-                          style: TextStyles.bimini16W700,
+                  child: Form(
+                    key: couponeCubit.formKey,
+                    child: Column(
+                      children: [
+                        NewCouponForm(
+                          couponeCodeController: couponeCubit.couponeCodeController,
+                          discountController: couponeCubit.discountController,
+                          expDateController: state.expDateController,
+                          validNumberController: couponeCubit.validNumberController,
+                          usagePerUserController: couponeCubit.usagePerUserController,
+                          minOrderValueController: couponeCubit.minOrderValueController,
+                          descriptionController: couponeCubit.descriptionController,
+                          currentDiscountType: couponeCubit.discountType,
+                          currentCouponType: couponeCubit.couponType,
+                          onDiscountTypeChanged: (val) {
+                            setState(() {
+                              couponeCubit.discountType = val ?? 'bill';
+                            });
+                          },
+                          onCouponTypeChanged: (val) {
+                            setState(() {
+                              couponeCubit.couponType = val ?? 'promotional';
+                            });
+                          },
+                          onTap: () => context.read<PickDateCubit>().pickExpDate(context),
                         ),
-                        onChanged: (p0) {
-                          setState(() {
-                            allResturants = !allResturants;
-                          });
-                        },
-                      ),
-                      DropDownOrderStatusCoupon(),
-                      verticalSpace(100),
-                      AddCouponeBlocListener(
-                        child: AppButton(
-                          title: AppStrings.saveCoupon,
-                          onPressed: () {
-                            couponeCubit.creatCoupone(
-                              request: CouponeRequest(
-                                restaurant:
-                                    allResturants
-                                        ? "Full"
-                                        : couponeCubit.resturantId,
-                                code: couponeCubit.couponeCodeController.text,
-                                numberEnable:
-                                    couponeCubit.validNumberController.text,
-                                discount:
-                                    int.tryParse(
-                                      couponeCubit.discountController.text,
-                                    ) ??
-                                    0,
-                                expiredDate: state.expDateController.text,
-                              ),
-                            );
+                        verticalSpace(10),
+                        CheckboxListTile(
+                          contentPadding: EdgeInsetsDirectional.zero,
+                          value: couponeCubit.isAllRestaurants,
+                          controlAffinity: ListTileControlAffinity.leading,
+                          activeColor: AppColors.primary,
+                          title: Text(
+                            "Apply For all resturants ",
+                            style: TextStyles.bimini16W700,
+                          ),
+                          onChanged: (val) {
+                            setState(() {
+                              couponeCubit.isAllRestaurants = val ?? false;
+                            });
                           },
                         ),
-                      ),
-                    ],
+                        if (!couponeCubit.isAllRestaurants)
+                          DropDownOrderStatusCoupon(),
+                        verticalSpace(100),
+                        AddCouponeBlocListener(
+                          child: AppButton(
+                            title: widget.coupon != null ? AppStrings.updateCoupon : AppStrings.saveCoupon,
+                            onPressed: () {
+                              if (widget.coupon != null) {
+                                  couponeCubit.updateCoupon(
+                                    id: widget.coupon!.id,
+                                    // Form data is used if updates map is null
+                                    updates: null 
+                                  );
+                              } else {
+                                  couponeCubit.creatCoupone(
+                                    expiredDate: state.expDateController.text,
+                                  );
+                              }
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               );

@@ -12,8 +12,7 @@ part of 'item_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ItemState {
@@ -34,26 +33,27 @@ mixin _$ItemState {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -77,7 +77,7 @@ mixin _$ItemState {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -86,7 +86,8 @@ mixin _$ItemState {
     TResult? Function(GetAllItemsResponse data)? filterItemCategoriesSuccess,
     TResult? Function(ApiErrorModel error)? filterItemCategoriesFail,
     TResult? Function(File photo)? photoSelected,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -110,7 +111,7 @@ mixin _$ItemState {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -120,7 +121,8 @@ mixin _$ItemState {
     TResult Function(ApiErrorModel error)? filterItemCategoriesFail,
     TResult Function(File photo)? photoSelected,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ItemStateInitial value) initial,
@@ -137,36 +139,37 @@ mixin _$ItemState {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ItemStateInitial value)? initial,
@@ -186,28 +189,29 @@ mixin _$ItemState {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ItemStateInitial value)? initial,
@@ -227,29 +231,30 @@ mixin _$ItemState {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -267,30 +272,22 @@ class _$ItemStateCopyWithImpl<$Res, $Val extends ItemState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$ItemStateInitialImplCopyWith<$Res> {
-  factory _$$ItemStateInitialImplCopyWith(
-    _$ItemStateInitialImpl value,
-    $Res Function(_$ItemStateInitialImpl) then,
-  ) = __$$ItemStateInitialImplCopyWithImpl<$Res>;
+  factory _$$ItemStateInitialImplCopyWith(_$ItemStateInitialImpl value,
+          $Res Function(_$ItemStateInitialImpl) then) =
+      __$$ItemStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$ItemStateInitialImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ItemStateInitialImpl>
     implements _$$ItemStateInitialImplCopyWith<$Res> {
-  __$$ItemStateInitialImplCopyWithImpl(
-    _$ItemStateInitialImpl _value,
-    $Res Function(_$ItemStateInitialImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$ItemStateInitialImplCopyWithImpl(_$ItemStateInitialImpl _value,
+      $Res Function(_$ItemStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -330,23 +327,23 @@ class _$ItemStateInitialImpl implements ItemStateInitial {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -377,7 +374,7 @@ class _$ItemStateInitialImpl implements ItemStateInitial {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -414,7 +411,7 @@ class _$ItemStateInitialImpl implements ItemStateInitial {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -448,34 +445,34 @@ class _$ItemStateInitialImpl implements ItemStateInitial {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return initial(this);
@@ -501,25 +498,25 @@ class _$ItemStateInitialImpl implements ItemStateInitial {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -546,25 +543,25 @@ class _$ItemStateInitialImpl implements ItemStateInitial {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -582,23 +579,18 @@ abstract class ItemStateInitial implements ItemState {
 
 /// @nodoc
 abstract class _$$ItemStateLoadingImplCopyWith<$Res> {
-  factory _$$ItemStateLoadingImplCopyWith(
-    _$ItemStateLoadingImpl value,
-    $Res Function(_$ItemStateLoadingImpl) then,
-  ) = __$$ItemStateLoadingImplCopyWithImpl<$Res>;
+  factory _$$ItemStateLoadingImplCopyWith(_$ItemStateLoadingImpl value,
+          $Res Function(_$ItemStateLoadingImpl) then) =
+      __$$ItemStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$ItemStateLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ItemStateLoadingImpl>
     implements _$$ItemStateLoadingImplCopyWith<$Res> {
-  __$$ItemStateLoadingImplCopyWithImpl(
-    _$ItemStateLoadingImpl _value,
-    $Res Function(_$ItemStateLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$ItemStateLoadingImplCopyWithImpl(_$ItemStateLoadingImpl _value,
+      $Res Function(_$ItemStateLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -638,23 +630,23 @@ class _$ItemStateLoadingImpl implements ItemStateLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -685,7 +677,7 @@ class _$ItemStateLoadingImpl implements ItemStateLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -722,7 +714,7 @@ class _$ItemStateLoadingImpl implements ItemStateLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -756,34 +748,34 @@ class _$ItemStateLoadingImpl implements ItemStateLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return loading(this);
@@ -809,25 +801,25 @@ class _$ItemStateLoadingImpl implements ItemStateLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -854,25 +846,25 @@ class _$ItemStateLoadingImpl implements ItemStateLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -890,10 +882,9 @@ abstract class ItemStateLoading implements ItemState {
 
 /// @nodoc
 abstract class _$$ItemStateSuccessImplCopyWith<$Res> {
-  factory _$$ItemStateSuccessImplCopyWith(
-    _$ItemStateSuccessImpl value,
-    $Res Function(_$ItemStateSuccessImpl) then,
-  ) = __$$ItemStateSuccessImplCopyWithImpl<$Res>;
+  factory _$$ItemStateSuccessImplCopyWith(_$ItemStateSuccessImpl value,
+          $Res Function(_$ItemStateSuccessImpl) then) =
+      __$$ItemStateSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CreateItemResponse data});
 }
@@ -902,24 +893,21 @@ abstract class _$$ItemStateSuccessImplCopyWith<$Res> {
 class __$$ItemStateSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ItemStateSuccessImpl>
     implements _$$ItemStateSuccessImplCopyWith<$Res> {
-  __$$ItemStateSuccessImplCopyWithImpl(
-    _$ItemStateSuccessImpl _value,
-    $Res Function(_$ItemStateSuccessImpl) _then,
-  ) : super(_value, _then);
+  __$$ItemStateSuccessImplCopyWithImpl(_$ItemStateSuccessImpl _value,
+      $Res Function(_$ItemStateSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$ItemStateSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as CreateItemResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$ItemStateSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as CreateItemResponse,
+    ));
   }
 }
 
@@ -947,16 +935,12 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ItemStateSuccessImplCopyWith<_$ItemStateSuccessImpl> get copyWith =>
       __$$ItemStateSuccessImplCopyWithImpl<_$ItemStateSuccessImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -976,23 +960,23 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -1023,7 +1007,7 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -1060,7 +1044,7 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -1094,34 +1078,34 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return success(this);
@@ -1147,25 +1131,25 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -1192,25 +1176,25 @@ class _$ItemStateSuccessImpl implements ItemStateSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -1227,10 +1211,7 @@ abstract class ItemStateSuccess implements ItemState {
       _$ItemStateSuccessImpl;
 
   CreateItemResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ItemStateSuccessImplCopyWith<_$ItemStateSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1238,9 +1219,8 @@ abstract class ItemStateSuccess implements ItemState {
 /// @nodoc
 abstract class _$$ItemStateFailImplCopyWith<$Res> {
   factory _$$ItemStateFailImplCopyWith(
-    _$ItemStateFailImpl value,
-    $Res Function(_$ItemStateFailImpl) then,
-  ) = __$$ItemStateFailImplCopyWithImpl<$Res>;
+          _$ItemStateFailImpl value, $Res Function(_$ItemStateFailImpl) then) =
+      __$$ItemStateFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -1250,23 +1230,20 @@ class __$$ItemStateFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ItemStateFailImpl>
     implements _$$ItemStateFailImplCopyWith<$Res> {
   __$$ItemStateFailImplCopyWithImpl(
-    _$ItemStateFailImpl _value,
-    $Res Function(_$ItemStateFailImpl) _then,
-  ) : super(_value, _then);
+      _$ItemStateFailImpl _value, $Res Function(_$ItemStateFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$ItemStateFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ItemStateFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -1294,9 +1271,7 @@ class _$ItemStateFailImpl implements ItemStateFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ItemStateFailImplCopyWith<_$ItemStateFailImpl> get copyWith =>
@@ -1320,23 +1295,23 @@ class _$ItemStateFailImpl implements ItemStateFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -1367,7 +1342,7 @@ class _$ItemStateFailImpl implements ItemStateFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -1404,7 +1379,7 @@ class _$ItemStateFailImpl implements ItemStateFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -1438,34 +1413,34 @@ class _$ItemStateFailImpl implements ItemStateFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return fail(this);
@@ -1491,25 +1466,25 @@ class _$ItemStateFailImpl implements ItemStateFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -1536,25 +1511,25 @@ class _$ItemStateFailImpl implements ItemStateFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -1570,10 +1545,7 @@ abstract class ItemStateFail implements ItemState {
   const factory ItemStateFail(final ApiErrorModel error) = _$ItemStateFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ItemStateFailImplCopyWith<_$ItemStateFailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1581,9 +1553,8 @@ abstract class ItemStateFail implements ItemState {
 /// @nodoc
 abstract class _$$EditLoadingImplCopyWith<$Res> {
   factory _$$EditLoadingImplCopyWith(
-    _$EditLoadingImpl value,
-    $Res Function(_$EditLoadingImpl) then,
-  ) = __$$EditLoadingImplCopyWithImpl<$Res>;
+          _$EditLoadingImpl value, $Res Function(_$EditLoadingImpl) then) =
+      __$$EditLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1591,12 +1562,8 @@ class __$$EditLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$EditLoadingImpl>
     implements _$$EditLoadingImplCopyWith<$Res> {
   __$$EditLoadingImplCopyWithImpl(
-    _$EditLoadingImpl _value,
-    $Res Function(_$EditLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$EditLoadingImpl _value, $Res Function(_$EditLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1636,23 +1603,23 @@ class _$EditLoadingImpl implements EditLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -1683,7 +1650,7 @@ class _$EditLoadingImpl implements EditLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -1720,7 +1687,7 @@ class _$EditLoadingImpl implements EditLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -1754,34 +1721,34 @@ class _$EditLoadingImpl implements EditLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return editLoading(this);
@@ -1807,25 +1774,25 @@ class _$EditLoadingImpl implements EditLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -1852,25 +1819,25 @@ class _$EditLoadingImpl implements EditLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -1889,9 +1856,8 @@ abstract class EditLoading implements ItemState {
 /// @nodoc
 abstract class _$$EditSuccessImplCopyWith<$Res> {
   factory _$$EditSuccessImplCopyWith(
-    _$EditSuccessImpl value,
-    $Res Function(_$EditSuccessImpl) then,
-  ) = __$$EditSuccessImplCopyWithImpl<$Res>;
+          _$EditSuccessImpl value, $Res Function(_$EditSuccessImpl) then) =
+      __$$EditSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({EditItemResponse data});
 }
@@ -1901,23 +1867,20 @@ class __$$EditSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$EditSuccessImpl>
     implements _$$EditSuccessImplCopyWith<$Res> {
   __$$EditSuccessImplCopyWithImpl(
-    _$EditSuccessImpl _value,
-    $Res Function(_$EditSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$EditSuccessImpl _value, $Res Function(_$EditSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$EditSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as EditItemResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$EditSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as EditItemResponse,
+    ));
   }
 }
 
@@ -1945,9 +1908,7 @@ class _$EditSuccessImpl implements EditSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditSuccessImplCopyWith<_$EditSuccessImpl> get copyWith =>
@@ -1971,23 +1932,23 @@ class _$EditSuccessImpl implements EditSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -2018,7 +1979,7 @@ class _$EditSuccessImpl implements EditSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -2055,7 +2016,7 @@ class _$EditSuccessImpl implements EditSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -2089,34 +2050,34 @@ class _$EditSuccessImpl implements EditSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return editSuccess(this);
@@ -2142,25 +2103,25 @@ class _$EditSuccessImpl implements EditSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -2187,25 +2148,25 @@ class _$EditSuccessImpl implements EditSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -2221,10 +2182,7 @@ abstract class EditSuccess implements ItemState {
   const factory EditSuccess(final EditItemResponse data) = _$EditSuccessImpl;
 
   EditItemResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditSuccessImplCopyWith<_$EditSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2232,9 +2190,8 @@ abstract class EditSuccess implements ItemState {
 /// @nodoc
 abstract class _$$EditFailImplCopyWith<$Res> {
   factory _$$EditFailImplCopyWith(
-    _$EditFailImpl value,
-    $Res Function(_$EditFailImpl) then,
-  ) = __$$EditFailImplCopyWithImpl<$Res>;
+          _$EditFailImpl value, $Res Function(_$EditFailImpl) then) =
+      __$$EditFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -2244,23 +2201,20 @@ class __$$EditFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$EditFailImpl>
     implements _$$EditFailImplCopyWith<$Res> {
   __$$EditFailImplCopyWithImpl(
-    _$EditFailImpl _value,
-    $Res Function(_$EditFailImpl) _then,
-  ) : super(_value, _then);
+      _$EditFailImpl _value, $Res Function(_$EditFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$EditFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$EditFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -2288,9 +2242,7 @@ class _$EditFailImpl implements EditFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditFailImplCopyWith<_$EditFailImpl> get copyWith =>
@@ -2314,23 +2266,23 @@ class _$EditFailImpl implements EditFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -2361,7 +2313,7 @@ class _$EditFailImpl implements EditFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -2398,7 +2350,7 @@ class _$EditFailImpl implements EditFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -2432,34 +2384,34 @@ class _$EditFailImpl implements EditFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return editFail(this);
@@ -2485,25 +2437,25 @@ class _$EditFailImpl implements EditFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -2530,25 +2482,25 @@ class _$EditFailImpl implements EditFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -2564,20 +2516,16 @@ abstract class EditFail implements ItemState {
   const factory EditFail(final ApiErrorModel error) = _$EditFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditFailImplCopyWith<_$EditFailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetItemLoadingImplCopyWith<$Res> {
-  factory _$$GetItemLoadingImplCopyWith(
-    _$GetItemLoadingImpl value,
-    $Res Function(_$GetItemLoadingImpl) then,
-  ) = __$$GetItemLoadingImplCopyWithImpl<$Res>;
+  factory _$$GetItemLoadingImplCopyWith(_$GetItemLoadingImpl value,
+          $Res Function(_$GetItemLoadingImpl) then) =
+      __$$GetItemLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -2585,12 +2533,8 @@ class __$$GetItemLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemLoadingImpl>
     implements _$$GetItemLoadingImplCopyWith<$Res> {
   __$$GetItemLoadingImplCopyWithImpl(
-    _$GetItemLoadingImpl _value,
-    $Res Function(_$GetItemLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$GetItemLoadingImpl _value, $Res Function(_$GetItemLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2630,23 +2574,23 @@ class _$GetItemLoadingImpl implements GetItemLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -2677,7 +2621,7 @@ class _$GetItemLoadingImpl implements GetItemLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -2714,7 +2658,7 @@ class _$GetItemLoadingImpl implements GetItemLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -2748,34 +2692,34 @@ class _$GetItemLoadingImpl implements GetItemLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemLoading(this);
@@ -2801,25 +2745,25 @@ class _$GetItemLoadingImpl implements GetItemLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -2846,25 +2790,25 @@ class _$GetItemLoadingImpl implements GetItemLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -2882,10 +2826,9 @@ abstract class GetItemLoading implements ItemState {
 
 /// @nodoc
 abstract class _$$GetItemSuccessImplCopyWith<$Res> {
-  factory _$$GetItemSuccessImplCopyWith(
-    _$GetItemSuccessImpl value,
-    $Res Function(_$GetItemSuccessImpl) then,
-  ) = __$$GetItemSuccessImplCopyWithImpl<$Res>;
+  factory _$$GetItemSuccessImplCopyWith(_$GetItemSuccessImpl value,
+          $Res Function(_$GetItemSuccessImpl) then) =
+      __$$GetItemSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({GetAllItemsResponse data});
 }
@@ -2895,23 +2838,20 @@ class __$$GetItemSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemSuccessImpl>
     implements _$$GetItemSuccessImplCopyWith<$Res> {
   __$$GetItemSuccessImplCopyWithImpl(
-    _$GetItemSuccessImpl _value,
-    $Res Function(_$GetItemSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$GetItemSuccessImpl _value, $Res Function(_$GetItemSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$GetItemSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as GetAllItemsResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$GetItemSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as GetAllItemsResponse,
+    ));
   }
 }
 
@@ -2939,16 +2879,12 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemSuccessImplCopyWith<_$GetItemSuccessImpl> get copyWith =>
       __$$GetItemSuccessImplCopyWithImpl<_$GetItemSuccessImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2968,23 +2904,23 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -3015,7 +2951,7 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -3052,7 +2988,7 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -3086,34 +3022,34 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemSuccess(this);
@@ -3139,25 +3075,25 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -3184,25 +3120,25 @@ class _$GetItemSuccessImpl implements GetItemSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -3219,10 +3155,7 @@ abstract class GetItemSuccess implements ItemState {
       _$GetItemSuccessImpl;
 
   GetAllItemsResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetItemSuccessImplCopyWith<_$GetItemSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3230,9 +3163,8 @@ abstract class GetItemSuccess implements ItemState {
 /// @nodoc
 abstract class _$$GetItemFailImplCopyWith<$Res> {
   factory _$$GetItemFailImplCopyWith(
-    _$GetItemFailImpl value,
-    $Res Function(_$GetItemFailImpl) then,
-  ) = __$$GetItemFailImplCopyWithImpl<$Res>;
+          _$GetItemFailImpl value, $Res Function(_$GetItemFailImpl) then) =
+      __$$GetItemFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -3242,23 +3174,20 @@ class __$$GetItemFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemFailImpl>
     implements _$$GetItemFailImplCopyWith<$Res> {
   __$$GetItemFailImplCopyWithImpl(
-    _$GetItemFailImpl _value,
-    $Res Function(_$GetItemFailImpl) _then,
-  ) : super(_value, _then);
+      _$GetItemFailImpl _value, $Res Function(_$GetItemFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetItemFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetItemFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -3286,9 +3215,7 @@ class _$GetItemFailImpl implements GetItemFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemFailImplCopyWith<_$GetItemFailImpl> get copyWith =>
@@ -3312,23 +3239,23 @@ class _$GetItemFailImpl implements GetItemFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -3359,7 +3286,7 @@ class _$GetItemFailImpl implements GetItemFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -3396,7 +3323,7 @@ class _$GetItemFailImpl implements GetItemFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -3430,34 +3357,34 @@ class _$GetItemFailImpl implements GetItemFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemFail(this);
@@ -3483,25 +3410,25 @@ class _$GetItemFailImpl implements GetItemFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -3528,25 +3455,25 @@ class _$GetItemFailImpl implements GetItemFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -3562,33 +3489,25 @@ abstract class GetItemFail implements ItemState {
   const factory GetItemFail(final ApiErrorModel error) = _$GetItemFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetItemFailImplCopyWith<_$GetItemFailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteItemLoadingImplCopyWith<$Res> {
-  factory _$$DeleteItemLoadingImplCopyWith(
-    _$DeleteItemLoadingImpl value,
-    $Res Function(_$DeleteItemLoadingImpl) then,
-  ) = __$$DeleteItemLoadingImplCopyWithImpl<$Res>;
+  factory _$$DeleteItemLoadingImplCopyWith(_$DeleteItemLoadingImpl value,
+          $Res Function(_$DeleteItemLoadingImpl) then) =
+      __$$DeleteItemLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$DeleteItemLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$DeleteItemLoadingImpl>
     implements _$$DeleteItemLoadingImplCopyWith<$Res> {
-  __$$DeleteItemLoadingImplCopyWithImpl(
-    _$DeleteItemLoadingImpl _value,
-    $Res Function(_$DeleteItemLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+  __$$DeleteItemLoadingImplCopyWithImpl(_$DeleteItemLoadingImpl _value,
+      $Res Function(_$DeleteItemLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -3628,23 +3547,23 @@ class _$DeleteItemLoadingImpl implements DeleteItemLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -3675,7 +3594,7 @@ class _$DeleteItemLoadingImpl implements DeleteItemLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -3712,7 +3631,7 @@ class _$DeleteItemLoadingImpl implements DeleteItemLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -3746,34 +3665,34 @@ class _$DeleteItemLoadingImpl implements DeleteItemLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return deleteItemLoading(this);
@@ -3799,25 +3718,25 @@ class _$DeleteItemLoadingImpl implements DeleteItemLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -3844,25 +3763,25 @@ class _$DeleteItemLoadingImpl implements DeleteItemLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -3880,10 +3799,9 @@ abstract class DeleteItemLoading implements ItemState {
 
 /// @nodoc
 abstract class _$$DeleteItemSuccessImplCopyWith<$Res> {
-  factory _$$DeleteItemSuccessImplCopyWith(
-    _$DeleteItemSuccessImpl value,
-    $Res Function(_$DeleteItemSuccessImpl) then,
-  ) = __$$DeleteItemSuccessImplCopyWithImpl<$Res>;
+  factory _$$DeleteItemSuccessImplCopyWith(_$DeleteItemSuccessImpl value,
+          $Res Function(_$DeleteItemSuccessImpl) then) =
+      __$$DeleteItemSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({EditItemResponse data});
 }
@@ -3892,24 +3810,21 @@ abstract class _$$DeleteItemSuccessImplCopyWith<$Res> {
 class __$$DeleteItemSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$DeleteItemSuccessImpl>
     implements _$$DeleteItemSuccessImplCopyWith<$Res> {
-  __$$DeleteItemSuccessImplCopyWithImpl(
-    _$DeleteItemSuccessImpl _value,
-    $Res Function(_$DeleteItemSuccessImpl) _then,
-  ) : super(_value, _then);
+  __$$DeleteItemSuccessImplCopyWithImpl(_$DeleteItemSuccessImpl _value,
+      $Res Function(_$DeleteItemSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$DeleteItemSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as EditItemResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$DeleteItemSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as EditItemResponse,
+    ));
   }
 }
 
@@ -3937,16 +3852,12 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteItemSuccessImplCopyWith<_$DeleteItemSuccessImpl> get copyWith =>
       __$$DeleteItemSuccessImplCopyWithImpl<_$DeleteItemSuccessImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3966,23 +3877,23 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -4013,7 +3924,7 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -4050,7 +3961,7 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -4084,34 +3995,34 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return deleteItemSuccess(this);
@@ -4137,25 +4048,25 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -4182,25 +4093,25 @@ class _$DeleteItemSuccessImpl implements DeleteItemSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -4217,20 +4128,16 @@ abstract class DeleteItemSuccess implements ItemState {
       _$DeleteItemSuccessImpl;
 
   EditItemResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteItemSuccessImplCopyWith<_$DeleteItemSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteItemFailImplCopyWith<$Res> {
-  factory _$$DeleteItemFailImplCopyWith(
-    _$DeleteItemFailImpl value,
-    $Res Function(_$DeleteItemFailImpl) then,
-  ) = __$$DeleteItemFailImplCopyWithImpl<$Res>;
+  factory _$$DeleteItemFailImplCopyWith(_$DeleteItemFailImpl value,
+          $Res Function(_$DeleteItemFailImpl) then) =
+      __$$DeleteItemFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -4240,23 +4147,20 @@ class __$$DeleteItemFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$DeleteItemFailImpl>
     implements _$$DeleteItemFailImplCopyWith<$Res> {
   __$$DeleteItemFailImplCopyWithImpl(
-    _$DeleteItemFailImpl _value,
-    $Res Function(_$DeleteItemFailImpl) _then,
-  ) : super(_value, _then);
+      _$DeleteItemFailImpl _value, $Res Function(_$DeleteItemFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$DeleteItemFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$DeleteItemFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -4284,16 +4188,12 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteItemFailImplCopyWith<_$DeleteItemFailImpl> get copyWith =>
       __$$DeleteItemFailImplCopyWithImpl<_$DeleteItemFailImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4313,23 +4213,23 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -4360,7 +4260,7 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -4397,7 +4297,7 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -4431,34 +4331,34 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return deleteItemFail(this);
@@ -4484,25 +4384,25 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -4529,25 +4429,25 @@ class _$DeleteItemFailImpl implements DeleteItemFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -4564,10 +4464,7 @@ abstract class DeleteItemFail implements ItemState {
       _$DeleteItemFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteItemFailImplCopyWith<_$DeleteItemFailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4575,9 +4472,9 @@ abstract class DeleteItemFail implements ItemState {
 /// @nodoc
 abstract class _$$ChangeEnableItemLoadingImplCopyWith<$Res> {
   factory _$$ChangeEnableItemLoadingImplCopyWith(
-    _$ChangeEnableItemLoadingImpl value,
-    $Res Function(_$ChangeEnableItemLoadingImpl) then,
-  ) = __$$ChangeEnableItemLoadingImplCopyWithImpl<$Res>;
+          _$ChangeEnableItemLoadingImpl value,
+          $Res Function(_$ChangeEnableItemLoadingImpl) then) =
+      __$$ChangeEnableItemLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -4585,12 +4482,9 @@ class __$$ChangeEnableItemLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ChangeEnableItemLoadingImpl>
     implements _$$ChangeEnableItemLoadingImplCopyWith<$Res> {
   __$$ChangeEnableItemLoadingImplCopyWithImpl(
-    _$ChangeEnableItemLoadingImpl _value,
-    $Res Function(_$ChangeEnableItemLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$ChangeEnableItemLoadingImpl _value,
+      $Res Function(_$ChangeEnableItemLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -4631,23 +4525,23 @@ class _$ChangeEnableItemLoadingImpl implements ChangeEnableItemLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -4678,7 +4572,7 @@ class _$ChangeEnableItemLoadingImpl implements ChangeEnableItemLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -4715,7 +4609,7 @@ class _$ChangeEnableItemLoadingImpl implements ChangeEnableItemLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -4749,34 +4643,34 @@ class _$ChangeEnableItemLoadingImpl implements ChangeEnableItemLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return changeEnableItemLoading(this);
@@ -4802,25 +4696,25 @@ class _$ChangeEnableItemLoadingImpl implements ChangeEnableItemLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -4847,25 +4741,25 @@ class _$ChangeEnableItemLoadingImpl implements ChangeEnableItemLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -4884,9 +4778,9 @@ abstract class ChangeEnableItemLoading implements ItemState {
 /// @nodoc
 abstract class _$$ChangeEnableItemSuccessImplCopyWith<$Res> {
   factory _$$ChangeEnableItemSuccessImplCopyWith(
-    _$ChangeEnableItemSuccessImpl value,
-    $Res Function(_$ChangeEnableItemSuccessImpl) then,
-  ) = __$$ChangeEnableItemSuccessImplCopyWithImpl<$Res>;
+          _$ChangeEnableItemSuccessImpl value,
+          $Res Function(_$ChangeEnableItemSuccessImpl) then) =
+      __$$ChangeEnableItemSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ChangeEnableItemResponse data});
 }
@@ -4896,23 +4790,21 @@ class __$$ChangeEnableItemSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ChangeEnableItemSuccessImpl>
     implements _$$ChangeEnableItemSuccessImplCopyWith<$Res> {
   __$$ChangeEnableItemSuccessImplCopyWithImpl(
-    _$ChangeEnableItemSuccessImpl _value,
-    $Res Function(_$ChangeEnableItemSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$ChangeEnableItemSuccessImpl _value,
+      $Res Function(_$ChangeEnableItemSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$ChangeEnableItemSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as ChangeEnableItemResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$ChangeEnableItemSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as ChangeEnableItemResponse,
+    ));
   }
 }
 
@@ -4940,15 +4832,12 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeEnableItemSuccessImplCopyWith<_$ChangeEnableItemSuccessImpl>
-  get copyWith => __$$ChangeEnableItemSuccessImplCopyWithImpl<
-    _$ChangeEnableItemSuccessImpl
-  >(this, _$identity);
+      get copyWith => __$$ChangeEnableItemSuccessImplCopyWithImpl<
+          _$ChangeEnableItemSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4968,23 +4857,23 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -5015,7 +4904,7 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -5052,7 +4941,7 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -5086,34 +4975,34 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return changeEnableItemSuccess(this);
@@ -5139,25 +5028,25 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -5184,25 +5073,25 @@ class _$ChangeEnableItemSuccessImpl implements ChangeEnableItemSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -5219,20 +5108,16 @@ abstract class ChangeEnableItemSuccess implements ItemState {
       _$ChangeEnableItemSuccessImpl;
 
   ChangeEnableItemResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangeEnableItemSuccessImplCopyWith<_$ChangeEnableItemSuccessImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeEnableItemFailImplCopyWith<$Res> {
-  factory _$$ChangeEnableItemFailImplCopyWith(
-    _$ChangeEnableItemFailImpl value,
-    $Res Function(_$ChangeEnableItemFailImpl) then,
-  ) = __$$ChangeEnableItemFailImplCopyWithImpl<$Res>;
+  factory _$$ChangeEnableItemFailImplCopyWith(_$ChangeEnableItemFailImpl value,
+          $Res Function(_$ChangeEnableItemFailImpl) then) =
+      __$$ChangeEnableItemFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -5241,24 +5126,21 @@ abstract class _$$ChangeEnableItemFailImplCopyWith<$Res> {
 class __$$ChangeEnableItemFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ChangeEnableItemFailImpl>
     implements _$$ChangeEnableItemFailImplCopyWith<$Res> {
-  __$$ChangeEnableItemFailImplCopyWithImpl(
-    _$ChangeEnableItemFailImpl _value,
-    $Res Function(_$ChangeEnableItemFailImpl) _then,
-  ) : super(_value, _then);
+  __$$ChangeEnableItemFailImplCopyWithImpl(_$ChangeEnableItemFailImpl _value,
+      $Res Function(_$ChangeEnableItemFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$ChangeEnableItemFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ChangeEnableItemFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -5286,17 +5168,13 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeEnableItemFailImplCopyWith<_$ChangeEnableItemFailImpl>
-  get copyWith =>
-      __$$ChangeEnableItemFailImplCopyWithImpl<_$ChangeEnableItemFailImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$ChangeEnableItemFailImplCopyWithImpl<_$ChangeEnableItemFailImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5316,23 +5194,23 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -5363,7 +5241,7 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -5400,7 +5278,7 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -5434,34 +5312,34 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return changeEnableItemFail(this);
@@ -5487,25 +5365,25 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -5532,25 +5410,25 @@ class _$ChangeEnableItemFailImpl implements ChangeEnableItemFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -5567,20 +5445,17 @@ abstract class ChangeEnableItemFail implements ItemState {
       _$ChangeEnableItemFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangeEnableItemFailImplCopyWith<_$ChangeEnableItemFailImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetItemsCategoriesLoadingImplCopyWith<$Res> {
   factory _$$GetItemsCategoriesLoadingImplCopyWith(
-    _$GetItemsCategoriesLoadingImpl value,
-    $Res Function(_$GetItemsCategoriesLoadingImpl) then,
-  ) = __$$GetItemsCategoriesLoadingImplCopyWithImpl<$Res>;
+          _$GetItemsCategoriesLoadingImpl value,
+          $Res Function(_$GetItemsCategoriesLoadingImpl) then) =
+      __$$GetItemsCategoriesLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -5588,12 +5463,9 @@ class __$$GetItemsCategoriesLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemsCategoriesLoadingImpl>
     implements _$$GetItemsCategoriesLoadingImplCopyWith<$Res> {
   __$$GetItemsCategoriesLoadingImplCopyWithImpl(
-    _$GetItemsCategoriesLoadingImpl _value,
-    $Res Function(_$GetItemsCategoriesLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$GetItemsCategoriesLoadingImpl _value,
+      $Res Function(_$GetItemsCategoriesLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -5634,23 +5506,23 @@ class _$GetItemsCategoriesLoadingImpl implements GetItemsCategoriesLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -5681,7 +5553,7 @@ class _$GetItemsCategoriesLoadingImpl implements GetItemsCategoriesLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -5718,7 +5590,7 @@ class _$GetItemsCategoriesLoadingImpl implements GetItemsCategoriesLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -5752,34 +5624,34 @@ class _$GetItemsCategoriesLoadingImpl implements GetItemsCategoriesLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemsCategoriesLoading(this);
@@ -5805,25 +5677,25 @@ class _$GetItemsCategoriesLoadingImpl implements GetItemsCategoriesLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -5850,25 +5722,25 @@ class _$GetItemsCategoriesLoadingImpl implements GetItemsCategoriesLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -5887,9 +5759,9 @@ abstract class GetItemsCategoriesLoading implements ItemState {
 /// @nodoc
 abstract class _$$GetItemsCategoriesSuccessImplCopyWith<$Res> {
   factory _$$GetItemsCategoriesSuccessImplCopyWith(
-    _$GetItemsCategoriesSuccessImpl value,
-    $Res Function(_$GetItemsCategoriesSuccessImpl) then,
-  ) = __$$GetItemsCategoriesSuccessImplCopyWithImpl<$Res>;
+          _$GetItemsCategoriesSuccessImpl value,
+          $Res Function(_$GetItemsCategoriesSuccessImpl) then) =
+      __$$GetItemsCategoriesSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ItemsCategoryResponse data});
 }
@@ -5899,23 +5771,21 @@ class __$$GetItemsCategoriesSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemsCategoriesSuccessImpl>
     implements _$$GetItemsCategoriesSuccessImplCopyWith<$Res> {
   __$$GetItemsCategoriesSuccessImplCopyWithImpl(
-    _$GetItemsCategoriesSuccessImpl _value,
-    $Res Function(_$GetItemsCategoriesSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$GetItemsCategoriesSuccessImpl _value,
+      $Res Function(_$GetItemsCategoriesSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$GetItemsCategoriesSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as ItemsCategoryResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$GetItemsCategoriesSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as ItemsCategoryResponse,
+    ));
   }
 }
 
@@ -5943,15 +5813,12 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemsCategoriesSuccessImplCopyWith<_$GetItemsCategoriesSuccessImpl>
-  get copyWith => __$$GetItemsCategoriesSuccessImplCopyWithImpl<
-    _$GetItemsCategoriesSuccessImpl
-  >(this, _$identity);
+      get copyWith => __$$GetItemsCategoriesSuccessImplCopyWithImpl<
+          _$GetItemsCategoriesSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5971,23 +5838,23 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -6018,7 +5885,7 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -6055,7 +5922,7 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -6089,34 +5956,34 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemsCategoriesSuccess(this);
@@ -6142,25 +6009,25 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -6187,25 +6054,25 @@ class _$GetItemsCategoriesSuccessImpl implements GetItemsCategoriesSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -6222,20 +6089,17 @@ abstract class GetItemsCategoriesSuccess implements ItemState {
       _$GetItemsCategoriesSuccessImpl;
 
   ItemsCategoryResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetItemsCategoriesSuccessImplCopyWith<_$GetItemsCategoriesSuccessImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetItemsCategoriesFailImplCopyWith<$Res> {
   factory _$$GetItemsCategoriesFailImplCopyWith(
-    _$GetItemsCategoriesFailImpl value,
-    $Res Function(_$GetItemsCategoriesFailImpl) then,
-  ) = __$$GetItemsCategoriesFailImplCopyWithImpl<$Res>;
+          _$GetItemsCategoriesFailImpl value,
+          $Res Function(_$GetItemsCategoriesFailImpl) then) =
+      __$$GetItemsCategoriesFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -6245,23 +6109,21 @@ class __$$GetItemsCategoriesFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemsCategoriesFailImpl>
     implements _$$GetItemsCategoriesFailImplCopyWith<$Res> {
   __$$GetItemsCategoriesFailImplCopyWithImpl(
-    _$GetItemsCategoriesFailImpl _value,
-    $Res Function(_$GetItemsCategoriesFailImpl) _then,
-  ) : super(_value, _then);
+      _$GetItemsCategoriesFailImpl _value,
+      $Res Function(_$GetItemsCategoriesFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetItemsCategoriesFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetItemsCategoriesFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -6289,17 +6151,12 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemsCategoriesFailImplCopyWith<_$GetItemsCategoriesFailImpl>
-  get copyWith =>
-      __$$GetItemsCategoriesFailImplCopyWithImpl<_$GetItemsCategoriesFailImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$GetItemsCategoriesFailImplCopyWithImpl<
+          _$GetItemsCategoriesFailImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6319,23 +6176,23 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -6366,7 +6223,7 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -6403,7 +6260,7 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -6437,34 +6294,34 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemsCategoriesFail(this);
@@ -6490,25 +6347,25 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -6535,25 +6392,25 @@ class _$GetItemsCategoriesFailImpl implements GetItemsCategoriesFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -6570,20 +6427,17 @@ abstract class GetItemsCategoriesFail implements ItemState {
       _$GetItemsCategoriesFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetItemsCategoriesFailImplCopyWith<_$GetItemsCategoriesFailImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetItemsCategoriesUserLoadingImplCopyWith<$Res> {
   factory _$$GetItemsCategoriesUserLoadingImplCopyWith(
-    _$GetItemsCategoriesUserLoadingImpl value,
-    $Res Function(_$GetItemsCategoriesUserLoadingImpl) then,
-  ) = __$$GetItemsCategoriesUserLoadingImplCopyWithImpl<$Res>;
+          _$GetItemsCategoriesUserLoadingImpl value,
+          $Res Function(_$GetItemsCategoriesUserLoadingImpl) then) =
+      __$$GetItemsCategoriesUserLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -6591,12 +6445,9 @@ class __$$GetItemsCategoriesUserLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemsCategoriesUserLoadingImpl>
     implements _$$GetItemsCategoriesUserLoadingImplCopyWith<$Res> {
   __$$GetItemsCategoriesUserLoadingImplCopyWithImpl(
-    _$GetItemsCategoriesUserLoadingImpl _value,
-    $Res Function(_$GetItemsCategoriesUserLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$GetItemsCategoriesUserLoadingImpl _value,
+      $Res Function(_$GetItemsCategoriesUserLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -6638,23 +6489,23 @@ class _$GetItemsCategoriesUserLoadingImpl
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -6685,7 +6536,7 @@ class _$GetItemsCategoriesUserLoadingImpl
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -6722,7 +6573,7 @@ class _$GetItemsCategoriesUserLoadingImpl
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -6756,34 +6607,34 @@ class _$GetItemsCategoriesUserLoadingImpl
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemsCategoriesUserLoading(this);
@@ -6809,25 +6660,25 @@ class _$GetItemsCategoriesUserLoadingImpl
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -6854,25 +6705,25 @@ class _$GetItemsCategoriesUserLoadingImpl
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -6892,9 +6743,9 @@ abstract class GetItemsCategoriesUserLoading implements ItemState {
 /// @nodoc
 abstract class _$$GetItemsCategoriesUserSuccessImplCopyWith<$Res> {
   factory _$$GetItemsCategoriesUserSuccessImplCopyWith(
-    _$GetItemsCategoriesUserSuccessImpl value,
-    $Res Function(_$GetItemsCategoriesUserSuccessImpl) then,
-  ) = __$$GetItemsCategoriesUserSuccessImplCopyWithImpl<$Res>;
+          _$GetItemsCategoriesUserSuccessImpl value,
+          $Res Function(_$GetItemsCategoriesUserSuccessImpl) then) =
+      __$$GetItemsCategoriesUserSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ItemsCategoryResponseUser data});
 }
@@ -6904,23 +6755,21 @@ class __$$GetItemsCategoriesUserSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemsCategoriesUserSuccessImpl>
     implements _$$GetItemsCategoriesUserSuccessImplCopyWith<$Res> {
   __$$GetItemsCategoriesUserSuccessImplCopyWithImpl(
-    _$GetItemsCategoriesUserSuccessImpl _value,
-    $Res Function(_$GetItemsCategoriesUserSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$GetItemsCategoriesUserSuccessImpl _value,
+      $Res Function(_$GetItemsCategoriesUserSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$GetItemsCategoriesUserSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as ItemsCategoryResponseUser,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$GetItemsCategoriesUserSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as ItemsCategoryResponseUser,
+    ));
   }
 }
 
@@ -6949,17 +6798,13 @@ class _$GetItemsCategoriesUserSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemsCategoriesUserSuccessImplCopyWith<
-    _$GetItemsCategoriesUserSuccessImpl
-  >
-  get copyWith => __$$GetItemsCategoriesUserSuccessImplCopyWithImpl<
-    _$GetItemsCategoriesUserSuccessImpl
-  >(this, _$identity);
+          _$GetItemsCategoriesUserSuccessImpl>
+      get copyWith => __$$GetItemsCategoriesUserSuccessImplCopyWithImpl<
+          _$GetItemsCategoriesUserSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6979,23 +6824,23 @@ class _$GetItemsCategoriesUserSuccessImpl
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -7026,7 +6871,7 @@ class _$GetItemsCategoriesUserSuccessImpl
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -7063,7 +6908,7 @@ class _$GetItemsCategoriesUserSuccessImpl
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -7097,34 +6942,34 @@ class _$GetItemsCategoriesUserSuccessImpl
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemsCategoriesUserSuccess(this);
@@ -7150,25 +6995,25 @@ class _$GetItemsCategoriesUserSuccessImpl
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -7195,25 +7040,25 @@ class _$GetItemsCategoriesUserSuccessImpl
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -7227,26 +7072,22 @@ class _$GetItemsCategoriesUserSuccessImpl
 
 abstract class GetItemsCategoriesUserSuccess implements ItemState {
   const factory GetItemsCategoriesUserSuccess(
-    final ItemsCategoryResponseUser data,
-  ) = _$GetItemsCategoriesUserSuccessImpl;
+          final ItemsCategoryResponseUser data) =
+      _$GetItemsCategoriesUserSuccessImpl;
 
   ItemsCategoryResponseUser get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetItemsCategoriesUserSuccessImplCopyWith<
-    _$GetItemsCategoriesUserSuccessImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
+          _$GetItemsCategoriesUserSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetItemsCategoriesUserFailImplCopyWith<$Res> {
   factory _$$GetItemsCategoriesUserFailImplCopyWith(
-    _$GetItemsCategoriesUserFailImpl value,
-    $Res Function(_$GetItemsCategoriesUserFailImpl) then,
-  ) = __$$GetItemsCategoriesUserFailImplCopyWithImpl<$Res>;
+          _$GetItemsCategoriesUserFailImpl value,
+          $Res Function(_$GetItemsCategoriesUserFailImpl) then) =
+      __$$GetItemsCategoriesUserFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -7256,23 +7097,21 @@ class __$$GetItemsCategoriesUserFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$GetItemsCategoriesUserFailImpl>
     implements _$$GetItemsCategoriesUserFailImplCopyWith<$Res> {
   __$$GetItemsCategoriesUserFailImplCopyWithImpl(
-    _$GetItemsCategoriesUserFailImpl _value,
-    $Res Function(_$GetItemsCategoriesUserFailImpl) _then,
-  ) : super(_value, _then);
+      _$GetItemsCategoriesUserFailImpl _value,
+      $Res Function(_$GetItemsCategoriesUserFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$GetItemsCategoriesUserFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetItemsCategoriesUserFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -7300,15 +7139,12 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemsCategoriesUserFailImplCopyWith<_$GetItemsCategoriesUserFailImpl>
-  get copyWith => __$$GetItemsCategoriesUserFailImplCopyWithImpl<
-    _$GetItemsCategoriesUserFailImpl
-  >(this, _$identity);
+      get copyWith => __$$GetItemsCategoriesUserFailImplCopyWithImpl<
+          _$GetItemsCategoriesUserFailImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7328,23 +7164,23 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -7375,7 +7211,7 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -7412,7 +7248,7 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -7446,34 +7282,34 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return getItemsCategoriesUserFail(this);
@@ -7499,25 +7335,25 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -7544,25 +7380,25 @@ class _$GetItemsCategoriesUserFailImpl implements GetItemsCategoriesUserFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -7579,20 +7415,17 @@ abstract class GetItemsCategoriesUserFail implements ItemState {
       _$GetItemsCategoriesUserFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GetItemsCategoriesUserFailImplCopyWith<_$GetItemsCategoriesUserFailImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateItemCategoriesLoadingImplCopyWith<$Res> {
   factory _$$CreateItemCategoriesLoadingImplCopyWith(
-    _$CreateItemCategoriesLoadingImpl value,
-    $Res Function(_$CreateItemCategoriesLoadingImpl) then,
-  ) = __$$CreateItemCategoriesLoadingImplCopyWithImpl<$Res>;
+          _$CreateItemCategoriesLoadingImpl value,
+          $Res Function(_$CreateItemCategoriesLoadingImpl) then) =
+      __$$CreateItemCategoriesLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -7600,12 +7433,9 @@ class __$$CreateItemCategoriesLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$CreateItemCategoriesLoadingImpl>
     implements _$$CreateItemCategoriesLoadingImplCopyWith<$Res> {
   __$$CreateItemCategoriesLoadingImplCopyWithImpl(
-    _$CreateItemCategoriesLoadingImpl _value,
-    $Res Function(_$CreateItemCategoriesLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$CreateItemCategoriesLoadingImpl _value,
+      $Res Function(_$CreateItemCategoriesLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -7646,23 +7476,23 @@ class _$CreateItemCategoriesLoadingImpl implements CreateItemCategoriesLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -7693,7 +7523,7 @@ class _$CreateItemCategoriesLoadingImpl implements CreateItemCategoriesLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -7730,7 +7560,7 @@ class _$CreateItemCategoriesLoadingImpl implements CreateItemCategoriesLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -7764,34 +7594,34 @@ class _$CreateItemCategoriesLoadingImpl implements CreateItemCategoriesLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return createItemCategoriesLoading(this);
@@ -7817,25 +7647,25 @@ class _$CreateItemCategoriesLoadingImpl implements CreateItemCategoriesLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -7862,25 +7692,25 @@ class _$CreateItemCategoriesLoadingImpl implements CreateItemCategoriesLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -7900,9 +7730,9 @@ abstract class CreateItemCategoriesLoading implements ItemState {
 /// @nodoc
 abstract class _$$CreateItemCategoriesSuccessImplCopyWith<$Res> {
   factory _$$CreateItemCategoriesSuccessImplCopyWith(
-    _$CreateItemCategoriesSuccessImpl value,
-    $Res Function(_$CreateItemCategoriesSuccessImpl) then,
-  ) = __$$CreateItemCategoriesSuccessImplCopyWithImpl<$Res>;
+          _$CreateItemCategoriesSuccessImpl value,
+          $Res Function(_$CreateItemCategoriesSuccessImpl) then) =
+      __$$CreateItemCategoriesSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CreateItemResponse data});
 }
@@ -7912,23 +7742,21 @@ class __$$CreateItemCategoriesSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$CreateItemCategoriesSuccessImpl>
     implements _$$CreateItemCategoriesSuccessImplCopyWith<$Res> {
   __$$CreateItemCategoriesSuccessImplCopyWithImpl(
-    _$CreateItemCategoriesSuccessImpl _value,
-    $Res Function(_$CreateItemCategoriesSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$CreateItemCategoriesSuccessImpl _value,
+      $Res Function(_$CreateItemCategoriesSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$CreateItemCategoriesSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as CreateItemResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$CreateItemCategoriesSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as CreateItemResponse,
+    ));
   }
 }
 
@@ -7956,15 +7784,12 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateItemCategoriesSuccessImplCopyWith<_$CreateItemCategoriesSuccessImpl>
-  get copyWith => __$$CreateItemCategoriesSuccessImplCopyWithImpl<
-    _$CreateItemCategoriesSuccessImpl
-  >(this, _$identity);
+      get copyWith => __$$CreateItemCategoriesSuccessImplCopyWithImpl<
+          _$CreateItemCategoriesSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7984,23 +7809,23 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -8031,7 +7856,7 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -8068,7 +7893,7 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -8102,34 +7927,34 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return createItemCategoriesSuccess(this);
@@ -8155,25 +7980,25 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -8200,25 +8025,25 @@ class _$CreateItemCategoriesSuccessImpl implements CreateItemCategoriesSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -8235,20 +8060,17 @@ abstract class CreateItemCategoriesSuccess implements ItemState {
       _$CreateItemCategoriesSuccessImpl;
 
   CreateItemResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateItemCategoriesSuccessImplCopyWith<_$CreateItemCategoriesSuccessImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CreateItemCategoriesFailImplCopyWith<$Res> {
   factory _$$CreateItemCategoriesFailImplCopyWith(
-    _$CreateItemCategoriesFailImpl value,
-    $Res Function(_$CreateItemCategoriesFailImpl) then,
-  ) = __$$CreateItemCategoriesFailImplCopyWithImpl<$Res>;
+          _$CreateItemCategoriesFailImpl value,
+          $Res Function(_$CreateItemCategoriesFailImpl) then) =
+      __$$CreateItemCategoriesFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -8258,23 +8080,21 @@ class __$$CreateItemCategoriesFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$CreateItemCategoriesFailImpl>
     implements _$$CreateItemCategoriesFailImplCopyWith<$Res> {
   __$$CreateItemCategoriesFailImplCopyWithImpl(
-    _$CreateItemCategoriesFailImpl _value,
-    $Res Function(_$CreateItemCategoriesFailImpl) _then,
-  ) : super(_value, _then);
+      _$CreateItemCategoriesFailImpl _value,
+      $Res Function(_$CreateItemCategoriesFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$CreateItemCategoriesFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$CreateItemCategoriesFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -8302,15 +8122,12 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateItemCategoriesFailImplCopyWith<_$CreateItemCategoriesFailImpl>
-  get copyWith => __$$CreateItemCategoriesFailImplCopyWithImpl<
-    _$CreateItemCategoriesFailImpl
-  >(this, _$identity);
+      get copyWith => __$$CreateItemCategoriesFailImplCopyWithImpl<
+          _$CreateItemCategoriesFailImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8330,23 +8147,23 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -8377,7 +8194,7 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -8414,7 +8231,7 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -8448,34 +8265,34 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return createItemCategoriesFail(this);
@@ -8501,25 +8318,25 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -8546,25 +8363,25 @@ class _$CreateItemCategoriesFailImpl implements CreateItemCategoriesFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -8581,20 +8398,17 @@ abstract class CreateItemCategoriesFail implements ItemState {
       _$CreateItemCategoriesFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreateItemCategoriesFailImplCopyWith<_$CreateItemCategoriesFailImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$FilterItemCategoriesLoadingImplCopyWith<$Res> {
   factory _$$FilterItemCategoriesLoadingImplCopyWith(
-    _$FilterItemCategoriesLoadingImpl value,
-    $Res Function(_$FilterItemCategoriesLoadingImpl) then,
-  ) = __$$FilterItemCategoriesLoadingImplCopyWithImpl<$Res>;
+          _$FilterItemCategoriesLoadingImpl value,
+          $Res Function(_$FilterItemCategoriesLoadingImpl) then) =
+      __$$FilterItemCategoriesLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -8602,12 +8416,9 @@ class __$$FilterItemCategoriesLoadingImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$FilterItemCategoriesLoadingImpl>
     implements _$$FilterItemCategoriesLoadingImplCopyWith<$Res> {
   __$$FilterItemCategoriesLoadingImplCopyWithImpl(
-    _$FilterItemCategoriesLoadingImpl _value,
-    $Res Function(_$FilterItemCategoriesLoadingImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
+      _$FilterItemCategoriesLoadingImpl _value,
+      $Res Function(_$FilterItemCategoriesLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -8648,23 +8459,23 @@ class _$FilterItemCategoriesLoadingImpl implements FilterItemCategoriesLoading {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -8695,7 +8506,7 @@ class _$FilterItemCategoriesLoadingImpl implements FilterItemCategoriesLoading {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -8732,7 +8543,7 @@ class _$FilterItemCategoriesLoadingImpl implements FilterItemCategoriesLoading {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -8766,34 +8577,34 @@ class _$FilterItemCategoriesLoadingImpl implements FilterItemCategoriesLoading {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return filterItemCategoriesLoading(this);
@@ -8819,25 +8630,25 @@ class _$FilterItemCategoriesLoadingImpl implements FilterItemCategoriesLoading {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -8864,25 +8675,25 @@ class _$FilterItemCategoriesLoadingImpl implements FilterItemCategoriesLoading {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -8902,9 +8713,9 @@ abstract class FilterItemCategoriesLoading implements ItemState {
 /// @nodoc
 abstract class _$$FilterItemCategoriesSuccessImplCopyWith<$Res> {
   factory _$$FilterItemCategoriesSuccessImplCopyWith(
-    _$FilterItemCategoriesSuccessImpl value,
-    $Res Function(_$FilterItemCategoriesSuccessImpl) then,
-  ) = __$$FilterItemCategoriesSuccessImplCopyWithImpl<$Res>;
+          _$FilterItemCategoriesSuccessImpl value,
+          $Res Function(_$FilterItemCategoriesSuccessImpl) then) =
+      __$$FilterItemCategoriesSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({GetAllItemsResponse data});
 }
@@ -8914,23 +8725,21 @@ class __$$FilterItemCategoriesSuccessImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$FilterItemCategoriesSuccessImpl>
     implements _$$FilterItemCategoriesSuccessImplCopyWith<$Res> {
   __$$FilterItemCategoriesSuccessImplCopyWithImpl(
-    _$FilterItemCategoriesSuccessImpl _value,
-    $Res Function(_$FilterItemCategoriesSuccessImpl) _then,
-  ) : super(_value, _then);
+      _$FilterItemCategoriesSuccessImpl _value,
+      $Res Function(_$FilterItemCategoriesSuccessImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = null}) {
-    return _then(
-      _$FilterItemCategoriesSuccessImpl(
-        null == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as GetAllItemsResponse,
-      ),
-    );
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$FilterItemCategoriesSuccessImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as GetAllItemsResponse,
+    ));
   }
 }
 
@@ -8958,15 +8767,12 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FilterItemCategoriesSuccessImplCopyWith<_$FilterItemCategoriesSuccessImpl>
-  get copyWith => __$$FilterItemCategoriesSuccessImplCopyWithImpl<
-    _$FilterItemCategoriesSuccessImpl
-  >(this, _$identity);
+      get copyWith => __$$FilterItemCategoriesSuccessImplCopyWithImpl<
+          _$FilterItemCategoriesSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8986,23 +8792,23 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -9033,7 +8839,7 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -9070,7 +8876,7 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -9104,34 +8910,34 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return filterItemCategoriesSuccess(this);
@@ -9157,25 +8963,25 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -9202,25 +9008,25 @@ class _$FilterItemCategoriesSuccessImpl implements FilterItemCategoriesSuccess {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -9237,20 +9043,17 @@ abstract class FilterItemCategoriesSuccess implements ItemState {
       _$FilterItemCategoriesSuccessImpl;
 
   GetAllItemsResponse get data;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FilterItemCategoriesSuccessImplCopyWith<_$FilterItemCategoriesSuccessImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$FilterItemCategoriesFailImplCopyWith<$Res> {
   factory _$$FilterItemCategoriesFailImplCopyWith(
-    _$FilterItemCategoriesFailImpl value,
-    $Res Function(_$FilterItemCategoriesFailImpl) then,
-  ) = __$$FilterItemCategoriesFailImplCopyWithImpl<$Res>;
+          _$FilterItemCategoriesFailImpl value,
+          $Res Function(_$FilterItemCategoriesFailImpl) then) =
+      __$$FilterItemCategoriesFailImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -9260,23 +9063,21 @@ class __$$FilterItemCategoriesFailImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$FilterItemCategoriesFailImpl>
     implements _$$FilterItemCategoriesFailImplCopyWith<$Res> {
   __$$FilterItemCategoriesFailImplCopyWithImpl(
-    _$FilterItemCategoriesFailImpl _value,
-    $Res Function(_$FilterItemCategoriesFailImpl) _then,
-  ) : super(_value, _then);
+      _$FilterItemCategoriesFailImpl _value,
+      $Res Function(_$FilterItemCategoriesFailImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$FilterItemCategoriesFailImpl(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$FilterItemCategoriesFailImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -9304,15 +9105,12 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FilterItemCategoriesFailImplCopyWith<_$FilterItemCategoriesFailImpl>
-  get copyWith => __$$FilterItemCategoriesFailImplCopyWithImpl<
-    _$FilterItemCategoriesFailImpl
-  >(this, _$identity);
+      get copyWith => __$$FilterItemCategoriesFailImplCopyWithImpl<
+          _$FilterItemCategoriesFailImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -9332,23 +9130,23 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -9379,7 +9177,7 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -9416,7 +9214,7 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -9450,34 +9248,34 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return filterItemCategoriesFail(this);
@@ -9503,25 +9301,25 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -9548,25 +9346,25 @@ class _$FilterItemCategoriesFailImpl implements FilterItemCategoriesFail {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -9583,20 +9381,17 @@ abstract class FilterItemCategoriesFail implements ItemState {
       _$FilterItemCategoriesFailImpl;
 
   ApiErrorModel get error;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FilterItemCategoriesFailImplCopyWith<_$FilterItemCategoriesFailImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ItemStatePhotoSelectedImplCopyWith<$Res> {
   factory _$$ItemStatePhotoSelectedImplCopyWith(
-    _$ItemStatePhotoSelectedImpl value,
-    $Res Function(_$ItemStatePhotoSelectedImpl) then,
-  ) = __$$ItemStatePhotoSelectedImplCopyWithImpl<$Res>;
+          _$ItemStatePhotoSelectedImpl value,
+          $Res Function(_$ItemStatePhotoSelectedImpl) then) =
+      __$$ItemStatePhotoSelectedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({File photo});
 }
@@ -9606,23 +9401,21 @@ class __$$ItemStatePhotoSelectedImplCopyWithImpl<$Res>
     extends _$ItemStateCopyWithImpl<$Res, _$ItemStatePhotoSelectedImpl>
     implements _$$ItemStatePhotoSelectedImplCopyWith<$Res> {
   __$$ItemStatePhotoSelectedImplCopyWithImpl(
-    _$ItemStatePhotoSelectedImpl _value,
-    $Res Function(_$ItemStatePhotoSelectedImpl) _then,
-  ) : super(_value, _then);
+      _$ItemStatePhotoSelectedImpl _value,
+      $Res Function(_$ItemStatePhotoSelectedImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? photo = null}) {
-    return _then(
-      _$ItemStatePhotoSelectedImpl(
-        null == photo
-            ? _value.photo
-            : photo // ignore: cast_nullable_to_non_nullable
-                as File,
-      ),
-    );
+  $Res call({
+    Object? photo = null,
+  }) {
+    return _then(_$ItemStatePhotoSelectedImpl(
+      null == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as File,
+    ));
   }
 }
 
@@ -9650,17 +9443,12 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
   @override
   int get hashCode => Object.hash(runtimeType, photo);
 
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ItemStatePhotoSelectedImplCopyWith<_$ItemStatePhotoSelectedImpl>
-  get copyWith =>
-      __$$ItemStatePhotoSelectedImplCopyWithImpl<_$ItemStatePhotoSelectedImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$ItemStatePhotoSelectedImplCopyWithImpl<
+          _$ItemStatePhotoSelectedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -9680,23 +9468,23 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
     required TResult Function(ApiErrorModel error) deleteItemFail,
     required TResult Function() changeEnableItemLoading,
     required TResult Function(ChangeEnableItemResponse data)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ApiErrorModel error) changeEnableItemFail,
     required TResult Function() getItemsCategoriesLoading,
     required TResult Function(ItemsCategoryResponse data)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesFail,
     required TResult Function() getItemsCategoriesUserLoading,
     required TResult Function(ItemsCategoryResponseUser data)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(ApiErrorModel error) getItemsCategoriesUserFail,
     required TResult Function() createItemCategoriesLoading,
     required TResult Function(CreateItemResponse data)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) createItemCategoriesFail,
     required TResult Function() filterItemCategoriesLoading,
     required TResult Function(GetAllItemsResponse data)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(ApiErrorModel error) filterItemCategoriesFail,
     required TResult Function(File photo) photoSelected,
   }) {
@@ -9727,7 +9515,7 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
     TResult? Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult? Function()? getItemsCategoriesUserLoading,
     TResult? Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult? Function()? createItemCategoriesLoading,
     TResult? Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -9764,7 +9552,7 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
     TResult Function(ApiErrorModel error)? getItemsCategoriesFail,
     TResult Function()? getItemsCategoriesUserLoading,
     TResult Function(ItemsCategoryResponseUser data)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(ApiErrorModel error)? getItemsCategoriesUserFail,
     TResult Function()? createItemCategoriesLoading,
     TResult Function(CreateItemResponse data)? createItemCategoriesSuccess,
@@ -9798,34 +9586,34 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
     required TResult Function(DeleteItemSuccess value) deleteItemSuccess,
     required TResult Function(DeleteItemFail value) deleteItemFail,
     required TResult Function(ChangeEnableItemLoading value)
-    changeEnableItemLoading,
+        changeEnableItemLoading,
     required TResult Function(ChangeEnableItemSuccess value)
-    changeEnableItemSuccess,
+        changeEnableItemSuccess,
     required TResult Function(ChangeEnableItemFail value) changeEnableItemFail,
     required TResult Function(GetItemsCategoriesLoading value)
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     required TResult Function(GetItemsCategoriesSuccess value)
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     required TResult Function(GetItemsCategoriesFail value)
-    getItemsCategoriesFail,
+        getItemsCategoriesFail,
     required TResult Function(GetItemsCategoriesUserLoading value)
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     required TResult Function(GetItemsCategoriesUserSuccess value)
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     required TResult Function(GetItemsCategoriesUserFail value)
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     required TResult Function(CreateItemCategoriesLoading value)
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     required TResult Function(CreateItemCategoriesSuccess value)
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     required TResult Function(CreateItemCategoriesFail value)
-    createItemCategoriesFail,
+        createItemCategoriesFail,
     required TResult Function(FilterItemCategoriesLoading value)
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     required TResult Function(FilterItemCategoriesSuccess value)
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     required TResult Function(FilterItemCategoriesFail value)
-    filterItemCategoriesFail,
+        filterItemCategoriesFail,
     required TResult Function(ItemStatePhotoSelected value) photoSelected,
   }) {
     return photoSelected(this);
@@ -9851,25 +9639,25 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
     TResult? Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult? Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult? Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult? Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult? Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult? Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult? Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult? Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult? Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult? Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult? Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult? Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult? Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult? Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult? Function(ItemStatePhotoSelected value)? photoSelected,
   }) {
@@ -9896,25 +9684,25 @@ class _$ItemStatePhotoSelectedImpl implements ItemStatePhotoSelected {
     TResult Function(ChangeEnableItemSuccess value)? changeEnableItemSuccess,
     TResult Function(ChangeEnableItemFail value)? changeEnableItemFail,
     TResult Function(GetItemsCategoriesLoading value)?
-    getItemsCategoriesLoading,
+        getItemsCategoriesLoading,
     TResult Function(GetItemsCategoriesSuccess value)?
-    getItemsCategoriesSuccess,
+        getItemsCategoriesSuccess,
     TResult Function(GetItemsCategoriesFail value)? getItemsCategoriesFail,
     TResult Function(GetItemsCategoriesUserLoading value)?
-    getItemsCategoriesUserLoading,
+        getItemsCategoriesUserLoading,
     TResult Function(GetItemsCategoriesUserSuccess value)?
-    getItemsCategoriesUserSuccess,
+        getItemsCategoriesUserSuccess,
     TResult Function(GetItemsCategoriesUserFail value)?
-    getItemsCategoriesUserFail,
+        getItemsCategoriesUserFail,
     TResult Function(CreateItemCategoriesLoading value)?
-    createItemCategoriesLoading,
+        createItemCategoriesLoading,
     TResult Function(CreateItemCategoriesSuccess value)?
-    createItemCategoriesSuccess,
+        createItemCategoriesSuccess,
     TResult Function(CreateItemCategoriesFail value)? createItemCategoriesFail,
     TResult Function(FilterItemCategoriesLoading value)?
-    filterItemCategoriesLoading,
+        filterItemCategoriesLoading,
     TResult Function(FilterItemCategoriesSuccess value)?
-    filterItemCategoriesSuccess,
+        filterItemCategoriesSuccess,
     TResult Function(FilterItemCategoriesFail value)? filterItemCategoriesFail,
     TResult Function(ItemStatePhotoSelected value)? photoSelected,
     required TResult orElse(),
@@ -9931,10 +9719,7 @@ abstract class ItemStatePhotoSelected implements ItemState {
       _$ItemStatePhotoSelectedImpl;
 
   File get photo;
-
-  /// Create a copy of ItemState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ItemStatePhotoSelectedImplCopyWith<_$ItemStatePhotoSelectedImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

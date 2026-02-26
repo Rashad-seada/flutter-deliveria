@@ -8,10 +8,9 @@ part of 'get_nearby_response.dart';
 
 GetNearbyResponse _$GetNearbyResponseFromJson(Map<String, dynamic> json) =>
     GetNearbyResponse(
-      response:
-          (json['response'] as List<dynamic>)
-              .map((e) => NearbyRestaurant.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      response: (json['response'] as List<dynamic>)
+          .map((e) => NearbyRestaurant.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$GetNearbyResponseToJson(GetNearbyResponse instance) =>
@@ -21,20 +20,17 @@ Map<String, dynamic> _$GetNearbyResponseToJson(GetNearbyResponse instance) =>
 
 NearbyRestaurant _$NearbyRestaurantFromJson(Map<String, dynamic> json) =>
     NearbyRestaurant(
-      coordinates: Coordinates.fromJson(
-        json['coordinates'] as Map<String, dynamic>,
-      ),
+      coordinates:
+          Coordinates.fromJson(json['coordinates'] as Map<String, dynamic>),
       id: json['_id'] as String,
       photo: json['photo'] as String,
       logo: json['logo'] as String,
-      superCategory:
-          (json['super_category'] as List<dynamic>)
-              .map((e) => SuperCategory.fromJson(e as Map<String, dynamic>))
-              .toList(),
-      subCategory:
-          (json['sub_category'] as List<dynamic>)
-              .map((e) => SubCategory.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      superCategory: (json['super_category'] as List<dynamic>)
+          .map((e) => SuperCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      subCategory: (json['sub_category'] as List<dynamic>)
+          .map((e) => SubCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
       name: json['name'] as String,
       phone: json['phone'] as String,
       aboutUs: json['about_us'] as String,
@@ -84,9 +80,9 @@ Map<String, dynamic> _$NearbyRestaurantToJson(NearbyRestaurant instance) =>
     };
 
 Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) => Coordinates(
-  latitude: (json['latitude'] as num).toDouble(),
-  longitude: (json['longitude'] as num).toDouble(),
-);
+      latitude: (json['latitude'] as num).toDouble(),
+      longitude: (json['longitude'] as num).toDouble(),
+    );
 
 Map<String, dynamic> _$CoordinatesToJson(Coordinates instance) =>
     <String, dynamic>{
@@ -111,10 +107,10 @@ Map<String, dynamic> _$SuperCategoryToJson(SuperCategory instance) =>
     };
 
 SubCategory _$SubCategoryFromJson(Map<String, dynamic> json) => SubCategory(
-  id: json['_id'] as String,
-  nameEn: json['name_en'] as String,
-  nameAr: json['name_ar'] as String,
-);
+      id: json['_id'] as String,
+      nameEn: json['name_en'] as String,
+      nameAr: json['name_ar'] as String,
+    );
 
 Map<String, dynamic> _$SubCategoryToJson(SubCategory instance) =>
     <String, dynamic>{

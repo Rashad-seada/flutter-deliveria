@@ -17,6 +17,7 @@ import 'package:delveria/features/client/resturant/ui/widgets/quick_food_restura
 import 'package:delveria/features/client/resturant/ui/widgets/rate_and_delivery_cost_row.dart';
 import 'package:delveria/features/client/resturant/ui/widgets/resturant_review_and_name.dart';
 import 'package:delveria/features/client/resturant/ui/widgets/resturant_stacked_image.dart';
+import 'package:delveria/features/client/resturant/ui/widgets/top_picks_section.dart';
 import 'package:delveria/features/client/settings/logic/theme_cubit.dart';
 import 'package:delveria/features/client/settings/logic/theme_state.dart';
 import 'package:easy_localization/easy_localization.dart' hide TextDirection;
@@ -63,7 +64,10 @@ class _ResturantScreenState extends State<ResturantScreen> {
     String? resId;
     List<Review>? reviews;
 
+    bool isOpen = true; // Default to true
+
     if (isTopTen) {
+      isOpen = resturantAdmin?.isOpen ?? true;
       logo = resturantAdmin?.logo;
       img = resturantAdmin?.photo;
       resName = resturantAdmin?.name;
@@ -72,8 +76,9 @@ class _ResturantScreenState extends State<ResturantScreen> {
       estimatedTime = resturantAdmin?.estimatedTime?.toString();
       rate = resturantAdmin?.rate.toString();
       resId = resturantAdmin?.id;
-      reviews = resturantAdmin?.reviews.cast<Review>();
+      reviews = resturantAdmin?.reviews;
     } else if (nearbyRestaurant != null) {
+      isOpen = nearbyRestaurant.isOpen;
       logo =
           (nearbyRestaurant.logo.isNotEmpty)
               ? nearbyRestaurant.logo
@@ -109,8 +114,9 @@ class _ResturantScreenState extends State<ResturantScreen> {
       reviews =
           (nearbyRestaurant.reviews.isNotEmpty)
               ? nearbyRestaurant.reviews.cast<Review>()
-              : resturantAdmin?.reviews.cast<Review>();
+              : resturantAdmin?.reviews;
     } else if (restuarntCategory != null) {
+      isOpen = restuarntCategory.isOpen;
       logo = restuarntCategory.logo;
       img = restuarntCategory.photo;
       resName = restuarntCategory.name;
@@ -125,6 +131,7 @@ class _ResturantScreenState extends State<ResturantScreen> {
       reviews = restuarntCategory.reviews.cast<Review>();
     } else {
       // fallback to admin if all are null
+      isOpen = resturantAdmin?.isOpen ?? true;
       logo = resturantAdmin?.logo;
       img = resturantAdmin?.photo;
       resName = resturantAdmin?.name;
@@ -133,7 +140,7 @@ class _ResturantScreenState extends State<ResturantScreen> {
       estimatedTime = resturantAdmin?.estimatedTime?.toString();
       rate = resturantAdmin?.rate.toString();
       resId = resturantAdmin?.id;
-      reviews = resturantAdmin?.reviews.cast<Review>();
+      reviews = resturantAdmin?.reviews;
     }
 
     Widget buildFoodTypeTabs(String? resId) {
@@ -150,6 +157,18 @@ class _ResturantScreenState extends State<ResturantScreen> {
     return BlocBuilder<ThemeCubit, ThemeState>(
       builder: (context, themeState) {
         return Scaffold(
+          bottomNavigationBar: isOpen == false
+              ? Container(
+                  height: 60.h,
+                  color: Colors.red,
+                  child: Center(
+                    child: Text(
+                      "Restaurant is Closed",
+                      style: TextStyles.bimini16W700.copyWith(color: Colors.white),
+                    ),
+                  ),
+                )
+              : null,
           body: SafeArea(
             child: BlocBuilder<ResturantMenuCubit, ResturantMenuState>(
               builder: (resContext, state) {
@@ -257,7 +276,7 @@ class _ResturantScreenState extends State<ResturantScreen> {
                               ),
                             ),
                             verticalSpace(20),
-                            ResturantStackedImage(logo: logo, img: img),
+                            ResturantStackedImage(logo: logo, img: img, isOpen: isOpen),
                             ResturantReviewAndName(
                               resName: resName,
                               reviews: reviews ?? [],
@@ -282,6 +301,12 @@ class _ResturantScreenState extends State<ResturantScreen> {
                               themeState: themeState,
                               rate: rate,
                             ),
+                            verticalSpace(10),
+                            if (resId != null && resId.isNotEmpty)
+                              TopPicksSection(
+                                restaurantId: resId,
+                                themeState: themeState,
+                              ),
                             verticalSpace(10),
                             
                           ],

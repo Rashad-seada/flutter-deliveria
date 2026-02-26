@@ -1,0 +1,12 @@
+{
+    "code": "TEST-CURL-FILE",
+    "discount_type": "delivery",
+    "value": 0,
+    "expired_date": "2026-02-14",
+    "description": "",
+    "usage_limit": 10,
+    "usage_per_user_limit": 10,
+    "minimum_order_value": 10.0,
+    "applicable_restaurants": [],
+    "coupon_type": "promotional"
+}

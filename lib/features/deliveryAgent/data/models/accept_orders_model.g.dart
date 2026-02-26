@@ -7,7 +7,11 @@ part of 'accept_orders_model.dart';
 // **************************************************************************
 
 AcceptOrdersModel _$AcceptOrdersModelFromJson(Map<String, dynamic> json) =>
-    AcceptOrdersModel(message: json['message'] as String?);
+    AcceptOrdersModel(
+      message: json['message'] as String?,
+    );
 
 Map<String, dynamic> _$AcceptOrdersModelToJson(AcceptOrdersModel instance) =>
-    <String, dynamic>{'message': instance.message};
+    <String, dynamic>{
+      'message': instance.message,
+    };

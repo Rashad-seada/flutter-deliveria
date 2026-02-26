@@ -14,7 +14,7 @@ import 'package:delveria/features/deliveryAgent/logic/cubit/agent_orders_state.d
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class OrdersTabBody extends StatelessWidget {
+class OrdersTabBody extends StatefulWidget {
   const OrdersTabBody({
     super.key,
     this.isDeliveryAgent,
@@ -25,6 +25,11 @@ class OrdersTabBody extends StatelessWidget {
   final DateTime? filterFromDate;
   final DateTime? filterToDate;
 
+  @override
+  State<OrdersTabBody> createState() => _OrdersTabBodyState();
+}
+
+class _OrdersTabBodyState extends State<OrdersTabBody> {
   bool _isWithinRange(DateTime date, DateTime? from, DateTime? to) {
     if (from == null || to == null) return true;
     final dateOnly = DateTime(date.year, date.month, date.day);
@@ -34,9 +39,25 @@ class OrdersTabBody extends StatelessWidget {
   }
 
   @override
+  void initState() {
+    super.initState();
+    // Trigger data fetch when widget is first built
+    if (widget.isDeliveryAgent == true) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        context.read<AgentOrdersCubit>().getAcceptedOrders();
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    if (isDeliveryAgent == true) {
-      return BlocBuilder<AgentOrdersCubit, AgentOrdersState>(
+    if (widget.isDeliveryAgent == true) {
+      return BlocConsumer<AgentOrdersCubit, AgentOrdersState>(
+        listener: (context, state) {
+          if (state is UpdateOrderStatusAgentSuccess) {
+            context.read<AgentOrdersCubit>().getAcceptedOrders();
+          }
+        },
         builder: (context, state) {
           final cubit = context.read<AgentOrdersCubit>();
 
@@ -44,92 +65,28 @@ class OrdersTabBody extends StatelessWidget {
             return CustomLoading();
           } else if (state is GetAcceptOrderFail) {
             return Center(child: Text('Failed to load orders'));
-          } else if (state is GetAcceptOrderSuccess) {
-            final orders = cubit.acceptedOrders;
-
-            return ListView.separated(
-              padding: EdgeInsets.all(16),
-              itemCount: orders.length,
-              separatorBuilder: (_, __) => SizedBox(height: 16),
-              itemBuilder: (context, index) {
-                final order = orders[index];
-                return BlocProvider(
-                  create: (context) => getIt<GetOrdersCubit>(),
-                  child: MyOrderCard(
-                    isResturant: true,
-                    orderId: order.id,
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder:
-                              (_) => BlocProvider(
-                                create: (context) => getIt<AgentOrdersCubit>(),
-                                child: NewOrdersDetailsScreen(
-                                  singleStatus:
-                                      order.orders.isNotEmpty
-                                          ? (order.orders.first.status ?? "")
-                                          : "",
-
-                                  addressDetails: order.address.details,
-
-                                  agentStatus: order.status,
-                                  orderStatus: order.status ?? "",
-                                  isResturant: false,
-                                  orderId: order.id,
-                                  recieved: true,
-                                  isDeliveryAgent: true,
-                                  acceptedOrder: order,
-                                  phone: order.address.phone,
-                                  address: order.address.addressTitle ?? "",
-                                  name: order.userId.firstName,
-                                ),
-                              ),
-                        ),
-                      );
-                    },
-                    orders: true,
-                    isDeliveryAgent: isDeliveryAgent,
-                    orderStatus:
-                        order.status == "Completed"
-                            ? "مكتمل"
-                            : order.status == "On the way"
-                            ? "في الطريق"
-                            : order.status == "Pick up"
-                            ? "جاري التحضير "
-                            : order.status,
-                    orderStatusColor:
-                        order.status == "Pick up"
-                            ? Colors.yellow
-                            : order.status == "On the way"
-                            ? Colors.green
-                            : AppColors.lightGreySecond,
-                    restaurantName:
-                        "${order.orderId} ${order.orders.length > 1 ? "multi " : order.orders.first.restaurantId.name}", //! show restuant name too
-                 
-                    shippingPrice:
-                        "Shipping Price ${order.finalDeliveryCost} L.E",
-                    price:
-                        "Order Price ${order.finalPrice.toString().length > 4 ? order.finalPrice.toString().substring(0, 5) : order.finalPrice} L.E",
-                    orderNumber: '#${order.orderId}',
-                    date: formatDate(order.createdAt),
-                    items:
-                        '${order.orders.first.items.length.toString().padLeft(2, '0')} Items',
-                    isOngoing: order.status != "delivered",
-                  ),
-                );
-              },
-            );
-          } else {
-            // Initial or unknown state
-            return Center(child: Text(state.toString()));
           }
+          
+          // For GetAcceptOrderSuccess or any other state, check if data is available
+          final orders = cubit.acceptedOrders;
+          if (orders.isNotEmpty) {
+            return _buildOrdersList(orders, context, widget.isDeliveryAgent);
+          }
+          
+          // No data yet (initial state or other)
+          return Center(child: CustomLoading());
         },
       );
     }
 
     // Restaurant Orders Tab with optional Date Filtering
-    return BlocBuilder<OrdersResturantCubit, state.OrdersResturantState>(
+    return BlocConsumer<OrdersResturantCubit, state.OrdersResturantState>(
+      listener: (context, orderState) {
+        if (orderState is state.MarkReadySuccess ||
+            orderState is state.AcceptOrderSuccess) {
+          context.read<OrdersResturantCubit>().getOrdersRestaurant();
+        }
+      },
       builder: (context, res) {
         if (res is state.Loading) {
           return CustomLoading();
@@ -141,16 +98,20 @@ class OrdersTabBody extends StatelessWidget {
             cubit.ordersResturant
                 .where(
                   (e) =>
+                      e.status == "Accepted" ||
                       e.status == "Preparing" ||
-                      e.status == "Completed" ||
+                      e.status == "Approved / Preparing" ||
+                      e.status == "Ready for Delivery" ||
+                      e.status == "Pick up" ||
+                      e.status == "On the way" ||
                       e.status == "Delivered" ||
-                      e.status == "Canceled" ||
-                      e.status == "Ready for Delivery",
+                      e.status == "Completed" ||
+                      e.status == "Canceled",
                 )
                 .toList();
 
         // 2. Filter by date range if both from and to dates are provided
-        if (filterFromDate != null && filterToDate != null) {
+        if (widget.filterFromDate != null && widget.filterToDate != null) {
           filteredOrders =
               filteredOrders.where((order) {
                 // Parse createdAt to DateTime. If fails, keep (safe).
@@ -160,8 +121,8 @@ class OrdersTabBody extends StatelessWidget {
                 if (createdDate == null) return false;
                 return _isWithinRange(
                   createdDate,
-                  filterFromDate,
-                  filterToDate,
+                  widget.filterFromDate,
+                  widget.filterToDate,
                 );
               }).toList();
         }
@@ -172,19 +133,23 @@ class OrdersTabBody extends StatelessWidget {
             itemCount: filteredOrders.length,
             itemBuilder: (BuildContext context, int index) {
               final order = filteredOrders[index];
-              final restOrder =
-                  order.orders != null && order.orders!.isNotEmpty
-                      ? order.orders!.first
-                      : null;
-              final restaurantId = restOrder?.restaurantId;
-              String restaurantName;
-              if (restaurantId != null && restaurantId.length > 5) {
-                restaurantName = restaurantId.substring(1, 5);
-              } else if (restaurantId != null) {
-                restaurantName = restaurantId;
-              } else {
-                restaurantName = 'ID #0123456789';
-              }
+              final restOrder = order.orders != null && order.orders!.isNotEmpty
+                  ? order.orders!.firstWhere(
+                      (element) =>
+                          element.status == order.status ||
+                          (order.status == "Approved / Preparing" &&
+                              (element.status == "Preparing" ||
+                                  element.status == "Approved")),
+                      orElse: () => order.orders!.firstWhere(
+                        (element) =>
+                            element.status != "Canceled" &&
+                            element.status != "Rejected",
+                        orElse: () => order.orders!.first,
+                      ),
+                    )
+                  : null;
+
+              final restaurantName = restOrder?.restaurant?.name ?? 'Unknown';
               // Calculate items count
               int itemsCount = 0;
               if (order.orders != null) {
@@ -193,17 +158,20 @@ class OrdersTabBody extends StatelessWidget {
                 }
               }
               String? singleStatus;
-              if (order.orders != null && order.orders!.isNotEmpty) {
-                singleStatus = order.orders!.first.status;
+              if (restOrder != null) {
+                singleStatus = restOrder.status;
               }
+
+              // Fallback: If selected sub-order is Canceled but parent is active, use parent status
+              if (singleStatus == "Canceled" &&
+                  order.status != "Canceled" &&
+                  order.status != null) {
+                singleStatus = order.status;
+              }
+
               return MultiBlocProvider(
                 providers: [
                   BlocProvider(create: (context) => getIt<GetOrdersCubit>()),
-                  BlocProvider(
-                    create:
-                        (context) =>
-                            getIt<OrdersResturantCubit>()..getOrdersRestaurant(),
-                  ),
                 ],
                 child: MyOrderCard(
                   isResturant: true,
@@ -216,15 +184,8 @@ class OrdersTabBody extends StatelessWidget {
                         builder:
                             (_) => MultiBlocProvider(
                               providers: [
-                                BlocProvider(
-                                  create:
-                                      (context) => getIt<AgentOrdersCubit>(),
-                                ),
-                                BlocProvider(
-                                  create:
-                                      (context) =>
-                                          getIt<OrdersResturantCubit>()
-                                            ..getOrdersRestaurant(),
+                                BlocProvider.value(
+                                  value: context.read<OrdersResturantCubit>(),
                                 ),
                               ],
                               child: NewOrdersDetailsScreen(
@@ -244,7 +205,7 @@ class OrdersTabBody extends StatelessWidget {
                       ),
                     );
                   },
-                  isDeliveryAgent: isDeliveryAgent,
+                  isDeliveryAgent: widget.isDeliveryAgent,
                   newOrders: false,
                   restaurantName: restaurantName,
                   shippingPrice:
@@ -265,6 +226,81 @@ class OrdersTabBody extends StatelessWidget {
                 ),
               );
             },
+          ),
+        );
+      },
+    );
+  }
+  Widget _buildOrdersList(List<dynamic> orders, BuildContext context, bool? isDeliveryAgent) {
+    return ListView.separated(
+      padding: EdgeInsets.all(16),
+      itemCount: orders.length,
+      separatorBuilder: (_, __) => SizedBox(height: 16),
+      itemBuilder: (context, index) {
+        final order = orders[index];
+        return BlocProvider(
+          create: (context) => getIt<GetOrdersCubit>(),
+          child: MyOrderCard(
+            isResturant: true,
+            orderId: order.id,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder:
+                      (_) => BlocProvider.value(
+                        value: context.read<AgentOrdersCubit>(),
+                        child: NewOrdersDetailsScreen(
+                          singleStatus:
+                              order.orders.isNotEmpty
+                                  ? (order.orders.first.status ?? "")
+                                  : "",
+
+                          addressDetails: order.address.details,
+
+                          agentStatus: order.status,
+                          orderStatus: order.status ?? "",
+                          isResturant: false,
+                          orderId: order.id,
+                          recieved: true,
+                          isDeliveryAgent: true,
+                          acceptedOrder: order,
+                          phone: order.address.phone,
+                          address: order.address.addressTitle ?? "",
+                          name: order.userId.firstName,
+                        ),
+                      ),
+                ),
+              );
+            },
+            orders: true,
+            isDeliveryAgent: isDeliveryAgent,
+            orderStatus:
+                order.status == "Completed"
+                    ? "مكتمل"
+                    : order.status == "On the way"
+                    ? "في الطريق"
+                    : order.status == "Pick up"
+                    ? "جاري التحضير "
+                    : order.status,
+            orderStatusColor:
+                order.status == "Pick up"
+                    ? Colors.yellow
+                    : order.status == "On the way"
+                    ? Colors.green
+                    : AppColors.lightGreySecond,
+            restaurantName:
+                "${order.orderId} ${order.orders.length > 1 ? "multi " : order.orders.first.restaurantId.name}", //! show restuant name too
+
+            shippingPrice:
+                "Shipping Price ${order.finalDeliveryCost} L.E",
+            price:
+                "Order Price ${order.finalPrice.toString().length > 4 ? order.finalPrice.toString().substring(0, 5) : order.finalPrice} L.E",
+            orderNumber: '#${order.orderId}',
+            date: formatDate(order.createdAt),
+            items:
+                '${order.orders.first.items.length.toString().padLeft(2, '0')} Items',
+            isOngoing: order.status != "delivered",
           ),
         );
       },

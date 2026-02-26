@@ -176,11 +176,24 @@ abstract class ApiServices {
   );
   //*Admin
   @GET(ApiConstants.allOrdersLink)
-  Future<AllOrdersModel> getAllOrders(@Body() Map<String, dynamic> body);
-  @GET("/agents/id/{id}")
+  Future<AllOrdersModel> getAllOrders(
+    @Body() Map<String, dynamic> body, {
+    @Query("date") String? date,
+    @Query("startDate") String? startDate,
+    @Query("endDate") String? endDate,
+    @Query("payment_type") String? paymentType,
+    @Query("status") String? status,
+    @Query("restaurant_id") String? restaurantId,
+    @Query("user_id") String? userId,
+    @Query("agent_id") String? agentId,
+    @Query("order_type") String? orderType,
+    @Query("delivery_type") String? deliveryType,
+  });
+  @GET("/agents/{id}/orders")
   Future<EachAgentOrderResponse> getAllOrdersForEachAgent(
     @Body() Map<String, dynamic> body,
     @Path("id") String id,
+    @Query("status") String? status,
   );
   @GET("/orders/id/{id}")
   Future<OrderDetailsResponse> getOrderDetails(@Body() Map<String, dynamic> body , @Path("id") String id);
@@ -205,6 +218,15 @@ abstract class ApiServices {
   Future<SuperCategoriesResponse> getAllSuperCategories();
   @POST(ApiConstants.createCouponeLink)
   Future<CouponeResponse> creatCoupone(@Body() CouponeRequest request);
+  @PUT('/coupon_codes/update/{id}')
+  Future<CouponeResponse> updateCoupon(
+    @Path('id') String id,
+    @Body() Map<String, dynamic> body,
+  );
+  @DELETE('/coupon_codes/delete/{id}')
+  Future<void> deleteCoupon(@Path('id') String id);
+  @PUT("/coupon_codes/change_enable/{id}")
+  Future<dynamic> toggleCouponStatus(@Path('id') String id);
   @POST('/coupon_codes/check/{code}')
   Future<CouponeResponse> checkCoupone(
     @Path('code') String code,
@@ -376,13 +398,11 @@ abstract class ApiServices {
   @POST("https://accept.paymob.com/api${ApiConstants.createPaymobOrder}")
   Future<PaymobOrderResponse> createPaymobOrder(
     @Body() Map<String, dynamic> data,
-    @Header("Authorization") String authorization,
   );
 
   @POST("https://accept.paymob.com/api${ApiConstants.getPaymentKey}")
   Future<PaymentKeyResponse> getPaymentKey(
     @Body() Map<String, dynamic> data,
-    @Header("Authorization") String authorization,
   );
   // @GET("https://accept.paymob.com/api/acceptance/transactions/{transactionId}")
   // Future<Map<String, dynamic>> checkPaymentStatus(
@@ -393,13 +413,23 @@ abstract class ApiServices {
   //* Agent
   @GET(ApiConstants.getOrdersNotAcceptedAgentLink)
   Future<GetNotAcceptedOrderAgentResponse> getCurrentOrders(
-    @Body() Map<String, dynamic> body,
-  );
+    @Body() Map<String, dynamic> body, {
+    @Query("date") String? date,
+    @Query("startDate") String? startDate,
+    @Query("endDate") String? endDate,
+    @Query("payment_type") String? paymentType,
+    @Query("order_type") String? orderType,
+  });
 
   @GET(ApiConstants.acceptedOrderLink)
   Future<GetAcceptedOrdersResponse> getAcceptedOrders(
-    @Body() Map<String, dynamic> body,
-  );
+    @Body() Map<String, dynamic> body, {
+    @Query("status") String? status,
+    @Query("date") String? date,
+    @Query("startDate") String? startDate,
+    @Query("endDate") String? endDate,
+    @Query("payment_type") String? paymentType,
+  });
 
   @PUT("/delivery/accept/{orderId}")
   Future<AcceptOrdersModel> acceptOrder(
@@ -429,4 +459,26 @@ abstract class ApiServices {
   Future<UpdateLocationResponse> updateAgentLocation(
     @Body() Map<String, dynamic> body,
   );
+
+  //* Branches
+  @GET("/restaurants/{id}/branches")
+  Future<dynamic> getBranches(@Path("id") String restaurantId);
+
+  @POST("/restaurants/{id}/branches")
+  Future<dynamic> createBranch(
+    @Path("id") String restaurantId,
+    @Body() Map<String, dynamic> body,
+  );
+
+  @PUT("/restaurants/branches/{branchId}")
+  Future<dynamic> updateBranch(
+    @Path("branchId") String branchId,
+    @Body() Map<String, dynamic> body,
+  );
+
+  @PATCH("/restaurants/branches/{branchId}/toggle")
+  Future<dynamic> toggleBranchStatus(@Path("branchId") String branchId);
+
+  @DELETE("/restaurants/branches/{branchId}")
+  Future<dynamic> deleteBranch(@Path("branchId") String branchId);
 }

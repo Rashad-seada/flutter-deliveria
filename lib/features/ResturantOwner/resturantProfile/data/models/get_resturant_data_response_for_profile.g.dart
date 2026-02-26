@@ -7,39 +7,34 @@ part of 'get_resturant_data_response_for_profile.dart';
 // **************************************************************************
 
 GetResturantDataResponseProfile _$GetResturantDataResponseProfileFromJson(
-  Map<String, dynamic> json,
-) => GetResturantDataResponseProfile(
-  restaurant:
-      json['restaurant'] == null
+        Map<String, dynamic> json) =>
+    GetResturantDataResponseProfile(
+      restaurant: json['restaurant'] == null
           ? null
           : RestaurantModel.fromJson(
-            json['restaurant'] as Map<String, dynamic>,
-          ),
-);
+              json['restaurant'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$GetResturantDataResponseProfileToJson(
-  GetResturantDataResponseProfile instance,
-) => <String, dynamic>{'restaurant': instance.restaurant?.toJson()};
+        GetResturantDataResponseProfile instance) =>
+    <String, dynamic>{
+      'restaurant': instance.restaurant?.toJson(),
+    };
 
 RestaurantModel _$RestaurantModelFromJson(Map<String, dynamic> json) =>
     RestaurantModel(
-      coordinates:
-          json['coordinates'] == null
-              ? null
-              : Coordinates.fromJson(
-                json['coordinates'] as Map<String, dynamic>,
-              ),
+      coordinates: json['coordinates'] == null
+          ? null
+          : Coordinates.fromJson(json['coordinates'] as Map<String, dynamic>),
       id: json['_id'] as String?,
       photo: json['photo'] as String?,
       logo: json['logo'] as String?,
-      superCategory:
-          (json['super_category'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
-      subCategory:
-          (json['sub_category'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
+      superCategory: (json['super_category'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      subCategory: (json['sub_category'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       name: json['name'] as String?,
       phone: json['phone'] as String?,
       userName: json['user_name'] as String?,
@@ -48,10 +43,9 @@ RestaurantModel _$RestaurantModelFromJson(Map<String, dynamic> json) =>
       rateNumber: (json['rate_number'] as num?)?.toInt(),
       userRated: (json['user_rated'] as num?)?.toInt(),
       rate: json['rate'] as num?,
-      reviews:
-          (json['reviews'] as List<dynamic>?)
-              ?.map((e) => Review.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      reviews: (json['reviews'] as List<dynamic>?)
+          ?.map((e) => Review.fromJson(e as Map<String, dynamic>))
+          .toList(),
       deliveryCost: json['delivery_cost'] as num?,
       loacationMap: json['loacation_map'] as String?,
       openHour: json['open_hour'] as String?,
@@ -96,9 +90,9 @@ Map<String, dynamic> _$RestaurantModelToJson(RestaurantModel instance) =>
     };
 
 Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) => Coordinates(
-  latitude: (json['latitude'] as num?)?.toDouble(),
-  longitude: (json['longitude'] as num?)?.toDouble(),
-);
+      latitude: (json['latitude'] as num?)?.toDouble(),
+      longitude: (json['longitude'] as num?)?.toDouble(),
+    );
 
 Map<String, dynamic> _$CoordinatesToJson(Coordinates instance) =>
     <String, dynamic>{

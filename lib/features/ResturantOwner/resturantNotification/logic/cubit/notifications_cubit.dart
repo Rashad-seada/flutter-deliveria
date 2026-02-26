@@ -1,4 +1,6 @@
 import 'package:delveria/core/network/api_error_handler.dart';
+import 'package:delveria/core/helper/constants.dart';
+import 'package:delveria/core/helper/shared_pref_helper.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/data/models/notifications_model.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/data/repo/notification_repo.dart';
 import 'package:delveria/features/ResturantOwner/resturantNotification/logic/cubit/notifications_state.dart';
@@ -11,33 +13,49 @@ class NotificationsCubit extends Cubit<NotificationsState> {
   List<NotificationItemModel> allNotifications = [];
 
   Future<void> getNotifications() async {
-    emit(NotificationsState.loading());
+    // Skip for guests - they don't have notifications
+    final isGuest = await SharedPrefHelper.getBool(SharedPrefKeys.isGuest);
+    print("NotificationsCubit: isGuest=$isGuest");
+    
+    if (isGuest == true) {
+      allNotifications = [];
+      if (!isClosed) emit(NotificationsState.success(NotificationsModel(response: [])));
+      return;
+    }
+    
+    if(!isClosed) emit(NotificationsState.loading());
     try {
       final response = await notificationRepo.getNotification();
+      if(isClosed) return;
       response.when(
         success: (notificationRes) {
           allNotifications = notificationRes.response;
-          emit(NotificationsState.success(notificationRes));
+          if(!isClosed) emit(NotificationsState.success(notificationRes));
         },
-        failure: (error) => emit(NotificationsState.fail(error)),
+        failure: (error) {
+           if(!isClosed) emit(NotificationsState.fail(error));
+        },
       );
     } catch (e) {
-      emit(NotificationsState.fail(ApiErrorHandler.handle(e)));
+      if(!isClosed) emit(NotificationsState.fail(ApiErrorHandler.handle(e)));
     }
   }
 
   Future<void> createNotification({required Map<String, dynamic> body}) async {
-    emit(NotificationsState.createLoading());
+    if(!isClosed) emit(NotificationsState.createLoading());
     try {
       final response = await notificationRepo.createNotfication(body: body);
+      if(isClosed) return;
       response.when(
         success: (notificationRes) {
-          emit(NotificationsState.createSuccess(notificationRes));
+          if(!isClosed) emit(NotificationsState.createSuccess(notificationRes));
         },
-        failure: (error) => emit(NotificationsState.createFail(error)),
+        failure: (error) {
+           if(!isClosed) emit(NotificationsState.createFail(error));
+        },
       );
     } catch (e) {
-      emit(NotificationsState.createFail(ApiErrorHandler.handle(e)));
+      if(!isClosed) emit(NotificationsState.createFail(ApiErrorHandler.handle(e)));
     }
   }
 }

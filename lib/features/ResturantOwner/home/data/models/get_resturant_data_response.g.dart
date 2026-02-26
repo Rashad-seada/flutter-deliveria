@@ -7,32 +7,30 @@ part of 'get_resturant_data_response.dart';
 // **************************************************************************
 
 GetResturantDataResponseHome _$GetResturantDataResponseHomeFromJson(
-  Map<String, dynamic> json,
-) => GetResturantDataResponseHome(
-  restaurant: RestaurantModel.fromJson(
-    json['restaurant'] as Map<String, dynamic>,
-  ),
-);
+        Map<String, dynamic> json) =>
+    GetResturantDataResponseHome(
+      restaurant:
+          RestaurantModel.fromJson(json['restaurant'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$GetResturantDataResponseHomeToJson(
-  GetResturantDataResponseHome instance,
-) => <String, dynamic>{'restaurant': instance.restaurant.toJson()};
+        GetResturantDataResponseHome instance) =>
+    <String, dynamic>{
+      'restaurant': instance.restaurant.toJson(),
+    };
 
 RestaurantModel _$RestaurantModelFromJson(Map<String, dynamic> json) =>
     RestaurantModel(
-      coordinates: Coordinates.fromJson(
-        json['coordinates'] as Map<String, dynamic>,
-      ),
+      coordinates:
+          Coordinates.fromJson(json['coordinates'] as Map<String, dynamic>),
       id: json['_id'] as String,
       photo: json['photo'] as String,
-      superCategory:
-          (json['super_category'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList(),
-      subCategory:
-          (json['sub_category'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList(),
+      superCategory: (json['super_category'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      subCategory: (json['sub_category'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       name: json['name'] as String,
       phone: json['phone'] as String,
       userName: json['user_name'] as String,
@@ -85,9 +83,9 @@ Map<String, dynamic> _$RestaurantModelToJson(RestaurantModel instance) =>
     };
 
 Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) => Coordinates(
-  latitude: (json['latitude'] as num).toDouble(),
-  longitude: (json['longitude'] as num).toDouble(),
-);
+      latitude: (json['latitude'] as num).toDouble(),
+      longitude: (json['longitude'] as num).toDouble(),
+    );
 
 Map<String, dynamic> _$CoordinatesToJson(Coordinates instance) =>
     <String, dynamic>{

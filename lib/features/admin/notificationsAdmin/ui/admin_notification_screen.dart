@@ -22,6 +22,7 @@ class _AdminNotificationsScreenState extends State<AdminNotificationsScreen>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
   final TextEditingController messageController = TextEditingController();
+  final TextEditingController titleController = TextEditingController();
 
   @override
   void initState() {
@@ -34,6 +35,7 @@ class _AdminNotificationsScreenState extends State<AdminNotificationsScreen>
   void dispose() {
     tabController.dispose();
     messageController.dispose();
+    titleController.dispose();
     super.dispose();
   }
 
@@ -59,7 +61,11 @@ class _AdminNotificationsScreenState extends State<AdminNotificationsScreen>
               verticalSpace(30),
               NotificationTabs(tabController: tabController),
               verticalSpace(40),
-              NotificationsTabBody(tabController: tabController, messageController: messageController,),
+              NotificationsTabBody(
+                tabController: tabController,
+                messageController: messageController,
+                titleController: titleController,
+              ),
           ],
           ),
         ),

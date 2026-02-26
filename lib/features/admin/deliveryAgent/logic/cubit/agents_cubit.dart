@@ -74,10 +74,32 @@ class AgentsCubit extends Cubit<AgentsState> {
     }
   }
 
-  Future<void> getAllOrders() async {
+  Future<void> getAllOrders({
+    String? date,
+    String? startDate,
+    String? endDate,
+    String? paymentType,
+    String? status,
+    String? restaurantId,
+    String? userId,
+    String? agentId,
+    String? orderType,
+    String? deliveryType,
+  }) async {
     emit(AgentsState.getAllOrdersLoading());
     try {
-      final response = await agentAdminRepo.getAllOrders();
+      final response = await agentAdminRepo.getAllOrders(
+        date: date,
+        startDate: startDate,
+        endDate: endDate,
+        paymentType: paymentType,
+        status: status,
+        restaurantId: restaurantId,
+        userId: userId,
+        agentId: agentId,
+        orderType: orderType,
+        deliveryType: deliveryType,
+      );
       response.when(
         success: (data) {
           deliveryIds = data.orders?.map((e) => e.deliveryId).toList();
@@ -111,10 +133,10 @@ class AgentsCubit extends Cubit<AgentsState> {
     }
   }
 
-  Future<void> getAllOrdersEachAgent(String id) async {
+  Future<void> getAllOrdersEachAgent(String id, {String? status}) async {
     emit(AgentsState.getAllOrdersEachAgentLoading());
     try {
-      final response = await agentAdminRepo.getAllOrdersForEachAgent(id: id);
+      final response = await agentAdminRepo.getAllOrdersForEachAgent(id: id, status: status);
       response.when(
         success: (data) {
           agentOrders = data.orders;

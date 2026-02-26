@@ -7,56 +7,58 @@ part of 'all_resturant_admin_response.dart';
 // **************************************************************************
 
 AllResturantAdminResponse _$AllResturantAdminResponseFromJson(
-  Map<String, dynamic> json,
-) => AllResturantAdminResponse(
-  response:
-      (json['response'] as List<dynamic>)
+        Map<String, dynamic> json) =>
+    AllResturantAdminResponse(
+      response: (json['response'] as List<dynamic>)
           .map((e) => ResturantAdmin.fromJson(e as Map<String, dynamic>))
           .toList(),
-);
+    );
 
 Map<String, dynamic> _$AllResturantAdminResponseToJson(
-  AllResturantAdminResponse instance,
-) => <String, dynamic>{
-  'response': instance.response.map((e) => e.toJson()).toList(),
-};
+        AllResturantAdminResponse instance) =>
+    <String, dynamic>{
+      'response': instance.response.map((e) => e.toJson()).toList(),
+    };
 
 ResturantAdmin _$ResturantAdminFromJson(Map<String, dynamic> json) =>
     ResturantAdmin(
-      coordinates: Coordinates.fromJson(
-        json['coordinates'] as Map<String, dynamic>,
-      ),
+      coordinates:
+          Coordinates.fromJson(json['coordinates'] as Map<String, dynamic>),
       id: json['_id'] as String,
-      photo: json['photo'] as String,
-      logo: json['logo'] as String,
-      superCategory:
-          (json['super_category'] as List<dynamic>)
-              .map((e) => SuperCategory.fromJson(e as Map<String, dynamic>))
-              .toList(),
-      subCategory:
-          (json['sub_category'] as List<dynamic>)
-              .map((e) => SubCategoryGetRes.fromJson(e as Map<String, dynamic>))
-              .toList(),
-      name: json['name'] as String,
-      phone: json['phone'] as String,
-      aboutUs: json['about_us'] as String,
-      rate: json['rate'] as num,
-      reviews:
-          (json['reviews'] as List<dynamic>)
-              .map((e) => Review.fromJson(e as Map<String, dynamic>))
-              .toList(),
-      deliveryCost: json['delivery_cost'] as num,
-      loacationMap: json['loacation_map'] as String,
-      openHour: json['open_hour'] as String,
-      closeHour: json['close_hour'] as String,
-      haveDelivery: json['have_delivery'] as bool,
-      isShow: json['is_show'] as bool,
-      isShowInHome: json['is_show_in_home'] as bool,
+      photo: json['photo'] as String?,
+      logo: json['logo'] as String?,
+      mainPhoto: json['main_photo'] as String?,
+      superCategory: (json['super_category'] as List<dynamic>?)
+          ?.map((e) => SuperCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      subCategory: (json['sub_category'] as List<dynamic>?)
+          ?.map((e) => SubCategoryGetRes.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      phone: json['phone'] as String?,
+      aboutUs: json['about_us'] as String?,
+      rate: json['rate'] as num?,
+      reviews: (json['reviews'] as List<dynamic>?)
+          ?.map((e) => Review.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      deliveryCost: json['delivery_cost'] as num?,
+      locationMap: json['location_map'] as String?,
+      openHour: json['open_hour'] as String?,
+      closeHour: json['close_hour'] as String?,
+      haveDelivery: json['have_delivery'] as bool?,
+      isShow: json['is_show'] as bool?,
+      isShowInHome: json['is_show_in_home'] as bool?,
       estimatedTime: json['estimated_time'] as num?,
-      createdAt: json['createdAt'] as String,
-      updatedAt: json['updatedAt'] as String,
-      v: (json['__v'] as num).toInt(),
-      isOpen: json['is_open'] as bool,
+      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updatedAt'] as String?,
+      v: (json['__v'] as num?)?.toInt(),
+      isOpen: json['is_open'] as bool?,
+      commissionPercentage: (json['commission_percentage'] as num?)?.toDouble(),
+      preparationTime: (json['preparation_time'] as num?)?.toInt(),
+      deliveryTime: (json['delivery_time'] as num?)?.toInt(),
+      isMainBranch: json['is_main_branch'] as bool?,
+      parentRestaurantId: json['parent_restaurant_id'] as String?,
+      branchesCount: (json['branches_count'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ResturantAdminToJson(ResturantAdmin instance) =>
@@ -65,15 +67,16 @@ Map<String, dynamic> _$ResturantAdminToJson(ResturantAdmin instance) =>
       '_id': instance.id,
       'photo': instance.photo,
       'logo': instance.logo,
-      'super_category': instance.superCategory.map((e) => e.toJson()).toList(),
-      'sub_category': instance.subCategory.map((e) => e.toJson()).toList(),
+      'main_photo': instance.mainPhoto,
+      'super_category': instance.superCategory?.map((e) => e.toJson()).toList(),
+      'sub_category': instance.subCategory?.map((e) => e.toJson()).toList(),
       'name': instance.name,
       'phone': instance.phone,
       'about_us': instance.aboutUs,
       'rate': instance.rate,
-      'reviews': instance.reviews.map((e) => e.toJson()).toList(),
+      'reviews': instance.reviews?.map((e) => e.toJson()).toList(),
       'delivery_cost': instance.deliveryCost,
-      'loacation_map': instance.loacationMap,
+      'location_map': instance.locationMap,
       'open_hour': instance.openHour,
       'close_hour': instance.closeHour,
       'have_delivery': instance.haveDelivery,
@@ -84,10 +87,18 @@ Map<String, dynamic> _$ResturantAdminToJson(ResturantAdmin instance) =>
       'updatedAt': instance.updatedAt,
       '__v': instance.v,
       'is_open': instance.isOpen,
+      'commission_percentage': instance.commissionPercentage,
+      'preparation_time': instance.preparationTime,
+      'delivery_time': instance.deliveryTime,
+      'is_main_branch': instance.isMainBranch,
+      'parent_restaurant_id': instance.parentRestaurantId,
+      'branches_count': instance.branchesCount,
     };
 
-Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) =>
-    Coordinates(latitude: json['latitude'], longitude: json['longitude']);
+Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) => Coordinates(
+      latitude: json['latitude'],
+      longitude: json['longitude'],
+    );
 
 Map<String, dynamic> _$CoordinatesToJson(Coordinates instance) =>
     <String, dynamic>{
@@ -126,15 +137,15 @@ Map<String, dynamic> _$SubCategoryGetResToJson(SubCategoryGetRes instance) =>
     };
 
 Review _$ReviewFromJson(Map<String, dynamic> json) => Review(
-  userId: json['user_id'] as String,
-  message: json['message'] as String,
-  rate: json['rate'] as num,
-  id: json['_id'] as String,
-);
+      userId: json['user_id'] as String,
+      message: json['message'] as String,
+      rate: json['rate'] as num,
+      id: json['_id'] as String,
+    );
 
 Map<String, dynamic> _$ReviewToJson(Review instance) => <String, dynamic>{
-  'user_id': instance.userId,
-  'message': instance.message,
-  'rate': instance.rate,
-  '_id': instance.id,
-};
+      'user_id': instance.userId,
+      'message': instance.message,
+      'rate': instance.rate,
+      '_id': instance.id,
+    };

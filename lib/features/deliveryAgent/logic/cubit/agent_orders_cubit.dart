@@ -10,13 +10,29 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
   AgentOrdersCubit(this.agentOrdrsRepo) : super(AgentOrdersState.initial());
   List<AgentOrder> agentOrders = [];
   List<AcceptedOrder> acceptedOrders = [];
-  void getCurrentOrdersAgent() async {
+  void getCurrentOrdersAgent({
+    String? date,
+    String? startDate,
+    String? endDate,
+    String? paymentType,
+    String? orderType,
+  }) async {
     emit(AgentOrdersState.loading());
     try {
-      final response = await agentOrdrsRepo.getCurrentOrdersForAgent();
+      final response = await agentOrdrsRepo.getCurrentOrdersForAgent(
+        date: date,
+        startDate: startDate,
+        endDate: endDate,
+        paymentType: paymentType,
+        orderType: orderType,
+      );
       response.when(
         success: (currentAgentRes) {
-          agentOrders = currentAgentRes.orders;
+          // Filter out orders that have been accepted by any delivery agent
+          agentOrders = currentAgentRes.orders.where((order) {
+            final isAccepted = order.acceptanceStatus?.acceptedByDeliveryAgents?.isNotEmpty ?? false;
+            return !isAccepted;
+          }).toList();
           print("ssssssss$agentOrders");
           emit(AgentOrdersState.success(currentAgentRes));
         },
@@ -27,10 +43,22 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
     }
   }
 
-  void getAcceptedOrders() async {
+  void getAcceptedOrders({
+    String? status,
+    String? date,
+    String? startDate,
+    String? endDate,
+    String? paymentType,
+  }) async {
     emit(AgentOrdersState.getAcceptOrderLoading());
     try {
-      final response = await agentOrdrsRepo.getAcceptedOrders();
+      final response = await agentOrdrsRepo.getAcceptedOrders(
+        status: status,
+        date: date,
+        startDate: startDate,
+        endDate: endDate,
+        paymentType: paymentType,
+      );
       response.when(
         success: (getAcceptedOrdersRes) {
           acceptedOrders = getAcceptedOrdersRes.orders;

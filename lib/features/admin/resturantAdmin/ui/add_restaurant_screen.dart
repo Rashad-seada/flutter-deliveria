@@ -17,11 +17,14 @@ import 'package:delveria/features/admin/resturantAdmin/ui/widgets/contact_number
 import 'package:delveria/features/admin/resturantAdmin/ui/widgets/description_section.dart';
 import 'package:delveria/features/admin/resturantAdmin/ui/widgets/opening_hours_section.dart';
 import 'package:delveria/features/admin/resturantAdmin/ui/widgets/resturant_name_section.dart';
+import 'package:delveria/features/admin/resturantAdmin/ui/widgets/admin_fields_section.dart';
 import 'package:delveria/features/admin/resturantAdmin/ui/widgets/upload_logo_section.dart';
 import 'package:delveria/features/admin/resturantAdmin/ui/widgets/upload_photo_section.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:delveria/features/client/adresses/ui/location_picker_screen.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_url_extractor/url_extractor.dart';
 
 class AddRestaurantScreen extends StatefulWidget {
@@ -34,6 +37,7 @@ class AddRestaurantScreen extends StatefulWidget {
 class _AddRestaurantScreenState extends State<AddRestaurantScreen> {
   String? selectedCategory;
   String selectedCountryCode = '+20';
+  LatLng? _selectedLocation;
 
   bool showCategoryDropdown = false;
 
@@ -96,7 +100,35 @@ class _AddRestaurantScreenState extends State<AddRestaurantScreen> {
                   descriptionController: cubit.descriptionController,
                 ),
                 verticalSpace(32),
-                BuildAddressSection(addressController: cubit.addressController),
+                BuildAddressSection(
+                  addressController: cubit.addressController,
+                  onPickLocation: () async {
+                    final result = await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LocationPickerScreen(),
+                      ),
+                    );
+
+                    if (result != null && result is Map) {
+                      if (result['location'] is LatLng) {
+                        setState(() {
+                          _selectedLocation = result['location'];
+                        });
+                      }
+                      if (result['address'] is String) {
+                        cubit.addressController.text = result['address'];
+                      }
+                    }
+                  },
+                ),
+                verticalSpace(32),
+                // Admin-only fields
+                AdminFieldsSection(
+                  commissionController: cubit.commissionPercentageController,
+                  preparationTimeController: cubit.preparationTimeController,
+                  deliveryTimeController: cubit.deliveryTimeController,
+                ),
                 verticalSpace(24),
                 // // Add the hasDelivery checkbox here
                 // Row(
@@ -149,11 +181,11 @@ class _AddRestaurantScreenState extends State<AddRestaurantScreen> {
                           return;
                         }
 
-                        // Check if address is a valid URL
-                        if (!cubit.addressController.text.startsWith("http")) {
+                        // Check if address is a valid URL only if no location is selected manually
+                        if (_selectedLocation == null && !cubit.addressController.text.startsWith("http")) {
                           showWarningSnackBar(
                             context,
-                            "The Location must be url",
+                            "The Location must be url or select from map",
                           );
                           return;
                         }
@@ -162,7 +194,10 @@ class _AddRestaurantScreenState extends State<AddRestaurantScreen> {
                         double latitude = 0;
                         double longitude = 0;
 
-                        if (cubit.addressController.text.isNotEmpty) {
+                        if (_selectedLocation != null) {
+                          latitude = _selectedLocation!.latitude;
+                          longitude = _selectedLocation!.longitude;
+                        } else if (cubit.addressController.text.isNotEmpty) {
                           final coordinates =
                               await GoogleMapsUrlExtractor.processGoogleMapsUrl(
                                 cubit.addressController.text,
@@ -191,10 +226,15 @@ class _AddRestaurantScreenState extends State<AddRestaurantScreen> {
                             openHour: openHour24, // 24-hour format
                             closeHour: closeHour24, // 24-hour format
                             aboutUs: cubit.descriptionController.text,
-                            locationMap: cubit.addressController.text,
+                            locationMap: _selectedLocation != null 
+                                ? "https://maps.google.com/?q=${_selectedLocation!.latitude},${_selectedLocation!.longitude}"
+                                : cubit.addressController.text,
                             password: cubit.passwordController.text,
-                            // haveDelivery: hasDelivery ? "true" : "false",
                             deliveryCost: "0",
+                            // Admin fields
+                            commissionPercentage: double.tryParse(cubit.commissionPercentageController.text) ?? 0,
+                            preparationTime: int.tryParse(cubit.preparationTimeController.text) ?? 15,
+                            deliveryTime: int.tryParse(cubit.deliveryTimeController.text) ?? 30,
                           ),
                         );
                       },

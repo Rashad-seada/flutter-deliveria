@@ -7,19 +7,18 @@ part of 'item_categories_response_user.dart';
 // **************************************************************************
 
 ItemsCategoryResponseUser _$ItemsCategoryResponseUserFromJson(
-  Map<String, dynamic> json,
-) => ItemsCategoryResponseUser(
-  itemCategories:
-      (json['itemCategories'] as List<dynamic>)
+        Map<String, dynamic> json) =>
+    ItemsCategoryResponseUser(
+      itemCategories: (json['itemCategories'] as List<dynamic>)
           .map((e) => ItemCategoryUser.fromJson(e as Map<String, dynamic>))
           .toList(),
-);
+    );
 
 Map<String, dynamic> _$ItemsCategoryResponseUserToJson(
-  ItemsCategoryResponseUser instance,
-) => <String, dynamic>{
-  'itemCategories': instance.itemCategories.map((e) => e.toJson()).toList(),
-};
+        ItemsCategoryResponseUser instance) =>
+    <String, dynamic>{
+      'itemCategories': instance.itemCategories.map((e) => e.toJson()).toList(),
+    };
 
 ItemCategoryUser _$ItemCategoryUserFromJson(Map<String, dynamic> json) =>
     ItemCategoryUser(

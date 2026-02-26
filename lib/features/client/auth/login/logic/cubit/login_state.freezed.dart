@@ -12,8 +12,7 @@ part of 'login_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LoginState<T> {
@@ -23,14 +22,16 @@ mixin _$LoginState<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(ApiErrorModel error) fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(ApiErrorModel error)? fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -38,21 +39,24 @@ mixin _$LoginState<T> {
     TResult Function(T data)? success,
     TResult Function(ApiErrorModel error)? fail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(LoginLoading<T> value) loading,
     required TResult Function(LoginSuccess<T> value) success,
     required TResult Function(LoginFail<T> value) fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(LoginLoading<T> value)? loading,
     TResult? Function(LoginSuccess<T> value)? success,
     TResult? Function(LoginFail<T> value)? fail,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
@@ -60,15 +64,15 @@ mixin _$LoginState<T> {
     TResult Function(LoginSuccess<T> value)? success,
     TResult Function(LoginFail<T> value)? fail,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LoginStateCopyWith<T, $Res> {
   factory $LoginStateCopyWith(
-    LoginState<T> value,
-    $Res Function(LoginState<T>) then,
-  ) = _$LoginStateCopyWithImpl<T, $Res, LoginState<T>>;
+          LoginState<T> value, $Res Function(LoginState<T>) then) =
+      _$LoginStateCopyWithImpl<T, $Res, LoginState<T>>;
 }
 
 /// @nodoc
@@ -80,17 +84,13 @@ class _$LoginStateCopyWithImpl<T, $Res, $Val extends LoginState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
   factory _$$InitialImplCopyWith(
-    _$InitialImpl<T> value,
-    $Res Function(_$InitialImpl<T>) then,
-  ) = __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -98,12 +98,8 @@ class __$$InitialImplCopyWithImpl<T, $Res>
     extends _$LoginStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
   __$$InitialImplCopyWithImpl(
-    _$InitialImpl<T> _value,
-    $Res Function(_$InitialImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -206,10 +202,9 @@ abstract class _Initial<T> implements LoginState<T> {
 
 /// @nodoc
 abstract class _$$LoginLoadingImplCopyWith<T, $Res> {
-  factory _$$LoginLoadingImplCopyWith(
-    _$LoginLoadingImpl<T> value,
-    $Res Function(_$LoginLoadingImpl<T>) then,
-  ) = __$$LoginLoadingImplCopyWithImpl<T, $Res>;
+  factory _$$LoginLoadingImplCopyWith(_$LoginLoadingImpl<T> value,
+          $Res Function(_$LoginLoadingImpl<T>) then) =
+      __$$LoginLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -217,12 +212,8 @@ class __$$LoginLoadingImplCopyWithImpl<T, $Res>
     extends _$LoginStateCopyWithImpl<T, $Res, _$LoginLoadingImpl<T>>
     implements _$$LoginLoadingImplCopyWith<T, $Res> {
   __$$LoginLoadingImplCopyWithImpl(
-    _$LoginLoadingImpl<T> _value,
-    $Res Function(_$LoginLoadingImpl<T>) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
+      _$LoginLoadingImpl<T> _value, $Res Function(_$LoginLoadingImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -325,10 +316,9 @@ abstract class LoginLoading<T> implements LoginState<T> {
 
 /// @nodoc
 abstract class _$$LoginSuccessImplCopyWith<T, $Res> {
-  factory _$$LoginSuccessImplCopyWith(
-    _$LoginSuccessImpl<T> value,
-    $Res Function(_$LoginSuccessImpl<T>) then,
-  ) = __$$LoginSuccessImplCopyWithImpl<T, $Res>;
+  factory _$$LoginSuccessImplCopyWith(_$LoginSuccessImpl<T> value,
+          $Res Function(_$LoginSuccessImpl<T>) then) =
+      __$$LoginSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
@@ -338,23 +328,20 @@ class __$$LoginSuccessImplCopyWithImpl<T, $Res>
     extends _$LoginStateCopyWithImpl<T, $Res, _$LoginSuccessImpl<T>>
     implements _$$LoginSuccessImplCopyWith<T, $Res> {
   __$$LoginSuccessImplCopyWithImpl(
-    _$LoginSuccessImpl<T> _value,
-    $Res Function(_$LoginSuccessImpl<T>) _then,
-  ) : super(_value, _then);
+      _$LoginSuccessImpl<T> _value, $Res Function(_$LoginSuccessImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? data = freezed}) {
-    return _then(
-      _$LoginSuccessImpl<T>(
-        freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                as T,
-      ),
-    );
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$LoginSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
   }
 }
 
@@ -383,16 +370,12 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginSuccessImplCopyWith<T, _$LoginSuccessImpl<T>> get copyWith =>
       __$$LoginSuccessImplCopyWithImpl<T, _$LoginSuccessImpl<T>>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -473,10 +456,7 @@ abstract class LoginSuccess<T> implements LoginState<T> {
   const factory LoginSuccess(final T data) = _$LoginSuccessImpl<T>;
 
   T get data;
-
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LoginSuccessImplCopyWith<T, _$LoginSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -484,9 +464,8 @@ abstract class LoginSuccess<T> implements LoginState<T> {
 /// @nodoc
 abstract class _$$LoginFailImplCopyWith<T, $Res> {
   factory _$$LoginFailImplCopyWith(
-    _$LoginFailImpl<T> value,
-    $Res Function(_$LoginFailImpl<T>) then,
-  ) = __$$LoginFailImplCopyWithImpl<T, $Res>;
+          _$LoginFailImpl<T> value, $Res Function(_$LoginFailImpl<T>) then) =
+      __$$LoginFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({ApiErrorModel error});
 }
@@ -496,23 +475,20 @@ class __$$LoginFailImplCopyWithImpl<T, $Res>
     extends _$LoginStateCopyWithImpl<T, $Res, _$LoginFailImpl<T>>
     implements _$$LoginFailImplCopyWith<T, $Res> {
   __$$LoginFailImplCopyWithImpl(
-    _$LoginFailImpl<T> _value,
-    $Res Function(_$LoginFailImpl<T>) _then,
-  ) : super(_value, _then);
+      _$LoginFailImpl<T> _value, $Res Function(_$LoginFailImpl<T>) _then)
+      : super(_value, _then);
 
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? error = null}) {
-    return _then(
-      _$LoginFailImpl<T>(
-        null == error
-            ? _value.error
-            : error // ignore: cast_nullable_to_non_nullable
-                as ApiErrorModel,
-      ),
-    );
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$LoginFailImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
   }
 }
 
@@ -540,9 +516,7 @@ class _$LoginFailImpl<T> implements LoginFail<T> {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginFailImplCopyWith<T, _$LoginFailImpl<T>> get copyWith =>
@@ -627,10 +601,7 @@ abstract class LoginFail<T> implements LoginState<T> {
   const factory LoginFail(final ApiErrorModel error) = _$LoginFailImpl<T>;
 
   ApiErrorModel get error;
-
-  /// Create a copy of LoginState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LoginFailImplCopyWith<T, _$LoginFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

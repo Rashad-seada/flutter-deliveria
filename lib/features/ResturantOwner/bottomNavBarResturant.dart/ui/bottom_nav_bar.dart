@@ -132,12 +132,6 @@ class _BottomNavBarScreenResturantState
                     getIt<AllresturantsadminCubit>()
                     ,
           ), 
-          BlocProvider(
-            create:
-                (context) =>
-                    getIt<AllresturantsadminCubit>()
-                    ,
-          ), 
         ],
         child: ResturantProfile(),
       ),

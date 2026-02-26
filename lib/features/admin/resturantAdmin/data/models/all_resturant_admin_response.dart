@@ -27,65 +27,87 @@ class ResturantAdmin {
   final Coordinates coordinates;
   @JsonKey(name: '_id')
   final String id;
-  final String photo;
-  final String logo;
+  final String? photo;
+  final String? logo;
+  @JsonKey(name: 'main_photo')
+  final String? mainPhoto;
   @JsonKey(name: 'super_category')
-  final List<SuperCategory> superCategory;
+  final List<SuperCategory>? superCategory;
   @JsonKey(name: 'sub_category')
-  final List<SubCategoryGetRes> subCategory;
-  final String name;
-  final String phone;
+  final List<SubCategoryGetRes>? subCategory;
+  final String? name;
+  final String? phone;
   @JsonKey(name: 'about_us')
-  final String aboutUs;
-  final num rate;
-  final List<Review> reviews;
+  final String? aboutUs;
+  final num? rate;
+  final List<Review>? reviews;
   @JsonKey(name: 'delivery_cost')
-  final num deliveryCost;
-  @JsonKey(name: 'loacation_map')
-  final String loacationMap;
+  final num? deliveryCost;
+  @JsonKey(name: 'location_map')
+  final String? locationMap;
   @JsonKey(name: 'open_hour')
-  final String openHour;
+  final String? openHour;
   @JsonKey(name: 'close_hour')
-  final String closeHour;
+  final String? closeHour;
   @JsonKey(name: 'have_delivery')
-  final bool haveDelivery;
+  final bool? haveDelivery;
   @JsonKey(name: 'is_show')
-  final bool isShow;
+  final bool? isShow;
   @JsonKey(name: 'is_show_in_home')
-  final bool isShowInHome;
+  final bool? isShowInHome;
   @JsonKey(name: 'estimated_time')
   final num? estimatedTime;
-  final String createdAt;
-  final String updatedAt;
+  final String? createdAt;
+  final String? updatedAt;
   @JsonKey(name: '__v')
-  final int v;
+  final int? v;
   @JsonKey(name: 'is_open')
-  final bool isOpen;
+  final bool? isOpen;
+  // New Admin Fields
+  @JsonKey(name: 'commission_percentage')
+  final double? commissionPercentage;
+  @JsonKey(name: 'preparation_time')
+  final int? preparationTime;
+  @JsonKey(name: 'delivery_time')
+  final int? deliveryTime;
+  @JsonKey(name: 'is_main_branch')
+  final bool? isMainBranch;
+  @JsonKey(name: 'parent_restaurant_id')
+  final String? parentRestaurantId;
+  @JsonKey(name: 'branches_count')
+  final int? branchesCount;
 
   ResturantAdmin({
     required this.coordinates,
     required this.id,
-    required this.photo,
-    required this.logo,
-    required this.superCategory,
-    required this.subCategory,
-    required this.name,
-    required this.phone,
-    required this.aboutUs,
-    required this.rate,
-    required this.reviews,
-    required this.deliveryCost,
-    required this.loacationMap,
-    required this.openHour,
-    required this.closeHour,
-    required this.haveDelivery,
-    required this.isShow,
-    required this.isShowInHome,
+    this.photo,
+    this.logo,
+    this.mainPhoto,
+    this.superCategory,
+    this.subCategory,
+    this.name,
+    this.phone,
+    this.aboutUs,
+    this.rate,
+    this.reviews,
+    this.deliveryCost,
+    this.locationMap,
+    this.openHour,
+    this.closeHour,
+    this.haveDelivery,
+    this.isShow,
+    this.isShowInHome,
     this.estimatedTime,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.v,
-    required this.isOpen,
+    this.createdAt,
+    this.updatedAt,
+    this.v,
+    this.isOpen,
+    this.commissionPercentage,
+    this.preparationTime,
+    this.deliveryTime,
+    this.isMainBranch,
+    this.parentRestaurantId,
+    this.branchesCount,
   });
 
   factory ResturantAdmin.fromJson(Map<String, dynamic> json) =>

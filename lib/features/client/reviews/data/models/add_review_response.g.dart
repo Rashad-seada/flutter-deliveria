@@ -13,4 +13,7 @@ AddReviewResponse _$AddReviewResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AddReviewResponseToJson(AddReviewResponse instance) =>
-    <String, dynamic>{'success': instance.success, 'message': instance.message};
+    <String, dynamic>{
+      'success': instance.success,
+      'message': instance.message,
+    };

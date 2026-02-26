@@ -7,9 +7,13 @@ part of 'update_agent_order_status_response.dart';
 // **************************************************************************
 
 UpdateAgentOrderStatusResponse _$UpdateAgentOrderStatusResponseFromJson(
-  Map<String, dynamic> json,
-) => UpdateAgentOrderStatusResponse(message: json['message'] as String);
+        Map<String, dynamic> json) =>
+    UpdateAgentOrderStatusResponse(
+      message: json['message'] as String,
+    );
 
 Map<String, dynamic> _$UpdateAgentOrderStatusResponseToJson(
-  UpdateAgentOrderStatusResponse instance,
-) => <String, dynamic>{'message': instance.message};
+        UpdateAgentOrderStatusResponse instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+    };

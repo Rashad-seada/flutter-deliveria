@@ -70,6 +70,7 @@ class _ResturantAdminDetailsState extends State<ResturantAdminDetails> {
                   background: ResturantStackedImage(
                     logo: widget.resturantAdmin.logo,
                     img: widget.resturantAdmin.photo,
+                    isOpen: widget.resturantAdmin.isOpen ?? true,
                   ),
                 ),
                 backgroundColor: Colors.white,
@@ -92,14 +93,14 @@ class _ResturantAdminDetailsState extends State<ResturantAdminDetails> {
                         ),
                         verticalSpace(10),
                         ResturantReviewAndName(
-                          resName: widget.resturantAdmin.name,
+                          resName: widget.resturantAdmin.name ?? '',
                           reviews: widget.resturantAdmin.reviews ?? [],
                           resId: widget.resturantAdmin.id ?? "",
                         ),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 10.0.w),
                           child: Text(
-                            widget.resturantAdmin.aboutUs,
+                            widget.resturantAdmin.aboutUs ?? '',
                             textAlign: TextAlign.start,
                             style: TextStyles.bimini16W400Body.copyWith(
                               color: AppColors.grey,
@@ -108,10 +109,10 @@ class _ResturantAdminDetailsState extends State<ResturantAdminDetails> {
                         ),
                         verticalSpace(10),
                         RateAndDeliveryCostRow(
-                          deliveryCost: widget.resturantAdmin.deliveryCost.toString(),
-                          estimatedTime: widget.resturantAdmin.estimatedTime.toString(),
+                          deliveryCost: widget.resturantAdmin.deliveryCost?.toString() ?? '0',
+                          estimatedTime: widget.resturantAdmin.estimatedTime?.toString() ?? '30',
                           themeState: themeState,
-                          rate: widget.resturantAdmin.rate.toString(),
+                          rate: widget.resturantAdmin.rate?.toString() ?? '0',
                         ),
                         verticalSpace(20),
                         FoodMenuText(themeState: themeState),

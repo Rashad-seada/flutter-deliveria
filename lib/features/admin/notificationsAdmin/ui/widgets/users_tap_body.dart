@@ -10,9 +10,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UsersTapBody extends StatelessWidget {
-  const UsersTapBody({super.key, required this.messageController});
+  const UsersTapBody({
+    super.key,
+    required this.messageController,
+    required this.titleController,
+  });
 
   final TextEditingController messageController;
+  final TextEditingController titleController;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +26,24 @@ class UsersTapBody extends StatelessWidget {
       children: [
         Text(AppStrings.notificationsMessage.tr(), style: TextStyles.bimini16W700),
         verticalSpace(24),
+        Container(
+          width: 342.w,
+          height: 44.h,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(4.r),
+            border: Border.all(color: AppColors.grey.withValues(alpha: .3)),
+          ),
+          child: TextField(
+            controller: titleController,
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: "Notification Title (Optional)",
+              hintStyle: TextStyles.bimini13W400Grey,
+              contentPadding: EdgeInsets.symmetric(horizontal: 16),
+            ),
+          ),
+        ),
+        verticalSpace(16),
         Container(
           width: 342.w,
           height: 44.h,
@@ -53,8 +76,8 @@ class UsersTapBody extends StatelessWidget {
                 () => pushNotification(
                   context,
                   messageController,
+                  titleController,
                   true,
-                
                 ),
           ),
         ),

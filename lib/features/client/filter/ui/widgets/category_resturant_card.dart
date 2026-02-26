@@ -36,7 +36,6 @@ class CategoryRestaurantCard extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              if (isClosed) return; // Prevent navigation if closed
               Navigator.push(
                 context,
                 MaterialPageRoute(
