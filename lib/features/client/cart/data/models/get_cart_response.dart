@@ -93,6 +93,7 @@ class CartItem {
   @JsonKey(defaultValue: const [])
   final List<ToppingDetails>? topping_details;
   final String? description;
+  final int? quantity;
   final num? total_price;
 
   CartItem({
@@ -100,6 +101,7 @@ class CartItem {
     this.size_details,
     this.topping_details,
     this.description,
+    this.quantity,
     this.total_price,
   });
 

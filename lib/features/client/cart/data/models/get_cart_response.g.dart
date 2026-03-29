@@ -91,6 +91,7 @@ CartItem _$CartItemFromJson(Map<String, dynamic> json) => CartItem(
               .toList() ??
           [],
       description: json['description'] as String?,
+      quantity: (json['quantity'] as num?)?.toInt(),
       total_price: json['total_price'] as num?,
     );
 
@@ -100,6 +101,7 @@ Map<String, dynamic> _$CartItemToJson(CartItem instance) => <String, dynamic>{
       'topping_details':
           instance.topping_details?.map((e) => e.toJson()).toList(),
       'description': instance.description,
+      'quantity': instance.quantity,
       'total_price': instance.total_price,
     };
 

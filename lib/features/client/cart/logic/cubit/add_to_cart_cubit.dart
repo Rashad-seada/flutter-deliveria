@@ -327,7 +327,7 @@ class AddToCartCubit extends Cubit<AddToCartState<dynamic>> {
         // Handle items without size or topping
         if (item.size_details == null && item.topping_details == null) {
           final baseKey = _generateItemKey(itemId: itemId);
-          itemQuantities[baseKey] = 1;
+          itemQuantities[baseKey] = item.quantity ?? 1;
         }
       }
     }
