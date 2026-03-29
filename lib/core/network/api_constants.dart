@@ -1,6 +1,6 @@
 class ApiConstants {
   static const String baseUrl = "https://delveria.online";
-  static const String signUpUrl = "$baseUrl/users/signup";
+  static const String signUpUrl = "/users/signup";
   static const String loginUrl = "/auth/login";
   static const String allResturantAdmin = "/restaurants/all";
   static const String allRatedResturant = "/restaurants/all_rated";
