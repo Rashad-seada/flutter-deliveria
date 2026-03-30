@@ -412,8 +412,7 @@ abstract class ApiServices {
 
   //* Agent
   @GET(ApiConstants.getOrdersNotAcceptedAgentLink)
-  Future<GetNotAcceptedOrderAgentResponse> getCurrentOrders(
-    @Body() Map<String, dynamic> body, {
+  Future<GetNotAcceptedOrderAgentResponse> getCurrentOrders({
     @Query("date") String? date,
     @Query("startDate") String? startDate,
     @Query("endDate") String? endDate,
@@ -422,8 +421,7 @@ abstract class ApiServices {
   });
 
   @GET(ApiConstants.acceptedOrderLink)
-  Future<GetAcceptedOrdersResponse> getAcceptedOrders(
-    @Body() Map<String, dynamic> body, {
+  Future<GetAcceptedOrdersResponse> getAcceptedOrders({
     @Query("status") String? status,
     @Query("date") String? date,
     @Query("startDate") String? startDate,

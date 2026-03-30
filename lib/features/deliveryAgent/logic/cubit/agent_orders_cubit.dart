@@ -36,7 +36,7 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
           print("ssssssss$agentOrders");
           emit(AgentOrdersState.success(currentAgentRes));
         },
-        failure: (error) => AgentOrdersState.fail(error),
+        failure: (error) => emit(AgentOrdersState.fail(error)),
       );
     } catch (e) {
       emit(AgentOrdersState.fail(ApiErrorHandler.handle(e)));
@@ -65,7 +65,7 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
           print("ssssssss$acceptedOrders");
           emit(AgentOrdersState.getAcceptOrderSuccess(acceptedOrders));
         },
-        failure: (error) => AgentOrdersState.getAcceptOrderFail(error),
+        failure: (error) => emit(AgentOrdersState.getAcceptOrderFail(error)),
       );
     } catch (e) {
       emit(AgentOrdersState.getAcceptOrderFail(ApiErrorHandler.handle(e)));
@@ -80,7 +80,7 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
         success: (acceptOrderRes) {
           emit(AgentOrdersState.acceptOrderSuccess(acceptOrderRes));
         },
-        failure: (error) => AgentOrdersState.acceptOrderFail(error),
+        failure: (error) => emit(AgentOrdersState.acceptOrderFail(error)),
       );
     } catch (e) {
       emit(AgentOrdersState.acceptOrderFail(ApiErrorHandler.handle(e)));
@@ -94,7 +94,7 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
         success: (acceptOrderRes) {
           emit(AgentOrdersState.acceptOrderResSuccess(acceptOrderRes));
         },
-        failure: (error) => AgentOrdersState.acceptOrderResFail(error),
+        failure: (error) => emit(AgentOrdersState.acceptOrderResFail(error)),
       );
     } catch (e) {
       emit(AgentOrdersState.acceptOrderResFail(ApiErrorHandler.handle(e)));
@@ -108,7 +108,7 @@ class AgentOrdersCubit extends Cubit<AgentOrdersState> {
         success: (acceptOrderRes) {
           emit(AgentOrdersState.readyForPickUpSuccess(acceptOrderRes));
         },
-        failure: (error) => AgentOrdersState.readyForPickUpFail(error),
+        failure: (error) => emit(AgentOrdersState.readyForPickUpFail(error)),
       );
     } catch (e) {
       emit(AgentOrdersState.readyForPickUpFail(ApiErrorHandler.handle(e)));

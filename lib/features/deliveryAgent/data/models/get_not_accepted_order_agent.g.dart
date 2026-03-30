@@ -199,8 +199,7 @@ AgentOrderItem _$AgentOrderItemFromJson(Map<String, dynamic> json) =>
     AgentOrderItem(
       itemDetails: AgentOrderItemDetails.fromJson(
           json['item_details'] as Map<String, dynamic>),
-      sizeDetails: AgentOrderSizeDetails.fromJson(
-          json['size_details'] as Map<String, dynamic>),
+      sizeDetails: _sizeDetailsFromJson(json['size_details']),
       toppingDetails: _toppingDetailsFromJson(json['topping_details']),
       description: json['description'] as String?,
       totalPrice: _safeNumFromJson(json['total_price']),
@@ -210,7 +209,7 @@ AgentOrderItem _$AgentOrderItemFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$AgentOrderItemToJson(AgentOrderItem instance) =>
     <String, dynamic>{
       'item_details': instance.itemDetails.toJson(),
-      'size_details': instance.sizeDetails.toJson(),
+      'size_details': instance.sizeDetails?.toJson(),
       'topping_details': _toppingDetailsToJson(instance.toppingDetails),
       'description': instance.description,
       'total_price': instance.totalPrice,

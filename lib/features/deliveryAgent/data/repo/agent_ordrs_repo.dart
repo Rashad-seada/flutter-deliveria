@@ -22,7 +22,6 @@ class AgentOrdrsRepo {
   }) async {
     try {
       final res = await apiServices.getCurrentOrders(
-        {},
         date: date,
         startDate: startDate,
         endDate: endDate,
@@ -47,7 +46,6 @@ class AgentOrdrsRepo {
   }) async {
     try {
       final res = await apiServices.getAcceptedOrders(
-        {},
         status: status,
         date: date,
         startDate: startDate,

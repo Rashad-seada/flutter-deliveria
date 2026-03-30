@@ -2278,8 +2278,7 @@ class _ApiServices implements ApiServices {
   }
 
   @override
-  Future<GetNotAcceptedOrderAgentResponse> getCurrentOrders(
-    Map<String, dynamic> body, {
+  Future<GetNotAcceptedOrderAgentResponse> getCurrentOrders({
     String? date,
     String? startDate,
     String? endDate,
@@ -2297,7 +2296,6 @@ class _ApiServices implements ApiServices {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(body);
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<GetNotAcceptedOrderAgentResponse>(Options(
       method: 'GET',
@@ -2320,8 +2318,7 @@ class _ApiServices implements ApiServices {
   }
 
   @override
-  Future<GetAcceptedOrdersResponse> getAcceptedOrders(
-    Map<String, dynamic> body, {
+  Future<GetAcceptedOrdersResponse> getAcceptedOrders({
     String? status,
     String? date,
     String? startDate,
@@ -2339,7 +2336,6 @@ class _ApiServices implements ApiServices {
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(body);
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<GetAcceptedOrdersResponse>(Options(
       method: 'GET',

@@ -290,8 +290,8 @@ class AgentOrderRestaurantInfo {
 class AgentOrderItem {
   @JsonKey(name: 'item_details')
   final AgentOrderItemDetails itemDetails;
-  @JsonKey(name: 'size_details')
-  final AgentOrderSizeDetails sizeDetails;
+  @JsonKey(name: 'size_details', fromJson: _sizeDetailsFromJson)
+  final AgentOrderSizeDetails? sizeDetails;
   // Fix: Accept both List and Map for topping_details
   @JsonKey(
     name: 'topping_details',
@@ -318,6 +318,15 @@ class AgentOrderItem {
       _$AgentOrderItemFromJson(json);
 
   Map<String, dynamic> toJson() => _$AgentOrderItemToJson(this);
+}
+
+/// Safely parse size_details which can be null in some orders
+AgentOrderSizeDetails? _sizeDetailsFromJson(dynamic json) {
+  if (json == null) return null;
+  if (json is Map<String, dynamic>) {
+    return AgentOrderSizeDetails.fromJson(json);
+  }
+  return null;
 }
 
 // Custom fromJson/toJson for topping_details to handle both List and Map/null
