@@ -22,7 +22,7 @@ OrderDetailsModel _$OrderDetailsModelFromJson(Map<String, dynamic> json) =>
     OrderDetailsModel(
       address: AddressModel.fromJson(json['address'] as Map<String, dynamic>),
       id: json['_id'] as String,
-      userId: json['user_id'] as String,
+      userId: OrderDetailsModel._userFromJson(json['user_id']),
       orders: (json['orders'] as List<dynamic>)
           .map((e) => RestaurantOrderModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -76,8 +76,8 @@ Map<String, dynamic> _$AddressModelToJson(AddressModel instance) =>
 
 CoordinatesModel _$CoordinatesModelFromJson(Map<String, dynamic> json) =>
     CoordinatesModel(
-      latitude: json['latitude'] as String,
-      longitude: json['longitude'] as String,
+      latitude: CoordinatesModel._asString(json['latitude']),
+      longitude: CoordinatesModel._asString(json['longitude']),
     );
 
 Map<String, dynamic> _$CoordinatesModelToJson(CoordinatesModel instance) =>
@@ -89,7 +89,7 @@ Map<String, dynamic> _$CoordinatesModelToJson(CoordinatesModel instance) =>
 RestaurantOrderModel _$RestaurantOrderModelFromJson(
         Map<String, dynamic> json) =>
     RestaurantOrderModel(
-      restaurantId: json['restaurant_id'] as String,
+      restaurantId: RestaurantOrderModel._extractIdFromJson(json['restaurant_id']),
       branch: _orderDetailsBranchFromJson(json['branch_id']),
       items: (json['items'] as List<dynamic>)
           .map((e) => OrderItemModel.fromJson(e as Map<String, dynamic>))

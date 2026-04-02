@@ -196,7 +196,7 @@ abstract class ApiServices {
     @Query("status") String? status,
   );
   @GET("/orders/id/{id}")
-  Future<OrderDetailsResponse> getOrderDetails(@Body() Map<String, dynamic> body , @Path("id") String id);
+  Future<OrderDetailsResponse> getOrderDetails(@Path("id") String id);
   @POST(ApiConstants.createNotificationLink)
   Future createNotification(@Body() Map<String, dynamic> body);
   @GET(ApiConstants.allResturantAdmin)

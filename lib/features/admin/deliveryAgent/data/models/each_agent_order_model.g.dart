@@ -79,8 +79,8 @@ Map<String, dynamic> _$AddressModelToJson(AddressModel instance) =>
 
 CoordinatesModel _$CoordinatesModelFromJson(Map<String, dynamic> json) =>
     CoordinatesModel(
-      latitude: json['latitude'] as String,
-      longitude: json['longitude'] as String,
+      latitude: CoordinatesModel._asString(json['latitude']),
+      longitude: CoordinatesModel._asString(json['longitude']),
     );
 
 Map<String, dynamic> _$CoordinatesModelToJson(CoordinatesModel instance) =>

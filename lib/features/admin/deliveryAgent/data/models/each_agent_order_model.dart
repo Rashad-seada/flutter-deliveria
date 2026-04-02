@@ -88,7 +88,9 @@ class AddressModel {
 
 @JsonSerializable()
 class CoordinatesModel {
+  @JsonKey(fromJson: _asString, toJson: _toString)
   final String latitude;
+  @JsonKey(fromJson: _asString, toJson: _toString)
   final String longitude;
 
   CoordinatesModel({
@@ -100,6 +102,9 @@ class CoordinatesModel {
       _$CoordinatesModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoordinatesModelToJson(this);
+
+  static String _asString(dynamic value) => value?.toString() ?? '';
+  static dynamic _toString(String value) => value;
 }
 
 @JsonSerializable()

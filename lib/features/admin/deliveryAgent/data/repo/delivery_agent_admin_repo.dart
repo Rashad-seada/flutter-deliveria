@@ -97,7 +97,7 @@ class DeliveryAgentAdminRepo {
     required String id,
   }) async {
     try {
-      final res = await apiServices.getOrderDetails({}, id);
+      final res = await apiServices.getOrderDetails(id);
       return ApiResult.success(res);
     } catch (e) {
       print("eee $e");

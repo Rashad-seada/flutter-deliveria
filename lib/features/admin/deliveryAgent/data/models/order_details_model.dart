@@ -19,8 +19,8 @@ class OrderDetailsModel {
   final AddressModel address;
   @JsonKey(name: '_id')
   final String id;
-  @JsonKey(name: 'user_id')
-  final String userId;
+  @JsonKey(name: 'user_id', fromJson: _userFromJson)
+  final dynamic userId;
   final List<RestaurantOrderModel> orders;
   @JsonKey(name: 'final_price_without_delivery_cost')
   final num finalPriceWithoutDeliveryCost;
@@ -61,6 +61,16 @@ class OrderDetailsModel {
       _$OrderDetailsModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$OrderDetailsModelToJson(this);
+
+  static dynamic _userFromJson(dynamic value) {
+    if (value == null) return null;
+    if (value is Map<String, dynamic>) {
+      final first = value['first_name'] ?? '';
+      final last = value['last_name'] ?? '';
+      return (first + " " + last).trim();
+    }
+    return value.toString();
+  }
 }
 
 @JsonSerializable()
@@ -86,7 +96,9 @@ class AddressModel {
 
 @JsonSerializable()
 class CoordinatesModel {
+  @JsonKey(fromJson: _asString, toJson: _toString)
   final String latitude;
+  @JsonKey(fromJson: _asString, toJson: _toString)
   final String longitude;
 
   CoordinatesModel({
@@ -98,11 +110,14 @@ class CoordinatesModel {
       _$CoordinatesModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoordinatesModelToJson(this);
+
+  static String _asString(dynamic value) => value?.toString() ?? '';
+  static dynamic _toString(String value) => value;
 }
 
 @JsonSerializable(explicitToJson: true)
 class RestaurantOrderModel {
-  @JsonKey(name: 'restaurant_id')
+  @JsonKey(name: 'restaurant_id', fromJson: _extractIdFromJson)
   final String restaurantId;
   @JsonKey(name: 'branch_id', fromJson: _orderDetailsBranchFromJson)
   final OrderDetailsBranchInfo? branch;
@@ -129,6 +144,15 @@ class RestaurantOrderModel {
       _$RestaurantOrderModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$RestaurantOrderModelToJson(this);
+
+  static String _extractIdFromJson(dynamic json) {
+    if (json == null) return '';
+    if (json is String) return json;
+    if (json is Map) {
+      return json['_id']?.toString() ?? json['id']?.toString() ?? '';
+    }
+    return json.toString();
+  }
 }
 
 /// Safely parse branch_id which can be a String (old) or Map (new)
