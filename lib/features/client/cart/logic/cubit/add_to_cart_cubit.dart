@@ -649,6 +649,7 @@ class AddToCartCubit extends Cubit<AddToCartState<dynamic>> {
       response.when(
         success: (removeCartRes) {
           clearCartLocal();
+          getCart();
           if (!isClosed) emit(AddToCartState.addOrderSuccess(removeCartRes));
         },
         failure: (error) {

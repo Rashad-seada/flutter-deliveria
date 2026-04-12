@@ -147,10 +147,8 @@ class _CouponeBodyBlocState extends State<CouponeBodyBloc> {
                                     context,
                                     MaterialPageRoute(
                                       builder:
-                                          (_) => BlocProvider(
-                                            create:
-                                                (context) =>
-                                                    getIt<AddToCartCubit>(),
+                                          (_) => BlocProvider.value(
+                                            value: getIt<AddToCartCubit>(),
                                             child: BlocBuilder<
                                               AddToCartCubit,
                                               AddToCartState
