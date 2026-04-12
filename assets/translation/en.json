@@ -449,5 +449,18 @@
   "pointsRedeemed": "Points redeemed",
   "adminAdjustment": "Admin adjustment",
   "pointsExpired": "Points expired",
-  "transaction": "Transaction"
+  "transaction": "Transaction",
+  "waitingForApproval": "Waiting for Approval",
+  "acceptedStatus": "Accepted",
+  "approvedPreparing": "Approved / Preparing",
+  "readyForDeliveryStatus": "Ready for Delivery",
+  "pickUpStatus": "Pick up",
+  "onTheWayStatus": "On the way",
+  "deliveredStatus": "Delivered",
+  "completedStatus": "Completed",
+  "canceledStatus": "Canceled",
+  "inProgress": "In Progress",
+  "progress": "Progress",
+  "orderLabel": "Order: #",
+  "received": "Received"
 }
