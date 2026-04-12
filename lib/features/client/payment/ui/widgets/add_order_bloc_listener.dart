@@ -20,7 +20,11 @@ class AddOrderBlocListener extends StatelessWidget {
         state.whenOrNull(
           addOrderSuccess: (data) {
             showSuccessSnackBar(context, "Order placed successfully");
-            context.pushReplacementNamed(Routes.successOrderScreen);
+            // Use pushNamedAndRemoveUntil to clear the checkout stack and ensure we reach the success screen
+            Navigator.of(context).pushNamedAndRemoveUntil(
+              Routes.successOrderScreen,
+              (route) => route.settings.name == Routes.bottomBarScreen || route.isFirst,
+            );
           },
           addOrderFail: (error) => showErrorSnackBar(context, error.message),
         );
